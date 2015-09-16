@@ -1,0 +1,29 @@
+@import '../../shared/styles/variables.scss';
+@import '../uiBasicsLabel/uiBasicsLabel.scss';
+
+.visibly-hidden {
+  height: 1px;
+  left: -10px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: -10px;  
+  width: 1px;
+  z-index: -1;
+}
+
+// Links
+a {
+  color: $color-blue-500;
+  cursor: pointer;
+  text-decoration: none;
+  
+  &:focus,
+  &:hover {
+    color: $color-blue-700;
+    text-decoration: underline;
+  }
+  &:active {
+    color: $color-blue-900;
+  }
+}

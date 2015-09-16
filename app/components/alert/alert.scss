@@ -1,0 +1,9 @@
+@import "susy/sass/susy";
+
+.btn-toolbar .btn {
+  border-radius: 0;
+}
+
+.grid6of12 {
+	@include span (6 of 12);
+}

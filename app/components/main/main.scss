@@ -1,0 +1,44 @@
+@import '../../shared/styles/grid.scss';
+//$icon-font-path: "/node_modules/bootstrap-sass/assets/fonts/bootstrap/";
+//@import "bootstrap-sass/assets/stylesheets/bootstrap";
+
+$red: red;
+$light-grey: #eee;
+
+.common {
+  background:#eee;
+}
+
+.root {
+  composes: common;
+  composes: span from '../../shared/styles/grid.scss';
+  border-width: 2px;
+  border-style: solid;
+  border-color: $red;
+  padding: 0 20px;
+  margin: 10px 6px;
+  
+  a {
+    color:$red;
+    &:hover {
+      color: blue;
+    }
+  }
+}
+
+.text {
+  color: #777;
+  font-size: 24px;
+  font-family: helvetica, arial, sans-serif;
+  font-weight: 600;
+}
+
+.toolBar {
+  width:100%;
+  //background:$light-grey;
+  padding:10px 0;
+}
+
+.right {
+  float:right;
+}

@@ -1,0 +1,97 @@
+// Miscellaneous
+
+$timing-transitions:        60ms;
+$timing-transition-delay:  400ms;
+$timing-tooltips:          100ms;
+
+
+// Color scales
+// ============
+
+// Purple Scale
+$color-purple-900:	rgba(34, 6, 73, 1);
+$color-purple-800:	rgba(46, 12, 101, 1);
+$color-purple-700:	rgba(62, 20, 137, 1);
+$color-purple-600:	rgba(84, 30, 184, 1);
+$color-purple-500:	rgba(127, 73, 201, 1);
+$color-purple-400:	rgba(237, 225, 250, 1);
+$color-purple-100:	rgba(248, 245, 252, 1);
+
+
+// blue Scale
+$color-blue-900: rgba(7, 28, 54, 1);
+$color-blue-800: rgba(8, 43, 85, 1);
+$color-blue-700: rgba(11, 66, 130, 1);
+$color-blue-600: rgba(11, 88, 171, 1);
+$color-blue-500: rgba(66, 122, 179, 1);
+$color-blue-500: rgba(66, 122, 179, 1); // old blue: #549bdd;
+$color-blue-400: rgba(230, 239, 255, 1);
+$color-blue-100: rgba(245, 249, 255, 1);
+
+// cyan Scale
+$color-cyan-900: rgba(4, 31, 32, 1);
+$color-cyan-800: rgba(4, 49, 50, 1);
+$color-cyan-700: rgba(3, 77, 79, 1);
+$color-cyan-600: rgba(1, 99, 102, 1);
+$color-cyan-500: rgba(61, 129, 131, 1);
+$color-cyan-400: rgba(204, 237, 233, 1);
+$color-cyan-100: rgba(243, 250, 250, 1);
+
+// green Scale
+$color-green-900: rgba(1, 19, 7, 1);
+$color-green-800: rgba(7, 50, 27, 1);
+$color-green-700: rgba(23, 101, 45, 1);
+$color-green-600: rgba(33, 133, 59, 1);
+$color-green-500: rgba(34, 138, 75, 1);
+$color-green-400: rgba(205, 223, 213, 1);
+$color-green-100: rgba(238, 244, 241, 1);
+
+// yellow Scale
+$color-yellow-900:	rgba(64, 39, 0, 1);
+$color-yellow-800:	rgba(102, 63, 0, 1);
+$color-yellow-700:	rgba(128, 79, 0, 1);
+$color-yellow-600:	rgba(153, 94, 0, 1);
+$color-yellow-500:	rgba(167, 105, 6, 1);
+$color-yellow-400:	rgba(242, 216, 155, 1);
+$color-yellow-100:	rgba(251, 247, 242, 1);
+
+// orange Scale
+$color-orange-900:	rgba(64, 20, 1, 1);
+$color-orange-800:	rgba(101, 32, 3, 1);
+$color-orange-700:	rgba(179, 50, 9, 1);
+$color-orange-600:	rgba(204, 65, 12, 1);
+$color-orange-500:	rgba(217, 54, 13, 1);
+$color-orange-400:	rgba(249, 236, 230, 1);
+$color-orange-100: rgba(253, 249, 247, 1);
+
+// red Scale
+$color-red-900:	rgba(52, 6, 3, 1);
+$color-red-800:	rgba(77, 10, 4, 1);
+$color-red-700:	rgba(131, 18, 9, 1);
+$color-red-600:	rgba(176, 26, 13, 1);
+$color-red-500:	rgba(192, 67, 58, 1);
+$color-red-400:	rgba(255, 230, 230, 1);
+$color-red-100:	rgba(254, 245, 245, 1);
+
+// // Gray Scale
+// $color-gray-000: rgba(49, 58, 66, 1);
+// $color-gray-000: rgba(74, 82, 89, 1);
+// $color-gray-000: rgba(99, 107, 113, 1);
+// $color-gray-000: rgba(124, 132, 137, 1);
+// $color-gray-000: rgba(150, 156, 160, 1);
+// $color-gray-000: rgba(176, 181, 184, 1);
+// $color-gray-000: rgba(202, 205, 207, 1);
+// $color-bright: 000(228, 230, 231, 1);
+
+// Gray Scale
+$color-black: rgba(32, 32, 32, 1);
+$color-gray-900: rgba(45, 54, 60, 1);
+$color-gray-800: rgba(55, 62, 66, 1);
+$color-gray-700: rgba(68, 73, 77, 1);
+$color-gray-600: rgba(79, 85, 89, 1);
+$color-gray-500: rgba(124, 132, 137, 1);
+$color-gray-400: rgba(163, 171, 176, 1);
+$color-gray-300: rgba(199, 203, 207, 1);
+$color-gray-200: rgba(233, 235, 237, 1);
+$color-gray-100: rgba(248, 249, 250, 1);
+$color-white: rgba(255, 255, 255, 1);

@@ -1,0 +1,16 @@
+//Local styles
+.root {
+  composes: grid from '../../shared/styles/grid.scss';
+  margin:10px auto;
+}
+
+.text {
+  color: #777;
+  font-size: 24px;
+  font-family: helvetica, arial, sans-serif;
+  font-weight: 600;
+}
+
+.alert-warning {
+  color: red;
+}
