@@ -1,0 +1,20 @@
+//Set icon font path for Glyphicons
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+
+//Bootstrap dependancies
+@import "variables";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+@import "bootswatch";
+
+//Further small customisations can go here, eg:
+
+$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" !default;
+
+@font-face {
+  font-family: 'Roboto';
+  font-style:  normal;
+  font-weight: 400;
+  src: url($web-font-path) format('woff2');
+}
+
+$font-family-sans-serif: 'Roboto';

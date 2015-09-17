@@ -27955,6 +27955,7 @@
 	
 	var _reactBootstrap = __webpack_require__(218);
 	
+	//Declare style variables
 	var text = _mainScss2['default'].text;
 	var grid = _mainScss2['default'].grid;
 	var toolbar = _mainScss2['default'].toolBar;
@@ -27985,101 +27986,164 @@
 							);
 	
 							return _react2['default'].createElement(
-									'div',
-									{ className: grid },
+									_reactBootstrap.Panel,
+									null,
 									_react2['default'].createElement(
 											'div',
-											{ className: toolbar },
+											{ className: 'grid6of12' },
 											_react2['default'].createElement(
-													_reactBootstrap.ButtonToolbar,
-													null,
+													'div',
+													{ className: toolbar },
 													_react2['default'].createElement(
-															_reactBootstrap.Button,
+															_reactBootstrap.ButtonToolbar,
 															null,
-															'Default'
-													),
-													_react2['default'].createElement(
-															_reactBootstrap.OverlayTrigger,
-															{ placement: 'bottom', overlay: tooltip },
 															_react2['default'].createElement(
 																	_reactBootstrap.Button,
-																	{ bsStyle: 'primary' },
-																	'Primary'
-															)
-													),
-													_react2['default'].createElement(
-															_reactBootstrap.Button,
-															{ bsStyle: 'success' },
-															'Success'
-													),
-													_react2['default'].createElement(
-															_reactBootstrap.Button,
-															{ bsStyle: 'info' },
-															'Info'
-													),
-													_react2['default'].createElement(
-															_reactBootstrap.Button,
-															{ bsStyle: 'warning' },
-															'Warning'
-													),
-													_react2['default'].createElement(
-															_reactBootstrap.Button,
-															{ bsStyle: 'danger' },
-															'Danger'
-													),
-													_react2['default'].createElement(
-															_reactBootstrap.Button,
-															{ bsStyle: 'link' },
-															'Link'
-													),
-													_react2['default'].createElement(
-															_reactBootstrap.OverlayTrigger,
-															{ trigger: 'click', placement: 'bottom', overlay: _react2['default'].createElement(
-																			_reactBootstrap.Popover,
-																			{ id: 'popID', title: 'Popover bottom' },
-																			_react2['default'].createElement(
-																					'strong',
-																					null,
-																					'Holy guacamole!'
-																			),
-																			' Check this info.'
-																	) },
-															_react2['default'].createElement(
-																	_reactBootstrap.Button,
-																	{ bsStyle: 'default' },
-																	'Click'
-															)
-													),
-													_react2['default'].createElement(
-															'div',
-															{ className: right },
-															_react2['default'].createElement(
-																	_reactBootstrap.ButtonGroup,
 																	null,
+																	'D'
+															),
+															_react2['default'].createElement(
+																	_reactBootstrap.OverlayTrigger,
+																	{ placement: 'bottom', overlay: tooltip },
 																	_react2['default'].createElement(
 																			_reactBootstrap.Button,
-																			null,
-																			_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'search' })
+																			{ bsStyle: 'primary' },
+																			'P'
+																	)
+															),
+															_react2['default'].createElement(
+																	_reactBootstrap.Button,
+																	{ bsStyle: 'success' },
+																	'S'
+															),
+															_react2['default'].createElement(
+																	_reactBootstrap.Button,
+																	{ bsStyle: 'info' },
+																	'I'
+															),
+															_react2['default'].createElement(
+																	_reactBootstrap.Button,
+																	{ bsStyle: 'warning' },
+																	'W'
+															),
+															_react2['default'].createElement(
+																	_reactBootstrap.Button,
+																	{ bsStyle: 'danger' },
+																	'Dg'
+															),
+															_react2['default'].createElement(
+																	_reactBootstrap.OverlayTrigger,
+																	{ trigger: 'click', placement: 'bottom', overlay: _react2['default'].createElement(
+																					_reactBootstrap.Popover,
+																					{ id: 'popID', title: 'Popover bottom' },
+																					_react2['default'].createElement(
+																							'strong',
+																							null,
+																							'Holy guacamole!'
+																					),
+																					' Check this info.'
+																			) },
+																	_react2['default'].createElement(
+																			_reactBootstrap.Button,
+																			{ bsStyle: 'default' },
+																			'Popover'
+																	)
+															),
+															_react2['default'].createElement(
+																	_reactBootstrap.DropdownButton,
+																	{ title: 'dropdown', id: '1' },
+																	_react2['default'].createElement(
+																			_reactBootstrap.MenuItem,
+																			{ eventKey: '1' },
+																			_react2['default'].createElement(
+																					_reactBootstrap.Label,
+																					{ bsSize: 'medium', bsStyle: 'info' },
+																					'IR'
+																			),
+																			' Action'
 																	),
 																	_react2['default'].createElement(
-																			_reactBootstrap.Button,
-																			null,
-																			_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'align-left' })
+																			_reactBootstrap.MenuItem,
+																			{ eventKey: '2' },
+																			_react2['default'].createElement(
+																					_reactBootstrap.Label,
+																					{ bsSize: 'medium', bsStyle: 'warning' },
+																					'RD'
+																			),
+																			' Another action'
 																	),
 																	_react2['default'].createElement(
-																			_reactBootstrap.Button,
-																			null,
-																			_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'align-center' })
+																			_reactBootstrap.MenuItem,
+																			{ eventKey: '3', active: true },
+																			_react2['default'].createElement(
+																					_reactBootstrap.Label,
+																					{ bsSize: 'medium', bsStyle: 'danger' },
+																					'DG'
+																			),
+																			' Active Item'
 																	),
+																	_react2['default'].createElement(_reactBootstrap.MenuItem, { divider: true }),
 																	_react2['default'].createElement(
-																			_reactBootstrap.Button,
-																			null,
-																			_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'align-right' })
-																	),
+																			_reactBootstrap.MenuItem,
+																			{ eventKey: '4' },
+																			_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'cog' }),
+																			' Separated link'
+																	)
+															),
+															_react2['default'].createElement(
+																	'div',
+																	{ className: right },
 																	_react2['default'].createElement(
-																			_reactBootstrap.Button,
+																			_reactBootstrap.ButtonGroup,
 																			null,
-																			_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'align-justify' })
+																			_react2['default'].createElement(
+																					_reactBootstrap.Button,
+																					null,
+																					_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'search' })
+																			),
+																			_react2['default'].createElement(
+																					_reactBootstrap.Button,
+																					null,
+																					_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'align-left' })
+																			),
+																			_react2['default'].createElement(
+																					_reactBootstrap.Button,
+																					null,
+																					_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'align-center' })
+																			),
+																			_react2['default'].createElement(
+																					_reactBootstrap.Button,
+																					null,
+																					_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'align-right' })
+																			),
+																			_react2['default'].createElement(
+																					_reactBootstrap.Button,
+																					null,
+																					_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'align-justify' })
+																			)
+																	)
+															),
+															_react2['default'].createElement(
+																	'div',
+																	{ className: right },
+																	_react2['default'].createElement(
+																			_reactBootstrap.ButtonGroup,
+																			null,
+																			_react2['default'].createElement(
+																					_reactBootstrap.Button,
+																					null,
+																					_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'th' })
+																			),
+																			_react2['default'].createElement(
+																					_reactBootstrap.Button,
+																					null,
+																					_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'th-large' })
+																			),
+																			_react2['default'].createElement(
+																					_reactBootstrap.Button,
+																					null,
+																					_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'th-list' })
+																			)
 																	)
 															)
 													)
@@ -28096,7 +28160,7 @@
 	
 	exports['default'] = Main;
 	module.exports = exports['default'];
-	/* Standard button */ /* Provides extra visual weight and identifies the primary action in a set of buttons */ /* Indicates a successful or positive action */ /* Contextual button for informational alert messages */ /* Indicates caution should be taken with this action */ /* Indicates a dangerous or potentially negative action */ /* Deemphasize a button by making it look like a link while maintaining button behavior */
+	/* Standard button */ /* Provides extra visual weight and identifies the primary action in a set of buttons */ /* Indicates a successful or positive action */ /* Contextual button for informational alert messages */ /* Indicates caution should be taken with this action */ /* Indicates a dangerous or potentially negative action */
 
 	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Applications/MAMP/htdocs/ui-bootstrap/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "main.jsx" + ": " + err.message); } }); } } })(); }
 
@@ -28105,7 +28169,6 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"grid":"main__grid___1gYcz","span":"main__span___39qAk","common":"main__common___1Hulf","root":"main__root___2mR-1 main__common___1Hulf grid__span___2RJ1n","text":"main__text___3wR7I","toolBar":"main__toolBar___RxNO6","right":"main__right___1MS9W"};
 
 /***/ },
 /* 218 */
@@ -43681,7 +43744,14 @@
 	  function SampleComponent() {
 	    _classCallCheck(this, SampleComponent);
 	
-	    _get(Object.getPrototypeOf(SampleComponent.prototype), 'constructor', this).apply(this, arguments);
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+	
+	    _get(Object.getPrototypeOf(SampleComponent.prototype), 'constructor', this).apply(this, args);
+	    this.state = {
+	      alertVisible: true
+	    };
 	  }
 	
 	  _createClass(SampleComponent, [{
@@ -43695,10 +43765,9 @@
 	          { className: _sampleComponentScss2['default'].text },
 	          'This class is locally scoped. Bosh!'
 	        ),
-	        _react2['default'].createElement(_mainMain2['default'], null),
 	        _react2['default'].createElement(
 	          _reactBootstrap.Alert,
-	          { bsStyle: 'warning' },
+	          { bsStyle: 'warning', onDismiss: this.handleAlertDismiss.bind(this) },
 	          _react2['default'].createElement(
 	            'strong',
 	            null,
@@ -43706,7 +43775,7 @@
 	          ),
 	          ' Here is an alert straight into the Component.'
 	        ),
-	        _react2['default'].createElement(_alertAlert2['default'], null),
+	        _react2['default'].createElement(_alertAlert2['default'], { className: 'newClass', gridValue: '1/2' }),
 	        _react2['default'].createElement(_uiBasicsUiBasics2['default'], null),
 	        _react2['default'].createElement(
 	          'p',
@@ -43714,11 +43783,50 @@
 	          'Here is a ui basics ',
 	          _react2['default'].createElement(
 	            _uiBasicsLabelUiBasicsLabel2['default'],
-	            { labelType: 'taBadge' },
+	            { labelType: 'UiBasicslabel tsBadge' },
 	            'label'
 	          )
+	        ),
+	        _react2['default'].createElement(
+	          'p',
+	          null,
+	          'You can see here that we are mixing a ',
+	          _react2['default'].createElement(
+	            'b',
+	            null,
+	            'Bootstrap'
+	          ),
+	          ' ',
+	          _react2['default'].createElement(
+	            _reactBootstrap.Button,
+	            { bsStyle: 'primary', bsSize: 'small' },
+	            'Button'
+	          ),
+	          ' with a label for ',
+	          _react2['default'].createElement(
+	            _uiBasicsLabelUiBasicsLabel2['default'],
+	            { labelType: 'UiBasicslabel statusRefused' },
+	            'Refused'
+	          ),
+	          ', and ',
+	          _react2['default'].createElement(
+	            _uiBasicsLabelUiBasicsLabel2['default'],
+	            { labelType: 'UiBasicslabel statusPending' },
+	            'Pending'
+	          ),
+	          ' from UI basics (Team Edyt)'
 	        )
 	      );
+	    }
+	  }, {
+	    key: 'handleAlertDismiss',
+	    value: function handleAlertDismiss() {
+	      this.setState({ alertVisible: false });
+	    }
+	  }, {
+	    key: 'handleAlertShow',
+	    value: function handleAlertShow() {
+	      this.setState({ alertVisible: true });
 	    }
 	  }]);
 	
@@ -43737,7 +43845,6 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"root":"sampleComponent__root___22z5h grid__grid___tPglQ","text":"sampleComponent__text___1VrwP","alert-warning":"sampleComponent__alert-warning___3hLmm"};
 
 /***/ },
 /* 450 */
@@ -43798,39 +43905,22 @@
 	          ' inside it. We have a simple plain ',
 	          _react2['default'].createElement(
 	            'span',
-	            { className: _uiBasicsScss2['default'].label },
+	            { className: 'UiBasicslabel' },
 	            'Label'
 	          ),
 	          ', a ',
 	          _react2['default'].createElement(
 	            'span',
-	            { className: _uiBasicsScss2['default'].warning },
+	            { className: 'UiBasicslabel warning' },
 	            'warning label'
 	          ),
 	          ', and here is a ',
 	          _react2['default'].createElement(
 	            'span',
-	            { className: _uiBasicsScss2['default'].statusGranted },
+	            { className: 'UiBasicslabel statusGranted' },
 	            'TA'
 	          ),
 	          ' badge.'
-	        ),
-	        _react2['default'].createElement(
-	          'p',
-	          null,
-	          'You can see here that we are mixing a bootstrap ',
-	          _react2['default'].createElement(
-	            _reactBootstrap.Button,
-	            { bsStyle: 'primary' },
-	            'Button'
-	          ),
-	          ' with a simple plain ',
-	          _react2['default'].createElement(
-	            'span',
-	            { className: _uiBasicsScss2['default'].label },
-	            'Label'
-	          ),
-	          ' from UI basics'
 	        )
 	      );
 	    }
@@ -43851,7 +43941,6 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"visibly-hidden":"uiBasics__visibly-hidden___39kop","label":"uiBasics__label___1qyKw","warning":"uiBasics__warning___22abb uiBasics__label___1qyKw","taBadge":"uiBasics__taBadge___1Neu9 uiBasics__label___1qyKw","statusGranted":"uiBasics__statusGranted___1oyFG uiBasics__label___1qyKw","statusPending":"uiBasics__statusPending___1Kt1h uiBasics__label___1qyKw","statusRefused":"uiBasics__statusRefused___1UW_1 uiBasics__label___1qyKw"};
 
 /***/ },
 /* 452 */
@@ -43898,6 +43987,12 @@
 	
 	      var className = this.props.labelType;
 	
+	      /*if (this.props.labelType == 'taBadge') { className = styles.taBadge }
+	      else if (this.props.labelType == 'statusGranted') { className = styles.statusGranted }
+	      else if (this.props.labelType == 'statusPending') { className = styles.statusPending }
+	      else if (this.props.labelType == 'statusRefused') { className = styles.statusRefused }
+	      else { className = styles.label }*/
+	
 	      return _react2['default'].createElement(
 	        'span',
 	        { className: className },
@@ -43920,7 +44015,6 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"label":"uiBasicsLabel__label___1MJJc","warning":"uiBasicsLabel__warning___2Xixe uiBasicsLabel__label___1MJJc","taBadge":"uiBasicsLabel__taBadge___1l-Ev uiBasicsLabel__label___1MJJc","statusGranted":"uiBasicsLabel__statusGranted___3MlQj uiBasicsLabel__label___1MJJc","statusPending":"uiBasicsLabel__statusPending___25_cP uiBasicsLabel__label___1MJJc","statusRefused":"uiBasicsLabel__statusRefused___3nLYl uiBasicsLabel__label___1MJJc"};
 
 /***/ },
 /* 454 */
@@ -43976,7 +44070,7 @@
 							var title = _react2['default'].createElement(
 									'h3',
 									null,
-									'Ui Basics'
+									'Ui Basics (Team Edyt)'
 							);
 	
 							var tooltip = _react2['default'].createElement(
@@ -43995,7 +44089,7 @@
 									null,
 									_react2['default'].createElement(
 											_reactBootstrap.Panel,
-											{ header: title, bsStyle: 'primary' },
+											{ className: _alertScss2['default'].grid6of12, header: title, bsStyle: 'primary' },
 											_react2['default'].createElement(_uiBasicsUiBasics2['default'], null)
 									),
 									_react2['default'].createElement(
@@ -44058,36 +44152,6 @@
 															'Click'
 													)
 											)
-									),
-									_react2['default'].createElement('hr', null),
-									_react2['default'].createElement(
-											_reactBootstrap.ButtonGroup,
-											null,
-											_react2['default'].createElement(
-													_reactBootstrap.Button,
-													null,
-													_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'search' })
-											),
-											_react2['default'].createElement(
-													_reactBootstrap.Button,
-													null,
-													_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'align-left' })
-											),
-											_react2['default'].createElement(
-													_reactBootstrap.Button,
-													null,
-													_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'align-center' })
-											),
-											_react2['default'].createElement(
-													_reactBootstrap.Button,
-													null,
-													_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'align-right' })
-											),
-											_react2['default'].createElement(
-													_reactBootstrap.Button,
-													null,
-													_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'align-justify' })
-											)
 									)
 							);
 					}
@@ -44108,7 +44172,6 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"btn-toolbar":"alert__btn-toolbar___27S33","btn":"alert__btn___18RxC"};
 
 /***/ }
 /******/ ]);

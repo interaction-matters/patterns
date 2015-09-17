@@ -1,4 +1,4 @@
-@import '../../shared/styles/grid.scss';
+@import '../../shared/styles/layout/grid.scss';
 //$icon-font-path: "/node_modules/bootstrap-sass/assets/fonts/bootstrap/";
 //@import "bootstrap-sass/assets/stylesheets/bootstrap";
 
@@ -10,8 +10,6 @@ $light-grey: #eee;
 }
 
 .root {
-  composes: common;
-  composes: span from '../../shared/styles/grid.scss';
   border-width: 2px;
   border-style: solid;
   border-color: $red;
@@ -19,7 +17,7 @@ $light-grey: #eee;
   margin: 10px 6px;
   
   a {
-    color:$red;
+    //color:$red;
     &:hover {
       color: blue;
     }

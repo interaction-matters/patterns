@@ -32,7 +32,7 @@ class Main extends React.Component {
 
     return (
     	<Panel>
-	    	<div className={ grid }>
+	    	<div className='grid6of12'>
 		    	<div className={ toolbar }>
 		    		<ButtonToolbar>
 					    {/* Standard button */}

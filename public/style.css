@@ -1,71 +1,68 @@
 body p {
   color: grey; }
-.grid__grid___tPglQ {
+
+body .shared-class {
+  float: left;
+  color: red; }
+.grid {
   max-width: 80%;
   margin-left: auto;
   margin-right: auto; }
-  .grid__grid___tPglQ:after {
+  .grid:after {
     content: " ";
     display: block;
     clear: both; }
 
-.grid__span___2RJ1n {
-  width: 83.05085%;
-  float: left;
-  margin-right: 1.69492%; }
-.main__grid___1gYcz {
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto; }
-  .main__grid___1gYcz:after {
-    content: " ";
-    display: block;
-    clear: both; }
-
-.main__span___39qAk {
+.span {
   width: 83.05085%;
   float: left;
   margin-right: 1.69492%; }
 
-.main__common___1Hulf {
+.common {
   background: #eee; }
 
-.main__root___2mR-1 {
+.root {
   border-width: 2px;
   border-style: solid;
   border-color: red;
   padding: 0 20px;
   margin: 10px 6px; }
-  .main__root___2mR-1 a {
+  .root a {
     color: red; }
-    .main__root___2mR-1 a:hover {
+    .root a:hover {
       color: blue; }
 
-.main__text___3wR7I {
+.text {
   color: #777;
   font-size: 24px;
   font-family: helvetica, arial, sans-serif;
   font-weight: 600; }
 
-.main__toolBar___RxNO6 {
+.toolBar {
   width: 100%;
-  background: #eee;
-  padding: 10px; }
+  padding: 10px 0; }
 
-.main__right___1MS9W {
+.right {
   float: right; }
-.sampleComponent__root___22z5h {
+body p {
+  color: grey; }
+
+body .shared-class {
+  float: left;
+  color: red; }
+
+.root {
   margin: 10px auto; }
 
-.sampleComponent__text___1VrwP {
+.text {
   color: #777;
   font-size: 24px;
   font-family: helvetica, arial, sans-serif;
   font-weight: 600; }
 
-.sampleComponent__alert-warning___3hLmm {
+.alert-warning {
   color: red; }
-.uiBasics__visibly-hidden___39kop {
+.visibly-hidden {
   height: 1px;
   left: -10px;
   opacity: 0;
@@ -85,8 +82,7 @@ a {
     text-decoration: underline; }
   a:active {
     color: #071c36; }
-
-.uiBasics__label___1qyKw {
+.UiBasicslabel {
   background: #4f5559;
   border-radius: 3px;
   color: white;
@@ -94,49 +90,28 @@ a {
   font-size: 90%;
   line-height: 1.4;
   padding: 1px 4px; }
+  .UiBasicslabel.warning {
+    background: #d9360d; }
+  .UiBasicslabel.taBadge {
+    background-color: #228a4b;
+    font-weight: bold;
+    padding: 1px 6px; }
+  .UiBasicslabel.statusGranted {
+    background-color: #21853b; }
+  .UiBasicslabel.statusPending {
+    background-color: #3d8183; }
+  .UiBasicslabel.statusRefused {
+    background-color: #202020; }
+body p {
+  color: grey; }
 
-.uiBasics__warning___22abb {
-  background: #d9360d; }
+body .shared-class {
+  float: left;
+  color: red; }
 
-.uiBasics__taBadge___1Neu9 {
-  background-color: #228a4b;
-  font-weight: bold;
-  padding: 1px 6px; }
-
-.uiBasics__statusGranted___1oyFG {
-  background-color: #21853b; }
-
-.uiBasics__statusPending___1Kt1h {
-  background-color: #3d8183; }
-
-.uiBasics__statusRefused___1UW_1 {
-  background-color: #202020; }
-.uiBasicsLabel__label___1MJJc {
-  background: #4f5559;
-  border-radius: 3px;
-  color: white;
-  display: inline-block;
-  font-size: 90%;
-  line-height: 1.4;
-  padding: 1px 4px; }
-
-.uiBasicsLabel__warning___2Xixe {
-  background: #d9360d; }
-
-.uiBasicsLabel__taBadge___1l-Ev {
-  background-color: #228a4b;
-  font-weight: bold;
-  padding: 1px 6px; }
-
-.uiBasicsLabel__statusGranted___3MlQj {
-  background-color: #21853b; }
-
-.uiBasicsLabel__statusPending___25_cP {
-  background-color: #3d8183; }
-
-.uiBasicsLabel__statusRefused___3nLYl {
-  background-color: #202020; }
-.alert__btn-toolbar___27S33 .alert__btn___18RxC {
-  border-radius: 0; }
+.grid6of12 {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%; }
 
 /*# sourceMappingURL=style.css.map*/

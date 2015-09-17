@@ -27,8 +27,8 @@ class SampleComponent extends Component {
 			  </Alert>
 			  <AlertBox className="newClass" gridValue="1/2" />
         <UiBasics />
-        <p>Here is a ui basics <UiBasicsLabel labelType='tsBadge'>label</UiBasicsLabel></p>
-        <p>You can see here that we are mixing a <b>Bootstrap</b> <Button bsStyle='primary' bsSize="small">Button</Button> with a label for <UiBasicsLabel labelType='statusRefused'>Refused</UiBasicsLabel>, and <UiBasicsLabel labelType='statusPending'>Pending</UiBasicsLabel> from UI basics (Team Edyt)</p>
+        <p>Here is a ui basics <UiBasicsLabel labelType='UiBasicslabel tsBadge'>label</UiBasicsLabel></p>
+        <p>You can see here that we are mixing a <b>Bootstrap</b> <Button bsStyle='primary' bsSize="small">Button</Button> with a label for <UiBasicsLabel labelType='UiBasicslabel statusRefused'>Refused</UiBasicsLabel>, and <UiBasicsLabel labelType='UiBasicslabel statusPending'>Pending</UiBasicsLabel> from UI basics (Team Edyt)</p>
       </Panel>
     );
   }

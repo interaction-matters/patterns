@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
-import styles from './shared/styles/style.scss';
+// Here, we import all of our base styles
+import styles from './app.scss';
 
 import Main from './components/main/main';
 import SampleComponent from './components/sampleComponent/sampleComponent';

@@ -1,6 +1,6 @@
-@import '../../shared/styles/variables.scss';
+@import '../../shared/styles/base/variables.scss';
 
-.label {
+.UiBasicslabel {
   background: $color-gray-600;
   border-radius: 3px;
   color: $color-white;
@@ -8,29 +8,25 @@
   font-size: 90%;
   line-height: 1.4;
   padding: 1px 4px;
-}
 
-.warning {
-  composes: label;
-  background: $color-orange-500;
-}
-  
-// Miscellaneous global classes
-.taBadge {
-  composes: label;
-  background-color: $color-green-500;
-  font-weight: bold;
-  padding: 1px 6px;
-}
-.statusGranted {
-  composes: label;
-  background-color: $color-green-600;
-}
-.statusPending {
-  composes: label;
-  background-color: $color-cyan-500;
-}
-.statusRefused {
-  composes: label;
-  background-color: $color-black;
+	&.warning {
+  	background: $color-orange-500;
+	}
+	  
+	// Miscellaneous global classes
+	&.taBadge {
+	  background-color: $color-green-500;
+	  font-weight: bold;
+	  padding: 1px 6px;
+	}
+	&.statusGranted {
+	  background-color: $color-green-600;
+	}
+	&.statusPending {
+	  background-color: $color-cyan-500;
+	}
+	&.statusRefused {
+	  background-color: $color-black;
+	}
+
 }
