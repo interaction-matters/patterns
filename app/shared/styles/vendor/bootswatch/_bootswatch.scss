@@ -2,13 +2,6 @@
 // Bootswatch
 // -----------------------------------------------------
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" !default;
-
-@function web-font($path){
-  @return url("#{$path}");
-}
-//@import web-font($web-font-path);
-
 // Navbar =====================================================================
 
 .navbar {

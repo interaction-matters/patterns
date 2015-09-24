@@ -1,11 +1,12 @@
-//Local styles
-.root {
-  margin:10px auto;
+@import "susy/sass/susy";
+
+.main-panel {
+  @include span (10 of 12);
+  min-height: 768px;
 }
 
-.text {
-  color: #777;
-  font-size: 24px;
-  font-family: helvetica, arial, sans-serif;
-  font-weight: 600;
+.secondary-panel {
+  @include span (2 of 12 last);
+  height:100%;
+  min-height: 768px;
 }

@@ -2,7 +2,7 @@ import styles from './alert.scss';
 
 import React, { Component } from 'react';
 
-import UiBasics from '../uiBasics/uiBasics';
+import UiBasics from 'components/uiBasics/uiBasics';
 
 //React-bootstrap components
 import { Alert } from 'react-bootstrap';

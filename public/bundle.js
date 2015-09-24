@@ -7453,25 +7453,58 @@
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
-	  value: true
+		value: true
 	});
 	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _react = __webpack_require__(58);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _appApp = __webpack_require__(214);
+	// Here, we import all of our base styles
 	
-	var _appApp2 = _interopRequireDefault(_appApp);
+	var _appScss = __webpack_require__(214);
 	
-	_react2['default'].render(_react2['default'].createElement(_appApp2['default'], null), document.querySelector("#myApp"));
+	var _appScss2 = _interopRequireDefault(_appScss);
 	
-	exports['default'] = _appApp2['default'];
+	var _viewsMainMain = __webpack_require__(456);
+	
+	var _viewsMainMain2 = _interopRequireDefault(_viewsMainMain);
+	
+	var App = (function (_Component) {
+		_inherits(App, _Component);
+	
+		function App() {
+			_classCallCheck(this, App);
+	
+			_get(Object.getPrototypeOf(App.prototype), 'constructor', this).apply(this, arguments);
+		}
+	
+		_createClass(App, [{
+			key: 'render',
+			value: function render() {
+				return _react2['default'].createElement(_viewsMainMain2['default'], null);
+			}
+		}]);
+	
+		return App;
+	})(_react.Component);
+	
+	exports['default'] = App;
+	
+	_react2['default'].render(_react2['default'].createElement(App, null), document.querySelector("#myApp"));
 	module.exports = exports['default'];
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Applications/MAMP/htdocs/ui-bootstrap/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.jsx" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Applications/MAMP/htdocs/ui-bootstrap/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "app.jsx" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 58 */
@@ -27850,78 +27883,12 @@
 
 /***/ },
 /* 214 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Applications/MAMP/htdocs/ui-bootstrap/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Applications/MAMP/htdocs/ui-bootstrap/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
-	
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-		value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(58);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _sharedStylesStyleScss = __webpack_require__(215);
-	
-	var _sharedStylesStyleScss2 = _interopRequireDefault(_sharedStylesStyleScss);
-	
-	var _componentsMainMain = __webpack_require__(216);
-	
-	var _componentsMainMain2 = _interopRequireDefault(_componentsMainMain);
-	
-	var _componentsSampleComponentSampleComponent = __webpack_require__(448);
-	
-	var _componentsSampleComponentSampleComponent2 = _interopRequireDefault(_componentsSampleComponentSampleComponent);
-	
-	var App = (function (_Component) {
-		_inherits(App, _Component);
-	
-		function App() {
-			_classCallCheck(this, App);
-	
-			_get(Object.getPrototypeOf(App.prototype), 'constructor', this).apply(this, arguments);
-		}
-	
-		_createClass(App, [{
-			key: 'render',
-			value: function render() {
-				return _react2['default'].createElement(
-					'div',
-					null,
-					_react2['default'].createElement(_componentsMainMain2['default'], null),
-					_react2['default'].createElement(_componentsSampleComponentSampleComponent2['default'], null)
-				);
-			}
-		}]);
-	
-		return App;
-	})(_react.Component);
-	
-	exports['default'] = App;
-	module.exports = exports['default'];
-
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Applications/MAMP/htdocs/ui-bootstrap/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "app.jsx" + ": " + err.message); } }); } } })(); }
-
-/***/ },
-/* 215 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
+/* 215 */,
 /* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -27990,161 +27957,76 @@
 									null,
 									_react2['default'].createElement(
 											'div',
-											{ className: 'grid6of12' },
+											{ className: 'toolbar' },
+											_react2['default'].createElement(
+													_reactBootstrap.ButtonGroup,
+													{ vertical: true },
+													_react2['default'].createElement(
+															_reactBootstrap.Button,
+															null,
+															'D'
+													),
+													_react2['default'].createElement(
+															_reactBootstrap.OverlayTrigger,
+															{ placement: 'bottom', overlay: tooltip },
+															_react2['default'].createElement(
+																	_reactBootstrap.Button,
+																	{ bsStyle: 'primary' },
+																	'P'
+															)
+													),
+													_react2['default'].createElement(
+															_reactBootstrap.Button,
+															{ bsStyle: 'success' },
+															'S'
+													),
+													_react2['default'].createElement(
+															_reactBootstrap.Button,
+															{ bsStyle: 'info' },
+															'I'
+													),
+													_react2['default'].createElement(
+															_reactBootstrap.Button,
+															{ bsStyle: 'warning' },
+															'W'
+													),
+													_react2['default'].createElement(
+															_reactBootstrap.Button,
+															{ bsStyle: 'danger' },
+															'Dg'
+													)
+											),
+											_react2['default'].createElement('hr', null),
 											_react2['default'].createElement(
 													'div',
-													{ className: toolbar },
+													null,
 													_react2['default'].createElement(
-															_reactBootstrap.ButtonToolbar,
-															null,
+															_reactBootstrap.ButtonGroup,
+															{ vertical: true },
 															_react2['default'].createElement(
 																	_reactBootstrap.Button,
 																	null,
-																	'D'
-															),
-															_react2['default'].createElement(
-																	_reactBootstrap.OverlayTrigger,
-																	{ placement: 'bottom', overlay: tooltip },
-																	_react2['default'].createElement(
-																			_reactBootstrap.Button,
-																			{ bsStyle: 'primary' },
-																			'P'
-																	)
+																	_react2['default'].createElement('i', { className: 'icon-icon-annotate' })
 															),
 															_react2['default'].createElement(
 																	_reactBootstrap.Button,
-																	{ bsStyle: 'success' },
-																	'S'
+																	null,
+																	_react2['default'].createElement('i', { className: 'icon-outdent' })
 															),
 															_react2['default'].createElement(
 																	_reactBootstrap.Button,
-																	{ bsStyle: 'info' },
-																	'I'
+																	null,
+																	_react2['default'].createElement('i', { className: 'icon-indent' })
 															),
 															_react2['default'].createElement(
 																	_reactBootstrap.Button,
-																	{ bsStyle: 'warning' },
-																	'W'
+																	null,
+																	_react2['default'].createElement('i', { className: 'icon-template-add' })
 															),
 															_react2['default'].createElement(
 																	_reactBootstrap.Button,
-																	{ bsStyle: 'danger' },
-																	'Dg'
-															),
-															_react2['default'].createElement(
-																	_reactBootstrap.OverlayTrigger,
-																	{ trigger: 'click', placement: 'bottom', overlay: _react2['default'].createElement(
-																					_reactBootstrap.Popover,
-																					{ id: 'popID', title: 'Popover bottom' },
-																					_react2['default'].createElement(
-																							'strong',
-																							null,
-																							'Holy guacamole!'
-																					),
-																					' Check this info.'
-																			) },
-																	_react2['default'].createElement(
-																			_reactBootstrap.Button,
-																			{ bsStyle: 'default' },
-																			'Popover'
-																	)
-															),
-															_react2['default'].createElement(
-																	_reactBootstrap.DropdownButton,
-																	{ title: 'dropdown', id: '1' },
-																	_react2['default'].createElement(
-																			_reactBootstrap.MenuItem,
-																			{ eventKey: '1' },
-																			_react2['default'].createElement(
-																					_reactBootstrap.Label,
-																					{ bsSize: 'medium', bsStyle: 'info' },
-																					'IR'
-																			),
-																			' Action'
-																	),
-																	_react2['default'].createElement(
-																			_reactBootstrap.MenuItem,
-																			{ eventKey: '2' },
-																			_react2['default'].createElement(
-																					_reactBootstrap.Label,
-																					{ bsSize: 'medium', bsStyle: 'warning' },
-																					'RD'
-																			),
-																			' Another action'
-																	),
-																	_react2['default'].createElement(
-																			_reactBootstrap.MenuItem,
-																			{ eventKey: '3', active: true },
-																			_react2['default'].createElement(
-																					_reactBootstrap.Label,
-																					{ bsSize: 'medium', bsStyle: 'danger' },
-																					'DG'
-																			),
-																			' Active Item'
-																	),
-																	_react2['default'].createElement(_reactBootstrap.MenuItem, { divider: true }),
-																	_react2['default'].createElement(
-																			_reactBootstrap.MenuItem,
-																			{ eventKey: '4' },
-																			_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'cog' }),
-																			' Separated link'
-																	)
-															),
-															_react2['default'].createElement(
-																	'div',
-																	{ className: right },
-																	_react2['default'].createElement(
-																			_reactBootstrap.ButtonGroup,
-																			null,
-																			_react2['default'].createElement(
-																					_reactBootstrap.Button,
-																					null,
-																					_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'search' })
-																			),
-																			_react2['default'].createElement(
-																					_reactBootstrap.Button,
-																					null,
-																					_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'align-left' })
-																			),
-																			_react2['default'].createElement(
-																					_reactBootstrap.Button,
-																					null,
-																					_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'align-center' })
-																			),
-																			_react2['default'].createElement(
-																					_reactBootstrap.Button,
-																					null,
-																					_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'align-right' })
-																			),
-																			_react2['default'].createElement(
-																					_reactBootstrap.Button,
-																					null,
-																					_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'align-justify' })
-																			)
-																	)
-															),
-															_react2['default'].createElement(
-																	'div',
-																	{ className: right },
-																	_react2['default'].createElement(
-																			_reactBootstrap.ButtonGroup,
-																			null,
-																			_react2['default'].createElement(
-																					_reactBootstrap.Button,
-																					null,
-																					_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'th' })
-																			),
-																			_react2['default'].createElement(
-																					_reactBootstrap.Button,
-																					null,
-																					_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'th-large' })
-																			),
-																			_react2['default'].createElement(
-																					_reactBootstrap.Button,
-																					null,
-																					_react2['default'].createElement(_reactBootstrap.Glyphicon, { glyph: 'th-list' })
-																			)
-																	)
+																	null,
+																	_react2['default'].createElement('i', { className: 'icon-find-in-page' })
 															)
 													)
 											)
@@ -43720,23 +43602,23 @@
 	
 	var _sampleComponentScss2 = _interopRequireDefault(_sampleComponentScss);
 	
-	var _mainMain = __webpack_require__(216);
+	var _componentsMainMain = __webpack_require__(216);
 	
-	var _mainMain2 = _interopRequireDefault(_mainMain);
+	var _componentsMainMain2 = _interopRequireDefault(_componentsMainMain);
 	
-	var _uiBasicsUiBasics = __webpack_require__(450);
+	var _componentsUiBasicsUiBasics = __webpack_require__(450);
 	
-	var _uiBasicsUiBasics2 = _interopRequireDefault(_uiBasicsUiBasics);
+	var _componentsUiBasicsUiBasics2 = _interopRequireDefault(_componentsUiBasicsUiBasics);
 	
-	var _uiBasicsLabelUiBasicsLabel = __webpack_require__(452);
+	var _componentsUiBasicsLabelUiBasicsLabel = __webpack_require__(452);
 	
-	var _uiBasicsLabelUiBasicsLabel2 = _interopRequireDefault(_uiBasicsLabelUiBasicsLabel);
+	var _componentsUiBasicsLabelUiBasicsLabel2 = _interopRequireDefault(_componentsUiBasicsLabelUiBasicsLabel);
 	
 	var _reactBootstrap = __webpack_require__(218);
 	
-	var _alertAlert = __webpack_require__(454);
+	var _componentsAlertAlert = __webpack_require__(454);
 	
-	var _alertAlert2 = _interopRequireDefault(_alertAlert);
+	var _componentsAlertAlert2 = _interopRequireDefault(_componentsAlertAlert);
 	
 	var SampleComponent = (function (_Component) {
 	  _inherits(SampleComponent, _Component);
@@ -43775,14 +43657,14 @@
 	          ),
 	          ' Here is an alert straight into the Component.'
 	        ),
-	        _react2['default'].createElement(_alertAlert2['default'], { className: 'newClass', gridValue: '1/2' }),
-	        _react2['default'].createElement(_uiBasicsUiBasics2['default'], null),
+	        _react2['default'].createElement(_componentsAlertAlert2['default'], { className: 'newClass', gridValue: '1/2' }),
+	        _react2['default'].createElement(_componentsUiBasicsUiBasics2['default'], null),
 	        _react2['default'].createElement(
 	          'p',
 	          null,
 	          'Here is a ui basics ',
 	          _react2['default'].createElement(
-	            _uiBasicsLabelUiBasicsLabel2['default'],
+	            _componentsUiBasicsLabelUiBasicsLabel2['default'],
 	            { labelType: 'UiBasicslabel tsBadge' },
 	            'label'
 	          )
@@ -43804,13 +43686,13 @@
 	          ),
 	          ' with a label for ',
 	          _react2['default'].createElement(
-	            _uiBasicsLabelUiBasicsLabel2['default'],
+	            _componentsUiBasicsLabelUiBasicsLabel2['default'],
 	            { labelType: 'UiBasicslabel statusRefused' },
 	            'Refused'
 	          ),
 	          ', and ',
 	          _react2['default'].createElement(
-	            _uiBasicsLabelUiBasicsLabel2['default'],
+	            _componentsUiBasicsLabelUiBasicsLabel2['default'],
 	            { labelType: 'UiBasicslabel statusPending' },
 	            'Pending'
 	          ),
@@ -43921,7 +43803,8 @@
 	            'TA'
 	          ),
 	          ' badge.'
-	        )
+	        ),
+	        _react2['default'].createElement('i', { className: 'icon-quote' })
 	      );
 	    }
 	  }]);
@@ -44046,9 +43929,9 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _uiBasicsUiBasics = __webpack_require__(450);
+	var _componentsUiBasicsUiBasics = __webpack_require__(450);
 	
-	var _uiBasicsUiBasics2 = _interopRequireDefault(_uiBasicsUiBasics);
+	var _componentsUiBasicsUiBasics2 = _interopRequireDefault(_componentsUiBasicsUiBasics);
 	
 	//React-bootstrap components
 	
@@ -44090,7 +43973,7 @@
 									_react2['default'].createElement(
 											_reactBootstrap.Panel,
 											{ className: _alertScss2['default'].grid6of12, header: title, bsStyle: 'primary' },
-											_react2['default'].createElement(_uiBasicsUiBasics2['default'], null)
+											_react2['default'].createElement(_componentsUiBasicsUiBasics2['default'], null)
 									),
 									_react2['default'].createElement(
 											_reactBootstrap.ButtonToolbar,
@@ -44169,6 +44052,328 @@
 
 /***/ },
 /* 455 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 456 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Applications/MAMP/htdocs/ui-bootstrap/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Applications/MAMP/htdocs/ui-bootstrap/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+		value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(58);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	// Sass dependencies
+	
+	var _mainScss = __webpack_require__(461);
+	
+	var _mainScss2 = _interopRequireDefault(_mainScss);
+	
+	// React dependencies
+	
+	var _componentsMainMain = __webpack_require__(216);
+	
+	var _componentsMainMain2 = _interopRequireDefault(_componentsMainMain);
+	
+	var _componentsSampleComponentSampleComponent = __webpack_require__(448);
+	
+	var _componentsSampleComponentSampleComponent2 = _interopRequireDefault(_componentsSampleComponentSampleComponent);
+	
+	var _modulesNavigationNavigation = __webpack_require__(457);
+	
+	var _modulesNavigationNavigation2 = _interopRequireDefault(_modulesNavigationNavigation);
+	
+	var _modulesHelpersHelpers = __webpack_require__(459);
+	
+	var _modulesHelpersHelpers2 = _interopRequireDefault(_modulesHelpersHelpers);
+	
+	var ViewMain = (function (_Component) {
+		_inherits(ViewMain, _Component);
+	
+		function ViewMain() {
+			_classCallCheck(this, ViewMain);
+	
+			_get(Object.getPrototypeOf(ViewMain.prototype), 'constructor', this).apply(this, arguments);
+		}
+	
+		_createClass(ViewMain, [{
+			key: 'render',
+			value: function render() {
+				return _react2['default'].createElement(
+					'div',
+					{ className: 'view' },
+					_react2['default'].createElement(
+						'div',
+						{ className: 'vertical-navigation' },
+						_react2['default'].createElement(_modulesNavigationNavigation2['default'], null)
+					),
+					_react2['default'].createElement(
+						'div',
+						{ className: 'wrapper' },
+						_react2['default'].createElement(_componentsSampleComponentSampleComponent2['default'], null)
+					),
+					_react2['default'].createElement(
+						'div',
+						{ className: 'helpers' },
+						_react2['default'].createElement(_modulesHelpersHelpers2['default'], null)
+					)
+				);
+			}
+		}]);
+	
+		return ViewMain;
+	})(_react.Component);
+	
+	exports['default'] = ViewMain;
+	module.exports = exports['default'];
+	/* Main navigation */ /* Routes */ /* This will be replaced with whichever routes we pass in */ /* But for now... */ /* Helpers */
+
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Applications/MAMP/htdocs/ui-bootstrap/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "main.jsx" + ": " + err.message); } }); } } })(); }
+
+/***/ },
+/* 457 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Applications/MAMP/htdocs/ui-bootstrap/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Applications/MAMP/htdocs/ui-bootstrap/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(58);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _navigationScss = __webpack_require__(458);
+	
+	var _navigationScss2 = _interopRequireDefault(_navigationScss);
+	
+	var _componentsMainMain = __webpack_require__(216);
+	
+	var _componentsMainMain2 = _interopRequireDefault(_componentsMainMain);
+	
+	var Navigation = (function (_Component) {
+	  _inherits(Navigation, _Component);
+	
+	  function Navigation() {
+	    _classCallCheck(this, Navigation);
+	
+	    _get(Object.getPrototypeOf(Navigation.prototype), 'constructor', this).apply(this, arguments);
+	  }
+	
+	  _createClass(Navigation, [{
+	    key: 'render',
+	    value: function render() {
+	
+	      return _react2['default'].createElement(
+	        'div',
+	        null,
+	        _react2['default'].createElement(_componentsMainMain2['default'], null)
+	      );
+	    }
+	  }]);
+	
+	  return Navigation;
+	})(_react.Component);
+	
+	exports['default'] = Navigation;
+	;
+	module.exports = exports['default'];
+
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Applications/MAMP/htdocs/ui-bootstrap/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "navigation.jsx" + ": " + err.message); } }); } } })(); }
+
+/***/ },
+/* 458 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 459 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Applications/MAMP/htdocs/ui-bootstrap/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Applications/MAMP/htdocs/ui-bootstrap/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+			value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(58);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _helpersScss = __webpack_require__(460);
+	
+	var _helpersScss2 = _interopRequireDefault(_helpersScss);
+	
+	//React-bootstrap components
+	
+	var _reactBootstrap = __webpack_require__(218);
+	
+	var Helpers = (function (_Component) {
+			_inherits(Helpers, _Component);
+	
+			function Helpers() {
+					_classCallCheck(this, Helpers);
+	
+					_get(Object.getPrototypeOf(Helpers.prototype), 'constructor', this).apply(this, arguments);
+			}
+	
+			_createClass(Helpers, [{
+					key: 'render',
+					value: function render() {
+	
+							var tooltip = _react2['default'].createElement(
+									_reactBootstrap.Tooltip,
+									{ id: 'tooltip' },
+									_react2['default'].createElement(
+											'strong',
+											null,
+											'Holy guacamole!'
+									),
+									' Check this info.'
+							);
+	
+							return _react2['default'].createElement(
+									'div',
+									{ className: 'toolbar' },
+									_react2['default'].createElement(
+											_reactBootstrap.ButtonGroup,
+											{ vertical: true },
+											_react2['default'].createElement(
+													_reactBootstrap.Button,
+													null,
+													'D'
+											),
+											_react2['default'].createElement(
+													_reactBootstrap.OverlayTrigger,
+													{ placement: 'left', overlay: tooltip },
+													_react2['default'].createElement(
+															_reactBootstrap.Button,
+															{ bsStyle: 'primary' },
+															'P'
+													)
+											),
+											_react2['default'].createElement(
+													_reactBootstrap.Button,
+													{ bsStyle: 'success' },
+													'S'
+											),
+											_react2['default'].createElement(
+													_reactBootstrap.Button,
+													{ bsStyle: 'info' },
+													'I'
+											),
+											_react2['default'].createElement(
+													_reactBootstrap.Button,
+													{ bsStyle: 'warning' },
+													'W'
+											),
+											_react2['default'].createElement(
+													_reactBootstrap.Button,
+													{ bsStyle: 'danger' },
+													'Dg'
+											)
+									),
+									_react2['default'].createElement('br', null),
+									_react2['default'].createElement(
+											'div',
+											null,
+											_react2['default'].createElement(
+													_reactBootstrap.ButtonGroup,
+													{ vertical: true },
+													_react2['default'].createElement(
+															_reactBootstrap.Button,
+															null,
+															_react2['default'].createElement('i', { className: 'icon-icon-annotate' })
+													),
+													_react2['default'].createElement(
+															_reactBootstrap.Button,
+															null,
+															_react2['default'].createElement('i', { className: 'icon-outdent' })
+													),
+													_react2['default'].createElement(
+															_reactBootstrap.Button,
+															null,
+															_react2['default'].createElement('i', { className: 'icon-indent' })
+													),
+													_react2['default'].createElement(
+															_reactBootstrap.Button,
+															null,
+															_react2['default'].createElement('i', { className: 'icon-template-add' })
+													),
+													_react2['default'].createElement(
+															_reactBootstrap.Button,
+															null,
+															_react2['default'].createElement('i', { className: 'icon-find-in-page' })
+													)
+											)
+									)
+							);
+					}
+			}]);
+	
+			return Helpers;
+	})(_react.Component);
+	
+	exports['default'] = Helpers;
+	;
+	module.exports = exports['default'];
+	/* Standard button */ /* Provides extra visual weight and identifies the primary action in a set of buttons */ /* Indicates a successful or positive action */ /* Contextual button for informational alert messages */ /* Indicates caution should be taken with this action */ /* Indicates a dangerous or potentially negative action */
+
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Applications/MAMP/htdocs/ui-bootstrap/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "helpers.jsx" + ": " + err.message); } }); } } })(); }
+
+/***/ },
+/* 460 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 461 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

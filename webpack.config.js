@@ -6,7 +6,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:8080', // WebpackDevServer host and port
     'webpack/hot/only-dev-server',
-    './index.jsx' // Your appʼs entry point
+    './app/app.jsx' // Appʼs entry point
   ],
   devtool: process.env.WEBPACK_DEVTOOL || 'source-map',
   output: {
@@ -14,6 +14,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
+    root: path.join(__dirname, 'app'),
     extensions: ['', '.js', '.jsx']
   },
   module: {
@@ -27,7 +28,7 @@ module.exports = {
       loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass?includePaths[]=' + path.resolve(__dirname, 'node_modules'))
     }, { 
       test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/, 
-      loader: 'url-loader?limit=10000&minetype=application/font-woff' 
+      loader: 'url-loader?limit=10000&name=fonts/[name].[ext]'
     }
     ]
   },

@@ -32,9 +32,9 @@ class Main extends React.Component {
 
     return (
     	<Panel>
-	    	<div className='grid6of12'>
-		    	<div className={ toolbar }>
-		    		<ButtonToolbar>
+	    	<div className='toolbar'>
+		    	
+		    		<ButtonGroup vertical>
 					    {/* Standard button */}
 					    <Button>D</Button>
 
@@ -55,38 +55,21 @@ class Main extends React.Component {
 					    {/* Indicates a dangerous or potentially negative action */}
 					    <Button bsStyle='danger'>Dg</Button>
 
-					    <OverlayTrigger trigger='click' placement='bottom' overlay={<Popover id='popID' title='Popover bottom'><strong>Holy guacamole!</strong> Check this info.</Popover>}>
-					      <Button bsStyle='default'>Popover</Button>
-					    </OverlayTrigger>
+					    
 
-					    <DropdownButton title='dropdown' id="1">
-					      <MenuItem eventKey='1'><Label bsSize='medium' bsStyle='info'>IR</Label> Action</MenuItem>
-					      <MenuItem eventKey='2'><Label bsSize='medium' bsStyle='warning'>RD</Label> Another action</MenuItem>
-					      <MenuItem eventKey='3' active><Label bsSize='medium' bsStyle='danger'>DG</Label> Active Item</MenuItem>
-					      <MenuItem divider />
-					      <MenuItem eventKey='4'><Glyphicon glyph='cog' /> Separated link</MenuItem>
-					    </DropdownButton>
+					  </ButtonGroup>
 
-					    <div className={ right }>
-					  		<ButtonGroup>
-							  	<Button><Glyphicon glyph='search' /></Button>
-					        <Button><Glyphicon glyph='align-left' /></Button>
-					        <Button><Glyphicon glyph='align-center' /></Button>
-					        <Button><Glyphicon glyph='align-right' /></Button>
-					        <Button><Glyphicon glyph='align-justify' /></Button>
-					      </ButtonGroup>
-					  	</div>
-					  	<div className={ right }>
-					  		<ButtonGroup>
-							  	<Button><Glyphicon glyph='th' /></Button>
-					        <Button><Glyphicon glyph='th-large' /></Button>
-					        <Button><Glyphicon glyph='th-list' /></Button>
-					      </ButtonGroup>
-					    </div>
+					  <hr />
 
-					  </ButtonToolbar>
-
-		    	</div>
+					  <div>
+				  		<ButtonGroup vertical>
+						  	<Button><i className="icon-icon-annotate"></i></Button>
+				        <Button><i className="icon-outdent"></i></Button>
+				        <Button><i className="icon-indent"></i></Button>
+				        <Button><i className="icon-template-add"></i></Button>
+				        <Button><i className="icon-find-in-page"></i></Button>
+				      </ButtonGroup>
+				  	</div>
 
 		    </div>
 		  </Panel>    

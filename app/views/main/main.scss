@@ -1,0 +1,45 @@
+@import "susy/sass/susy";
+
+.wrapper {
+	@include container (80%);
+	margin-top:15px;
+}
+
+.span {
+	@include span (10 of 12);
+}
+
+.vertical-navigation {
+	background:#eee;
+	position:fixed;
+	left:0;
+	top:0;
+	height:100%;
+
+	&__toolbar {
+		button {
+			font-size:1.8em;
+		}
+	}
+
+	&>div {
+		height:100%;
+		&>div {
+			height:100%;
+		}
+	}
+}
+
+.helpers {
+	padding:15px;
+	position:fixed;
+	right:0;
+	top:0;
+	height:100%;
+	&>div {
+		height:100%;
+	}
+	button {
+		font-size:1.8em;
+	}
+}

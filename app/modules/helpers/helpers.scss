@@ -1,0 +1,13 @@
+.helpers {
+	padding:15px;
+	position:fixed;
+	right:0;
+	top:0;
+	height:100%;
+	&>div {
+		height:100%;
+	}
+	button {
+		font-size:1.8em;
+	}
+}

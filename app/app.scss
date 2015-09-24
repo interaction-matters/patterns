@@ -1,1 +1,48 @@
-@import './shared/styles/vendor/bootswatch/custom.scss';
+/***********
+App.scss
+--------
+This file imports any
+global app dependencies
+************/
+
+/************
+1. Bootstrap
+*************/
+
+//Set icon font path for Glyphicons
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+
+//Web font
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+//Bootstrap dependancies
+@import "shared/styles/vendor/bootswatch/variables";
+
+//Include only the Bootstrap files we need from a custom import file:
+@import "shared/styles/vendor/bootswatch/bootstrap";
+
+//Bootstrap 'Paper' Theme, Material Design style from Bootswatch.com
+@import "shared/styles/vendor/bootswatch/bootswatch";
+
+//Additional custom styles
+@import "shared/styles/vendor/bootswatch/custom";
+
+/************
+2. Global 
+*************/
+
+//Font icons
+@import 'shared/styles/base/icons';
+
+//Utilities
+@import 'shared/styles/base/utils';
+
+//additional
+#myApp {
+	height:100%;
+	overflow:hidden;
+}
+
+.view {
+	height:100%;
+}
