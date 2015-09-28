@@ -29,7 +29,7 @@ export default class AlertBox extends Component {
 
     return (
     	<div>  		
-			  <Panel className={styles.grid6of12} header={title} bsStyle='primary'>
+			  <Panel header={title} bsStyle='default'>
 		      <UiBasics />
 		    </Panel>
 

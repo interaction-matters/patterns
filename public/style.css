@@ -8794,10 +8794,18 @@ Global utility classes
 ****************************/
 .global-style {
   border: 1px solid red; }
+
+#myApp {
+  height: 100%;
+  overflow: hidden; }
+
+.view {
+  height: 100%; }
 .wrapper {
   max-width: 80%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-top: 15px; }
   .wrapper:after {
     content: " ";
     display: block;
@@ -8807,24 +8815,18 @@ Global utility classes
   width: 83.05085%;
   float: left;
   margin-right: 1.69492%; }
+.main-panel {
+  width: 83.05085%;
+  float: left;
+  margin-right: 1.69492%;
+  min-height: 768px; }
 
-.vertical-navigation {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%; }
-  .vertical-navigation > div {
-    height: 100%; }
-    .vertical-navigation > div > div {
-      height: 100%; }
-
-.helpers {
-  position: fixed;
-  right: 0;
-  top: 0;
-  height: 100%; }
-  .helpers > div {
-    height: 100%; }
+.secondary-panel {
+  width: 15.25424%;
+  float: right;
+  margin-right: 0;
+  height: 100%;
+  min-height: 768px; }
 .grid {
   max-width: 80%;
   margin-left: auto;
@@ -8863,14 +8865,6 @@ Global utility classes
 
 .right {
   float: right; }
-.root {
-  margin: 10px auto; }
-
-.text {
-  color: #777;
-  font-size: 24px;
-  font-family: helvetica, arial, sans-serif;
-  font-weight: 600; }
 /********
 UI Basics
 *********/
@@ -8921,5 +8915,48 @@ UI Basics Label
   width: 49.15254%;
   float: left;
   margin-right: 1.69492%; }
+.vertical-navigation {
+  background: #eee;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%; }
+  .vertical-navigation__toolbar button {
+    font-size: 1.8em; }
+    .vertical-navigation__toolbar button:first-child {
+      font-size: 2.4em;
+      padding-left: 0;
+      padding-right: 0; }
+      .vertical-navigation__toolbar button:first-child p {
+        font-size: 30%;
+        display: block;
+        border-top: 1px solid #eee;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+        margin-bottom: 0; }
+    .vertical-navigation__toolbar button:not(:first-child) {
+      min-height: 100px; }
+  .vertical-navigation > div {
+    height: 100%; }
+    .vertical-navigation > div > div {
+      height: 100%; }
+.helpers {
+  padding: 15px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%; }
+  .helpers > div {
+    height: 100%; }
+  .helpers button {
+    font-size: 1.8em; }
+  .helpers .toolbar {
+    height: 100%;
+    position: relative; }
+    .helpers .toolbar__button--anchored {
+      position: absolute;
+      bottom: 0;
+      right: 0; }
 
 /*# sourceMappingURL=style.css.map*/

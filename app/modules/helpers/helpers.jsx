@@ -25,7 +25,7 @@ export default class Helpers extends Component {
 		);
 
     return (
-    	<div className='toolbar'>
+    	<div className='toolbar toolbar--vertical'>
 		    	
 			  		<ButtonGroup vertical>
 					  	<Button><i className="icon-icon-annotate"></i></Button>
@@ -37,6 +37,8 @@ export default class Helpers extends Component {
 			        <Button><i className="icon-indent"></i></Button>
 			        <Button><i className="icon-template-add"></i></Button>
 			      </ButtonGroup>
+
+			      <Button className='toolbar__button--anchored' bsStyle='primary'><i className="icon-external-link"></i></Button>
 
 	    </div>
     );

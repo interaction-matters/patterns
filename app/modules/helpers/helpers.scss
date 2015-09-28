@@ -10,4 +10,18 @@
 	button {
 		font-size:1.8em;
 	}
+	
+	.toolbar {
+		height:100%;
+		position:relative;
+		&--vertical {}
+		&__button {
+			&--anchored {
+				position: absolute;
+    		bottom: 0;
+    		right: 0;
+			}
+		}
+	}
+
 }

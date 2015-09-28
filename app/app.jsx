@@ -1,16 +1,11 @@
 import React, {Component} from 'react';
+import Router from 'react-router';
 
 // Here, we import all of our base styles
 import styles from './app.scss';
 
-import ViewMain from 'views/main/main';
+import routes from './config/routes';
 
-export default class App extends Component {
-	render() {
-		return (
-			<ViewMain />
-		);
-	}
-}
-
-React.render(<App/>, document.querySelector("#myApp"));
+Router.run(routes, (Root, state) => {
+  React.render(<Root {...state} />, document.querySelector("#myApp"));
+});
