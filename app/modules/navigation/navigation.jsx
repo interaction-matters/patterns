@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 import styles from './navigation.scss';
 
@@ -30,15 +31,19 @@ export default class Navigation extends Component {
           <ButtonGroup vertical>
             {/* Standard button */}
             <Button bsStyle='primary'>
-              <i className="icon-global-nav"></i>
-              <p>Workspace</p>
+              <Link to="home">
+                <i className="icon-global-nav"></i>
+                <p>Workspace</p>
+              </Link>
             </Button>
 
             {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
-            <OverlayTrigger placement='right' overlay={tooltip}>
+            <OverlayTrigger placement='right' overlay={tooltip}>              
               <Button>
-                <i className="icon-dossier-files"></i>
-              </Button>
+                <Link to="screen2">
+                  <i className="icon-dossier-files"></i>
+                </Link>
+              </Button>             
             </OverlayTrigger>
 
             {/* Indicates a successful or positive action */}
@@ -81,4 +86,8 @@ export default class Navigation extends Component {
     );
   }
 
+};
+
+Navigation.contextTypes = {
+  router: React.PropTypes.func.isRequired
 };

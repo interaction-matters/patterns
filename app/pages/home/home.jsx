@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
-import styles from './sampleComponent.scss';
+// Sass dependencies
+import styles from './home.scss';
+
+// React dependencies
 import Main from 'components/main/main';
 import UiBasics from 'components/uiBasics/uiBasics';
 import UiBasicsLabel from 'components/uiBasicsLabel/uiBasicsLabel';
@@ -11,29 +14,15 @@ import { Accordion } from 'react-bootstrap';
 
 import AlertBox from 'components/alert/alert';
 
-class SampleComponent extends Component {
-
-  constructor(...args){
-    super(...args);
-    this.state = {
-      alertVisible: true
-    }
-  }
-
-  render() {
-    return (
-      <div>
-        <Panel className='main-panel'>
-        	<Alert bsStyle='success' onDismiss={this.handleAlertDismiss.bind(this)}>
-  			    <strong>Congratulations!</strong> You have successfully loaded the <strong>default SCREEN 2</strong> page.
-  			  </Alert>
-  			  <AlertBox className="newClass" gridValue="1/2" />        
-        </Panel>
-
-        <Panel className='secondary-panel secondary-panel--long' header='Secondary content' bsStyle='primary'>
-          <p>This is a secondary content <UiBasicsLabel labelType='UiBasicslabel tsBadge'>panel</UiBasicsLabel></p>
-          <hr />
-          <Accordion>
+export default class Home extends Component {
+	render() {
+		return (
+			<div className="view">
+				<Alert bsStyle='success'>
+			    <strong>Congratulations!</strong> You have successfully loaded the <strong>default HOME</strong> page.
+			  </Alert>
+				<Panel className='main-panel'>       	
+  			  <Accordion>
             <Panel header='Simple text' eventKey='1'>
               Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
             </Panel>
@@ -45,20 +34,18 @@ class SampleComponent extends Component {
               <p>Here is an out-of-context ui basics <UiBasicsLabel labelType='UiBasicslabel tsBadge'>label</UiBasicsLabel></p><hr />
               <p>You can see here that we are mixing an extra small <b>Bootstrap</b> <Button bsStyle='primary' bsSize="xsmall">Button</Button> with a label for <UiBasicsLabel labelType='UiBasicslabel statusRefused'>Refused</UiBasicsLabel>, and <UiBasicsLabel labelType='UiBasicslabel statusPending'>Pending</UiBasicsLabel> from UI basics (Team Edyt)</p>    
             </Panel>
-          </Accordion>
+          </Accordion>        
         </Panel>
-      </div>
-    );
-  }
 
-  handleAlertDismiss() {
-    this.setState({alertVisible: false});
-  }
-
-  handleAlertShow() {
-    this.setState({alertVisible: true});
-  }
-
-};
-
-export default SampleComponent;
+        <Panel className='secondary-panel secondary-panel--short' header='Secondary content' bsStyle='primary'>
+          <p>This is a secondary content <UiBasicsLabel labelType='UiBasicslabel tsBadge'>panel</UiBasicsLabel></p>
+          <UiBasics />
+        </Panel>
+        <Panel className='secondary-panel secondary-panel--short' header='Secondary content'>
+          <p>This is a secondary content <UiBasicsLabel labelType='UiBasicslabel tsBadge'>panel</UiBasicsLabel></p>
+          <UiBasics />
+        </Panel>
+			</div>
+		);
+	}
+}

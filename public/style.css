@@ -8815,6 +8815,49 @@ Global utility classes
   width: 83.05085%;
   float: left;
   margin-right: 1.69492%; }
+.vertical-navigation {
+  background: #eee;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%; }
+  .vertical-navigation__toolbar button {
+    font-size: 1.8em; }
+    .vertical-navigation__toolbar button:first-child {
+      font-size: 2.4em;
+      padding-left: 0;
+      padding-right: 0; }
+      .vertical-navigation__toolbar button:first-child p {
+        font-size: 30%;
+        display: block;
+        border-top: 1px solid #eee;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+        margin-bottom: 0; }
+    .vertical-navigation__toolbar button:not(:first-child) {
+      min-height: 100px; }
+  .vertical-navigation > div {
+    height: 100%; }
+    .vertical-navigation > div > div {
+      height: 100%; }
+.helpers {
+  padding: 15px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%; }
+  .helpers > div {
+    height: 100%; }
+  .helpers button {
+    font-size: 1.8em; }
+  .helpers .toolbar {
+    height: 100%;
+    position: relative; }
+    .helpers .toolbar__button--anchored {
+      position: absolute;
+      bottom: 0;
+      right: 0; }
 .main-panel {
   width: 83.05085%;
   float: left;
@@ -8915,48 +8958,5 @@ UI Basics Label
   width: 49.15254%;
   float: left;
   margin-right: 1.69492%; }
-.vertical-navigation {
-  background: #eee;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%; }
-  .vertical-navigation__toolbar button {
-    font-size: 1.8em; }
-    .vertical-navigation__toolbar button:first-child {
-      font-size: 2.4em;
-      padding-left: 0;
-      padding-right: 0; }
-      .vertical-navigation__toolbar button:first-child p {
-        font-size: 30%;
-        display: block;
-        border-top: 1px solid #eee;
-        padding-left: 5px;
-        padding-right: 5px;
-        padding-top: 5px;
-        margin-bottom: 0; }
-    .vertical-navigation__toolbar button:not(:first-child) {
-      min-height: 100px; }
-  .vertical-navigation > div {
-    height: 100%; }
-    .vertical-navigation > div > div {
-      height: 100%; }
-.helpers {
-  padding: 15px;
-  position: fixed;
-  right: 0;
-  top: 0;
-  height: 100%; }
-  .helpers > div {
-    height: 100%; }
-  .helpers button {
-    font-size: 1.8em; }
-  .helpers .toolbar {
-    height: 100%;
-    position: relative; }
-    .helpers .toolbar__button--anchored {
-      position: absolute;
-      bottom: 0;
-      right: 0; }
 
 /*# sourceMappingURL=style.css.map*/

@@ -8,6 +8,12 @@
 	&__toolbar {
 		button {
 			font-size:1.8em;
+			a {
+    		color: inherit;
+    		&:hover, &:active, &:focus {
+    			text-decoration:none;
+    		}
+			}
 			&:first-child {
 				font-size:2.4em;
 				padding-left:0;

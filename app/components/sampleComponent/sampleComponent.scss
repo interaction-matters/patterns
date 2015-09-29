@@ -8,5 +8,4 @@
 .secondary-panel {
   @include span (2 of 12 last);
   height:100%;
-  min-height: 768px;
 }
