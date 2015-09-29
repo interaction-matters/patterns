@@ -5,7 +5,7 @@ Top level ‘controller’ component
 ********************************/
 
 import React, {Component} from 'react';
-import { Router, RouteHandler } from 'react-router';
+import Router from 'react-router';
 
 // Here, we import all of our base styles
 import styles from './app.scss';

@@ -1,7 +1,7 @@
 /*******************************
 Frame
 --------------------------------
-Default scaffold for /index app
+Scaffolding for our app
 ********************************/
 
 import React, {Component} from 'react';
@@ -14,7 +14,7 @@ import styles from './frame.scss';
 import Navigation from 'modules/navigation/navigation';
 import Helpers from 'modules/helpers/helpers';
 
-export default class Frame extends Component {
+export class Frame extends Component {
 	render() {
 		return (
 			<div className="view">
@@ -27,6 +27,21 @@ export default class Frame extends Component {
 				</div>
 				{/* Helpers */}
 				<Helpers />
+			</div>
+		);
+	}
+}
+
+export class AltLayout extends Component {
+	render() {
+		return (
+			<div className="view">
+				
+				<div className="wrapper">
+					{/* This will be replaced with whichever routes we pass in */}
+					<RouteHandler {...this.props}/>
+				</div>
+
 			</div>
 		);
 	}
