@@ -8815,7 +8815,10 @@ Global utility classes
   width: 83.05085%;
   float: left;
   margin-right: 1.69492%; }
-.vertical-navigation {
+
+.secondary-panel--long {
+  min-height: 768px; }
+.vertical-navigation__toolbar {
   background: #eee;
   position: fixed;
   left: 0;
@@ -8823,6 +8826,10 @@ Global utility classes
   height: 100%; }
   .vertical-navigation__toolbar button {
     font-size: 1.8em; }
+    .vertical-navigation__toolbar button a {
+      color: inherit; }
+      .vertical-navigation__toolbar button a:hover, .vertical-navigation__toolbar button a:active, .vertical-navigation__toolbar button a:focus {
+        text-decoration: none; }
     .vertical-navigation__toolbar button:first-child {
       font-size: 2.4em;
       padding-left: 0;
@@ -8837,10 +8844,11 @@ Global utility classes
         margin-bottom: 0; }
     .vertical-navigation__toolbar button:not(:first-child) {
       min-height: 100px; }
-  .vertical-navigation > div {
+
+.vertical-navigation > div {
+  height: 100%; }
+  .vertical-navigation > div > div {
     height: 100%; }
-    .vertical-navigation > div > div {
-      height: 100%; }
 .helpers {
   padding: 15px;
   position: fixed;
@@ -8851,25 +8859,18 @@ Global utility classes
     height: 100%; }
   .helpers button {
     font-size: 1.8em; }
-  .helpers .toolbar {
-    height: 100%;
-    position: relative; }
-    .helpers .toolbar__button--anchored {
+  .helpers__toolbar {
+    padding: 15px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%; }
+    .helpers__toolbar__button--anchored {
       position: absolute;
-      bottom: 0;
-      right: 0; }
-.main-panel {
-  width: 83.05085%;
-  float: left;
-  margin-right: 1.69492%;
-  min-height: 768px; }
-
-.secondary-panel {
-  width: 15.25424%;
-  float: right;
-  margin-right: 0;
-  height: 100%;
-  min-height: 768px; }
+      bottom: 10px;
+      right: 10px; }
+.secondary-panel--short {
+  min-height: 374px; }
 .grid {
   max-width: 80%;
   margin-left: auto;
@@ -8958,5 +8959,16 @@ UI Basics Label
   width: 49.15254%;
   float: left;
   margin-right: 1.69492%; }
+.main-panel {
+  width: 83.05085%;
+  float: left;
+  margin-right: 1.69492%;
+  min-height: 768px; }
+
+.secondary-panel {
+  width: 15.25424%;
+  float: right;
+  margin-right: 0;
+  height: 100%; }
 
 /*# sourceMappingURL=style.css.map*/

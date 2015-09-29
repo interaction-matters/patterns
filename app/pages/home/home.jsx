@@ -1,3 +1,9 @@
+/*******************************
+Home
+--------------------------------
+Home page
+********************************/
+
 import React, {Component} from 'react';
 
 // Sass dependencies

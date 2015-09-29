@@ -66,21 +66,7 @@ export default class Navigation extends Component {
               <i className="icon-mail2"></i>
             </Button>
 
-            
-
           </ButtonGroup>
-
-          <hr />
-
-          <div>
-            <ButtonGroup vertical>
-              <Button><i className="icon-icon-annotate"></i></Button>
-              <Button><i className="icon-outdent"></i></Button>
-              <Button><i className="icon-indent"></i></Button>
-              <Button><i className="icon-template-add"></i></Button>
-              <Button><i className="icon-find-in-page"></i></Button>
-            </ButtonGroup>
-          </div>
 
       </div>
     );

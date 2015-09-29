@@ -1,11 +1,11 @@
 .vertical-navigation {
-	background:#eee;
-	position:fixed;
-	left:0;
-	top:0;
-	height:100%;
 
 	&__toolbar {
+		background:#eee;
+		position:fixed;
+		left:0;
+		top:0;
+		height:100%;
 		button {
 			font-size:1.8em;
 			a {

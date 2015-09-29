@@ -1,3 +1,10 @@
+/*******************************
+Helpers
+--------------------------------
+Right hand side helpers module,
+defined in 'Basic'
+********************************/
+
 import React, { Component } from 'react';
 
 import styles from './helpers.scss';
@@ -25,7 +32,7 @@ export default class Helpers extends Component {
 		);
 
     return (
-    	<div className='toolbar toolbar--vertical'>
+    	<div className='helpers helpers__toolbar--vertical'>
 		    	
 			  		<ButtonGroup vertical>
 					  	<Button><i className="icon-icon-annotate"></i></Button>
@@ -38,7 +45,7 @@ export default class Helpers extends Component {
 			        <Button><i className="icon-template-add"></i></Button>
 			      </ButtonGroup>
 
-			      <Button className='toolbar__button--anchored' bsStyle='primary'><i className="icon-external-link"></i></Button>
+			      <Button className='helpers__toolbar__button--anchored' bsStyle='primary'><i className="icon-external-link"></i></Button>
 
 	    </div>
     );
