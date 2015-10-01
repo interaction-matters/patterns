@@ -7472,7 +7472,7 @@
 	
 	var _appScss2 = _interopRequireDefault(_appScss);
 	
-	// Import route definitions from app > config > routes.jsx
+	// Import route definitions from epo > config > routes.jsx
 	
 	var _configRoutes = __webpack_require__(254);
 	
@@ -30987,7 +30987,7 @@
 	/*******************************
 	Routes
 	--------------------------------
-	Defines the routes for our app
+	Defines the routes for our epo
 	********************************/
 	
 	'use strict';
@@ -31027,8 +31027,8 @@
 	  _reactRouter.Route,
 	  { name: 'app', path: '/', handler: baseFrame },
 	  '//Routes in here',
-	  _react2['default'].createElement(_reactRouter.Route, { name: 'home', path: 'app/home', handler: _pagesHomeHome2['default'] }),
-	  _react2['default'].createElement(_reactRouter.Route, { name: 'screen2', path: 'app/screen2', handler: _pagesPage2Page22['default'] }),
+	  _react2['default'].createElement(_reactRouter.Route, { name: 'home', path: 'epo/home', handler: _pagesHomeHome2['default'] }),
+	  _react2['default'].createElement(_reactRouter.Route, { name: 'screen2', path: 'epo/screen2', handler: _pagesPage2Page22['default'] }),
 	  '//Fallback default route',
 	  _react2['default'].createElement(_reactRouter.DefaultRoute, { handler: _pagesHomeHome2['default'] })
 	);
@@ -31045,7 +31045,7 @@
 	/*******************************
 	Frame
 	--------------------------------
-	Default scaffold for /index app
+	Default scaffold for /index epo
 	********************************/
 	
 	'use strict';

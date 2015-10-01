@@ -10,7 +10,7 @@ import Router from 'react-router';
 // Here, we import all of our base styles
 import styles from './app.scss';
 
-// Import route definitions from app > config > routes.jsx
+// Import route definitions from epo > config > routes.jsx
 import routes from './config/routes';
 
 // Rather than rendering a component to screen, tell the router
