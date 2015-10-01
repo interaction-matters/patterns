@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ac93aa0f-dfad-406f-b3ff-c7596322ae89" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/idea.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/app.jsx" afterPath="$PROJECT_DIR$/epo/app.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/app.scss" afterPath="$PROJECT_DIR$/epo/app.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/elements/uiBasicsButton/uiBasicsButton.jsx" afterPath="$PROJECT_DIR$/epo/components/elements/uiBasicsButton/uiBasicsButton.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/elements/uiBasicsButton/uiBasicsButton.scss" afterPath="$PROJECT_DIR$/epo/components/elements/uiBasicsButton/uiBasicsButton.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/elements/uiBasicsLabel/uiBasicsLabel.jsx" afterPath="$PROJECT_DIR$/epo/components/elements/uiBasicsLabel/uiBasicsLabel.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/elements/uiBasicsLabel/uiBasicsLabel.scss" afterPath="$PROJECT_DIR$/epo/components/elements/uiBasicsLabel/uiBasicsLabel.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/elements/uiBasicsLink/uiBasicsLink.jsx" afterPath="$PROJECT_DIR$/epo/components/elements/uiBasicsLink/uiBasicsLink.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/elements/uiBasicsLink/uiBasicsLink.scss" afterPath="$PROJECT_DIR$/epo/components/elements/uiBasicsLink/uiBasicsLink.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/modules/helpers/helpers.jsx" afterPath="$PROJECT_DIR$/epo/components/modules/helpers/helpers.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/modules/helpers/helpers.scss" afterPath="$PROJECT_DIR$/epo/components/modules/helpers/helpers.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/modules/navigation/navigation.jsx" afterPath="$PROJECT_DIR$/epo/components/modules/navigation/navigation.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/modules/navigation/navigation.scss" afterPath="$PROJECT_DIR$/epo/components/modules/navigation/navigation.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/modules/uiBasics/uiBasics.jsx" afterPath="$PROJECT_DIR$/epo/components/modules/uiBasics/uiBasics.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/modules/uiBasics/uiBasics.scss" afterPath="$PROJECT_DIR$/epo/components/modules/uiBasics/uiBasics.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/config/routes.jsx" afterPath="$PROJECT_DIR$/epo/config/routes.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/pages/frames.jsx" afterPath="$PROJECT_DIR$/epo/pages/frames.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/pages/frames.scss" afterPath="$PROJECT_DIR$/epo/pages/frames.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/pages/home/home.jsx" afterPath="$PROJECT_DIR$/epo/pages/home/home.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/pages/home/home.scss" afterPath="$PROJECT_DIR$/epo/pages/home/home.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/pages/page2/page2.jsx" afterPath="$PROJECT_DIR$/epo/pages/page2/page2.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/pages/page2/page2.scss" afterPath="$PROJECT_DIR$/epo/pages/page2/page2.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/fonts/edyt/edyt-icons.eot" afterPath="$PROJECT_DIR$/epo/shared/fonts/edyt/edyt-icons.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/fonts/edyt/edyt-icons.svg" afterPath="$PROJECT_DIR$/epo/shared/fonts/edyt/edyt-icons.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/fonts/edyt/edyt-icons.ttf" afterPath="$PROJECT_DIR$/epo/shared/fonts/edyt/edyt-icons.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/fonts/edyt/edyt-icons.woff" afterPath="$PROJECT_DIR$/epo/shared/fonts/edyt/edyt-icons.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/fonts/icomoon.eot" afterPath="$PROJECT_DIR$/epo/shared/fonts/icomoon.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/fonts/icomoon.svg" afterPath="$PROJECT_DIR$/epo/shared/fonts/icomoon.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/fonts/icomoon.ttf" afterPath="$PROJECT_DIR$/epo/shared/fonts/icomoon.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/fonts/icomoon.woff" afterPath="$PROJECT_DIR$/epo/shared/fonts/icomoon.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/styles/base/_icons.scss" afterPath="$PROJECT_DIR$/epo/shared/styles/base/_icons.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/styles/base/_utils.scss" afterPath="$PROJECT_DIR$/epo/shared/styles/base/_utils.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/styles/base/mixins/_blank.scss" afterPath="$PROJECT_DIR$/epo/shared/styles/base/mixins/_blank.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/styles/base/mixins/_border-radius.scss" afterPath="$PROJECT_DIR$/epo/shared/styles/base/mixins/_border-radius.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/styles/base/mixins/_box-shadow.scss" afterPath="$PROJECT_DIR$/epo/shared/styles/base/mixins/_box-shadow.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/styles/base/variables/_colours.scss" afterPath="$PROJECT_DIR$/epo/shared/styles/base/variables/_colours.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/styles/base/variables/_timing.scss" afterPath="$PROJECT_DIR$/epo/shared/styles/base/variables/_timing.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/styles/layout/grid.scss" afterPath="$PROJECT_DIR$/epo/shared/styles/layout/grid.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/styles/vendor/bootswatch/_bootstrap.scss" afterPath="$PROJECT_DIR$/epo/shared/styles/vendor/bootswatch/_bootstrap.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/styles/vendor/bootswatch/_bootswatch.scss" afterPath="$PROJECT_DIR$/epo/shared/styles/vendor/bootswatch/_bootswatch.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/styles/vendor/bootswatch/_custom.scss" afterPath="$PROJECT_DIR$/epo/shared/styles/vendor/bootswatch/_custom.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/shared/styles/vendor/bootswatch/_variables.scss" afterPath="$PROJECT_DIR$/epo/shared/styles/vendor/bootswatch/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bundle.js" afterPath="$PROJECT_DIR$/public/bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/style.css" afterPath="$PROJECT_DIR$/public/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
+    </list>
+    <ignored path="patterns.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="patterns" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="idea.gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/idea.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.2">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.179159">
+              <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/idea.gitignore" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="948" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="patterns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="patterns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="patterns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <method />
+    </configuration>
+    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac93aa0f-dfad-406f-b3ff-c7596322ae89" name="Default" comment="" />
+      <created>1443725697679</created>
+      <option name="number" value="Default" />
+      <updated>1443725697679</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="948" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32983682" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983682" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24954791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/idea.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.179159">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
