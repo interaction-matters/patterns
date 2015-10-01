@@ -5,8 +5,8 @@ import styles from './page2.scss';
 
 // React dependencies
 
-import UiBasics from 'modules/uiBasics/uiBasics';
-import UiBasicsLabel from 'components/uiBasicsLabel/uiBasicsLabel';
+import UiBasics from 'components/modules/uiBasics/uiBasics';
+import UiBasicsLabel from 'components/elements/uiBasicsLabel/uiBasicsLabel';
 
 //React-bootstrap components
 import { Alert } from 'react-bootstrap';

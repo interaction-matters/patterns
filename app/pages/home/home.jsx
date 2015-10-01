@@ -10,8 +10,8 @@ import React, {Component} from 'react';
 import styles from './home.scss';
 
 // React dependencies
-import UiBasicsLabel from 'components/uiBasicsLabel/uiBasicsLabel';
-import UiBasics from 'modules/uiBasics/uiBasics';
+import UiBasicsLabel from 'components/elements/uiBasicsLabel/uiBasicsLabel';
+import UiBasics from 'components/modules/uiBasics/uiBasics';
 
 import { Alert } from 'react-bootstrap';
 import { Panel } from 'react-bootstrap';
