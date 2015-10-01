@@ -6,7 +6,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:8080', // WebpackDevServer host and port
     'webpack/hot/only-dev-server',
-    './app/app.jsx' // Appʼs entry point
+    './epo/app.jsx' // Appʼs entry point
   ],
   devtool: process.env.WEBPACK_DEVTOOL || 'source-map',
   output: {
@@ -14,7 +14,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    root: path.join(__dirname, 'app'),
+    root: path.join(__dirname, 'epo'),
     extensions: ['', '.js', '.jsx']
   },
   module: {
