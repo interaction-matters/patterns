@@ -1,9 +1,9 @@
-/***********
+/**********************
 App.scss
---------
+-----------------------
 This file imports any
 global app dependencies
-************/
+***********************/
 
 /************
 1. Bootstrap
@@ -37,28 +37,4 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 //Utilities
 @import 'shared/styles/base/utils';
 
-//additional
-#myApp {
-	height:100%;
-	overflow:hidden;
-}
-
-.view {
-	height:100%;
-}
-
-@import "susy/sass/susy";
-
-.wrapper {
-	@include container (80%);
-	margin-top:15px;
-}
-
-.span {
-	@include span (10 of 12);
-}
-
-//temp class
-.secondary-panel--long {
-	 min-height: 768px;
-}
+//Additional

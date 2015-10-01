@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 import styles from './uiBasics.scss';
 
-import UiBasicsLabel from 'components/uiBasicsLabel/uiBasicsLabel';
-import UiBasicsLink from 'components/uiBasicsLink/uiBasicsLink';
+import UiBasicsLabel from 'components/elements/uiBasicsLabel/uiBasicsLabel';
+import UiBasicsLink from 'components/elements/uiBasicsLink/uiBasicsLink';
 
 class UiBasics extends Component {
 

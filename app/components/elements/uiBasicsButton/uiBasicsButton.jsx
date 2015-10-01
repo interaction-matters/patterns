@@ -6,12 +6,12 @@ export default class UiBasicsButton extends Component {
 
   render() {
 
-    buttonVariables (propTypes) {
+    /*buttonVariables (propTypes) {
       type: ['emphasis', 'animated', 'icon', 'labeled', ],
       variations: ['colour', 'size', 'fluid', 'circle']
       position: ['left', 'right'],
       state: ['active', 'disabled', 'loading']
-    }
+    }*/
 
     /*if (this.props.labelType == 'taBadge') { className = styles.taBadge }
     else if (this.props.labelType == 'statusGranted') { className = styles.statusGranted }
@@ -20,7 +20,7 @@ export default class UiBasicsButton extends Component {
     else { className = styles.label }*/
 
     return (
-      <Button className={this.props.buttonStyle}>{this.props.children}</Button>
+      <Button className={'ui-basics-button' + ' ' + this.props.buttonStyle}>{this.props.children}</Button>
     );
 
   }

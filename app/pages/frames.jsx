@@ -11,8 +11,8 @@ import { RouteHandler } from 'react-router';
 import styles from './frames.scss';
 
 // React dependencies
-import Navigation from 'modules/navigation/navigation';
-import Helpers from 'modules/helpers/helpers';
+import Navigation from 'components/modules/navigation/navigation';
+import Helpers from 'components/modules/helpers/helpers';
 
 export class Frame extends Component {
 	render() {
