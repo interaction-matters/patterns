@@ -1,0 +1,23 @@
+/***************************
+Utilities
+----------------------------
+Global utility classes
+****************************/
+
+//Use as a test for global styling
+.global-style {
+	border:1px solid red;
+}
+
+//Hiding
+
+.visibly-hidden {
+  height: 1px;
+  left: -10px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: -10px;  
+  width: 1px;
+  z-index: -1;
+}
