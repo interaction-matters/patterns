@@ -1,9 +1,0 @@
-@import "susy/sass/susy";
-
-.grid {
-	@include container (80%);
-}
-
-.span {
-	@include span (10 of 12);
-}

@@ -1,14 +1,14 @@
 /*******************************
 Frame
 --------------------------------
-Scaffolding for our app
+Defines scaffolding for our app
 ********************************/
 
 import React, {Component} from 'react';
 import { RouteHandler } from 'react-router';
 
 // Sass dependencies
-import styles from './frame.scss';
+import styles from './frames.scss';
 
 // React dependencies
 import Navigation from 'modules/navigation/navigation';

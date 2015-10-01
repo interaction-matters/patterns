@@ -10,15 +10,13 @@ import React, {Component} from 'react';
 import styles from './home.scss';
 
 // React dependencies
-import Main from 'components/main/main';
-import UiBasics from 'components/uiBasics/uiBasics';
 import UiBasicsLabel from 'components/uiBasicsLabel/uiBasicsLabel';
+import UiBasics from 'modules/uiBasics/uiBasics';
+
 import { Alert } from 'react-bootstrap';
 import { Panel } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { Accordion } from 'react-bootstrap';
-
-import AlertBox from 'components/alert/alert';
 
 export default class Home extends Component {
 	render() {
