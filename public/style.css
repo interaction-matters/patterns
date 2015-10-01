@@ -2,7 +2,7 @@
 App.scss
 --------
 This file imports any
-global epo dependencies
+global app dependencies
 ************/
 /************
 1. Bootstrap
@@ -11,7 +11,7 @@ global epo dependencies
 Bootstrap Main
 --------------
 This file imports specified Bootstrap 
-components, per our epo's needs.
+components, per our app's needs.
 Removed so far:
 1. Variables
 2. Glyphicons

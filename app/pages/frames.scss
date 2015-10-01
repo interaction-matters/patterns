@@ -1,0 +1,15 @@
+@import "susy/sass/susy";
+
+.wrapper {
+	@include container (80%);
+	margin-top:15px;
+}
+
+.span {
+	@include span (10 of 12);
+}
+
+//temp class
+.secondary-panel--long {
+	 min-height: 768px;
+}
