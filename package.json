@@ -1,7 +1,7 @@
 {
-  "name": "ui-library",
+  "name": "pattern library",
   "version": "0.0.2",
-  "description": "ui-library",
+  "description": "basic envrionment to mount react components easily and consistently within an application environment",
   "main": "''",
   "scripts": {
     "build": "webpack --progress --profile --colors",
@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mattdoble/ui-library"
+    "url": "https://github.com/interaction-matters/patterns"
   },
-  "author": "Matt Doble",
+  "author": "Matt Doble / Konrad Späth",
   "license": "ISC",
   "dependencies": {
     "react": "^0.13.3",
