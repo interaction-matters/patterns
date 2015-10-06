@@ -1,8 +1,7 @@
 /*******************************
 Helpers
 --------------------------------
-Right hand side helpers module,
-defined in 'Basic'
+Right hand side helpers module
 ********************************/
 
 import React, { Component } from 'react';

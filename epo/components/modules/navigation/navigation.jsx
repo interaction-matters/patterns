@@ -74,6 +74,7 @@ export default class Navigation extends Component {
 
 };
 
+// Scope the 'this' function to the router context
 Navigation.contextTypes = {
   router: React.PropTypes.func.isRequired
 };

@@ -1,3 +1,7 @@
+/***************
+A basic label
+****************/
+
 import React, { Component } from 'react';
 
 import styles from './uiBasicsLabel.scss';
