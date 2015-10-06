@@ -41,8 +41,15 @@ export default class InputSubmit extends Component {
 
 // Express our proptypes
 InputSubmit.propTypes = {
-  className: React.PropTypes.string,
-  name: React.PropTypes.string,
-  value: React.PropTypes.string,
-  defaultValue: React.PropTypes.string
+  ButtonColour: React.PropTypes.string,
+  SubmitName: React.PropTypes.string,
+  SubmitValue: React.PropTypes.string,
+  SubmitDefaultValue: React.PropTypes.string
+};
+// Default props
+InputSubmit.defaultProps = {
+  ButtonColour: 'primary',
+  SubmitName: 'submit',
+  SubmitValue: 'Submit',
+  SubmitDefaultValue: ''
 };

@@ -44,9 +44,18 @@ export default class InputText extends Component {
 
 // Express our proptypes
 InputText.propTypes = {
-  className: React.PropTypes.string,
-  name: React.PropTypes.string,
-  maxLength: React.PropTypes.number,
-  value: React.PropTypes.string,
-  placeholder: React.PropTypes.string
+  InputClassName: React.PropTypes.string,
+  InputName: React.PropTypes.string,
+  InputMaxLength: React.PropTypes.number,
+  InputValue: React.PropTypes.string,
+  InputPlaceholder: React.PropTypes.string
+};
+
+// Default props
+InputText.defaultProps = {
+  InputClassName: 'default',
+  InputName: 'default',
+  InputMaxLength: '500',
+  InputValue: '',
+  InputPlaceholder: 'Enter text...'
 };
