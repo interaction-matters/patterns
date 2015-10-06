@@ -1,0 +1,24 @@
+/**************
+UI Basics Label
+***************/
+
+// Dependencies:
+
+// 1. Colours
+@import '~shared/styles/base/variables/colours';
+// 2. Border-radius
+@import '~shared/styles/base/mixins/border-radius';
+// 3. Box-shadow
+@import '~shared/styles/base/mixins/box-shadow';
+
+// Styles
+input[type=text] {
+	&.ui-basics-input-text {
+		-webkit-appearance: none;
+	  @include border-radius(4px, 4px, 4px, 4px);
+		@include box-shadow(1px, 1px, 4px, rgba(0, 0, 0, 0.4));
+		font-size:inherit;
+		padding: .35em .8em;
+		border:0;
+	}
+}

@@ -1,0 +1,28 @@
+/*******************
+Default button mixin
+********************/
+
+@mixin button($color) {
+	background-color: $color;
+	border-color: mix(black, $color, 10%);
+  
+	&:hover {
+		background-color: mix(black, $color, 15%);
+		border-color: mix(black, $color, 20%);
+	}
+}
+
+@mixin button-static {
+	border: none;
+	text-transform:uppercase;
+	display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+	
+	&:hover {
+		cursor: pointer;
+	}
+}

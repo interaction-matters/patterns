@@ -1,6 +1,6 @@
-/***************
-UI Basics Button
-****************/
+/*********************
+UI Basics Input Submit
+**********************/
 
 // Dependencies:
 
@@ -15,18 +15,17 @@ UI Basics Button
 
 // Styles
 
-.ui-basics-button {
+.ui-basics-submit {
   @include button-static;
 	@include border-radius(4px, 4px, 4px, 4px);
-	@include box-shadow(1px, 1px, 4px, rgba(0, 0, 0, 0.4));
+	@include box-shadow(1px, 1px, 4px, rgba(0, 0, 0, 0.4));	
+  color:white;
 	padding: .35em .8em;
+	&--primary {
+		@include button($color-blue-600);
+	}
+	&--warning {
+		@include button($color-red-600);
+	}
 
-  &--red {
-  	@include button($color-red-600);
-  	color:white;
-  }
-  &--green {
-  	@include button($color-green-600);
-  	color:white;
-  }
 }
