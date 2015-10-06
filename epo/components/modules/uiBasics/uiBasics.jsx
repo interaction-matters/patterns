@@ -6,13 +6,22 @@ import UiBasicsPanel from 'components/elements/UiBasicsPanel/UiBasicsPanel';
 import UiBasicsLabel from 'components/elements/uiBasicsLabel/uiBasicsLabel';
 import UiBasicsLink from 'components/elements/uiBasicsLink/uiBasicsLink';
 import UiBasicsButton from 'components/elements/uiBasicsButton/uiBasicsButton';
+import MenuList from 'components/composites/menuList/menuList';
 import SearchForm from 'components/composites/SearchForm/SearchForm';
 
 class UiBasics extends Component {
 
+	constructor(props){
+    super(props);
+    this.state = {
+      menuItems: ['Home', 'Link1', 'Link2', 'Link3']
+    };
+  }
+
   render() {
     return (
     <UiBasicsPanel>
+    	<MenuList menuItems={this.state.menuItems} menuPlacement='left' />
     	<SearchForm 
 				formPlacement = 'right'
 				InputName='asearchForm' 
