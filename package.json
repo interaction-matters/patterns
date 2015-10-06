@@ -1,5 +1,5 @@
 {
-  "name": "pattern library",
+  "name": "pattern-library",
   "version": "0.0.2",
   "description": "basic envrionment to mount react components easily and consistently within an application environment",
   "main": "''",
