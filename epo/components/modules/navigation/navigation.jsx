@@ -17,6 +17,8 @@ import { DropdownButton } from 'react-bootstrap';
 import { MenuItem } from 'react-bootstrap';
 import { Label } from 'react-bootstrap';
 
+
+
 export default class Navigation extends Component {
 
   render() {
@@ -27,42 +29,39 @@ export default class Navigation extends Component {
 
     return (
     	<div className='vertical-navigation__toolbar'>
-          
+
           <ButtonGroup vertical>
-            {/* Standard button */}
-            <Button bsStyle='primary'>
-              <Link to="home">
+
+            <Button className="btn-primary" href="/#/app/home">
                 <i className="icon-global-nav"></i>
                 <p>Workspace</p>
-              </Link>
             </Button>
 
-            {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
-            <OverlayTrigger placement='right' overlay={tooltip}>              
-              <Button>
-                <Link to="screen2">
-                  <i className="icon-dossier-files"></i>
-                </Link>
-              </Button>             
-            </OverlayTrigger>
+            <Button className="btn-dashboard" href="/#/app/dashboard">
+              EP 1432 17589
+            </Button>
 
-            {/* Indicates a successful or positive action */}
-            <Button>
+            <Button className="btn-task btn-content" href="/#/app/content">
+              <i className="icon-dossier-files"></i>
+            </Button>
+
+            <Button className="btn-back">
+              <i className="icon-arrow_back"></i>
+            </Button>
+
+            <Button  className="btn-task" href="/#/app/analysis">
               <i className="icon-analyze"></i>
             </Button>
 
-            {/* Contextual button for informational alert messages */}
-            <Button>
+            <Button  className="btn-task" href="/#/app/search">
               <i className="icon-search2"></i>
             </Button>
 
-            {/* Indicates caution should be taken with this action */}
-            <Button>
+            <Button className="btn-task" href="/#/app/viewer">
               <i className="icon-file-stack"></i>
             </Button>
 
-            {/* Indicates a dangerous or potentially negative action */}
-            <Button>
+            <Button className="btn-task" href="/#/app/office-actions">
               <i className="icon-mail2"></i>
             </Button>
 
