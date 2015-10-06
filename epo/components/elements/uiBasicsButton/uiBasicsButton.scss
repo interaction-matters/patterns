@@ -46,24 +46,28 @@ UI Basics Button
 
   // Sizes
   &--smallest {
-      font-size: 10px;
-      height: 16px;
-      line-height: 16px;
-      padding: 0 6px;
+    font-size: 10px;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 6px;
   }
   &--small {
-      font-size: 12px;
-      line-height: 20px;
-      height: 20px;
-      padding: 0 6px;
+    font-size: 12px;
+    line-height: 20px;
+    height: 20px;
+    padding: 0 6px;
   }
   &--large {
-      font-size: 24px;
-      height: 40px;
+    font-size: 24px;
+    [class*='icon'] {
+      margin-top:6px;
+    }
   }
   &--largest {
     font-size: 32px;
-    height: 52px;
+    [class*='icon'] {
+      margin-top:10px;
+    }
   }
 
   // Icon

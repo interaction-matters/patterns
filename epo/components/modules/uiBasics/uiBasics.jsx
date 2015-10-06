@@ -47,6 +47,15 @@ class UiBasics extends Component {
          <UiBasicsButton buttonColour='danger'>This button has a lot of text</UiBasicsButton>
          <UiBasicsButton>Default button</UiBasicsButton>
       </UiButtonToolbar>
+      <br />
+      <UiButtonToolbar>
+        <h4>More sizes</h4>
+        <UiBasicsButton buttonColour='success' buttonSize='smallest'>Smallest button</UiBasicsButton>
+        <UiBasicsButton buttonColour='danger' buttonSize='small'>Small button</UiBasicsButton>
+        <UiBasicsButton>Default button</UiBasicsButton>
+        <UiBasicsButton buttonColour='success' icon='icon-dossier-files' buttonSize='large'>Large button</UiBasicsButton>
+        <UiBasicsButton buttonColour='warning' icon='icon-file-stack' buttonSize='largest'>Largest button</UiBasicsButton>
+      </UiButtonToolbar>
       <hr />
       <h4>A search Form</h4>
       <h6>Unstyled</h6>
