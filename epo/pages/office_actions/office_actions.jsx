@@ -8,6 +8,7 @@ import styles from './office_actions.scss';
 import UiBasics from 'components/modules/uiBasics/uiBasics';
 import UiBasicsLabel from 'components/elements/uiBasicsLabel/uiBasicsLabel';
 import UiBasicsPanel from 'components/elements/uiBasicsPanel/uiBasicsPanel';
+import UiBasicsButton from 'components/elements/uiBasicsButton/uiBasicsButton';
 
 //React-bootstrap components
 import { Alert } from 'react-bootstrap';
@@ -55,7 +56,7 @@ export default class Content extends Component {
             </Panel>
             <Panel header='Component inside' eventKey='2'>
               Here is a component (UI Basics) inside the panel:<br /><br />
-              <UiBasics />
+              <UiBasicsButton>A button</UiBasicsButton>
             </Panel>
             <Panel header='More text' eventKey='3'>
               <p>Here is an out-of-context ui basics <UiBasicsLabel labelType='UiBasicslabel tsBadge'>label</UiBasicsLabel></p><hr />
