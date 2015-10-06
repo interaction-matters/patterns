@@ -6,32 +6,36 @@
 		left:0;
 		top:0;
 		height:100%;
-		button {
-			font-size:1.8em;
-			a {
-    		color: inherit;
-    		&:hover, &:active, &:focus {
-    			text-decoration:none;
-    		}
+
+
+		a {
+		  font-size:1.8em;
+		  color: inherit;
+		  &:hover, &:active, &:focus {
+			  text-decoration:none;
 			}
-			&:first-child {
-				font-size:2.4em;
-				padding-left:0;
-				padding-right:0;
-				p {
-					font-size: 30%;
-					display: block;
-					border-top:1px solid #eee;
-					padding-left:5px;
-					padding-right:5px;
-					padding-top:5px;
-					margin-bottom:0;
-				}
+		  &:first-child {
+			font-size:2.4em;
+			padding-left:0;
+			padding-right:0;
+			p {
+			  font-size: 30%;
+			  display: block;
+			  border-top:1px solid #eee;
+			  padding-left:5px;
+			  padding-right:5px;
+			  padding-top:5px;
+			  margin-bottom:0;
 			}
-			&:not(:first-child) {
-				min-height:100px;
-			}
+		  }
+		  &:not(:first-child) {
+			min-height:80px;
+			display: flex;
+			justify-content: center; /* align horizontal */
+			align-items: center; /* align vertical */
+		  }
 		}
+
 	}
 
 	&>div {
@@ -41,4 +45,74 @@
 		}
 	}
 }
-	
+
+.btn-primary {
+  color: #fff !important;
+
+}
+
+.btn-dashboard {
+  max-width: 70px !important;
+  min-height: 70px !important;
+  line-height: 1.4em;
+  background: #dadada;
+  color: #666666 !important;
+  font-size: 1.1em !important;
+  padding: 2px !important;
+  margin: 0 !important;
+  white-space: pre-wrap;
+
+  p {
+	display: block;
+  }
+  &:hover, &:active, &:focus {
+	text-decoration:none;
+	color: 222222 !important;
+	background: white;
+	box-shadow: none;
+  }
+}
+
+.btn-content {
+  min-height: 50px !important;
+
+
+}
+
+.btn-task {
+  background: #f1f1f1;
+
+  &:hover, &:active, &:focus {
+	text-decoration: none;
+	color: 222222 !important;
+	background: white;
+  &:active, &:focus {
+	box-shadow: none;
+  }
+
+  }
+  &:disabled {
+	background: #dadada;
+	font-size: 150%;
+
+
+	&:hover {
+	  background: #dadada;
+	  font-size: 150%;
+	}
+  }
+  }
+.btn-back {
+  background: #dadada;
+  font-size: 140%;
+  line-height: 100%;
+
+
+  &:hover, &:focus, &:active {
+	background: #dadada;
+	font-size: 140%;
+	line-height: 100%;
+
+  }
+
+}

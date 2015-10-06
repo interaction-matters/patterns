@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 // Sass dependencies
-import styles from './page2.scss';
+import styles from './office_actions.scss';
 
 // React dependencies
 
@@ -20,7 +20,7 @@ import { ButtonGroup } from 'react-bootstrap';
 import { Glyphicon } from 'react-bootstrap';
 import { Accordion } from 'react-bootstrap';
 
-export default class Page2 extends Component {
+export default class Content extends Component {
 
   render() {
 
@@ -36,8 +36,8 @@ export default class Page2 extends Component {
       <div>
         <Panel className='main-panel'>
         	<Alert bsStyle='success'>
-  			    <strong>Congratulations!</strong> You have successfully loaded the <strong>default SCREEN 2</strong> page.
-  			  </Alert>
+  			    <strong>Congratulations!</strong> You have successfully loaded the <strong>default OFFICE ACTIONS</strong> page.
+			</Alert>
   			  <div>  		
 					  <Panel header={title} bsStyle='default'>
 				      <UiBasics />
