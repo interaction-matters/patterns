@@ -6,11 +6,13 @@ Menu
 	display:block;
 	padding:0;
 	margin:0;	
+	vertical-align:middle;
 	& > li {
 		display:inline-block;
 		margin-right:0.5em;
 		&:after {
-			content:" : "
+			content:" • ";
+			color: #666;
 		}
 		&:last-child {
 			margin-right: 0;

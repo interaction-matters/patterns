@@ -7,6 +7,8 @@ import styles from './office_actions.scss';
 
 import UiBasics from 'components/modules/uiBasics/uiBasics';
 import UiBasicsLabel from 'components/elements/uiBasicsLabel/uiBasicsLabel';
+import UiBasicsPanel from 'components/elements/uiBasicsPanel/uiBasicsPanel';
+import UiBasicsButton from 'components/elements/uiBasicsButton/uiBasicsButton';
 
 //React-bootstrap components
 import { Alert } from 'react-bootstrap';
@@ -34,47 +36,16 @@ export default class Content extends Component {
 
     return (
       <div>
-        <Panel className='main-panel'>
+        <UiBasicsPanel {...this.props} containerName='main-panel'>
         	<Alert bsStyle='success'>
   			    <strong>Congratulations!</strong> You have successfully loaded the <strong>default OFFICE ACTIONS</strong> page.
-			</Alert>
+					</Alert>
   			  <div>  		
-					  <Panel header={title} bsStyle='default'>
-				      <UiBasics />
-				    </Panel>
-
-					  <ButtonToolbar>
-					    {/* Standard button */}
-					    <Button>Default</Button>
-
-					    {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
-					    <OverlayTrigger placement='bottom' overlay={tooltip}>
-					    	<Button bsStyle='primary'>Primary</Button>
-					    </OverlayTrigger>
-
-					    {/* Indicates a successful or positive action */}
-					    <Button bsStyle='success'>Success</Button>
-
-					    {/* Contextual button for informational alert messages */}
-					    <Button bsStyle='info'>Info</Button>
-
-					    {/* Indicates caution should be taken with this action */}
-					    <Button bsStyle='warning'>Warning</Button>
-
-					    {/* Indicates a dangerous or potentially negative action */}
-					    <Button bsStyle='danger'>Danger</Button>
-
-					    {/* Deemphasize a button by making it look like a link while maintaining button behavior */}
-					    <Button bsStyle='link'>Link</Button>
-
-					    <OverlayTrigger trigger='click' placement='bottom' overlay={<Popover id='popID' title='Popover bottom'><strong>Holy guacamole!</strong> Check this info.</Popover>}>
-					      <Button bsStyle='default'>Click</Button>
-					    </OverlayTrigger>
-
-					  </ButtonToolbar>
+					  
+				    <UiBasics />
 
 					</div>      
-        </Panel>
+        </UiBasicsPanel>
 
         <Panel className='secondary-panel secondary-panel--long' header='Secondary content' bsStyle='primary'>
           <p>This is a secondary content <UiBasicsLabel labelType='UiBasicslabel tsBadge'>panel</UiBasicsLabel></p>
@@ -85,7 +56,7 @@ export default class Content extends Component {
             </Panel>
             <Panel header='Component inside' eventKey='2'>
               Here is a component (UI Basics) inside the panel:<br /><br />
-              <UiBasics />
+              <UiBasicsButton>A button</UiBasicsButton>
             </Panel>
             <Panel header='More text' eventKey='3'>
               <p>Here is an out-of-context ui basics <UiBasicsLabel labelType='UiBasicslabel tsBadge'>label</UiBasicsLabel></p><hr />
