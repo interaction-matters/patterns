@@ -15,18 +15,74 @@ UI Basics Button
 
 // Styles
 
-.ui-basics-button {
+.ui-button {
   @include button-static;
 	@include border-radius(4px, 4px, 4px, 4px);
 	@include box-shadow(1px, 1px, 4px, rgba(0, 0, 0, 0.4));
 	padding: .35em .8em;
 
-  &--red {
+  &--default {
+    @include button($color-white);
+    border:1px solid $color-gray-100;
+  }
+  
+  // Colours
+  &--primary {
+    @include button($color-blue-600);
+    color:white;
+  }
+  &--danger {
   	@include button($color-red-600);
   	color:white;
   }
-  &--green {
+  &--warning {
+    @include button($color-orange-500);
+    color:white;
+  }
+  &--success {
   	@include button($color-green-600);
   	color:white;
   }
+
+  // Sizes
+  &--smallest {
+      font-size: 10px;
+      height: 16px;
+      line-height: 16px;
+      padding: 0 6px;
+  }
+  &--small {
+      font-size: 12px;
+      line-height: 20px;
+      height: 20px;
+      padding: 0 6px;
+  }
+  &--large {
+      font-size: 24px;
+      height: 40px;
+  }
+  &--largest {
+    font-size: 32px;
+    height: 52px;
+  }
+
+  // Icon
+  &__icon {
+    font-size: 1.2em;
+    display: inline-block;
+    text-decoration: none;
+    &--left {
+      float: left;
+      margin: 3px 6px 0 0;
+    }
+    &--right {
+      float: right;
+      margin: 3px 0 0 6px;
+    }
+    &--icon-only {
+      margin: 0;
+      padding: 0.25em;
+    }
+  }
+  
 }

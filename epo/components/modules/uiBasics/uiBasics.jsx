@@ -6,8 +6,12 @@ import UiBasicsPanel from 'components/elements/UiBasicsPanel/UiBasicsPanel';
 import UiBasicsLabel from 'components/elements/uiBasicsLabel/uiBasicsLabel';
 import UiBasicsLink from 'components/elements/uiBasicsLink/uiBasicsLink';
 import UiBasicsButton from 'components/elements/uiBasicsButton/uiBasicsButton';
+import UiButtonToolbar from 'components/elements/uiButtonToolbar/uiButtonToolbar';
+
 import MenuList from 'components/composites/menuList/menuList';
-import SearchForm from 'components/composites/SearchForm/SearchForm';
+import SearchForm from 'components/composites/searchForm/searchForm';
+
+import MenuSearchBar from 'components/modules/menuSearchBar/menuSearchBar';
 
 class UiBasics extends Component {
 
@@ -20,18 +24,40 @@ class UiBasics extends Component {
 
   render() {
     return (
-    <UiBasicsPanel>
-    	<MenuList menuItems={this.state.menuItems} menuPlacement='left' />
-    	<SearchForm 
-				formPlacement = 'right'
-				InputName='asearchForm' 
-				InputPlaceholder='Some placeholder text' 
-				ButtonColour='primary'
-				SubmitName='searchForm1' 
-				SubmitValue='Search' />	
-			<p>This is a paragraph with <UiBasicsLink linkTarget='#'>a regular link</UiBasicsLink> inside it. We have a simple plain <UiBasicsLabel labelType='UiBasicslabel'>label</UiBasicsLabel>, a <UiBasicsLabel labelType='UiBasicslabel warning'>warning label</UiBasicsLabel>, and here is a <UiBasicsLabel labelType='UiBasicslabel statusGranted'>TA</UiBasicsLabel> badge.</p>
-			<p>Here is a UI Basics <UiBasicsButton buttonColour='red'>Button</UiBasicsButton><UiBasicsButton buttonColour='green'>Button</UiBasicsButton></p>		
-		</UiBasicsPanel>	
+    <div>
+      {/*<h4>A menu plus search</h4>
+      <UiBasicsPanel>
+        <MenuSearchBar menuItems={this.state.menuItems} />
+      </UiBasicsPanel> 
+      <br />*/}
+      <h3>Basic components</h3>
+      <br />
+    	<h4>Basic text with labels</h4>
+  		<p>This is a paragraph with <UiBasicsLink linkTarget='#'>a regular link</UiBasicsLink> inside it. We have a simple plain&nbsp;
+         <UiBasicsLabel labelType='UiBasicslabel'>label</UiBasicsLabel>, a <UiBasicsLabel labelType='UiBasicslabel warning'>warning label</UiBasicsLabel>, 
+         and here is a <UiBasicsLabel labelType='UiBasicslabel statusGranted'>TA</UiBasicsLabel> badge.
+         Below are some buttons:
+      </p>
+      <hr />
+      <UiButtonToolbar>
+        <h4>Buttons</h4>
+         <UiBasicsButton buttonColour='primary' icon='icon-file-stack'>Icon left</UiBasicsButton>
+         <UiBasicsButton buttonColour='warning' icon='icon-dossier-files' iconPlacement='right'>Icon right</UiBasicsButton>
+         <UiBasicsButton buttonColour='success' icon='icon-search2' iconOnly ='true'></UiBasicsButton>
+         <UiBasicsButton buttonColour='danger'>This button has a lot of text</UiBasicsButton>
+         <UiBasicsButton>Default button</UiBasicsButton>
+      </UiButtonToolbar>
+      <hr />
+      <h4>A search Form</h4>
+      <h6>Unstyled</h6>
+      <SearchForm />
+      <h6>With some properties added</h6>
+      <SearchForm ButtonColour='warning' SubmitName='search' InputPlaceholder='Enter your search term' SubmitValue='submit your search'/>
+      <hr />
+      <h4>A basic menu</h4>
+      <h6>The menu items can be changed using 'state'</h6>
+      <MenuList menuItems={this.state.menuItems} />
+    </div>
     );
   }
 

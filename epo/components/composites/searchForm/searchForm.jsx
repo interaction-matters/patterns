@@ -28,3 +28,7 @@ export default class SearchForm extends Component {
 
 };
 
+SearchForm.defaultProps = {
+  SubmitValue: 'Search'
+};
+
