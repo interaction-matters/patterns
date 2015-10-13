@@ -1,0 +1,185 @@
+/*******************************
+Typography
+--------------------------------
+Handles font-size and all
+baseline/vertical rhythm classes
+********************************/
+
+// Dependancies
+@import '~shared/styles/base/variables/typography';
+@import '~shared/styles/base/variables/scaffolding';
+@import '~shared/styles/base/variables/colours';
+
+// Web font
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+body {
+	font-family:"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+  letter-spacing: .1px;
+  color: $color-gray-600;
+  font-size: $font-size-base;
+  font-weight: $font-weight-default;
+  line-height: $line-height-base;
+}
+
+/* Headings
+----------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+  letter-spacing: -0.01em;
+
+  small {
+    font-weight: normal;
+    line-height: 1;
+    color: inherit;
+  }
+}
+
+h1, 
+h2, 
+h3 {
+  margin-top: $line-height-computed;
+  margin-bottom: ($line-height-computed / 2);
+
+  small {
+    font-size: 65%;
+  }
+}
+h4,
+h5,
+h6, {
+  margin-top: ($line-height-computed / 2);
+  margin-bottom: ($line-height-computed / 2);
+
+  small {
+    font-size: 75%;
+  }
+}
+
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+h4 { font-size: $font-size-h4; }
+h5 { font-size: $font-size-h5; }
+h6 { font-size: $font-size-h6; }
+
+
+// Body text
+// -------------------------
+
+p {
+  margin: 0 0 1em;
+}
+
+// Emphasis & misc
+// -------------------------
+
+// Ex: (12px small font / 14px base font) * 100% = about 85%
+small {
+  font-size: floor((100% * $font-size-small / $font-size-base));
+}
+
+mark {
+  background-color: $warning;
+  padding: .2em;
+}
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+
+// Page header
+// -------------------------
+
+
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: ($line-height-computed / 2);
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+  li {
+  	line-height:$line-height-base;
+  }
+}
+
+// Description Lists
+dl {
+  margin-top: 0; // Remove browser default
+  margin-bottom: $line-height-computed;
+}
+dt,
+dd {
+  line-height: $line-height-base;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0; // Undo browser default
+}
+
+// Misc
+// -------------------------
+
+code {}
+pre {}
+form {
+	input{}
+}
+kbd {}
+
+hr {
+	margin: 2em 0;
+	opacity:0.2;
+	-webkit-opacity:0.2;
+	-moz-opacity:0.2;
+}
+
+// Abbreviations and acronyms
+abbr {
+  cursor: help;
+  border-bottom: 1px dotted;
+}
+
+// Blockquotes
+blockquote {
+  padding: ($line-height-computed / 2) $line-height-computed;
+  margin: 0 0 $line-height-computed;
+  font-size: $font-size-base;
+  border-left: 5px solid $color-gray-900;
+
+  p,
+  ul,
+  ol {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Addresses
+address {
+  margin-bottom: $line-height-computed;
+  font-style: normal;
+  line-height: $line-height-base;
+}

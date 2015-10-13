@@ -1,0 +1,32 @@
+/*****
+Alerts
+******/
+
+// Dependencies:
+
+// Colours
+@import '~shared/styles/base/variables/colours';
+// Border-radius
+@import '~shared/styles/base/mixins/border-radius';
+
+.ui-alert {
+  padding:0.625em;
+  @include border-radius(0.265em, 0.265em, 0.265em, 0.265em);
+  // Colours
+  &--primary {
+    background: $primary;
+    color:white;
+  }
+  &--danger {
+    background: $danger;
+    color:white;
+  }
+  &--warning {
+    background: $warning;
+    color:white;
+  }
+  &--success {
+    background: $success;
+    color:white;
+  }
+}

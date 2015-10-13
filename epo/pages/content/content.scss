@@ -1,11 +1,12 @@
 @import "susy/sass/susy";
 
-.main-panel {
-  @include span (10 of 12);
-  min-height: 768px;
-}
+.content {
+	&__main-panel {
+	  @include span (10 of 12);
+	}
 
-.secondary-panel {
-  @include span (2 of 12 last);
-  height:100%;
+	&__secondary-panel {
+	  @include span (2 of 12 last);
+	}
 }
+	

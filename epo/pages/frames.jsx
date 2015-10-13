@@ -17,7 +17,7 @@ import Helpers from 'components/modules/helpers/helpers';
 export class Frame extends Component {
 	render() {
 		return (
-			<div>
+			<div className="view">
 				{/* Main navigation */}
 				<Navigation />
 				{/* Routes */}

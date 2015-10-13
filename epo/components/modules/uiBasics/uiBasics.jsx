@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import styles from './uiBasics.scss';
 
-import UiBasicsPanel from 'components/elements/UiBasicsPanel/UiBasicsPanel';
+import UiBasicsWrapper from 'components/elements/uiBasicsWrapper/uiBasicsWrapper';
 import UiBasicsLabel from 'components/elements/uiBasicsLabel/uiBasicsLabel';
 import UiBasicsLink from 'components/elements/uiBasicsLink/uiBasicsLink';
 import UiBasicsButton from 'components/elements/uiBasicsButton/uiBasicsButton';
@@ -50,12 +50,21 @@ class UiBasics extends Component {
       <br />
       <UiButtonToolbar>
         <h4>More sizes</h4>
-        <UiBasicsButton buttonColour='success' buttonSize='smallest'>Smallest button</UiBasicsButton>
+        <UiBasicsButton buttonColour='primary' buttonSize='smallest'>Smallest button</UiBasicsButton>
         <UiBasicsButton buttonColour='danger' buttonSize='small'>Small button</UiBasicsButton>
         <UiBasicsButton>Default button</UiBasicsButton>
         <UiBasicsButton buttonColour='success' icon='icon-dossier-files' buttonSize='large'>Large button</UiBasicsButton>
-        <UiBasicsButton buttonColour='warning' icon='icon-file-stack' buttonSize='largest'>Largest button</UiBasicsButton>
+        <UiBasicsButton buttonColour='warning' icon='icon-file-stack' iconPlacement="right" buttonSize='largest'>Largest button</UiBasicsButton>
       </UiButtonToolbar>
+      <br />  
+      <UiBasicsWrapper containerName='button-full-container'>
+          <h4>This button will fill its container</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+          sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <UiBasicsButton buttonColour='primary' buttonWidth='full'>Full width button</UiBasicsButton>
+      </UiBasicsWrapper>
       <hr />
       <h4>A search Form</h4>
       <h6>Unstyled</h6>

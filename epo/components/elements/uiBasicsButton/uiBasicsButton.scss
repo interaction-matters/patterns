@@ -4,22 +4,32 @@ UI Basics Button
 
 // Dependencies:
 
-// 1. Colours
+// Colours
 @import '~shared/styles/base/variables/colours';
-// 2. Button
+// Typography
+@import '~shared/styles/base/variables/typography';
+// Button
 @import '~shared/styles/base/mixins/button';
-// 3. Border-radius
+// Border-radius
 @import '~shared/styles/base/mixins/border-radius';
-// 4. Box-shadow
+// Box-shadow
 @import '~shared/styles/base/mixins/box-shadow';
 
 // Styles
 
 .ui-button {
   @include button-static;
-	@include border-radius(4px, 4px, 4px, 4px);
+	@include border-radius(0.265em, 0.265em, 0.265em, 0.265em);
 	@include box-shadow(1px, 1px, 4px, rgba(0, 0, 0, 0.4));
-	padding: .35em .8em;
+	padding: .625em;
+  line-height:1;
+
+  & > span {
+    display:table;
+    & > span {
+      vertical-align: middle;
+    }
+  }
 
   &--default {
     @include button($color-white);
@@ -28,64 +38,79 @@ UI Basics Button
   
   // Colours
   &--primary {
-    @include button($color-blue-600);
+    @include button($primary);
     color:white;
   }
   &--danger {
-  	@include button($color-red-600);
+  	@include button($danger);
   	color:white;
   }
   &--warning {
-    @include button($color-orange-500);
+    @include button($warning);
     color:white;
   }
   &--success {
-  	@include button($color-green-600);
+  	@include button($success);
   	color:white;
   }
 
   // Sizes
   &--smallest {
     font-size: 10px;
-    height: 16px;
     line-height: 16px;
     padding: 0 6px;
   }
   &--small {
     font-size: 12px;
     line-height: 20px;
-    height: 20px;
     padding: 0 6px;
   }
   &--large {
-    font-size: 24px;
+    font-size: 18px;
     [class*='icon'] {
-      margin-top:6px;
+      &[class*='--right'] {
+        padding-top:.02em;
+      }
     }
   }
   &--largest {
-    font-size: 32px;
+    font-size: 24px;
     [class*='icon'] {
-      margin-top:10px;
+      &[class*='--right'] {
+        padding-top:.08em;
+      }
+    }
+  }
+
+  // Width
+  &--wide {
+    width:400px;
+  }
+  &--full {
+    width:100%;
+    padding-top:0.8rem;
+    padding-bottom:0.8rem;
+    & > span {
+      width:100%;
     }
   }
 
   // Icon
   &__icon {
-    font-size: 1.2em;
-    display: inline-block;
+    font-size: inherit;
+    padding: 0 .325em 0 0;
+    vertical-align: middle;
     text-decoration: none;
     &--left {
       float: left;
-      margin: 3px 6px 0 0;
     }
     &--right {
       float: right;
-      margin: 3px 0 0 6px;
+      padding: .1em 0 0 .325em;
     }
     &--icon-only {
       margin: 0;
-      padding: 0.25em;
+      padding: 0;
     }
   }
   

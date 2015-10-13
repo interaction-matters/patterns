@@ -1,11 +1,11 @@
 @import "susy/sass/susy";
 
-.main-panel {
-  @include container (100%);
-  min-height: 768px;
-}
+.dashboard {
+	&__main-panel {
+	  @include container (100%);
+	}
 
-.secondary-panel {
-  @include span (2 of 12 last);
-  height:100%;
+	&__secondary-panel {
+	  @include span (2 of 12 last);
+	}
 }
