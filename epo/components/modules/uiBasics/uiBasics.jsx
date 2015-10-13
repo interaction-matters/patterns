@@ -44,20 +44,31 @@ class UiBasics extends Component {
       <hr />
       <ButtonToolBar>
         <h4>Buttons</h4>
-         <Button colour='primary' icon='icon-file-stack'>Icon left</Button>
-         <Button colour='warning' icon='icon-dossier-files' position='right'>Icon right</Button>
-         <Button colour='success' icon='icon-search2' iconOnly ='true'></Button>
-         <Button colour='danger'>This button has a lot of text</Button>
-         <Button>Default button</Button>
+         <Button type='primary'>Primary</Button>
+         <Button type='warning'>Warning</Button>
+         <Button type='success'>Success</Button>
+         <Button type='danger'>Danger</Button>
+         <Button>Default</Button>
+         <Button type='link'>Link</Button>
       </ButtonToolBar>
       <br />
       <ButtonToolBar>
-        <h4>More sizes</h4>
-        <Button colour='primary' size='smallest'>Smallest button</Button>
-        <Button colour='danger' size='small'>Small button</Button>
+        <h6>Some alternatives</h6>
+        <Button type='primary' icon='icon-file-stack'>Icon left</Button>
+        <Button type='warning' icon='icon-dossier-files' position='right'>Icon right</Button>
+        <Button type='success' icon='icon-search2' iconOnly ='true'></Button>
+        <Button type='danger' icon='icon-warning2'>This button has a lot of text</Button>
         <Button>Default button</Button>
-        <Button colour='success' icon='icon-dossier-files' size='large'>Large button</Button>
-        <Button colour='warning' icon='icon-file-stack' position="right" size='largest'>Largest button</Button>
+        <Button type='link' icon='icon-trash'>Delete this</Button>
+      </ButtonToolBar>
+      <br />
+      <ButtonToolBar>
+        <h6>More sizes</h6>
+        <Button type='primary' size='smallest'>Smallest button</Button>
+        <Button type='danger' size='small'>Small button</Button>
+        <Button>Default button</Button>
+        <Button type='success' icon='icon-dossier-files' size='large'>Large button</Button>
+        <Button type='warning' icon='icon-file-stack' position="right" size='largest'>Largest button</Button>
       </ButtonToolBar>
       <br />  
       <Panel panelName='button-full-container'>
@@ -66,7 +77,7 @@ class UiBasics extends Component {
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
           in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
           sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <Button colour='primary' width='full'>Full width button</Button>
+          <Button type='primary' width='full'>Full width button</Button>
       </Panel>
       <hr />
       <h4>A search Form</h4>

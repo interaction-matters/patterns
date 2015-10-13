@@ -25,11 +25,11 @@ export default class Button extends Component {
 
   render() {
 
-    // Colour of the button
-    let colour = 'ui-button--' + this.props.colour;
-    // Type of button [button, reset, submit]
+    // Type of button [default, primary, warning, success, info, link, delete]
+    let type = 'ui-button--' + this.props.type;
+    // Role (html attribute 'type') of button [button, reset, submit]
     let role = this.props.role;
-    // Width of button [default, wide, full]
+    // Width of button [default, wide, fluid]
     let width = 'ui-button--' + this.props.width;
     if (Boolean(this.props.width)) { width = 'ui-button--' + this.props.width } else { width = '' }
     // Size of button [small, smallest, default, large, largest]
@@ -47,7 +47,7 @@ export default class Button extends Component {
     if (Boolean(this.props.icon)) {iconTag = <i className={'ui-button__icon' + ' ' + icon + ' ' + position + ' ' + iconOnly}></i>}
 
     // Remove whitespace from class definition
-    var trimClass = 'ui-button' + ' ' + colour + ' ' + size + ' ' + width;
+    var trimClass = 'ui-button' + ' ' + type + ' ' + size + ' ' + width;
     
     return (
 
@@ -61,6 +61,6 @@ export default class Button extends Component {
 
 Button.defaultProps = {
   role: 'button',
-  colour: 'default',
+  type: 'default',
   iconOnly: false
 }

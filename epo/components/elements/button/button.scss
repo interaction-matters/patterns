@@ -2,7 +2,7 @@
 UI Basics Button
 ****************/
 
-// Dependencies:
+/*** Dependencies ***/
 
 // Colours
 @import '~shared/styles/base/variables/colours';
@@ -14,8 +14,10 @@ UI Basics Button
 @import '~shared/styles/base/mixins/border-radius';
 // Box-shadow
 @import '~shared/styles/base/mixins/box-shadow';
+// Link
+@import '~shared/styles/base/mixins/link';
 
-// Styles
+/*** Styles ***/
 
 .ui-button {
   @include button-static;
@@ -35,6 +37,13 @@ UI Basics Button
   &--default {
     @include button($color-white);
     border:1px solid $color-gray-100;
+  }
+
+  &--link {
+    @include link;
+    @include box-shadow(0,0,0,0);
+    background:transparent;
+    border:none;   
   }
   
   // Colours

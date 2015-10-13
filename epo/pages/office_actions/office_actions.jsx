@@ -38,7 +38,7 @@ export default class Content extends Component {
             <Button>A button</Button>
           	<hr />
             <p>Here is an out-of-context ui basics <Label type='ts-badge'>label</Label></p><hr />
-            <p>You can see here that we are mixing an extra small <b>UI basics</b> <Button size='small' colour='primary'>Button</Button> with a label for <Label type='status-refused'>Refused</Label>, and <Label type='status-pending'>Pending</Label> from UI basics (Team Edyt)</p>    
+            <p>You can see here that we are mixing an extra small <b>UI basics</b> <Button size='small' type='primary'>Button</Button> with a label for <Label type='status-refused'>Refused</Label>, and <Label type='status-pending'>Pending</Label> from UI basics (Team Edyt)</p>    
          </Panel>
         
       </div>
