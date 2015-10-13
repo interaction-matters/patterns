@@ -1,0 +1,14 @@
+@mixin link {
+  color: $color-blue-500;
+  cursor: pointer;
+  text-decoration: none;
+  
+  &:focus,
+  &:hover {
+    color: $color-blue-700;
+    text-decoration: underline;
+  }
+  &:active {
+    color: $color-blue-900;
+  }
+}
