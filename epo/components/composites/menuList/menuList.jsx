@@ -9,7 +9,7 @@ import React, { Component } from 'react';
 
 import styles from './menuList.scss';
 
-import UiBasicsLink from 'components/elements/uiBasicsLink/uiBasicsLink';
+import TextLink from 'components/elements/link/link';
 
 export default class MenuList extends Component {
 
@@ -20,9 +20,9 @@ export default class MenuList extends Component {
   	// Get menu items in menu
   	var menuItems = this.props.menuItems.map((menuItem, index) => {
       return <li key={index}> 
-      					<UiBasicsLink {...this.props}>
+      					<TextLink {...this.props}>
       						{menuItem}
-      					</UiBasicsLink>
+      					</TextLink>
       			 </li>
     });
 

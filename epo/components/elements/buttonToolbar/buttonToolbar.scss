@@ -1,0 +1,12 @@
+/****************
+UI Button Toolbar
+*****************/
+
+.ui-button-toolbar {
+	& > button {
+		margin-right:5px;
+		&:last-child {
+			margin:0;
+		}
+	}
+}

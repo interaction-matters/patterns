@@ -1,0 +1,118 @@
+/***************
+UI Basics Button
+****************/
+
+// Dependencies:
+
+// Colours
+@import '~shared/styles/base/variables/colours';
+// Typography
+@import '~shared/styles/base/variables/typography';
+// Button
+@import '~shared/styles/base/mixins/button';
+// Border-radius
+@import '~shared/styles/base/mixins/border-radius';
+// Box-shadow
+@import '~shared/styles/base/mixins/box-shadow';
+
+// Styles
+
+.ui-button {
+  @include button-static;
+	@include border-radius(0.265em, 0.265em, 0.265em, 0.265em);
+	@include box-shadow(1px, 1px, 4px, rgba(0, 0, 0, 0.4));
+	padding: .625em;
+  line-height:1; /* resets line-height */
+  border:1px solid transparent;
+
+  & > span {
+    display:table;
+    & > span {
+      vertical-align: middle;
+    }
+  }
+
+  &--default {
+    @include button($color-white);
+    border:1px solid $color-gray-100;
+  }
+  
+  // Colours
+  &--primary {
+    @include button($primary);
+    color:white;
+  }
+  &--danger {
+  	@include button($danger);
+  	color:white;
+  }
+  &--warning {
+    @include button($warning);
+    color:white;
+  }
+  &--success {
+  	@include button($success);
+  	color:white;
+  }
+
+  // Sizes
+  &--smallest {
+    font-size: 10px;
+    line-height: 16px;
+    padding: 0 6px;
+  }
+  &--small {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0 6px;
+  }
+  &--large {
+    font-size: 18px;
+    [class*='icon'] {
+      &[class*='--right'] {
+        padding-top:.02em;
+      }
+    }
+  }
+  &--largest {
+    font-size: 24px;
+    [class*='icon'] {
+      &[class*='--right'] {
+        padding-top:.08em;
+      }
+    }
+  }
+
+  // Width
+  &--wide {
+    width:400px;
+  }
+  &--full {
+    width:100%;
+    padding-top:0.8rem;
+    padding-bottom:0.8rem;
+    & > span {
+      width:100%;
+    }
+  }
+
+  // Icon
+  &__icon {
+    font-size: inherit;
+    padding: 0 .325em 0 0;
+    vertical-align: middle;
+    text-decoration: none;
+    &--left {
+      float: left;
+    }
+    &--right {
+      float: right;
+      padding: .1em 0 0 .325em;
+    }
+    &--icon-only {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  
+}

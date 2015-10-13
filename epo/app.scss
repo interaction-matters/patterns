@@ -6,14 +6,31 @@ global app dependencies
 ***********************/
 
 /************
-1. Bootstrap
+1. Global 
 *************/
+
+//Normalize
+@import "shared/styles/vendor/normalize";
+
+//Font icons
+@import 'shared/styles/base/global/icons';
+
+//Utilities
+@import 'shared/styles/base/global/utils';
+
+//Typography
+@import 'shared/styles/base/global/typography';
+
+//Additional
+// -- Normalize
+// -- base typography
+
+/************
+2. Bootstrap
+
 
 //Set icon font path for Glyphicons
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-
-//Web font
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 
 //Bootstrap dependancies
 @import "shared/styles/vendor/bootswatch/variables";
@@ -27,14 +44,4 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 //Additional custom styles
 @import "shared/styles/vendor/bootswatch/custom";
 
-/************
-2. Global 
 *************/
-
-//Font icons
-@import 'shared/styles/base/icons';
-
-//Utilities
-@import 'shared/styles/base/utils';
-
-//Additional

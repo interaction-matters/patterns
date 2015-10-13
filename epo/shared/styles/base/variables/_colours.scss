@@ -1,5 +1,6 @@
-// Color scales
-// ============
+/****************
+Edyt Color scales
+*****************/
 
 // Purple Scale
 $color-purple-900:	rgba(34, 6, 73, 1);
@@ -66,16 +67,6 @@ $color-red-500:	rgba(192, 67, 58, 1);
 $color-red-400:	rgba(255, 230, 230, 1);
 $color-red-100:	rgba(254, 245, 245, 1);
 
-// // Gray Scale
-// $color-gray-000: rgba(49, 58, 66, 1);
-// $color-gray-000: rgba(74, 82, 89, 1);
-// $color-gray-000: rgba(99, 107, 113, 1);
-// $color-gray-000: rgba(124, 132, 137, 1);
-// $color-gray-000: rgba(150, 156, 160, 1);
-// $color-gray-000: rgba(176, 181, 184, 1);
-// $color-gray-000: rgba(202, 205, 207, 1);
-// $color-bright: 000(228, 230, 231, 1);
-
 // Gray Scale
 $color-black: rgba(32, 32, 32, 1);
 $color-gray-900: rgba(45, 54, 60, 1);
@@ -88,3 +79,30 @@ $color-gray-300: rgba(199, 203, 207, 1);
 $color-gray-200: rgba(233, 235, 237, 1);
 $color-gray-100: rgba(248, 249, 250, 1);
 $color-white: rgba(255, 255, 255, 1);
+
+/**************************
+Additional colour variables
+***************************/
+
+$red            : rgba(231, 76, 60,1.0);
+$orange         : rgba(230, 126, 34,1.0);
+$yellow         : rgba(241, 196, 15,1.0);
+$olive          : rgba(39, 174, 96,1.0);
+$green          : rgba(39, 174, 96,1.0);
+$teal           : rgba(26, 188, 156,1.0);
+$blue           : rgba(52, 152, 219,1.0);
+$violet         : rgba(142, 68, 173,1.0);
+$purple         : rgba(155, 89, 182,1.0);
+$pink           : #e03997;
+$brown          : #a5673f;
+$grey           : #767676;
+$black          : #000000;
+
+/*****************
+Colour definitions
+******************/
+
+$primary				: #2196F3;
+$warning				: #ff9800;
+$success				: #4CAF50;
+$danger					: #e51c23;

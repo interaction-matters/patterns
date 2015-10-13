@@ -9,8 +9,8 @@ import React, { Component } from 'react';
 
 import styles from './searchForm.scss';
 
-import InputSubmit from 'components/elements/uiBasicsInput/inputSubmit/inputSubmit';
-import InputText from 'components/elements/uiBasicsInput/inputText/inputText';
+import Submit from 'components/elements/input/submit/submit';
+import Text from 'components/elements/input/text/text';
 
 export default class SearchForm extends Component {
 
@@ -20,8 +20,8 @@ export default class SearchForm extends Component {
 
     return (
       <div className={"ui-search-form" + ' ' + "ui-search-form--" + formPlacement}>
-				<InputText {...this.props} />
-				<InputSubmit {...this.props} />
+				<Text {...this.props} />
+				<Submit {...this.props} />
 			</div>
     );
   }
@@ -29,6 +29,6 @@ export default class SearchForm extends Component {
 };
 
 SearchForm.defaultProps = {
-  SubmitValue: 'Search'
+  value: 'Search'
 };
 

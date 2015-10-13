@@ -1,7 +1,31 @@
+/**************
+Menu Search Bar
+***************/
+
 .menu-search-bar {
 	float:left;
 	width:100%;
-	padding-bottom:1.2em;
+	padding:1.2em;
+	background:#eee;
 	margin-bottom:1.2em;
-	border-bottom:1px solid #eee;
+	border-bottom:1px solid #ddd;
+	
+	ul {
+		/* Probably need a better vertical
+		centering solution e.g flexbox */
+		margin-top:0.6em;
+  	li {}
+	}
+
+	input[type="text"], input[type="textarea"] {
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		transition: all 1s ease;
+		&:focus {
+			width:375px;
+			outline:0;
+		}
+	}
 }

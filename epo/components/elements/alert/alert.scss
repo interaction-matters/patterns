@@ -1,0 +1,37 @@
+/*****
+Alerts
+******/
+
+// Dependencies:
+
+// Colours
+@import '~shared/styles/base/variables/colours';
+// Border-radius
+@import '~shared/styles/base/mixins/border-radius';
+
+.ui-alert {
+  padding:0.625em;
+  border:1px solid $color-gray-300;
+  @include border-radius(0.265em, 0.265em, 0.265em, 0.265em);
+  // Colours
+  &--primary {
+    background: mix(white, $primary, 80%);
+    border-color: mix(white, $primary, 60%);
+    color: mix(black, $primary, 25%);
+  }
+  &--danger {
+    background: mix(white, $danger, 80%);
+    border-color: mix(white, $danger, 60%);
+    color: mix(black, $danger, 25%);
+  }
+  &--warning {
+    background: mix(white, $warning, 80%);
+    border-color: mix(white, $warning, 60%);
+    color: mix(black, $warning, 25%);
+  }
+  &--success {
+    background: mix(white, $success, 80%);
+    border-color: mix(white, $success, 60%);
+    color: mix(black, $success, 25%);
+  }
+}

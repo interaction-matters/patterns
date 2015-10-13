@@ -9,20 +9,18 @@ import React, {Component} from 'react';
 // Sass dependencies
 import styles from './home.scss';
 
-
-import { Alert } from 'react-bootstrap';
-import { Panel } from 'react-bootstrap';
+import Panel from 'components/elements/panel/panel';
 
 
 export default class Home extends Component {
 	render() {
 		return (
-			<div>
-				<Alert bsStyle='success'>
+			<div className="home">
+				{/*<Alert bsStyle='success'>
 			        <strong>HOME</strong> You have successfully loaded the <strong>default home</strong> page.
-			    </Alert>
+			    </Alert>*/}
 
-                <Panel className="panel-main">
+                <Panel panelName="home__main-panel">
                 </Panel>
 			</div>
 		);

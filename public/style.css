@@ -1,9 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);/***********
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);/**********************
 App.scss
---------
+-----------------------
 This file imports any
-global epo dependencies
-************/
+global app dependencies
+***********************/
 /************
 1. Bootstrap
 *************/
@@ -11,7 +11,7 @@ global epo dependencies
 Bootstrap Main
 --------------
 This file imports specified Bootstrap 
-components, per our epo's needs.
+components, per our app's needs.
 Removed so far:
 1. Variables
 2. Glyphicons
@@ -8795,12 +8795,18 @@ Global utility classes
 .global-style {
   border: 1px solid red; }
 
-#myApp {
-  height: 100%;
-  overflow: hidden; }
+.visibly-hidden {
+  height: 1px;
+  left: -10px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: -10px;
+  width: 1px;
+  z-index: -1; }
 
-.view {
-  height: 100%; }
+.appearance-none {
+  -webkit-appearance: none; }
 .wrapper {
   max-width: 80%;
   margin-left: auto;
@@ -8824,17 +8830,16 @@ Global utility classes
   left: 0;
   top: 0;
   height: 100%; }
-  .vertical-navigation__toolbar button {
-    font-size: 1.8em; }
-    .vertical-navigation__toolbar button a {
-      color: inherit; }
-      .vertical-navigation__toolbar button a:hover, .vertical-navigation__toolbar button a:active, .vertical-navigation__toolbar button a:focus {
-        text-decoration: none; }
-    .vertical-navigation__toolbar button:first-child {
+  .vertical-navigation__toolbar a {
+    font-size: 1.8em;
+    color: inherit; }
+    .vertical-navigation__toolbar a:hover, .vertical-navigation__toolbar a:active, .vertical-navigation__toolbar a:focus {
+      text-decoration: none; }
+    .vertical-navigation__toolbar a:first-child {
       font-size: 2.4em;
       padding-left: 0;
       padding-right: 0; }
-      .vertical-navigation__toolbar button:first-child p {
+      .vertical-navigation__toolbar a:first-child p {
         font-size: 30%;
         display: block;
         border-top: 1px solid #eee;
@@ -8842,13 +8847,66 @@ Global utility classes
         padding-right: 5px;
         padding-top: 5px;
         margin-bottom: 0; }
-    .vertical-navigation__toolbar button:not(:first-child) {
-      min-height: 100px; }
+    .vertical-navigation__toolbar a:not(:first-child) {
+      min-height: 80px;
+      display: flex;
+      justify-content: center;
+      /* align horizontal */
+      align-items: center;
+      /* align vertical */ }
 
 .vertical-navigation > div {
   height: 100%; }
   .vertical-navigation > div > div {
     height: 100%; }
+
+.btn-primary {
+  color: #fff !important; }
+
+.btn-dashboard {
+  max-width: 70px !important;
+  min-height: 70px !important;
+  line-height: 1.4em;
+  background: #dadada;
+  color: #666666 !important;
+  font-size: 1.1em !important;
+  padding: 2px !important;
+  margin: 0 !important;
+  white-space: pre-wrap; }
+  .btn-dashboard p {
+    display: block; }
+  .btn-dashboard:hover, .btn-dashboard:active, .btn-dashboard:focus {
+    text-decoration: none;
+    color: 222222 !important;
+    background: white;
+    box-shadow: none; }
+
+.btn-content {
+  min-height: 50px !important; }
+
+.btn-task {
+  background: #f1f1f1; }
+  .btn-task:hover, .btn-task:active, .btn-task:focus {
+    text-decoration: none;
+    color: 222222 !important;
+    background: white; }
+    .btn-task:hover:active, .btn-task:hover:focus, .btn-task:active:active, .btn-task:active:focus, .btn-task:focus:active, .btn-task:focus:focus {
+      box-shadow: none; }
+  .btn-task:disabled {
+    background: #dadada;
+    font-size: 150%; }
+    .btn-task:disabled:hover {
+      background: #dadada;
+      font-size: 150%; }
+
+.btn-back {
+  background: #dadada;
+  font-size: 140%;
+  line-height: 100%; }
+  .btn-back:hover, .btn-back:focus, .btn-back:active {
+    background: #dadada;
+    font-size: 140%;
+    line-height: 100%; }
 .helpers {
   padding: 15px;
   position: fixed;
@@ -8869,46 +8927,33 @@ Global utility classes
       position: absolute;
       bottom: 10px;
       right: 10px; }
-.secondary-panel--short {
-  min-height: 374px; }
-.grid {
-  max-width: 80%;
+.panel-main {
+  max-width: 100%;
   margin-left: auto;
-  margin-right: auto; }
-  .grid:after {
+  margin-right: auto;
+  min-height: 768px; }
+  .panel-main:after {
     content: " ";
     display: block;
     clear: both; }
 
-.span {
-  width: 83.05085%;
-  float: left;
-  margin-right: 1.69492%; }
+.secondary-panel--short {
+  min-height: 374px; }
+.main-panel {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 768px; }
+  .main-panel:after {
+    content: " ";
+    display: block;
+    clear: both; }
 
-.common {
-  background: #eee; }
-
-.root {
-  border-width: 2px;
-  border-style: solid;
-  border-color: red;
-  padding: 0 20px;
-  margin: 10px 6px; }
-  .root a:hover {
-    color: blue; }
-
-.text {
-  color: #777;
-  font-size: 24px;
-  font-family: helvetica, arial, sans-serif;
-  font-weight: 600; }
-
-.toolBar {
-  width: 100%;
-  padding: 10px 0; }
-
-.right {
-  float: right; }
+.secondary-panel {
+  width: 15.25424%;
+  float: right;
+  margin-right: 0;
+  height: 100%; }
 /********
 UI Basics
 *********/
@@ -8933,6 +8978,32 @@ a {
   a:active {
     color: #071c36; }
 /**************
+UI Basics Panel
+***************/
+/**********************
+Mixin for border-radius
+***********************/
+/**********************
+Mixin for border-radius
+-----------------------
+// Credit to:
+gist.github.com/garyharan/957284
+********************************/
+.ui-basics-panel {
+  border: none;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  -ms-border-radius: 2px 2px 2px 2px;
+  -o-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.2em;
+  background-color: #fff; }
+  .ui-basics-panel__panel-inner {
+    padding: 1.2em; }
+/**************
 UI Basics Label
 ***************/
 .UiBasicslabel {
@@ -8955,10 +9026,241 @@ UI Basics Label
     background-color: #3d8183; }
   .UiBasicslabel.statusRefused {
     background-color: #202020; }
-.grid6of12 {
-  width: 49.15254%;
+/*************
+UI Basics Link
+**************/
+a {
+  color: #427ab3;
+  cursor: pointer;
+  text-decoration: none; }
+  a:focus,
+  a:hover {
+    color: #0b4282;
+    text-decoration: underline; }
+  a:active {
+    color: #071c36; }
+/***************
+UI Basics Button
+****************/
+/*******************
+Default button mixin
+********************/
+/**********************
+Mixin for border-radius
+***********************/
+/**********************
+Mixin for border-radius
+-----------------------
+// Credit to:
+gist.github.com/garyharan/957284
+********************************/
+.ui-button {
+  border: none;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -ms-border-radius: 4px 4px 4px 4px;
+  -o-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  padding: 0.35em 0.8em; }
+  .ui-button:hover {
+    cursor: pointer; }
+  .ui-button--default {
+    background-color: white;
+    border-color: #e6e6e6;
+    border: 1px solid #f8f9fa; }
+    .ui-button--default:hover {
+      background-color: #d9d9d9;
+      border-color: #cccccc; }
+  .ui-button--primary {
+    background-color: #0b58ab;
+    border-color: #0a4f9a;
+    color: white; }
+    .ui-button--primary:hover {
+      background-color: #094b91;
+      border-color: #094689; }
+  .ui-button--danger {
+    background-color: #b01a0d;
+    border-color: #9e170c;
+    color: white; }
+    .ui-button--danger:hover {
+      background-color: #96160b;
+      border-color: #8d150a; }
+  .ui-button--warning {
+    background-color: #d9360d;
+    border-color: #c3310c;
+    color: white; }
+    .ui-button--warning:hover {
+      background-color: #b82e0b;
+      border-color: #ae2b0a; }
+  .ui-button--success {
+    background-color: #21853b;
+    border-color: #1e7835;
+    color: white; }
+    .ui-button--success:hover {
+      background-color: #1c7132;
+      border-color: #1a6a2f; }
+  .ui-button--smallest {
+    font-size: 10px;
+    line-height: 16px;
+    padding: 0 6px; }
+  .ui-button--small {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0 6px; }
+  .ui-button--large {
+    font-size: 18px; }
+    .ui-button--large [class*='icon'] {
+      margin-top: 2px; }
+  .ui-button--largest {
+    font-size: 24px; }
+    .ui-button--largest [class*='icon'] {
+      margin-top: 6px; }
+  .ui-button__icon {
+    font-size: 1.2em;
+    display: inline-block;
+    text-decoration: none; }
+    .ui-button__icon--left {
+      float: left;
+      margin: 3px 6px 0 0; }
+    .ui-button__icon--right {
+      float: right;
+      margin: 3px 0 0 6px; }
+    .ui-button__icon--icon-only {
+      margin: 0;
+      padding: 0.25em; }
+/****************
+UI Button Toolbar
+*****************/
+.button-toolbar > button {
+  margin-right: 5px; }
+  .button-toolbar > button:last-child {
+    margin: 0; }
+@charset "UTF-8";
+/*************
+Menu
+**************/
+.ui-menu {
+  display: block;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle; }
+  .ui-menu > li {
+    display: inline-block;
+    margin-right: 0.5em; }
+    .ui-menu > li:after {
+      content: " \2022   ";
+      color: #666; }
+    .ui-menu > li:last-child {
+      margin-right: 0; }
+      .ui-menu > li:last-child:after {
+        content: ""; }
+  .ui-menu--left {
+    float: left; }
+  .ui-menu--right {
+    float: right; }
+/*************
+Search Form
+**************/
+.ui-search-form input[type="text"] {
+  min-width: 180px; }
+
+.ui-search-form input[type="submit"] {
+  margin-left: 5px; }
+
+.ui-search-form--left {
+  float: left; }
+
+.ui-search-form--right {
+  float: right; }
+/*********************
+UI Basics Input Submit
+**********************/
+/*******************
+Default button mixin
+********************/
+/**********************
+Mixin for border-radius
+***********************/
+/**********************
+Mixin for border-radius
+-----------------------
+// Credit to:
+gist.github.com/garyharan/957284
+********************************/
+.ui-basics-submit {
+  border: none;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -ms-border-radius: 4px 4px 4px 4px;
+  -o-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 0.35em 0.8em; }
+  .ui-basics-submit:hover {
+    cursor: pointer; }
+  .ui-basics-submit--primary {
+    background-color: #0b58ab;
+    border-color: #0a4f9a; }
+    .ui-basics-submit--primary:hover {
+      background-color: #094b91;
+      border-color: #094689; }
+  .ui-basics-submit--warning {
+    background-color: #b01a0d;
+    border-color: #9e170c; }
+    .ui-basics-submit--warning:hover {
+      background-color: #96160b;
+      border-color: #8d150a; }
+/**************
+UI Basics Label
+***************/
+/**********************
+Mixin for border-radius
+***********************/
+/**********************
+Mixin for border-radius
+-----------------------
+// Credit to:
+gist.github.com/garyharan/957284
+********************************/
+input[type=text].ui-basics-input-text {
+  -webkit-appearance: none;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -ms-border-radius: 4px 4px 4px 4px;
+  -o-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  font-size: inherit;
+  padding: 0.35em 0.8em;
+  border: 0; }
+.menu-search-bar {
   float: left;
-  margin-right: 1.69492%; }
+  width: 100%;
+  padding-bottom: 1.2em;
+  margin-bottom: 1.2em;
+  border-bottom: 1px solid #eee; }
 .main-panel {
   width: 83.05085%;
   float: left;
@@ -8970,5 +9272,75 @@ UI Basics Label
   float: right;
   margin-right: 0;
   height: 100%; }
+.main-panel {
+  width: 83.05085%;
+  float: left;
+  margin-right: 1.69492%;
+  min-height: 768px; }
+
+.secondary-panel {
+  width: 15.25424%;
+  float: right;
+  margin-right: 0;
+  height: 100%; }
+.main-panel {
+  width: 83.05085%;
+  float: left;
+  margin-right: 1.69492%;
+  min-height: 768px; }
+
+.secondary-panel {
+  width: 15.25424%;
+  float: right;
+  margin-right: 0;
+  height: 100%; }
+.main-panel {
+  width: 83.05085%;
+  float: left;
+  margin-right: 1.69492%;
+  min-height: 768px; }
+
+.secondary-panel {
+  width: 15.25424%;
+  float: right;
+  margin-right: 0;
+  height: 100%; }
+.main-panel {
+  width: 83.05085%;
+  float: left;
+  margin-right: 1.69492%;
+  min-height: 768px; }
+
+.secondary-panel {
+  width: 15.25424%;
+  float: right;
+  margin-right: 0;
+  height: 100%; }
+/**************
+UI Basics Panel
+***************/
+/**********************
+Mixin for border-radius
+***********************/
+/**********************
+Mixin for border-radius
+-----------------------
+// Credit to:
+gist.github.com/garyharan/957284
+********************************/
+.ui-basics-panel {
+  border: none;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  -ms-border-radius: 2px 2px 2px 2px;
+  -o-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.2em;
+  background-color: #fff; }
+  .ui-basics-panel__panel-inner {
+    padding: 1.2em; }
 
 /*# sourceMappingURL=style.css.map*/
