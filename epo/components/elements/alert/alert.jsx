@@ -18,3 +18,7 @@ export default class Alert extends Component {
   }
 
 };
+
+Alert.defaultProps = {
+  type: 'primary'
+}

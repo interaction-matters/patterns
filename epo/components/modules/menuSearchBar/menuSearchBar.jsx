@@ -26,6 +26,7 @@ export default class MenuSearchBar extends Component {
 
 };
 
+MenuSearchBar.defaultProps = {}
 
 
 

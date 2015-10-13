@@ -1,3 +1,11 @@
+/*************************
+UI Basics
+--------------------------
+Intended for display of UI 
+elements on a single page,
+for demonstration purposes
+**************************/
+
 import React, { Component } from 'react';
 
 import styles from './uiBasics.scss';
@@ -75,7 +83,6 @@ class UiBasics extends Component {
         <h4>A menu plus search</h4>
         <MenuSearchBar menuItems={this.state.itemsInMenu} />
       </div> 
-      <br />
     </div>
     );
   }

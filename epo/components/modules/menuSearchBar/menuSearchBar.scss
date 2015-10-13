@@ -1,3 +1,7 @@
+/**************
+Menu Search Bar
+***************/
+
 .menu-search-bar {
 	float:left;
 	width:100%;
@@ -5,6 +9,14 @@
 	background:#eee;
 	margin-bottom:1.2em;
 	border-bottom:1px solid #ddd;
+	
+	ul {
+		/* Probably need a better vertical
+		centering solution e.g flexbox */
+		margin-top:0.6em;
+  	li {}
+	}
+
 	input[type="text"], input[type="textarea"] {
 		-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;

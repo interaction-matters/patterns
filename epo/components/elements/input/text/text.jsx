@@ -55,7 +55,7 @@ Text.propTypes = {
 Text.defaultProps = {
   className: 'default',
   textName: 'default',
-  textMaxLength: '500',
+  textMaxLength: 500,
   textValue: '',
   textPlaceholder: 'Enter text...'
 };

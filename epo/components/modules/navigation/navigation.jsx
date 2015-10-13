@@ -1,3 +1,10 @@
+/********************************
+Main Navigation
+---------------------------------
+A vertical navigation module, for
+the global menu/navigation
+*********************************/
+
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
