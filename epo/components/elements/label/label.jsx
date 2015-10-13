@@ -4,13 +4,13 @@ A basic label
 
 import React, { Component } from 'react';
 
-import styles from './uiBasicsLabel.scss';
+import styles from './label.scss';
 
-export default class UiBasicsLabel extends Component {
+export default class Label extends Component {
 
   render() {
 
-  	var className = this.props.labelType;
+  	var className = 'ui-label ui-label--' + this.props.type;
 
   	/*if (this.props.labelType == 'taBadge') { className = styles.taBadge }
   	else if (this.props.labelType == 'statusGranted') { className = styles.statusGranted }
@@ -24,3 +24,7 @@ export default class UiBasicsLabel extends Component {
   }
 
 };
+
+Label.defaultProps = {
+  labelType: 'default'
+}

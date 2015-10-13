@@ -8,6 +8,8 @@ import React, { Component } from 'react';
 
 import styles from './helpers.scss';
 
+import Button from 'components/elements/button/button';
+
 export default class Helpers extends Component {
 
   render() {
@@ -16,17 +18,17 @@ export default class Helpers extends Component {
     	<div className='helpers helpers__toolbar--vertical'>
 		    	
 	  		<nav>
-			  	<button><i className="icon-icon-annotate"></i></button>
-	        <button><i className="icon-outdent"></i></button>
-	        <button><i className="icon-indent"></i></button>
-	        <button><i className="icon-template-add"></i></button>
-	        <button><i className="icon-find-in-page"></i></button>
-	        <button><i className="icon-outdent"></i></button>
-	        <button><i className="icon-indent"></i></button>
-	        <button><i className="icon-template-add"></i></button>
+			  	<Button><i className="icon-icon-annotate"></i></Button>
+	        <Button><i className="icon-outdent"></i></Button>
+	        <Button><i className="icon-indent"></i></Button>
+	        <Button><i className="icon-template-add"></i></Button>
+	        <Button><i className="icon-find-in-page"></i></Button>
+	        <Button><i className="icon-outdent"></i></Button>
+	        <Button><i className="icon-indent"></i></Button>
+	        <Button><i className="icon-template-add"></i></Button>
 	      </nav>
 
-	      <button className='helpers__toolbar__button--anchored'><i className="icon-external-link"></i></button>
+	      <Button className='helpers__toolbar__button--anchored'><i className="icon-external-link"></i></Button>
 
 	    </div>
     );

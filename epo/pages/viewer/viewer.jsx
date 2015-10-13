@@ -4,9 +4,7 @@ import React, {Component} from 'react';
 import styles from './viewer.scss';
 
 // React dependencies
-import UiBasics from 'components/modules/uiBasics/uiBasics';
-import UiBasicsLabel from 'components/elements/uiBasicsLabel/uiBasicsLabel';
-import UiBasicsWrapper from 'components/elements/uiBasicsWrapper/uiBasicsWrapper';
+import Panel from 'components/elements/panel/panel';
 import Alert from 'components/elements/alert/alert';
 
 export default class Content extends Component {
@@ -15,17 +13,17 @@ export default class Content extends Component {
 
     return (
       <div className="viewer">
-        <UiBasicsWrapper containerName='viewer__main-panel'>
+        <Panel panelName='viewer__main-panel'>
     			<Alert type='primary'>
     				<strong>Congratulations!</strong> You have successfully loaded the <strong>default VIEWER</strong> page.
     			</Alert>
-    		</UiBasicsWrapper>
+    		</Panel>
 
-        <UiBasicsWrapper containerName='viewer__secondary-panel'>
+        <Panel panelName='viewer__secondary-panel'>
     			<Alert type='success'>
     				<strong>Secondary Content</strong>
     			</Alert>
-        </UiBasicsWrapper>
+        </Panel>
       </div>
     );
   }

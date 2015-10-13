@@ -4,16 +4,16 @@ A toolbar for displaying buttons
 
 import React, { Component } from 'react';
 
-import styles from './uiButtonToolbar.scss';
+import styles from './buttonToolbar.scss';
 
-class UiButtonToolbar extends Component {
+class ButtonToolbar extends Component {
 
   render() {
     return (
-			<div className='button-toolbar'>{this.props.children}</div>	
+			<div className='ui-button-toolbar'>{this.props.children}</div>	
     );
   }
 
 };
 
-export default UiButtonToolbar;
+export default ButtonToolbar;

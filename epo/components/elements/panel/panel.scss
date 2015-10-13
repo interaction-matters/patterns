@@ -12,7 +12,7 @@ UI Basics Panel
 @import '~shared/styles/base/variables/scaffolding';
 
 // Styles
-.ui-basics-panel {
+.ui-panel {
   border: none;
   @include border-radius(2px, 2px, 2px, 2px);
   @include box-shadow(0px, 1px, 4px, rgba(0, 0, 0, 0.3));

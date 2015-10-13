@@ -4,9 +4,9 @@ A basic link (anchor tag)
 
 import React, { Component } from 'react';
 
-import styles from './uiBasicsLink.scss';
+import styles from './link.scss';
 
-class UiBasicsLink extends Component {
+export default class TextLink extends Component {
 
   render() {
     return (
@@ -15,5 +15,3 @@ class UiBasicsLink extends Component {
   }
 
 };
-
-export default UiBasicsLink;

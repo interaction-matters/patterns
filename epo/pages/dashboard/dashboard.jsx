@@ -4,10 +4,7 @@ import React, {Component} from 'react';
 import styles from './dashboard.scss';
 
 // React dependencies
-
-import UiBasics from 'components/modules/uiBasics/uiBasics';
-import UiBasicsLabel from 'components/elements/uiBasicsLabel/uiBasicsLabel';
-import UiBasicsWrapper from 'components/elements/uiBasicsWrapper/uiBasicsWrapper';
+import Panel from 'components/elements/panel/panel';
 
 export default class Dashboard extends Component {
 
@@ -15,9 +12,9 @@ export default class Dashboard extends Component {
 
     return (
       <div className="dashboard">
-        <UiBasicsWrapper containerName='dashboard__main-panel'>
+        <Panel panelName='dashboard__main-panel'>
           &nbsp;
-        </UiBasicsWrapper>
+        </Panel>
       </div>
     );
   }

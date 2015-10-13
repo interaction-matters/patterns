@@ -9,7 +9,7 @@ import React, {Component} from 'react';
 // Sass dependencies
 import styles from './home.scss';
 
-import UiBasicsWrapper from 'components/elements/uiBasicsWrapper/uiBasicsWrapper';
+import Panel from 'components/elements/panel/panel';
 
 
 export default class Home extends Component {
@@ -20,8 +20,8 @@ export default class Home extends Component {
 			        <strong>HOME</strong> You have successfully loaded the <strong>default home</strong> page.
 			    </Alert>*/}
 
-                <UiBasicsWrapper containerName="home__main-panel">
-                </UiBasicsWrapper>
+                <Panel panelName="home__main-panel">
+                </Panel>
 			</div>
 		);
 	}

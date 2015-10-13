@@ -9,7 +9,7 @@ UI Basics Label
 
 // Styles
 
-.UiBasicslabel {
+.ui-label {
   background: $color-gray-600;
   border-radius: 3px;
   color: $color-white;
@@ -18,23 +18,23 @@ UI Basics Label
   line-height: 1.4;
   padding: 1px 4px;
 
-	&.warning {
+	&--warning {
   	background: $color-orange-500;
 	}
 	  
 	// Miscellaneous global classes
-	&.taBadge {
+	&--ta-badge {
 	  background-color: $color-green-500;
 	  font-weight: bold;
 	  padding: 1px 6px;
 	}
-	&.statusGranted {
+	&--status-granted {
 	  background-color: $color-green-600;
 	}
-	&.statusPending {
+	&--status-pending {
 	  background-color: $color-cyan-500;
 	}
-	&.statusRefused {
+	&--status-refused {
 	  background-color: $color-black;
 	}
 

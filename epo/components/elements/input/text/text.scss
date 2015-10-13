@@ -1,5 +1,5 @@
 /**************
-UI Basics Label
+Input Type Text
 ***************/
 
 // Dependencies:
@@ -13,12 +13,12 @@ UI Basics Label
 
 // Styles
 input[type=text] {
-	&.ui-basics-input-text {
+	&.ui-input-text {
 		-webkit-appearance: none;
 	  @include border-radius(4px, 4px, 4px, 4px);
 		@include box-shadow(1px, 1px, 4px, rgba(0, 0, 0, 0.4));
 		font-size:inherit;
-		padding: .35em .8em;
+		padding: .625em;
 		border:0;
 	}
 }

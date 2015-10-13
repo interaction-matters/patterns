@@ -15,17 +15,24 @@ UI Basics Input Submit
 
 // Styles
 
-.ui-basics-submit {
+.ui-input-submit {
   @include button-static;
 	@include border-radius(4px, 4px, 4px, 4px);
 	@include box-shadow(1px, 1px, 4px, rgba(0, 0, 0, 0.4));	
   color:white;
-	padding: .35em .8em;
+	padding: .625em;
+	border:1px solid transparent; 
+
 	&--primary {
-		@include button($color-blue-600);
+		@include button($primary);
 	}
 	&--warning {
-		@include button($color-red-600);
+		@include button($warning);
 	}
-
+	&--success {
+		@include button($success);
+	}
+	&--danger {
+		@include button($danger);
+	}
 }
