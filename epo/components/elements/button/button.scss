@@ -20,8 +20,8 @@ UI Basics Button
 /*** Styles ***/
 
 .ui-button {
-  @include button-static;
-	@include border-radius(0.265em, 0.265em, 0.265em, 0.265em);
+  @include button-static; /* from button mixin */
+	@include border-radius(0.265em, 0.265em, 0.265em, 0.265em); /* from border-radius mixin */
 	@include box-shadow(1px, 1px, 4px, rgba(0, 0, 0, 0.4));
 	padding: .625em;
   line-height:1; /* resets line-height */
@@ -62,6 +62,10 @@ UI Basics Button
   &--success {
   	@include button($success);
   	color:white;
+  }
+  &--info {
+    @include button($info);
+    color:white;
   }
 
   // Sizes

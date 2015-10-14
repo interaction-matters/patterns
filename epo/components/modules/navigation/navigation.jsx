@@ -6,49 +6,59 @@ the global menu/navigation
 *********************************/
 
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 
 import styles from './navigation.scss';
+
+import { Link } from 'react-router';
+import GlobalMenuButton from 'components/composites/globalMenuButton/globalMenuButton';
 
 export default class Navigation extends Component {
 
   render() {
 
     return (
-    	<nav className='vertical-navigation__toolbar'>
+    	<nav className='vertical-nav vertical-nav--work-manager'>
 
-        <Link className="btn-primary" to="home">
-            <i className="icon-global-nav"></i>
-            <p>Workspace</p>
-        </Link>
+        <div className="vertical-nav-header">
+          <GlobalMenuButton trayId="work-manager">
+            Work manager
+          </GlobalMenuButton>
 
-        <Link className="btn-dashboard" to="dashboard">
-          EP 1432 17589
-        </Link>
+          <Link to="dashboard" className="vertical-nav-header__dossier-identifier">
+            EP 1432 17589
+          </Link>
 
-        <Link className="btn-task btn-content" to="content">
-          <i className="icon-dossier-files"></i>
-        </Link>
+          <Link to="content" className="vertical-nav-header__dossier-content">
+            <i className="icon-dossier-files"></i>
+          </Link>
 
-        <Link className="btn-back" to="home">
-          <i className="icon-arrow_back"></i>
-        </Link>
+          <Link to="home" className="vertical-nav-header__back-btn">
+            <i className="icon-arrow_back"></i>
+          </Link>
+        </div>
 
-        <Link className="btn-task" to="analysis">
-          <i className="icon-analyze"></i>
-        </Link>
+        <div className="vertical-nav-toolbar">
+          {/* These menu items will be mapped from an array */}
+          <Link to="analysis" className="btn-task">
+            <i className="icon-analyze"></i>
+          </Link>
 
-        <Link className="btn-task" to="search">
-          <i className="icon-search2"></i>
-        </Link>
+          <Link to="search" className="btn-task">
+            <i className="icon-search2"></i>
+          </Link>
 
-        <Link className="btn-task" to="viewer">
-          <i className="icon-file-stack"></i>
-        </Link>
+          <Link to="viewer" className="btn-task">
+            <i className="icon-file-stack"></i>
+          </Link>
 
-        <Link className="btn-task" to="office-actions">
-          <i className="icon-mail2"></i>
-        </Link>
+          <Link to="office-actions" className="btn-task">
+            <i className="icon-mail2"></i>
+          </Link>
+        </div>
+
+        <div className="vertical-nav-footer">
+        {/* Print/font-size etc */}
+        </div>
 
       </nav>
     );

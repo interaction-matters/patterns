@@ -48,6 +48,7 @@ class UiBasics extends Component {
          <Button type='warning'>Warning</Button>
          <Button type='success'>Success</Button>
          <Button type='danger'>Danger</Button>
+         <Button type='info'>Info</Button>
          <Button>Default</Button>
          <Button type='link'>Link</Button>
       </ButtonToolBar>

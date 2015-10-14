@@ -84,13 +84,14 @@ $color-white: rgba(255, 255, 255, 1);
 Additional colour variables
 ***************************/
 
-$red            : rgba(231, 76, 60,1.0);
-$orange         : rgba(230, 126, 34,1.0);
+$red            : #e51c23;
+$orange         : #ff9800;
 $yellow         : rgba(241, 196, 15,1.0);
 $olive          : rgba(39, 174, 96,1.0);
-$green          : rgba(39, 174, 96,1.0);
+$green          : #4CAF50;
 $teal           : rgba(26, 188, 156,1.0);
-$blue           : rgba(52, 152, 219,1.0);
+$blue           : #2196F3;
+$cerulean				: #1DACD6;
 $violet         : rgba(142, 68, 173,1.0);
 $purple         : rgba(155, 89, 182,1.0);
 $pink           : #e03997;
@@ -102,7 +103,8 @@ $black          : #000000;
 Colour definitions
 ******************/
 
-$primary				: #2196F3;
-$warning				: #ff9800;
-$success				: #4CAF50;
-$danger					: #e51c23;
+$primary				: $blue;
+$warning				: $orange;
+$success				: $green;
+$danger					: $red;
+$info						: $cerulean;
