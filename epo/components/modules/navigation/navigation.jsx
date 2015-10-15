@@ -16,19 +16,18 @@ export default class Navigation extends Component {
 
   render() {
 
-    /* Determine which 'workspace' 
+    {/* Determine which 'workspace' 
     ** Try changing to 'work-manager'
-    */
-    
+    */}   
     let currentWorkspace = 'workspace';
 
     return (
     	<nav className={'nav nav--vertical nav--' + currentWorkspace}>
 
         <div className="nav-header">
-          /* Determines which 'home' button is displayed */
+          {/* Determines which 'home' button is displayed */}
           <GlobalMenuButton trayId={currentWorkspace}>
-            Work manager
+            {currentWorkspace}
           </GlobalMenuButton>
 
           <Link to="dashboard" className="nav-header__dossier-identifier">
