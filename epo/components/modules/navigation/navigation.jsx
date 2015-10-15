@@ -16,47 +16,72 @@ export default class Navigation extends Component {
 
   render() {
 
-    return (
-    	<nav className='vertical-nav vertical-nav--work-manager'>
+    /* Determine which 'workspace' 
+    ** Try changing to 'work-manager'
+    */
+    
+    let currentWorkspace = 'workspace';
 
-        <div className="vertical-nav-header">
-          <GlobalMenuButton trayId="work-manager">
+    return (
+    	<nav className={'nav nav--vertical nav--' + currentWorkspace}>
+
+        <div className="nav-header">
+          /* Determines which 'home' button is displayed */
+          <GlobalMenuButton trayId={currentWorkspace}>
             Work manager
           </GlobalMenuButton>
 
-          <Link to="dashboard" className="vertical-nav-header__dossier-identifier">
+          <Link to="dashboard" className="nav-header__dossier-identifier">
             EP 1432 17589
           </Link>
 
-          <Link to="content" className="vertical-nav-header__dossier-content">
+          <Link to="content" className="nav-header__dossier-content">
             <i className="icon-dossier-files"></i>
           </Link>
 
-          <Link to="home" className="vertical-nav-header__back-btn">
+          <Link to="home" className="nav-header__back-btn">
             <i className="icon-arrow_back"></i>
           </Link>
         </div>
 
-        <div className="vertical-nav-toolbar">
+        <div className="nav-list">
           {/* These menu items will be mapped from an array */}
-          <Link to="analysis" className="btn-task">
-            <i className="icon-analyze"></i>
-          </Link>
+          <div className="nav-list__scroll">
+            <Link to="analysis" className="nav-list__item">
+              <i className="icon-analyze"></i>
+            </Link>
 
-          <Link to="search" className="btn-task">
-            <i className="icon-search2"></i>
-          </Link>
+            <Link to="search" className="nav-list__item">
+              <i className="icon-search2"></i>
+            </Link>
 
-          <Link to="viewer" className="btn-task">
-            <i className="icon-file-stack"></i>
-          </Link>
+            <Link to="viewer" className="nav-list__item">
+              <i className="icon-file-stack"></i>
+            </Link>
 
-          <Link to="office-actions" className="btn-task">
-            <i className="icon-mail2"></i>
-          </Link>
+            <Link to="office-actions" className="nav-list__item">
+              <i className="icon-mail2"></i>
+            </Link>
+
+            <Link to="analysis" className="nav-list__item">
+              <i className="icon-analyze"></i>
+            </Link>
+
+            <Link to="search" className="nav-list__item">
+              <i className="icon-search2"></i>
+            </Link>
+
+            <Link to="viewer" className="nav-list__item">
+              <i className="icon-file-stack"></i>
+            </Link>
+
+            <Link to="office-actions" className="nav-list__item">
+              <i className="icon-mail2"></i>
+            </Link>
+          </div>
         </div>
 
-        <div className="vertical-nav-footer">
+        <div className="nav-toolbar">
         {/* Print/font-size etc */}
         </div>
 

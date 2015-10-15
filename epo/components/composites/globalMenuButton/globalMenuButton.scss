@@ -29,7 +29,7 @@ Global Menu Button
 	  padding-top:0.625em;
 	  margin-top:0.625em;
 	}
-	&:hover {
+	&:hover, &:active, &:focus {
 		color: $color-white;	
 	}
   

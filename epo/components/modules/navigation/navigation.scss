@@ -7,75 +7,110 @@ Main Navigation
 // Box-shadow
 @import '~shared/styles/base/mixins/box-shadow';
 
-.vertical-nav {
+.nav {
 	//@include box-shadow(1px, 1px, 4px, rgba(0, 0, 0, 0.4));
 	background:#eee;
 	position:fixed;
 	left:0;
 	top:0;
 	height:100vh;
-	width:70px;
 	overflow-x:hidden;
 	a {
 		&:hover, &:active, &:focus {
-		  text-decoration:none;
+		  text-decoration:none; /* 'Globally' remove from all anchor tags */
 		}
 	}
+	&--vertical {
+		width:70px;
+	}
+}
 
-	.vertical-nav-header {
-		a {
-			display:block;
-			text-align:center;
-			line-height: 1;
-		}
-		&__dossier-identifier {
-			background:$color-gray-400;
-			color: white;
-			padding:1em 0;
-			&:hover {
-				color: $color-white;
-			}
-		}
-		&__dossier-content {
-			font-size:1.8em;
-			color: inherit;
-			padding:0.5em 0;
-			&:hover {
-				color: $color-green-500;
-			}
-		}
-		&__back-btn {
-			color: inherit;
-			font-size:1.8em;
-			padding:0.2em 0;
-			background:$color-gray-500;
+.nav-header {
+	a {
+		display:block;
+		text-align:center;
+		line-height: 1;
+	}
+	&__dossier-identifier {
+		background:$color-gray-400;
+		color: white;
+		padding:1em 0;
+		&:hover {
 			color: $color-white;
-			&:hover {
-				background: $color-gray-600;
-				color: $color-white;
-			}
 		}
 	}
-
-	.vertical-nav-toolbar {
-		a {
-			font-size:1.8em;
-		  color: inherit;
-			min-height:80px;
-			display: flex;
-			justify-content: center; /* align horizontal */
-			align-items: center; /* align vertical */
-			&:hover, &:active, &:focus {
-			  background:$color-white;
-			}
-		}
-	}
-
-	&--work-manager {
-		.vertical-nav-toolbar a {
+	&__dossier-content {
+		font-size:1.8em;
+		color: inherit;
+		padding:0.5em 0;
+		/* 
+		** Relates to parent '.nav' modifier. Keep all
+		** context (e.g. all .nav-header__dossier-content {} code)
+		** encapsulated in one location. See css guidelines doc.
+		*/
+		.nav--work-manager & { /* is the same as {.nav--work-manager.nav-header__dossier-content} */
 			&:hover, &:active, &:focus {
 			  color:$color-green-500;
 			}
 		}
+		.nav--workspace & {
+			&:hover, &:active, &:focus {
+			  color:$primary;
+			}
+		}
 	}
+	&__back-btn {
+		color: inherit;
+		font-size:1.8em;
+		padding:0.2em 0;
+		background:$color-gray-500;
+		color: $color-white;
+		&:hover {
+			background: $color-gray-600;
+			color: $color-white;
+		}
+	}
+}
+
+.nav-list {
+	height:400px;
+	overflow:hidden;
+	&__item {
+		font-size:1.8em;
+	  color: inherit;
+		min-height:80px;
+		display: flex;
+		justify-content: center; /* align horizontal */
+		align-items: center; /* align vertical */
+		&:hover, &:active, &:focus {
+		  background:$color-white;
+		}
+		/* 
+		** Relates to parent '.nav' modifier. Keep all
+		** context (e.g. all .nav-list__item {} code) encapsulated 
+		** in one location. See css guidelines doc.
+		*/
+		.nav--work-manager & { /* is the same as {.nav--work-manager.nav-list__item}*/
+			&:hover, &:active, &:focus {
+			  color:$color-green-500;
+			}
+		}
+		.nav--workspace & {
+			&:hover, &:active, &:focus {
+			  color:$primary;
+			}
+		}
+	}
+	&__scroll {
+		height:100%;
+		overflow:auto;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	
+}
+
+.nav-toolbar {
+
 }
