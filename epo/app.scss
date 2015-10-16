@@ -20,28 +20,3 @@ global app dependencies
 
 //Typography
 @import 'shared/styles/base/global/typography';
-
-//Additional
-// -- Normalize
-// -- base typography
-
-/************
-2. Bootstrap
-
-
-//Set icon font path for Glyphicons
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-
-//Bootstrap dependancies
-@import "shared/styles/vendor/bootswatch/variables";
-
-//Include only the Bootstrap files we need from a custom import file:
-@import "shared/styles/vendor/bootswatch/bootstrap";
-
-//Bootstrap 'Paper' Theme, Material Design style from Bootswatch.com
-@import "shared/styles/vendor/bootswatch/bootswatch";
-
-//Additional custom styles
-@import "shared/styles/vendor/bootswatch/custom";
-
-*************/

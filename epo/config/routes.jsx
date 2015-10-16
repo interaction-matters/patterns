@@ -8,7 +8,7 @@ import React from 'react';
 import { Router, Route, DefaultRoute } from 'react-router';
 
 // Import 'scaffold' options from 'Frames' 
-import { Frame, AltLayout } from 'pages/frames';
+import { App, Workspace, ManagementModule } from 'pages/frames';
 
 // Import pages
 import Home from 'pages/home/home';
@@ -22,19 +22,30 @@ import OfficeActions from 'pages/office_actions/office_actions';
 // Set up variable to change base scaffolding
 // Try changing to 'AltLayout'
 // This could be a dynamic variable in future
-const baseFrame = Frame;
+const baseFrame = Workspace;
 
 export default (
-  <Route name="app" path="/" handler={baseFrame}>
-    //Routes in here
-    <Route name="home" path="app/home" handler={Home} />
-    <Route name="dashboard" path="app/dashboard" handler={Dashboard} />
-    <Route name="content" path="app/content" handler={Content} />
-    <Route name="analysis" path="app/analysis" handler={Analysis} />
-    <Route name="search" path="app/search" handler={Search} />
-    <Route name="viewer" path="app/viewer" handler={Viewer} />
-    <Route name="office-actions" path="app/office-actions" handler={OfficeActions} />
-    //Fallback default route
-    <DefaultRoute handler={Home} />
+<Route name="app" path="/" handler={App}>
+  
+  {/* Workspace routes */}
+  <Route name="workspace" path="/" handler={Workspace}> {/* set to route '/' to make default */}
+    <Route name="home" path="workspace/home" handler={Home} />
+    <Route name="dashboard" path="workspace/dashboard" handler={Dashboard} />
+    <Route name="content" path="workspace/content" handler={Content} />
+    <Route name="analysis" path="workspace/analysis" handler={Analysis} />
+    <Route name="search" path="workspace/search" handler={Search} />
+    <Route name="viewer" path="workspace/viewer" handler={Viewer} />
+    <Route name="office-actions" path="workspace/office-actions" handler={OfficeActions} />
+    <DefaultRoute handler={OfficeActions} />
   </Route>
+
+  {/* Management Module routes */}
+  <Route name="management" path="management" handler={ManagementModule}>
+    <Route name="work-manager" path="/management/work-manager" handler={Home} />
+  </Route>
+
+  {/* Default route for root '/' path */}
+  <DefaultRoute handler={Workspace} />
+
+</Route>
 );

@@ -14,7 +14,18 @@ import styles from './frames.scss';
 import Navigation from 'components/modules/navigation/navigation';
 import Helpers from 'components/modules/helpers/helpers';
 
-export class Frame extends Component {
+{/* This is the root-level '/' route. */}
+export class App extends Component {
+	render() {
+		return (
+			<div className="view">
+					<RouteHandler {...this.props}/>
+			</div>
+		);
+	}
+}
+{/* This is the layout for Workspace pages. */}
+export class Workspace extends Component {
 	render() {
 		return (
 			<div className="view">
@@ -31,17 +42,17 @@ export class Frame extends Component {
 		);
 	}
 }
-
-export class AltLayout extends Component {
+{/* This is the layout for Management Module pages. */}
+export class ManagementModule extends Component {
 	render() {
 		return (
 			<div className="view">
-				
+				{/* Trays will go here */}
 				<div className="wrapper">
 					{/* This will be replaced with whichever routes we pass in */}
 					<RouteHandler {...this.props}/>
 				</div>
-
+				<Helpers />
 			</div>
 		);
 	}

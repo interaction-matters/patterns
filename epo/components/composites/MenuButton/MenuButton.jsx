@@ -8,26 +8,25 @@ between available 'trays'
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-import styles from './globalMenuButton.scss';
+import styles from './MenuButton.scss';
 
-export default class GlobalMenuButton extends Component {
+export default class MenuButton extends Component {
 
 	render() {
 
-		let className = 'global-menu global-menu--' + this.props.trayId;
+		let className = 'menu-button menu-button--' + this.props.size + ' ' + 'menu-button--' + this.props.colour;
 
     return (
 
 			<Link className={className} to="home">
 					{/* Home button */}
-          <i className="icon-global-nav"></i>
-        	{/* Module Identifier */}
-          <span>{this.props.children}</span>
+          <i className="menu-button__icon icon-global-nav"></i>
       </Link>
     );
   }
 }
 
-GlobalMenuButton.defaultProps = {
-	trayId: 'workspace'
+MenuButton.defaultProps = {
+	colour: 'workspace',
+  size: 'default'
 }

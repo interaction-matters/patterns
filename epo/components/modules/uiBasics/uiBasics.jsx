@@ -14,8 +14,8 @@ import Panel from 'components/elements/panel/panel';
 import Label from 'components/elements/label/label';
 import TextLink from 'components/elements/link/link';
 import Button from 'components/elements/button/button';
-import ButtonToolBar from 'components/elements/buttonToolBar/buttonToolBar';
 
+import ButtonToolBar from 'components/composites/buttonToolBar/buttonToolBar';
 import MenuList from 'components/composites/menuList/menuList';
 import SearchForm from 'components/composites/searchForm/searchForm';
 

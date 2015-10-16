@@ -10,7 +10,7 @@ import React, { Component } from 'react';
 import styles from './navigation.scss';
 
 import { Link } from 'react-router';
-import GlobalMenuButton from 'components/composites/globalMenuButton/globalMenuButton';
+import MenuButton from 'components/composites/MenuButton/MenuButton';
 
 export default class Navigation extends Component {
 
@@ -26,9 +26,9 @@ export default class Navigation extends Component {
 
         <div className="nav-header">
           {/* Determines which 'home' button is displayed */}
-          <GlobalMenuButton trayId={currentWorkspace}>
-            {currentWorkspace}
-          </GlobalMenuButton>
+          <MenuButton size="large" />
+          {/* Module Identifier */}
+          <span className="nav-header__module-identifier">{currentWorkspace}</span>
 
           <Link to="dashboard" className="nav-header__dossier-identifier">
             EP 1432 17589
