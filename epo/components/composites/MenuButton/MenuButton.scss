@@ -9,26 +9,22 @@ Global Menu Button
 
 /*** Styles ***/
 
-.global-menu {
+.menu-button {
 	display: block;
-  padding: 0.625em 0;
+  padding: 0.25em 0;
   background: $color-gray-600;
-	i {
+	&__icon {
 		display: block;
-		font-size:2.4em;
-		text-align: center;		
+		text-align: center;
+    margin-top:2px; /* slight adjustment as icon font is not vertically centred */ 
 	}
-	& > span {
-		display: block;
-	  font-size: 0.65em;
-    line-height: 1;
-	  font-weight:bold;
-	  text-transform: uppercase;
-	  text-align: center;
-	  border-top:1px solid;
-	  padding-top:0.625em;
-	  margin-top:0.625em;
-	}
+  &--small {
+    font-size:1.4em;
+  }
+  &--large {
+    font-size:2.4em;
+  }
+	
 	&:hover, &:active, &:focus {
 		color: $color-white;	
 	}

@@ -8,8 +8,8 @@ Main Navigation
 @import '~shared/styles/base/mixins/box-shadow';
 
 .nav {
-	//@include box-shadow(1px, 1px, 4px, rgba(0, 0, 0, 0.4));
-	background:#eee;
+	@include box-shadow(1px, 1px, 4px, rgba(0, 0, 0, 0.2));
+	background:$color-white;
 	position:fixed;
 	left:0;
 	top:0;
@@ -26,16 +26,32 @@ Main Navigation
 }
 
 .nav-header {
+	.menu-button {
+		font-size:2.4em;
+	}
 	a {
 		display:block;
 		text-align:center;
 		line-height: 1;
 	}
+	&__module-identifier {
+		background:$primary;
+		color:$color-white;
+		display: block;
+	  font-size: 0.65em;
+	  line-height: 1;
+	  font-weight:bold;
+	  text-transform: uppercase;
+	  text-align: center;
+	  border-top:1px solid darken($primary, 5%);
+	  padding:0.625em 0;
+	}
 	&__dossier-identifier {
 		background:$color-gray-400;
-		color: white;
+		color: $color-white;
 		padding:1em 0;
 		&:hover {
+			background:$color-gray-500;
 			color: $color-white;
 		}
 	}
@@ -43,6 +59,9 @@ Main Navigation
 		font-size:1.8em;
 		color: inherit;
 		padding:0.5em 0;
+		&:hover {
+			background:$color-gray-100;
+		}
 		/* 
 		** Relates to parent '.nav' modifier. Keep all
 		** context (e.g. all .nav-header__dossier-content {} code)
@@ -83,7 +102,7 @@ Main Navigation
 		justify-content: center; /* align horizontal */
 		align-items: center; /* align vertical */
 		&:hover, &:active, &:focus {
-		  background:$color-white;
+		  background:$color-gray-100;
 		}
 		/* 
 		** Relates to parent '.nav' modifier. Keep all

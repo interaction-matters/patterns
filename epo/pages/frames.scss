@@ -2,6 +2,8 @@
 @import "susy/sass/susy";
 // Padding & margin
 @import '~shared/styles/base/variables/scaffolding';
+// Colours
+@import '~shared/styles/base/variables/colours';
 
 * {
 	box-sizing: border-box;
@@ -11,6 +13,7 @@
 scrolling within containers **/
 html, body, #myApp {
 	overflow: hidden;
+	background:$color-gray-100;
 }
 
 /** A utility class for applying 
