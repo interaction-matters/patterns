@@ -45,6 +45,9 @@ Main Navigation
 	  text-align: center;
 	  border-top:1px solid darken($primary, 5%);
 	  padding:0.625em 0;
+	  &:hover {
+			color: $color-white;
+		}
 	}
 	&__dossier-identifier {
 		background:$color-gray-400;
@@ -89,45 +92,6 @@ Main Navigation
 			color: $color-white;
 		}
 	}
-}
-
-.nav-list {
-	height:400px;
-	overflow:hidden;
-	&__item {
-		font-size:1.8em;
-	  color: inherit;
-		min-height:80px;
-		display: flex;
-		justify-content: center; /* align horizontal */
-		align-items: center; /* align vertical */
-		&:hover, &:active, &:focus {
-		  background:$color-gray-100;
-		}
-		/* 
-		** Relates to parent '.nav' modifier. Keep all
-		** context (e.g. all .nav-list__item {} code) encapsulated 
-		** in one location. See css guidelines doc.
-		*/
-		.nav--work-manager & { /* is the same as {.nav--work-manager.nav-list__item}*/
-			&:hover, &:active, &:focus {
-			  color:$color-green-500;
-			}
-		}
-		.nav--workspace & {
-			&:hover, &:active, &:focus {
-			  color:$primary;
-			}
-		}
-	}
-	&__scroll {
-		height:100%;
-		overflow:auto;
-		&::-webkit-scrollbar {
-			display: none;
-		}
-	}
-	
 }
 
 .nav-toolbar {

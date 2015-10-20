@@ -36,6 +36,7 @@ export default (
     <Route name="search" path="workspace/search" handler={Search} />
     <Route name="viewer" path="workspace/viewer" handler={Viewer} />
     <Route name="office-actions" path="workspace/office-actions" handler={OfficeActions} />
+    {/* (Temporary) default route for workspace path */}
     <DefaultRoute handler={OfficeActions} />
   </Route>
 

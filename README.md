@@ -1,5 +1,5 @@
-# ui-library with Bootstrap
-Bolierplate/starter for UI Library, including react-bootstrap components and setup
+# UI Library
+UI Library project.
 
 ### To run
 

@@ -1,6 +1,8 @@
 /************************
-Tool bar
+Tray Title Bar
 -------------------------
-A toolbar, comprising
-multiple buttons
+Title bar component for 
+a trays module. Comprises
+a global menu button and
+a title (h2)
 *************************/

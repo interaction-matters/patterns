@@ -16,6 +16,7 @@
   "dependencies": {
     "react": "^0.13.3",
     "react-router": "^0.13.3",
+    "reflux": "^0.3.0",
     "webpack": "^1.12.0"
   },
   "devDependencies": {

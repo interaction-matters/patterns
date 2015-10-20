@@ -10,7 +10,9 @@ import React, { Component } from 'react';
 import styles from './navigation.scss';
 
 import { Link } from 'react-router';
+
 import MenuButton from 'components/composites/MenuButton/MenuButton';
+import IconToolbarContainer from 'components/containers/IconToolbarContainer';
 
 export default class Navigation extends Component {
 
@@ -43,42 +45,7 @@ export default class Navigation extends Component {
           </Link>
         </div>
 
-        <div className="nav-list">
-          {/* These menu items will be mapped from an array */}
-          <div className="nav-list__scroll">
-            <Link to="analysis" className="nav-list__item">
-              <i className="icon-analyze"></i>
-            </Link>
-
-            <Link to="search" className="nav-list__item">
-              <i className="icon-search2"></i>
-            </Link>
-
-            <Link to="viewer" className="nav-list__item">
-              <i className="icon-file-stack"></i>
-            </Link>
-
-            <Link to="office-actions" className="nav-list__item">
-              <i className="icon-mail2"></i>
-            </Link>
-
-            <Link to="analysis" className="nav-list__item">
-              <i className="icon-analyze"></i>
-            </Link>
-
-            <Link to="search" className="nav-list__item">
-              <i className="icon-search2"></i>
-            </Link>
-
-            <Link to="viewer" className="nav-list__item">
-              <i className="icon-file-stack"></i>
-            </Link>
-
-            <Link to="office-actions" className="nav-list__item">
-              <i className="icon-mail2"></i>
-            </Link>
-          </div>
-        </div>
+        <IconToolbarContainer/>
 
         <div className="nav-toolbar">
         {/* Print/font-size etc */}
