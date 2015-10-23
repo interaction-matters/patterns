@@ -1,0 +1,32 @@
+/***********
+Icon Toolbar
+************/
+
+// Colours
+@import '~shared/styles/base/variables/colours';
+
+.icon-toolbar {
+	color: inherit;
+	padding:0;
+	&__item {
+		font-size:1.8em;
+	  color: inherit;
+		text-align:center;
+		& > a {
+			color: inherit;
+			display:block;
+			padding:1em 0;
+		}
+		&:hover, &:active, &:focus {
+		  background:$color-gray-100;
+		  color: inherit;
+		}
+	}
+	&__scroll {
+		height:100%;
+		overflow:auto;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}

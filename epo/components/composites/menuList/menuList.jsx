@@ -1,7 +1,8 @@
 /************************
 Menu 
 -------------------------
-A simple menu, comprising
+A component for creating
+a simple menu, comprising
 a series of links
 *************************/
 
@@ -9,7 +10,7 @@ import React, { Component } from 'react';
 
 import styles from './menuList.scss';
 
-import TextLink from 'components/elements/link/link';
+import { Link } from 'react-router';
 
 export default class MenuList extends Component {
 
@@ -20,9 +21,9 @@ export default class MenuList extends Component {
   	// Get menu items in menu
   	var menuItems = this.props.menuItems.map((menuItem, index) => {
       return <li key={index}> 
-      					<TextLink {...this.props}>
-      						{menuItem}
-      					</TextLink>
+      					<Link to={menuItem.target}>
+      						{menuItem.text}
+      					</Link>
       			 </li>
     });
 
