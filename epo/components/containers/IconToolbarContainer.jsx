@@ -12,12 +12,6 @@ import { Link } from 'react-router';
 
 import IconToolbar from 'components/composites/IconToolbar/IconToolbar';
 
-var JSONdata = require('./menu.json');
-
-//var ParsedJSON = JSON.parse(JSONdata);
-
-console.log(JSONdata[0]);
-
 export default class IconToolbarContainer extends Component {
 
   constructor(props){
