@@ -32,15 +32,15 @@ export default class Navigation extends Component {
           {/* Module Identifier */}
           <span className="nav-header__module-identifier">{currentWorkspace}</span>
 
-          <Link to="dashboard" className="nav-header__dossier-identifier">
+          <Link to={`/workspace/dashboard`} className="nav-header__dossier-identifier">
             EP 1432 17589
           </Link>
 
-          <Link to="content" className="nav-header__dossier-content">
+          <Link to="/workspace/content" className="nav-header__dossier-content">
             <i className="icon-dossier-files"></i>
           </Link>
 
-          <Link to="home" className="nav-header__back-btn">
+          <Link to={`/workspace/home`} className="nav-header__back-btn">
             <i className="icon-arrow_back"></i>
           </Link>
         </div>
@@ -58,6 +58,6 @@ export default class Navigation extends Component {
 };
 
 // Scope the 'this' function to the router context
-Navigation.contextTypes = {
+/*Navigation.contextTypes = {
   router: React.PropTypes.func.isRequired
-};
+};*/

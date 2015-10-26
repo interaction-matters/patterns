@@ -16,10 +16,10 @@ import TextLink from 'components/elements/link/link';
 import Button from 'components/elements/button/button';
 
 import ButtonToolBar from 'components/composites/buttonToolBar/buttonToolBar';
-//import MenuList from 'components/composites/menuList/menuList';
+import MenuList from 'components/composites/menuList/menuList';
 import SearchForm from 'components/composites/searchForm/searchForm';
 
-//import MenuSearchBar from 'components/modules/menuSearchBar/menuSearchBar';
+import MenuSearchBar from 'components/modules/menuSearchBar/menuSearchBar';
 
 class UiBasics extends Component {
 
@@ -27,10 +27,10 @@ class UiBasics extends Component {
     super(props);
     this.state = {
       itemsInMenu: [
-        {text:'Viewer', target: 'viewer'}, 
-        {text:'Office Actions', target: 'office-actions'}, 
-        {text:'Dashboard', target: 'dashboard'}, 
-        {text:'Analysis', target: 'analysis'}
+        {text:'Viewer', target: '/workspace/viewer'}, 
+        {text:'Office Actions', target: '/workspace/office-actions'}, 
+        {text:'Dashboard', target: '/workspace/dashboard'}, 
+        {text:'Analysis', target: '/workspace/analysis'}
       ]
     };
   }
@@ -94,11 +94,11 @@ class UiBasics extends Component {
       <hr />
       <h4>A basic menu</h4>
       <h6>The menu items can be changed using 'state'</h6>
-      {/*<MenuList menuItems={this.state.itemsInMenu} />*/}
+      <MenuList menuItems={this.state.itemsInMenu} />
       <hr />
       <div>
         <h4>A menu plus search</h4>
-        {/*<MenuSearchBar menuItems={this.state.itemsInMenu} />*/}
+        <MenuSearchBar menuItems={this.state.itemsInMenu} />
       </div> 
     </div>
     );

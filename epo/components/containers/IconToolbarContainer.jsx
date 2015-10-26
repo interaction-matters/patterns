@@ -23,10 +23,10 @@ export default class IconToolbarContainer extends Component {
 
   componentDidMount() {
     this.setState({toolbarItems: [
-      {target:'analysis', icon: 'icon-analyze'}, 
-      {target:'search', icon: 'icon-search2'}, 
-      {target:'viewer', icon: 'icon-file-stack'}, 
-      {target:'office-actions', icon: 'icon-mail2'}
+      {target:'/workspace/analysis', icon: 'icon-analyze'}, 
+      {target:'/workspace/search', icon: 'icon-search2'}, 
+      {target:'/workspace/viewer', icon: 'icon-file-stack'}, 
+      {target:'/workspace/office-actions', icon: 'icon-mail2'}
     ]})
   }
 
