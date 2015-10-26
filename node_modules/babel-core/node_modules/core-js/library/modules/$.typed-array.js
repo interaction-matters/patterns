@@ -1,63 +1,66 @@
 'use strict';
 var DEBUG = true;
 
-var global            = require('./$.global')
-  , $def              = require('./$.def')
-  , $buffer           = require('./$.buffer')
-  , $ArrayBuffer      = $buffer.ArrayBuffer
-  , $DataView         = $buffer.DataView
-  , $                 = require('./$')
-  , setDesc           = $.setDesc
-  , getDesc           = $.getDesc
-  , ctx               = require('./$.ctx')
-  , strictNew         = require('./$.strict-new')
-  , propertyDesc      = require('./$.property-desc')
-  , $hide             = require('./$.hide')
-  , isInteger         = require('./$.is-integer')
-  , toInteger         = require('./$.to-integer')
-  , toLength          = require('./$.to-length')
-  , toIndex           = require('./$.to-index')
-  , isObject          = require('./$.is-object')
-  , toObject          = require('./$.to-object')
-  , isArrayIter       = require('./$.is-array-iter')
-  , isIterable        = require('./core.is-iterable')
-  , getIterFn         = require('./core.get-iterator-method')
-  , wks               = require('./$.wks')
-  , arrayMethods      = require('./$.array-methods')
-  , arrayIncludes     = require('./$.array-includes')
-  , $fill             = require('./$.array-fill')
-  , $copyWithin       = require('./$.array-copy-within')
-  , $forEach          = arrayMethods(0)
-  , $map              = arrayMethods(1)
-  , $filter           = arrayMethods(2)
-  , $some             = arrayMethods(3)
-  , $every            = arrayMethods(4)
-  , $find             = arrayMethods(5)
-  , $findIndex        = arrayMethods(6)
-  , $indexOf          = arrayIncludes(false)
-  , $includes         = arrayIncludes(true)
-  , $lastIndexOf      = [].lastIndexOf
-  , $reduce           = [].reduce
-  , $reduceRight      = [].reduceRight
-  , $join             = [].join
-  , $reverse          = [].reverse
-  , $sort             = [].sort
-  , $slice            = [].slice
-  , $toString         = [].toString
-  , $toLocaleString   = [].toLocaleString
-  , TYPED_ARRAY       = wks('typed_array')
-  , TYPED_CONSTRUCTOR = wks('typed_constructor')
-  , BYTES_PER_ELEMENT = 'BYTES_PER_ELEMENT';
+var global             = require('./$.global')
+  , $def               = require('./$.def')
+  , $buffer            = require('./$.buffer')
+  , $ArrayBuffer       = $buffer.ArrayBuffer
+  , $DataView          = $buffer.DataView
+  , $                  = require('./$')
+  , setDesc            = $.setDesc
+  , getDesc            = $.getDesc
+  , ctx                = require('./$.ctx')
+  , strictNew          = require('./$.strict-new')
+  , propertyDesc       = require('./$.property-desc')
+  , $hide              = require('./$.hide')
+  , isInteger          = require('./$.is-integer')
+  , toInteger          = require('./$.to-integer')
+  , toLength           = require('./$.to-length')
+  , toIndex            = require('./$.to-index')
+  , isObject           = require('./$.is-object')
+  , toObject           = require('./$.to-object')
+  , isArrayIter        = require('./$.is-array-iter')
+  , isIterable         = require('./core.is-iterable')
+  , getIterFn          = require('./core.get-iterator-method')
+  , wks                = require('./$.wks')
+  , arrayMethods       = require('./$.array-methods')
+  , arrayIncludes      = require('./$.array-includes')
+  , $fill              = require('./$.array-fill')
+  , $copyWithin        = require('./$.array-copy-within')
+  , speciesConstructor = require('./$.species-constructor')
+  , $forEach           = arrayMethods(0)
+  , $map               = arrayMethods(1)
+  , $filter            = arrayMethods(2)
+  , $some              = arrayMethods(3)
+  , $every             = arrayMethods(4)
+  , $find              = arrayMethods(5)
+  , $findIndex         = arrayMethods(6)
+  , $indexOf           = arrayIncludes(false)
+  , $includes          = arrayIncludes(true)
+  , $lastIndexOf       = [].lastIndexOf
+  , $reduce            = [].reduce
+  , $reduceRight       = [].reduceRight
+  , $join              = [].join
+  , $reverse           = [].reverse
+  , $sort              = [].sort
+  , $slice             = [].slice
+  , $toString          = [].toString
+  , $toLocaleString    = [].toLocaleString
+  , TAG                = wks('toStringTag')
+  , TYPED_ARRAY        = wks('typed_array')
+  , TYPED_CONSTRUCTOR  = wks('typed_constructor')
+  , DEF_CONSTRUCTOR    = wks('def_constructor')
+  , BYTES_PER_ELEMENT  = 'BYTES_PER_ELEMENT';
 
 var validate = function(it){
   if(isObject(it) && TYPED_ARRAY in it)return it;
   throw TypeError(it + ' is not a typed array!');
 };
 
-var fromList = function(C, list){
+var fromList = function(O, list){
   var index  = 0
     , length = list.length
-    , result = allocate(C, length);
+    , result = allocate(speciesConstructor(O, O[DEF_CONSTRUCTOR]), length);
   while(length > index)result[index] = list[index++];
   return result;
 };
@@ -105,8 +108,6 @@ var statics = {
 };
 
 var proto = {
-  // get length
-  // constructor
   copyWithin: function copyWithin(target, start /*, end */){
     return $copyWithin.call(validate(this), target, start, arguments.length > 2 ? arguments[2] : undefined);
   },
@@ -117,7 +118,7 @@ var proto = {
     return $fill.apply(validate(this), arguments);
   },
   filter: function filter(callbackfn /*, thisArg */){
-    return fromList(this.constructor, $filter(validate(this), callbackfn, arguments.length > 1 ? arguments[1] : undefined));
+    return fromList(this, $filter(validate(this), callbackfn, arguments.length > 1 ? arguments[1] : undefined)); // TODO
   },
   find: function find(predicate /*, thisArg */){
     return $find(validate(this), predicate, arguments.length > 1 ? arguments[1] : undefined);
@@ -141,7 +142,7 @@ var proto = {
     return $lastIndexOf.apply(validate(this), arguments);
   },
   map: function map(mapfn /*, thisArg */){
-    return fromList(this.constructor, $map(validate(this), mapfn, arguments.length > 1 ? arguments[1] : undefined));
+    return fromList(this, $map(validate(this), mapfn, arguments.length > 1 ? arguments[1] : undefined)); // TODO
   },
   reduce: function reduce(callbackfn /*, initialValue */){ // eslint-disable-line no-unused-vars
     return $reduce.apply(validate(this), arguments);
@@ -164,7 +165,7 @@ var proto = {
     while(index < len)this[offset + index] = src[index++];
   },
   slice: function slice(start, end){
-    return fromList(this.constructor, $slice.call(validate(this), start, end)); // TODO
+    return fromList(this, $slice.call(validate(this), start, end)); // TODO
   },
   some: function some(callbackfn /*, thisArg */){
     return $some(validate(this), callbackfn, arguments.length > 1 ? arguments[1] : undefined);
@@ -179,7 +180,7 @@ var proto = {
       , $$len  = $$.length
       , begin  = toIndex($$len > 0 ? $$[0] : undefined, length)
       , end    = $$len > 1 ? $$[1] : undefined;
-    return new O.constructor( // <- TODO SpeciesConstructor
+    return new (speciesConstructor(O, O[DEF_CONSTRUCTOR]))(
       O.buffer,
       O.byteOffset + begin * O.BYTES_PER_ELEMENT,
       toLength((end === undefined ? length : toIndex(end, length)) - begin)
@@ -301,7 +302,11 @@ module.exports = function(KEY, BYTES, wrapper, CLAMPED){
     $TypedArray.prototype = Base.prototype;
   }
   $hide($TypedArray, TYPED_CONSTRUCTOR, true);
-  $hide($TypedArray.prototype, TYPED_ARRAY, true);
+  $hide($TypedArray.prototype, TYPED_ARRAY, NAME);
+  $hide($TypedArray.prototype, DEF_CONSTRUCTOR, $TypedArray);
+  TAG in $TypedArray.prototype || $.setDesc($TypedArray.prototype, TAG, {
+    get: function(){ return NAME; }
+  });
   DEBUG && require('./$.mix')($TypedArray.prototype, proto);
   DEBUG && require('./$.mix')($TypedArray, statics);
   O[NAME] = $TypedArray;
