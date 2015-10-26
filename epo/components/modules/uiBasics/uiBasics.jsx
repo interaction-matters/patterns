@@ -27,10 +27,10 @@ class UiBasics extends Component {
     super(props);
     this.state = {
       itemsInMenu: [
-        {text:'Viewer', target: 'viewer'}, 
-        {text:'Office Actions', target: 'office-actions'}, 
-        {text:'Dashboard', target: 'dashboard'}, 
-        {text:'Analysis', target: 'analysis'}
+        {text:'Viewer', target: '/workspace/viewer'}, 
+        {text:'Office Actions', target: '/workspace/office-actions'}, 
+        {text:'Dashboard', target: '/workspace/dashboard'}, 
+        {text:'Analysis', target: '/workspace/analysis'}
       ]
     };
   }

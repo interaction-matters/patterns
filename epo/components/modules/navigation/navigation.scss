@@ -45,7 +45,7 @@ Main Navigation
 	  text-align: center;
 	  border-top:1px solid darken($primary, 5%);
 	  padding:0.625em 0;
-	  &:hover {
+	  &:hover, &:active, &:focus {
 			color: $color-white;
 		}
 	}
@@ -53,7 +53,7 @@ Main Navigation
 		background:$color-gray-400;
 		color: $color-white;
 		padding:1em 0;
-		&:hover {
+		&:hover, &:active, &:focus {
 			background:$color-gray-500;
 			color: $color-white;
 		}
@@ -62,7 +62,7 @@ Main Navigation
 		font-size:1.8em;
 		color: inherit;
 		padding:0.5em 0;
-		&:hover {
+		&:hover, &:active, &:focus {
 			background:$color-gray-100;
 		}
 		/* 

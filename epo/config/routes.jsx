@@ -5,7 +5,7 @@ Defines the routes for our app
 ********************************/
 
 import React from 'react';
-import { Router, Route, DefaultRoute } from 'react-router';
+import { Router, Route, IndexRoute, Redirect } from 'react-router';
 
 // Import 'scaffold' options from 'Frames' 
 import { App, Workspace, ManagementModule } from 'pages/frames';
@@ -25,28 +25,30 @@ import OfficeActions from 'pages/office_actions/office_actions';
 const baseFrame = Workspace;
 
 export default (
-<Route name="app" path="/" handler={App}>
+<Route path="/" component={App}>
   
   {/* Workspace routes */}
-  <Route name="workspace" path="/" handler={Workspace}> {/* set to route '/' to make default */}
-    <Route name="home" path="workspace/home" handler={Home} />
-    <Route name="dashboard" path="workspace/dashboard" handler={Dashboard} />
-    <Route name="content" path="workspace/content" handler={Content} />
-    <Route name="analysis" path="workspace/analysis" handler={Analysis} />
-    <Route name="search" path="workspace/search" handler={Search} />
-    <Route name="viewer" path="workspace/viewer" handler={Viewer} />
-    <Route name="office-actions" path="workspace/office-actions" handler={OfficeActions} />
+  <Route path="/workspace" component={Workspace}> {/* set to route '/' to make default */}
+    <Route path="/home" component={Home} />
+    <Route path="/dashboard" component={Dashboard} />
+    <Route path="/content" component={Content} />
+    <Route path="/analysis" component={Analysis} />
+    <Route path="/search" component={Search} />
+    <Route path="/viewer" component={Viewer} />
+    <Route path="/office-actions" component={OfficeActions} />
     {/* (Temporary) default route for workspace path */}
-    <DefaultRoute handler={OfficeActions} />
+    <IndexRoute to="/workspace/office-actions" component={OfficeActions} />
   </Route>
 
   {/* Management Module routes */}
-  <Route name="management" path="management" handler={ManagementModule}>
-    <Route name="work-manager" path="/management/work-manager" handler={Home} />
+  <Route path="/management" component={ManagementModule}>
+    <Route path="/management/work-manager" component={Home} />
   </Route>
 
   {/* Default route for root '/' path */}
-  <DefaultRoute handler={Workspace} />
+  <IndexRoute to="/workspace" component={Workspace} />
+
+  <Redirect from="/home" to="/workspace/office-actions"/>
 
 </Route>
 );

@@ -18,7 +18,7 @@ export default class MenuButton extends Component {
 
     return (
 
-			<Link className={className} to="home">
+			<Link className={className} to="/home">
 					{/* Home button */}
           <i className="menu-button__icon icon-global-nav"></i>
       </Link>

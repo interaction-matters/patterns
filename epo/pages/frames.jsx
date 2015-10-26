@@ -19,7 +19,7 @@ export class App extends Component {
 	render() {
 		return (
 			<div className="view">
-					<RouteHandler {...this.props}/>
+					{this.props.children}
 			</div>
 		);
 	}
@@ -34,7 +34,7 @@ export class Workspace extends Component {
 				{/* Routes */}
 				<div className="wrapper">
 					{/* This will be replaced with whichever routes we pass in */}
-					<RouteHandler {...this.props}/>
+					{this.props.children}
 				</div>
 				{/* Helpers */}
 				<Helpers />
@@ -50,7 +50,7 @@ export class ManagementModule extends Component {
 				{/* Trays will go here */}
 				<div className="wrapper">
 					{/* This will be replaced with whichever routes we pass in */}
-					<RouteHandler {...this.props}/>
+					{this.props.children}
 				</div>
 				<Helpers />
 			</div>
