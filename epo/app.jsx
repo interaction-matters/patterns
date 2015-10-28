@@ -13,10 +13,10 @@ import styles from './app.scss';
 
 // Import route definitions from epo > config > routes.jsx
 import routes from './config/routes';
-import createBrowserHistory from 'history/lib/createBrowserHistory'
+import createHashHistory from 'history/lib/createHashHistory'
 
 // Set history var
-let history = createBrowserHistory()
+let history = createHashHistory()
 // Rather than rendering a component to screen, tell the router
 // which route to pass
 /*Router.run(routes, (Root, state) => {
