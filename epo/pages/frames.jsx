@@ -5,7 +5,6 @@ Defines scaffolding for our app
 ********************************/
 
 import React, {Component} from 'react';
-import { RouteHandler } from 'react-router';
 
 // Sass dependencies
 import styles from './frames.scss';
