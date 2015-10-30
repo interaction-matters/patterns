@@ -12,6 +12,9 @@ import { Link } from 'react-router';
 
 import IconToolbar from 'components/composites/IconToolbar/IconToolbar';
 
+// Import our initial state as a JSON object
+const initialState = require("config/menu.json");
+
 export default class IconToolbarContainer extends Component {
 
   constructor(props){
@@ -22,12 +25,7 @@ export default class IconToolbarContainer extends Component {
   }
 
   componentDidMount() {
-    this.setState({toolbarItems: [
-      {target:'/workspace/analysis', icon: 'icon-analyze'}, 
-      {target:'/workspace/search', icon: 'icon-search2'}, 
-      {target:'/workspace/viewer', icon: 'icon-file-stack'}, 
-      {target:'/workspace/office-actions', icon: 'icon-mail2'}
-    ]})
+    this.setState({toolbarItems: initialState.toolbarItems})
   }
 
   render() {

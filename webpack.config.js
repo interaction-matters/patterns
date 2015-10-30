@@ -29,6 +29,9 @@ module.exports = {
     }, { 
       test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/, 
       loader: 'url-loader?limit=10000&name=fonts/[name].[ext]'
+    }, {
+      test: /\.json$/, 
+      loader: 'json-loader'
     }
     ]
   },
