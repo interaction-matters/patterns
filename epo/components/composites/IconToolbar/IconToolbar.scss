@@ -8,6 +8,9 @@ Icon Toolbar
 .icon-toolbar {
 	color: inherit;
 	padding:0;
+	font-size:inherit;
+	display:block;
+	width:100%;
 	&__item {
 		font-size:1.8em;
 	  color: inherit;
@@ -28,5 +31,11 @@ Icon Toolbar
 		&::-webkit-scrollbar {
 			display: none;
 		}
+	}
+	&--helpers {
+		font-size: 0.8em;
+		position:absolute;
+		bottom:0;
+		margin-bottom: 0;
 	}
 }
