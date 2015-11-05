@@ -16,8 +16,6 @@ export default class Content extends Component {
 
   render() {
 
-    const { dispatch } = this.props.dispatch
-
     return (
       <div className="viewer">
         <Panel panelName='viewer__main-panel'>
@@ -25,7 +23,7 @@ export default class Content extends Component {
     				<strong>Congratulations!</strong> You have successfully loaded the <strong>default VIEWER</strong> page.
     			</Alert>
           <hr />
-          <Button onAddClick={ () => dispatch.addMenuItem('1', '2') } type="danger">Off</Button>
+          <Button onAddClick={ () => this.props.addMenuItem('1', '2') } type="danger">Off</Button>
           <hr />
     		</Panel>
 
