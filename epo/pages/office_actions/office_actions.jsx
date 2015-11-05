@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 
 // Redux Actions
-import * as ActionCreators from 'actions/actions';
-import addMenuItem from 'actions/actions';
+import * as ToggleActions from 'actions/actions';
 
 // Sass dependencies
 import styles from './office_actions.scss';
@@ -37,10 +36,9 @@ export default class Content extends Component {
 					</Alert>
           <hr />
           <h4>Secondary Content</h4>
-          
-          <Button onAddClick={this.props.toggleSecondaryContentOn} type="primary">On</Button>&nbsp;
-          <Button onAddClick={this.props.toggleSecondaryContentOff} type="danger">Off</Button>
-          
+          <Button onAddClick={() => this.props.toggleSecondaryContent('active')} type="primary">On</Button>&nbsp;
+          <Button onAddClick={() => this.props.toggleSecondaryContent('disabled')} type="danger">Off</Button>
+          <hr />
          
   			  <div>  		
 					  {/* Demo of all components */}
@@ -78,9 +76,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(ActionCreators, dispatch)
+  return bindActionCreators(ToggleActions, dispatch)
 }
-
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Content);

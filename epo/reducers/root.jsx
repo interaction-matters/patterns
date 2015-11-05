@@ -1,4 +1,10 @@
-import { TOGGLE_SECONDARY_CONTENT_ON, TOGGLE_SECONDARY_CONTENT_OFF, ADD_MENU_ITEM} from 'actions/actions';
+import { 
+	TOGGLE_SECONDARY_CONTENT_ON, 
+	TOGGLE_SECONDARY_CONTENT_OFF, 
+	ADD_MENU_ITEM,
+	TOGGLE_SECONDARY_CONTENT
+} from 'actions/actions';
+
 import { combineReducers } from 'redux';
 
 // Import our initial state as a JSON object
@@ -19,9 +25,7 @@ function utlityReducer(state=initialState.footerToolbarItems, action) {
 
 function secondaryContentReducer (state = { secondaryContent: '' }, action) {
   switch (action.type) {
-    case 'TOGGLE_SECONDARY_CONTENT_ON':
-      return {...state, secondaryContent: action.status}
-    case 'TOGGLE_SECONDARY_CONTENT_OFF':
+  	case 'TOGGLE_SECONDARY_CONTENT':
       return {...state, secondaryContent: action.status}
     default:
       return state
