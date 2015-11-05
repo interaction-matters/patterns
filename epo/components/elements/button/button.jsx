@@ -51,8 +51,8 @@ export default class Button extends Component {
     
     return (
 
-      this.props.disabled? <button type={role} className={trimClass.trim()} disabled><span>{iconTag}{this.props.children}</span></button> : 
-                           <button type={role} className={trimClass.trim()}><span>{iconTag}{this.props.children}</span></button>
+      this.props.disabled? <button type={role} onClick={this.props.onAddClick} className={trimClass.trim()} disabled><span>{iconTag}{this.props.children}</span></button> : 
+                           <button type={role} onClick={this.props.onAddClick} className={trimClass.trim()}><span>{iconTag}{this.props.children}</span></button>
     );
 
   }

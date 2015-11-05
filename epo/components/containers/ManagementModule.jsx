@@ -1,7 +1,8 @@
 /*******************************
-Frame
+Management Module Container
 --------------------------------
-Defines scaffolding for our app
+Defines scaffolding for the 
+management modules
 ********************************/
 
 import React, {Component} from 'react';
@@ -13,18 +14,7 @@ import styles from 'shared/styles/layout/_frames.scss';
 // React dependencies
 import Navigation from 'components/modules/navigation/navigation';
 import Helpers from 'components/modules/helpers/helpers';
-import RouteHandler from 'components/containers/RouteHandler'
-
-{/* This is the root-level '/' route. */}
-export class App extends Component {
-	render() {
-		return (
-			<RouteHandler className="view">
-					{this.props.children}
-			</RouteHandler>
-		);
-	}
-}
+import RouteHandler from 'components/containers/RouteHandler';
 
 {/* This is the layout for Management Module pages. */}
 export class ManagementModule extends Component {
@@ -32,10 +22,10 @@ export class ManagementModule extends Component {
 		return (
 			<div className="view">
 				{/* Trays will go here */}
-				<div className="wrapper">
+				<RouteHandler className="wrapper">
 					{/* This will be replaced with whichever routes we pass in */}
 					{this.props.children}
-				</div>
+				</RouteHandler>
 				<Helpers />
 			</div>
 		);

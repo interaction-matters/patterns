@@ -1,0 +1,23 @@
+{
+	"toolbarItems":
+		[	
+			{"target":"/workspace/analysis", "icon": "icon-analyze"}, 
+			{"target":"/workspace/search", "icon": "icon-search2"}, 
+			{"target":"/workspace/viewer", "icon": "icon-file-stack"}, 
+			{"target":"/workspace/office-actions", "icon": "icon-mail2"}
+		],
+	"itemsInMenu": [
+      {"text":"Viewer", "target": "/workspace/viewer"}, 
+      {"text":"Office Actions", "target": "/workspace/office-actions"}, 
+      {"text":"Dashboard", "target": "/workspace/dashboard"}, 
+      {"text":"Analysis", "target": "/workspace/analysis"}
+    ],
+  "footerToolbarItems":
+		[	
+			{"target":"/workspace/analysis", "icon": "icon-share2"}, 
+			{"target":"/workspace/search", "icon": "icon-file_upload"}, 
+			{"target":"/workspace/viewer", "icon": "icon-format_size"}, 
+			{"target":"/workspace/office-actions", "icon": "icon-local_print_shop"}
+		],
+	"secondaryContent": "disabled"
+}

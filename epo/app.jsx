@@ -23,6 +23,8 @@ import configureStore from 'store/store';
 // Create the store
 let store = configureStore();
 
+console.log(store.getState());
+
 // Set history var
 let history = createHashHistory()
 // Rather than rendering a component to screen, tell the router

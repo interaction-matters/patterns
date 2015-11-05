@@ -7,6 +7,7 @@ for demonstration purposes
 **************************/
 
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import styles from './uiBasics.scss';
 
@@ -21,19 +22,7 @@ import SearchForm from 'components/composites/searchForm/searchForm';
 
 import MenuSearchBar from 'components/modules/menuSearchBar/menuSearchBar';
 
-class UiBasics extends Component {
-
-	constructor(props){
-    super(props);
-    this.state = {
-      itemsInMenu: [
-        {text:'Viewer', target: '/workspace/viewer'}, 
-        {text:'Office Actions', target: '/workspace/office-actions'}, 
-        {text:'Dashboard', target: '/workspace/dashboard'}, 
-        {text:'Analysis', target: '/workspace/analysis'}
-      ]
-    };
-  }
+export default class UiBasics extends Component {
 
   render() {
     return (
@@ -94,16 +83,14 @@ class UiBasics extends Component {
       <hr />
       <h4>A basic menu</h4>
       <h6>The menu items can be changed using 'state'</h6>
-      <MenuList menuItems={this.state.itemsInMenu} />
+      <MenuList menuItems={this.props.menuItems} />
       <hr />
       <div>
         <h4>A menu plus search</h4>
-        <MenuSearchBar menuItems={this.state.itemsInMenu} />
+        <MenuSearchBar menuItems={this.props.menuItems} />
       </div> 
     </div>
     );
   }
 
 };
-
-export default UiBasics;

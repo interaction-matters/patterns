@@ -25,10 +25,14 @@ export default class IconToolbar extends Component {
 
     return (
       
-      <ul className="icon-toolbar">
+      <ul className={'icon-toolbar' + ' icon-toolbar--' + this.props.type}>
         {toolbarItems}
       </ul>
     )
   }
 
+}
+
+IconToolbar.defaultProps = {
+  type: 'default'
 }

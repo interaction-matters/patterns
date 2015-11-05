@@ -6,13 +6,14 @@ the global menu/navigation
 *********************************/
 
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import styles from './navigation.scss';
 
 import { Link } from 'react-router';
 
 import MenuButton from 'components/composites/MenuButton/MenuButton';
-import IconToolbarContainer from 'components/containers/IconToolbarContainer';
+import IconToolbar from 'components/composites/IconToolbar/IconToolbar';
 
 export default class Navigation extends Component {
 
@@ -23,6 +24,8 @@ export default class Navigation extends Component {
     */}   
     let currentWorkspace = 'workspace';
 
+    const { toolbarItems, helperItems } = this.props
+ 
     return (
     	<nav className={'nav nav--vertical nav--' + currentWorkspace}>
 
@@ -45,11 +48,11 @@ export default class Navigation extends Component {
           </Link>
         </div>
 
-        <IconToolbarContainer/>
+        <IconToolbar toolbarItems={toolbarItems} />
 
-        <div className="nav-toolbar">
+        <IconToolbar type="helpers" toolbarItems={helperItems}>
         {/* Print/font-size etc */}
-        </div>
+        </IconToolbar>
 
       </nav>
     );

@@ -1,9 +1,3 @@
-/*******************************
-Frame
---------------------------------
-Defines scaffolding for our app
-********************************/
-
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
  
@@ -15,29 +9,30 @@ import Navigation from 'components/modules/navigation/navigation';
 import Helpers from 'components/modules/helpers/helpers';
 import RouteHandler from 'components/containers/RouteHandler'
 
-{/* This is the root-level '/' route. */}
-export class App extends Component {
-	render() {
-		return (
-			<RouteHandler className="view">
-					{this.props.children}
-			</RouteHandler>
-		);
-	}
-}
-
-{/* This is the layout for Management Module pages. */}
-export class ManagementModule extends Component {
+{/* This is the layout for Workspace pages. */}
+export default class Workspace extends Component {
 	render() {
 		return (
 			<div className="view">
-				{/* Trays will go here */}
-				<div className="wrapper">
+				{/* Main navigation */}
+				<Navigation toolbarItems={this.props.toolbarItems} helperItems={this.props.utilItems} />
+				{/* Routes */}
+				<RouteHandler className="wrapper">
 					{/* This will be replaced with whichever routes we pass in */}
 					{this.props.children}
-				</div>
+				</RouteHandler>
+				{/* Helpers */}
 				<Helpers />
 			</div>
 		);
 	}
 }
+
+function mapStateToProps(state) {
+  return { 
+    toolbarItems: state.navReducer,
+    utilItems: state.utlityReducer
+  };
+}
+
+export default connect(mapStateToProps)(Workspace);
