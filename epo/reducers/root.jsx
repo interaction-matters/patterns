@@ -1,6 +1,4 @@
 import { 
-	TOGGLE_SECONDARY_CONTENT_ON, 
-	TOGGLE_SECONDARY_CONTENT_OFF, 
 	ADD_MENU_ITEM,
 	TOGGLE_SECONDARY_CONTENT
 } from 'actions/actions';
@@ -19,7 +17,7 @@ function menuReducer(state=initialState.itemsInMenu, action) {
   return state;
 }
 // Sets the 'utility' icons in main nav
-function utlityReducer(state=initialState.footerToolbarItems, action) {
+function utilityReducer(state=initialState.footerToolbarItems, action) {
   return state;
 }
 
@@ -40,11 +38,11 @@ function addMenuItemReducer(state=initialState.toolbarItems, action) {
 }
 
 const rootReducer = combineReducers({
-	navReducer,
- 	menuReducer,
- 	utlityReducer,
- 	addMenuItemReducer,
-  secondaryContentReducer
+	nav: navReducer,
+ 	menu: menuReducer,
+ 	utils: utilityReducer,
+ 	addItems: addMenuItemReducer,
+  secondary: secondaryContentReducer
 })
 
 export default rootReducer

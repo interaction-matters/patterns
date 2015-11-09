@@ -30,8 +30,8 @@ export default class Workspace extends Component {
 
 function mapStateToProps(state) {
   return { 
-    toolbarItems: state.navReducer,
-    utilItems: state.utlityReducer
+    toolbarItems: state.nav,
+    utilItems: state.utils
   };
 }
 

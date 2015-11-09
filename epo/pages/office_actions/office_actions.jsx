@@ -3,13 +3,12 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 
 // Redux Actions
-import * as ToggleActions from 'actions/actions';
+import * as toggleActions from 'actions/actions';
 
 // Sass dependencies
 import styles from './office_actions.scss';
 
 // React dependencies
-
 import UiBasics from 'components/modules/uiBasics/uiBasics';
 import Label from 'components/elements/label/label';
 import Panel from 'components/elements/panel/panel';
@@ -20,13 +19,17 @@ export default class Content extends Component {
 
   render() {
 
-    let frameName;
-
+    // Determine whether to show one column or two
+    let frameName ;
     this.props.secondaryContent
       ? frameName = 'office-actions--sc-' + this.props.secondaryContent
       : frameName = 'office-actions';
 
-    const { dispatch } = this.props
+    // Toggle secondary state option
+    let secondaryState, currentSecState, color;
+    this.props.secondaryContent !== 'active'
+      ? (secondaryState = "active", currentSecState = 'on', color='primary')
+      : (secondaryState = "disabled", currentSecState = 'off', color='danger')
 
     return (
       <div className={frameName}>
@@ -36,13 +39,18 @@ export default class Content extends Component {
 					</Alert>
           <hr />
           <h4>Secondary Content</h4>
-          <Button onAddClick={() => this.props.toggleSecondaryContent('active')} type="primary">On</Button>&nbsp;
-          <Button onAddClick={() => this.props.toggleSecondaryContent('disabled')} type="danger">Off</Button>
+          {/* 
+          ** assign dispatch to 'toggleActions' props and 
+          ** call the function 'toggleSecondaryContent', 
+          ** passing it the value of the 'secondaryState' var
+          ** (see actions.js)
+          */}
+          <Button onAddClick={ () => this.props.toggleActions.toggleSecondaryContent(secondaryState) } type={color}>Turn {currentSecState}</Button>&nbsp;
           <hr />
          
   			  <div>  		
 					  {/* Demo of all components */}
-				    <UiBasics menuItems={this.props.menuItems} />
+				    <UiBasics colour='success' name='search' textPlaceholder='Enter your search term' value='submit your search' menuItems={this.props.menuItems} />
 				  	{/* **** */}
 					</div>     
         </Panel>
@@ -70,13 +78,19 @@ export default class Content extends Component {
 
 function mapStateToProps(state) {
   return { 
-    menuItems: state.menuReducer,
-    secondaryContent: state.secondaryContentReducer.secondaryContent
+    menuItems: state.menu,
+    secondaryContent: state.secondary.secondaryContent
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(ToggleActions, dispatch)
+  return {
+    /* 
+    ** bind our imported actions to store.dispatch()
+    ** and give them a key of the same name 
+    */
+    toggleActions: bindActionCreators(toggleActions, dispatch)
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Content);

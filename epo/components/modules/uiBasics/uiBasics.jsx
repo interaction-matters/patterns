@@ -79,7 +79,7 @@ export default class UiBasics extends Component {
       <h6>Unstyled</h6>
       <SearchForm />
       <h6>With some properties added</h6>
-      <SearchForm colour='success' name='search' textPlaceholder='Enter your search term' value='submit your search'/>
+      <SearchForm {...this.props}/>
       <hr />
       <h4>A basic menu</h4>
       <h6>The menu items can be changed using 'state'</h6>
