@@ -15,4 +15,13 @@ Search Form
 	&--right {
 		float:right;
 	}
+	&--full {
+		input[type="text"] {
+			width:75%;
+		}
+		input[type="submit"] {
+			width:23%;
+			margin-left: 2%;
+		}
+	}
 }

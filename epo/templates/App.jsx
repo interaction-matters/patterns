@@ -11,15 +11,17 @@ import { connect } from 'react-redux';
 import styles from 'shared/styles/layout/_frames.scss';
 
 // React dependencies
-import RouteHandler from 'components/containers/RouteHandler'
+import RouteHandler from 'components/elements/RouteHandler'
 
 {/* This is the root-level '/' route. */}
 export default class App extends Component {
 	render() {
 		return (
-			<RouteHandler className="view">
+			<div className="MAINVIEW">
+				<RouteHandler className="view">
 					{this.props.children}
-			</RouteHandler>
+				</RouteHandler>
+			</div>
 		);
 	}
 }

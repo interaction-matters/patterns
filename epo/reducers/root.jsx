@@ -1,5 +1,5 @@
 import { 
-	ADD_MENU_ITEM,
+	TOGGLE_GLOBAL_MENU,
 	TOGGLE_SECONDARY_CONTENT
 } from 'actions/actions';
 
@@ -21,7 +21,7 @@ function utilityReducer(state=initialState.footerToolbarItems, action) {
   return state;
 }
 
-function secondaryContentReducer (state = { secondaryContent: '' }, action) {
+function secondaryContentReducer (state = { secondaryContent: initialState.secondaryContent }, action) {
   switch (action.type) {
   	case 'TOGGLE_SECONDARY_CONTENT':
       return {...state, secondaryContent: action.status}
@@ -30,9 +30,11 @@ function secondaryContentReducer (state = { secondaryContent: '' }, action) {
   }
 }
 
-function addMenuItemReducer(state=initialState.toolbarItems, action) {
+function globalMenuReducer(state={ globalMenuStatus: 'disabled' }, action) {
   switch (action.type) {
-		default:
+		case 'TOGGLE_GLOBAL_MENU':
+      return {...state, globalMenuStatus: action.status}
+    default:
       return state
 	}
 }
@@ -41,8 +43,8 @@ const rootReducer = combineReducers({
 	nav: navReducer,
  	menu: menuReducer,
  	utils: utilityReducer,
- 	addItems: addMenuItemReducer,
-  secondary: secondaryContentReducer
+  secondary: secondaryContentReducer,
+  globalMenu: globalMenuReducer
 })
 
 export default rootReducer

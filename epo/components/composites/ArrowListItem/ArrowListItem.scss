@@ -1,0 +1,32 @@
+/**************
+Arrow List Item
+***************/
+
+// Dependencies:
+
+// Base > variables > colours
+@import '~shared/styles/base/variables/colours';
+
+.arrow-list-item {
+	margin:1px 0;
+	&__link {
+		display: block;
+		width:100%;
+		height:100%;
+		padding:0.625em;
+		background: $color-gray-200;
+		color:inherit;
+		transition: 0.2s ease background;
+		font-size: 1.5em;
+		&:hover, &:active, &:focus {
+			background: darken($color-gray-200, 5%);
+			text-decoration: none;
+			color: inherit;
+		}
+		.icon {
+			display: block;
+			float:right;
+			line-height: 1.85;
+		}
+	}
+}

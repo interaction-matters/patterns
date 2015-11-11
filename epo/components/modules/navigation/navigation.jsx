@@ -31,7 +31,7 @@ export default class Navigation extends Component {
 
         <div className="nav-header">
           {/* Determines which 'home' button is displayed */}
-          <MenuButton size="large" />
+          <MenuButton {...this.props} size="large" />
           {/* Module Identifier */}
           <span className="nav-header__module-identifier">{currentWorkspace}</span>
 

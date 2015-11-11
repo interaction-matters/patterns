@@ -16,10 +16,15 @@ export default class SearchForm extends Component {
 
   render() {
 
-  	var formPlacement = this.props.formPlacement;
+  	let formPlacement = "ui-search-form--" + this.props.formPlacement;
+
+    let width;
+    this.props.width ? width = "ui-search-form--" + this.props.width : width = ''
+
+    let className = "ui-search-form" + ' ' + formPlacement + ' ' + width
 
     return (
-      <div className={"ui-search-form" + ' ' + "ui-search-form--" + formPlacement}>
+      <div className={className}>
 				<Text {...this.props} />
 				<Submit {...this.props} />
 			</div>

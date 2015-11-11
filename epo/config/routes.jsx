@@ -8,9 +8,9 @@ import React from 'react';
 import { Router, Route, IndexRoute, Redirect } from 'react-router';
 
 // Import 'scaffold' options from components » containers 
-import App from 'components/containers/App';
-import ManagementModule from 'components/containers/ManagementModule';
-import Workspace from 'components/containers/Workspace';
+import App from 'templates/App';
+import ManagementModule from 'templates/ManagementModule';
+import Workspace from 'templates/Workspace';
 
 // Import pages
 import Home from 'pages/home/home';

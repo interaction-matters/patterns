@@ -4,7 +4,7 @@
 
 export const TOGGLE_SECONDARY_CONTENT = 'TOGGLE_SECONDARY_CONTENT'
 
-export const ADD_MENU_ITEM = 'ADD_MENU_ITEM'
+export const TOGGLE_GLOBAL_MENU = 'TOGGLE_GLOBAL_MENU'
 
 /*
  * action creators
@@ -17,10 +17,9 @@ export function toggleSecondaryContent(status) {
   }
 }
 
-export function addMenuItem(target, icon) {
+export function toggleGlobalMenu(status) {
   return {
-  	type: ADD_MENU_ITEM,
-  	target,
-  	icon
+  	type: TOGGLE_GLOBAL_MENU,
+		status
   }
 }

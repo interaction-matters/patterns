@@ -1,9 +1,4 @@
 import React, {Component} from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux'
-
-// Redux Actions
-import * as toggleActions from 'actions/actions';
 
 // Sass dependencies
 import styles from './office_actions.scss';
@@ -21,7 +16,7 @@ export default class Content extends Component {
 
     // Determine whether to show one column or two
     let frameName ;
-    this.props.secondaryContent
+    this.props.secondaryContent == 'active'
       ? frameName = 'office-actions--sc-' + this.props.secondaryContent
       : frameName = 'office-actions';
 
@@ -30,6 +25,11 @@ export default class Content extends Component {
     this.props.secondaryContent !== 'active'
       ? (secondaryState = "active", currentSecState = 'on', color='primary')
       : (secondaryState = "disabled", currentSecState = 'off', color='danger')
+
+    // Function to emit when toggling 
+    function alertOnClick () {
+      this.props.toggleActions.toggleSecondaryContent(secondaryState)
+    }
 
     return (
       <div className={frameName}>
@@ -45,18 +45,18 @@ export default class Content extends Component {
           ** passing it the value of the 'secondaryState' var
           ** (see actions.js)
           */}
-          <Button onAddClick={ () => this.props.toggleActions.toggleSecondaryContent(secondaryState) } type={color}>Turn {currentSecState}</Button>&nbsp;
+          <Button onAddClick={ alertOnClick.bind(this) } type={color}>Turn {currentSecState}</Button>&nbsp;
           <hr />
          
   			  <div>  		
 					  {/* Demo of all components */}
-				    <UiBasics colour='success' name='search' textPlaceholder='Enter your search term' value='submit your search' menuItems={this.props.menuItems} />
+				    <UiBasics {...this.props}  />
 				  	{/* **** */}
 					</div>     
         </Panel>
 
         {/* conditionally load secondary content */}
-        {(this.props.secondaryContent == 'active' ? 
+        {(this.props.secondaryContent == 'active' ?
           <Panel panelName='office-actions__secondary-panel'>
             <p>This is a secondary content <Label type='ts-badge'>panel</Label></p>
             <hr />
@@ -75,22 +75,3 @@ export default class Content extends Component {
   }
 
 };
-
-function mapStateToProps(state) {
-  return { 
-    menuItems: state.menu,
-    secondaryContent: state.secondary.secondaryContent
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    /* 
-    ** bind our imported actions to store.dispatch()
-    ** and give them a key of the same name 
-    */
-    toggleActions: bindActionCreators(toggleActions, dispatch)
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Content);

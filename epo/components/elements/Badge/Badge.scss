@@ -1,0 +1,41 @@
+/**************
+UI Basics Label
+***************/
+
+// Dependencies:
+
+// Base > variables > colours
+@import '~shared/styles/base/variables/colours';
+// Base > mixins > border-radius
+@import '~shared/styles/base/mixins/border-radius';
+
+// Styles
+
+.ui-badge {
+  @include border-radius (3px, 3px, 3px, 3px);
+  display:table-cell;
+  background:#666;
+  width: 52px;
+  height: 52px;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 500;
+
+	&--orange {
+  	background: $color-orange-500;
+	}
+	&--green {
+	  background-color: $color-green-500;
+	}
+	&--red {
+	  background-color: $color-red-600;
+	}
+	&--blue {
+	  background-color: $color-cyan-500;
+	}
+	&--yellow {
+	  background-color: $color-yellow-600;
+	}
+
+}

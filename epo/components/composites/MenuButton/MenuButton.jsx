@@ -1,12 +1,11 @@
-/********************************
+/****************************
 Global menu navigation button 
----------------------------------
+-----------------------------
 Global button which switches 
 between available 'trays'
-*********************************/
+*****************************/
 
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 
 import styles from './MenuButton.scss';
 
@@ -18,10 +17,10 @@ export default class MenuButton extends Component {
 
     return (
 
-			<Link className={className} to="/home">
+			<a onClick={this.props.onAddClick} className={className}>
 					{/* Home button */}
           <i className="menu-button__icon icon-global-nav"></i>
-      </Link>
+      </a>
     );
   }
 }
