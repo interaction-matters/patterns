@@ -7,7 +7,6 @@ Top level ‘controller’ component
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import Router from 'react-router';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 // Here, we import all of our base styles

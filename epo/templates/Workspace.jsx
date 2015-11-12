@@ -34,6 +34,7 @@ export default class Workspace extends Component {
       menuItems: this.props.menuItems
     }
 
+    // Toggle global menu with menu button
     function changeMenuStatusHandler() {
       let changeMenuStatus;
       this.props.globalMenuStatus !== 'active' 
@@ -42,20 +43,20 @@ export default class Workspace extends Component {
       this.props.toggleActions.toggleGlobalMenu(changeMenuStatus);
       console.log('changeMenuStatus: ' + changeMenuStatus)
     }
-
+    // Reset global menu (turn off)
     function resetMenuStatusHandler () {
       this.props.globalMenuStatus == 'active'
       ? this.props.toggleActions.toggleGlobalMenu('disabled')
       : '';
     }
-
+    // Reset global menu when clicking outside of it
     document.body.onclick = function (event) {
       var target = event.target;  
       if ((target.className != 'menu-button__icon icon-global-nav') && (target.className == 'global-menu__overlay') && (this.props.globalMenuStatus == 'active')) {
         this.props.toggleActions.toggleGlobalMenu('disabled');
       }
     }.bind(this);
-
+    // Reset global menu when clicking ESC key
     window.onkeydown = function (event) {
       if ((event.keyCode === 27) && (this.props.globalMenuStatus == 'active')) {
         this.props.toggleActions.toggleGlobalMenu('disabled');
@@ -65,7 +66,13 @@ export default class Workspace extends Component {
 		return (
 			<div className="view">
 				{/* Main navigation */}
-				<Navigation resetClick={resetMenuStatusHandler.bind(this)} onAddClick={changeMenuStatusHandler.bind(this)} toolbarItems={this.props.toolbarItems} helperItems={this.props.utilItems} />
+				<Navigation 
+          resetClick={resetMenuStatusHandler.bind(this)} 
+          onAddClick={changeMenuStatusHandler.bind(this)} 
+          toolbarItems={this.props.toolbarItems} 
+          helperItems={this.props.utilItems} 
+        />
+
         {(this.props.globalMenuStatus == 'active' ?
           <div>
             <GlobalMenu status={this.props.globalMenuStatus} apps={apps} />

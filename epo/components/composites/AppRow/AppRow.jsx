@@ -22,10 +22,10 @@ export default class AppRow extends Component {
     let totalNumber = this.props.totalNumber;
 
     return (
-    	<div className={className}>
+    	<a href={route} className={className}>
     		<Badge {...this.props}>{shortName}</Badge>
-    		<a className='app-row__link' href={route}>{name}</a>
-    		<div className='app-row__numeric'>
+    		<span className='app-row__link'>{name}</span>
+    		<span className='app-row__numeric'>
 
           { ( this.props.number ? <Indicator {...this.props}>{number}</Indicator> : <span className='app-row__spacer'></span> ) }
 	      	
@@ -33,8 +33,8 @@ export default class AppRow extends Component {
 	      		{ ( this.props.activeNumber ? <strong>{activeNumber}/</strong> : '' ) }           
             { ( this.props.totalNumber ? <span>{totalNumber}</span> : '' ) }
 	      	</span>
-	     	</div>
-    	</div>
+	     	</span>
+    	</a>
     );
   }
 

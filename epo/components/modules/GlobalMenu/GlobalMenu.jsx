@@ -10,8 +10,8 @@ import React, { Component, PropTypes } from 'react';
 import styles from './GlobalMenu.scss';
 
 import AppList from 'components/composites/AppList/AppList';
-import Panel from 'components/elements/Panel/Panel';
-import SearchForm from 'components/composites/SearchForm/SearchForm';
+import Panel from 'components/elements/panel/panel';
+import SearchForm from 'components/composites/searchForm/searchForm';
 import ArrowListItem from 'components/composites/ArrowListItem/ArrowListItem';
 
 export default class GlobalMenu extends Component {

@@ -43,9 +43,7 @@ export default (
   </Route>
 
   {/* Default route for root '/' path */}
-  <IndexRoute to="workspace" component={Workspace} />
-
-  <Redirect from="/home" to="/workspace/office-actions"/>
+  <IndexRoute to="workspace/office-actions" component={ManagementModule} />
 
 </Route>
 );

@@ -12,16 +12,22 @@ UI Basics Label
 .app-row {
 	display:table;
   background: $color-gray-200;
+  color: inherit;
   padding:1em;
   width:100%;
   margin-bottom: 1px;
+  transition: background 0.4s ease;
+  &:active, &:focus, &:hover {
+    text-decoration: inherit;
+    color: $color-gray-900;
+    background: darken($color-gray-200, 5%);
+  }
 
   &__link {
   	display:table-cell;
   	vertical-align: middle;
   	width: 60%;
   	font-size: 1.4em;
-  	color: inherit;
   	text-transform: capitalize;
     padding-left: 8px;
     padding-right: 6px;

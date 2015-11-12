@@ -17,11 +17,9 @@ import RouteHandler from 'components/elements/RouteHandler'
 export default class App extends Component {
 	render() {
 		return (
-			<div className="MAINVIEW">
-				<RouteHandler className="view">
-					{this.props.children}
-				</RouteHandler>
-			</div>
+			<RouteHandler className="App">
+				{this.props.children}
+			</RouteHandler>
 		);
 	}
 }
