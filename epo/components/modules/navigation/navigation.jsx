@@ -24,14 +24,14 @@ export default class Navigation extends Component {
     */}   
     let currentWorkspace = 'workspace';
 
-    const { toolbarItems, helperItems } = this.props
+    const { toolbarItems, helperItems, onAddClick, resetClick } = this.props
  
     return (
     	<nav className={'nav nav--vertical nav--' + currentWorkspace}>
 
         <div className="nav-header">
           {/* Determines which 'home' button is displayed */}
-          <MenuButton size="large" />
+          <MenuButton {...this.props} size="large" />
           {/* Module Identifier */}
           <span className="nav-header__module-identifier">{currentWorkspace}</span>
 
@@ -48,9 +48,9 @@ export default class Navigation extends Component {
           </Link>
         </div>
 
-        <IconToolbar toolbarItems={toolbarItems} />
+        <IconToolbar resetClick={resetClick} toolbarItems={toolbarItems} />
 
-        <IconToolbar type="helpers" toolbarItems={helperItems}>
+        <IconToolbar resetClick={resetClick} type="helpers" toolbarItems={helperItems}>
         {/* Print/font-size etc */}
         </IconToolbar>
 

@@ -12,12 +12,6 @@ export default class Label extends Component {
 
   	var className = 'ui-label ui-label--' + this.props.type;
 
-  	/*if (this.props.labelType == 'taBadge') { className = styles.taBadge }
-  	else if (this.props.labelType == 'statusGranted') { className = styles.statusGranted }
-  	else if (this.props.labelType == 'statusPending') { className = styles.statusPending }
-  	else if (this.props.labelType == 'statusRefused') { className = styles.statusRefused }
-  	else { className = styles.label }*/
-
     return (
     	<span className={className}>{this.props.children}</span>
     );
@@ -26,5 +20,5 @@ export default class Label extends Component {
 };
 
 Label.defaultProps = {
-  labelType: 'default'
+  type: 'default'
 }

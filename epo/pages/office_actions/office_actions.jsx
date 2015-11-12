@@ -1,16 +1,9 @@
 import React, {Component} from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux'
-
-// Redux Actions
-import * as ActionCreators from 'actions/actions';
-import addMenuItem from 'actions/actions';
 
 // Sass dependencies
 import styles from './office_actions.scss';
 
 // React dependencies
-
 import UiBasics from 'components/modules/uiBasics/uiBasics';
 import Label from 'components/elements/label/label';
 import Panel from 'components/elements/panel/panel';
@@ -21,13 +14,22 @@ export default class Content extends Component {
 
   render() {
 
-    let frameName;
-
-    this.props.secondaryContent
+    // Determine whether to show one column or two
+    let frameName ;
+    this.props.secondaryContent == 'active'
       ? frameName = 'office-actions--sc-' + this.props.secondaryContent
       : frameName = 'office-actions';
 
-    const { dispatch } = this.props
+    // Toggle secondary state option
+    let secondaryState, currentSecState, color;
+    this.props.secondaryContent !== 'active'
+      ? (secondaryState = "active", currentSecState = 'on', color='primary')
+      : (secondaryState = "disabled", currentSecState = 'off', color='danger')
+
+    // Function to emit when toggling 
+    function alertOnClick () {
+      this.props.toggleActions.toggleSecondaryContent(secondaryState)
+    }
 
     return (
       <div className={frameName}>
@@ -37,20 +39,24 @@ export default class Content extends Component {
 					</Alert>
           <hr />
           <h4>Secondary Content</h4>
-          
-          <Button onAddClick={this.props.toggleSecondaryContentOn} type="primary">On</Button>&nbsp;
-          <Button onAddClick={this.props.toggleSecondaryContentOff} type="danger">Off</Button>
-          
+          {/* 
+          ** assign dispatch to 'toggleActions' props and 
+          ** call the function 'toggleSecondaryContent', 
+          ** passing it the value of the 'secondaryState' var
+          ** (see actions.js)
+          */}
+          <Button onAddClick={ alertOnClick.bind(this) } type={color}>Turn {currentSecState}</Button>&nbsp;
+          <hr />
          
   			  <div>  		
 					  {/* Demo of all components */}
-				    <UiBasics menuItems={this.props.menuItems} />
+				    <UiBasics {...this.props}  />
 				  	{/* **** */}
 					</div>     
         </Panel>
 
         {/* conditionally load secondary content */}
-        {(this.props.secondaryContent == 'active' ? 
+        {(this.props.secondaryContent == 'active' ?
           <Panel panelName='office-actions__secondary-panel'>
             <p>This is a secondary content <Label type='ts-badge'>panel</Label></p>
             <hr />
@@ -69,18 +75,3 @@ export default class Content extends Component {
   }
 
 };
-
-function mapStateToProps(state) {
-  return { 
-    menuItems: state.menuReducer,
-    secondaryContent: state.secondaryContentReducer.secondaryContent
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators(ActionCreators, dispatch)
-}
-
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Content);

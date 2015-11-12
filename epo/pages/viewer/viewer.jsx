@@ -40,8 +40,8 @@ export default class Content extends Component {
 
 function mapStateToProps(state) {
   return { 
-    menuItems: state.menuReducer,
-    secondaryContent: state.secondaryContentReducer.secondaryContent
+    menuItems: state.menu,
+    secondaryContent: state.secondary.secondaryContent
   };
 }
 

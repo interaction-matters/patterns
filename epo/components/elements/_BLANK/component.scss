@@ -1,0 +1,41 @@
+/**************
+UI Basics Label
+***************/
+
+// Dependencies:
+
+// 1. Base > variables > colours
+@import '~shared/styles/base/variables/colours';
+
+// Styles
+
+.ui-label {
+  background: $color-gray-600;
+  border-radius: 3px;
+  color: $color-white;
+  display: inline-block;
+  font-size: 90%;
+  line-height: 1.4;
+  padding: 1px 4px;
+
+	&--warning {
+  	background: $color-orange-500;
+	}
+	  
+	// Miscellaneous global classes
+	&--ta-badge {
+	  background-color: $color-green-500;
+	  font-weight: bold;
+	  padding: 1px 6px;
+	}
+	&--status-granted {
+	  background-color: $color-green-600;
+	}
+	&--status-pending {
+	  background-color: $color-cyan-500;
+	}
+	&--status-refused {
+	  background-color: $color-black;
+	}
+
+}
