@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux'
+import { bindActionCreators } from 'redux';
 
 // Redux Actions
 import * as toggleActions from 'actions/actions';
@@ -34,22 +34,42 @@ export default class Workspace extends Component {
       menuItems: this.props.menuItems
     }
 
-    let changeMenuStatus;
-    this.props.globalMenuStatus !== 'active' 
+    function changeMenuStatusHandler() {
+      let changeMenuStatus;
+      this.props.globalMenuStatus !== 'active' 
       ? changeMenuStatus = 'active'
       : changeMenuStatus = 'disabled'
-
-    function changeMenuStatusHandler() {
       this.props.toggleActions.toggleGlobalMenu(changeMenuStatus);
+      console.log('changeMenuStatus: ' + changeMenuStatus)
     }
+
+    function resetMenuStatusHandler () {
+      this.props.globalMenuStatus == 'active'
+      ? this.props.toggleActions.toggleGlobalMenu('disabled')
+      : '';
+    }
+
+    document.body.onclick = function (event) {
+      var target = event.target;  
+      if ((target.className != 'menu-button__icon icon-global-nav') && (target.className == 'global-menu__overlay') && (this.props.globalMenuStatus == 'active')) {
+        this.props.toggleActions.toggleGlobalMenu('disabled');
+      }
+    }.bind(this);
+
+    window.onkeydown = function (event) {
+      if ((event.keyCode === 27) && (this.props.globalMenuStatus == 'active')) {
+        this.props.toggleActions.toggleGlobalMenu('disabled');
+      }
+    }.bind(this);
 
 		return (
 			<div className="view">
 				{/* Main navigation */}
-				<Navigation onAddClick={changeMenuStatusHandler.bind(this)} toolbarItems={this.props.toolbarItems} helperItems={this.props.utilItems} />
+				<Navigation resetClick={resetMenuStatusHandler.bind(this)} onAddClick={changeMenuStatusHandler.bind(this)} toolbarItems={this.props.toolbarItems} helperItems={this.props.utilItems} />
         {(this.props.globalMenuStatus == 'active' ?
           <div>
-            <GlobalMenu apps={apps} />
+            <GlobalMenu status={this.props.globalMenuStatus} apps={apps} />
+            <div className="global-menu__overlay"></div>
           </div>
         : '' )}
 				{/* Routes */}

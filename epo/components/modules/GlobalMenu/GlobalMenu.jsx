@@ -18,14 +18,27 @@ export default class GlobalMenu extends Component {
 
   render() {
 
+    var iconStyle = {
+      top: '2px',
+      position: 'relative',
+      marginRight: '2px'
+    }
+
+    let panelClassName;
+    this.props.status == "active"
+    ? panelClassName = "global-menu global-menu--" + this.props.status
+    : panelClassName = "global-menu"
+
     return (
     
-    <Panel panelName="global-menu">
+    <Panel panelName={panelClassName}>
       <AppList {...this.props} />
       <ArrowListItem className="previous" route="/workspace/viewer">Currently opened dossiers</ArrowListItem>
       <ArrowListItem className="all" route="/workspace/viewer">Previously viewed</ArrowListItem>
       <br />
-      <SearchForm width="full" textPlaceholder="Enter a dossier number to search"/> 
+      <SearchForm width="full" textPlaceholder="Enter a dossier number to search"/>
+      <hr />
+      <h5><i style={iconStyle} className="icon-settings2" /> Settings</h5>
     </Panel>
       
     )

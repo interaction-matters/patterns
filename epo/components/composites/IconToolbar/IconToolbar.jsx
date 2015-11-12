@@ -17,7 +17,7 @@ export default class IconToolbar extends Component {
 
     var toolbarItems = this.props.toolbarItems.map((toolbarItem, index) => {
       return <li key={index} className="icon-toolbar__item"> 
-                <Link to={toolbarItem.target}>
+                <Link to={toolbarItem.target} onClick={this.props.resetClick}>
                   <i className={toolbarItem.icon} />
                 </Link>
              </li>
