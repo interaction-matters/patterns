@@ -37,12 +37,3 @@ export default class Content extends Component {
   }
 
 };
-
-function mapStateToProps(state) {
-  return { 
-    menuItems: state.menu,
-    secondaryContent: state.secondary.secondaryContent
-  };
-}
-
-export default connect(mapStateToProps, {addMenuItem})(Content);

@@ -16,10 +16,13 @@ import Label from 'components/elements/label/label';
 import TextLink from 'components/elements/link/link';
 import Button from 'components/elements/button/button';
 import Indicator from 'components/elements/Indicator/Indicator';
+import CloseButton from 'components/elements/CloseButton/CloseButton';
 
 import ButtonToolBar from 'components/composites/buttonToolBar/buttonToolBar';
 import MenuList from 'components/composites/menuList/menuList';
 import SearchForm from 'components/composites/searchForm/searchForm';
+import DossierRow from 'components/composites/DossierRow/DossierRow';
+import DossierList from 'components/composites/DossierList/DossierList';
 
 import MenuSearchBar from 'components/modules/menuSearchBar/menuSearchBar';
 import GlobalMenu from 'components/modules/GlobalMenu/GlobalMenu';
@@ -36,6 +39,7 @@ export default class UiBasics extends Component {
     		<p>This is a paragraph with <TextLink linkTarget='#'>a regular link</TextLink> inside it. We have a simple plain&nbsp;
            <Label>label</Label>, a <Label type='warning'>warning label</Label>, 
            and here is a <Label type='status-granted'>TA</Label> badge. Can be used as an indicator, like so: You have <Indicator type="warning">1</Indicator> new message.
+           <CloseButton type='icon-only' />
            Below are some buttons:
         </p>
         <hr />
@@ -92,7 +96,11 @@ export default class UiBasics extends Component {
         <div>
           <h4>A menu plus search</h4>
           <MenuSearchBar menuItems={this.props.menuItems} />
-        </div> 
+        </div>
+        <hr />
+        <Panel>
+          <DossierList dossiers={this.props.dossiers}/>
+        </Panel>
       </div>
     );
   }

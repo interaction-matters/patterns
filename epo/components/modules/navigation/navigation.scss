@@ -6,6 +6,8 @@ Main Navigation
 @import '~shared/styles/base/variables/colours';
 // Box-shadow
 @import '~shared/styles/base/mixins/box-shadow';
+// Config
+@import '~shared/styles/base/variables/config';
 
 .nav {
 	@include box-shadow(1px, 1px, 4px, rgba(0, 0, 0, 0.2));
@@ -21,7 +23,7 @@ Main Navigation
 		}
 	}
 	&--vertical {
-		width:70px;
+		width:$globalnavwidth;
 	}
 }
 

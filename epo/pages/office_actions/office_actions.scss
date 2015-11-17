@@ -1,6 +1,13 @@
 @import "susy/sass/susy";
 
 .office-actions {
+	/* 
+	** Maintains static bounding box
+	** in case any elements (e.g menu)
+	** overflow the window height 
+	*/
+	//position:fixed;
+	
 	&__main-panel {
 	  @include span (12 of 12);
 	  .office-actions--sc-active & {
