@@ -17,6 +17,7 @@ import TextLink from 'components/elements/link/link';
 import Button from 'components/elements/button/button';
 import Indicator from 'components/elements/Indicator/Indicator';
 import CloseButton from 'components/elements/CloseButton/CloseButton';
+import Input from 'components/elements/input/text/text';
 
 import ButtonToolBar from 'components/composites/buttonToolBar/buttonToolBar';
 import MenuList from 'components/composites/menuList/menuList';
@@ -40,7 +41,8 @@ export default class UiBasics extends Component {
            <Label>label</Label>, a <Label type='warning'>warning label</Label>, 
            and here is a <Label type='status-granted'>TA</Label> badge. Can be used as an indicator, like so: You have <Indicator type="warning">1</Indicator> new message.
            <CloseButton type='icon-only' />
-           Below are some buttons:
+                <input type="search" />
+           Test Below are some buttons:
         </p>
         <hr />
         <ButtonToolBar>
