@@ -10,6 +10,9 @@ Arrow List Item
 .arrow-list-item {
 	margin:1px 0;
 	list-style:none;
+	&:last-child {
+		margin-bottom:0;
+	}
 	&__link {
 		display: block;
 		width:100%;

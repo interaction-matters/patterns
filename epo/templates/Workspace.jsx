@@ -32,27 +32,6 @@ export default class Workspace extends Component {
       // Menu items props
       menuItems: this.props.menuItems
     }
-    // Reset global menu on click outside
-    document.body.onclick = function (event) {
-      var target = event.target;
-      var elementRoot = document.querySelector('.global-menu');
-      console.log('element root is: ' + elementRoot);
-      // Would like to do this more elegantly
-      if ((target.className != ('menu-button__icon icon-global-nav' || 'menu-button')) && (target.className == 'global-menu__overlay') && (this.props.globalMenuStatus == 'active')) {
-      //if (elementRoot.contains(target) || target.className != ('menu-button__icon icon-global-nav')) {
-        this.props.toggleActions.toggleGlobalMenu('disabled');
-        this.props.toggleActions.toggleDossierMenu('disabled');
-      };
-    }.bind(this);
-    // Reset global menu on ESC key
-    window.onkeydown = function (event) {
-      if ((event.keyCode === 27) && (this.props.globalMenuStatus == 'active')) {
-        // Reset menu
-        this.props.toggleActions.toggleGlobalMenu('disabled');
-        // Reset second-level (dossier) navigation
-        this.props.toggleActions.toggleDossierMenu('disabled');
-      };
-    }.bind(this);
 
 		return (
 			<div className="view">
@@ -66,14 +45,14 @@ export default class Workspace extends Component {
         {/* Conditional loading of global menu */}
         {(this.props.globalMenuStatus == 'active' ?
           <div>
-            <GlobalMenu 
+            <GlobalMenu
+              toggleActions = {this.props.toggleActions}
               status={this.props.globalMenuStatus}
               apps={this.props.apps}
               dossiers={this.props.dossiers}
               currentDossierStatus={this.props.currentDossierStatus}
               dossierClick={gmFuncs.dossierClickHandler.bind(this)}
-            />
-            <div className="global-menu__overlay"></div>
+            />  
           </div>
         : '' )}
 				{/* Routes */}

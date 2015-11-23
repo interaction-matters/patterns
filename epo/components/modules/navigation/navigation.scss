@@ -96,6 +96,12 @@ Main Navigation
 	}
 }
 
-.nav-toolbar {
-
+.icon-toolbar {
+	&--main a {
+		transition: 0.2s ease color;
+		&:hover, &:active, &:focus {
+			color: $primary;
+			background: inherit;
+		}
+	}
 }

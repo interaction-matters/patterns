@@ -1,0 +1,195 @@
+// Colours
+@import '~shared/styles/base/variables/colours';
+// Box-shadow
+@import '~shared/styles/base/mixins/box-shadow';
+// Config
+@import '~shared/styles/base/variables/config';
+
+
+.ui-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  dd {
+    margin-left: 1em;
+  }
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+
+.visibly-hidden {
+  height: 1px;
+  left: -10px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: -10px;  
+  width: 1px;
+  z-index: -1;
+}
+
+/*
+** Bit of repetition here for now
+*/
+
+.trays-module {
+  background-color: $color-gray-100;
+  height: 100%;
+  width: 260px;
+  position:absolute;
+  top:0;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Tray Tabs */
+.tray-tabs {
+  margin: 0 0 -2px 0;
+  padding: 0;
+  position: relative;
+  z-index: 500;
+  
+  &__tab {
+    border-bottom: 1px solid $color-gray-400;
+    border-top: 1px solid $color-gray-400;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 -3px 0 0;
+    padding: 0;
+    text-align: center;
+    width: 50%;
+    
+    a {
+      background-color: $color-gray-300;
+      color: $color-black;
+      display: block;
+      margin: 0;
+      padding: 10px 0;
+      text-decoration: none;
+      width: 100%;
+      
+      &:hover,
+      &:active {
+        background-color: $color-gray-400;
+        text-decoration: inherit;
+        color: inherit;
+      }
+    }
+    
+    &.is-active {
+      border-bottom: none;
+      
+      a {
+        background-color: $color-white;
+      }
+    }
+  }
+}
+
+/* Tray Elements */
+.tray-set {
+  margin: 0 0 40px 0;
+}
+
+.tray {
+  background-color: white;
+  border-bottom: 1px solid $color-gray-200;
+  border-top: 1px solid $color-gray-200;
+  color: $color-black;
+  display: block;
+  margin-bottom: -1px;
+  padding: 12px;
+  position: relative;
+  text-decoration: none;
+  transition: background-color .125s ease, border-color .125s ease;
+  width: 100%;
+  /* z-index: 100; */
+  
+  &:hover,
+  &:active {
+    background-color: $color-blue-100;
+    border-bottom: 1px solid $color-blue-500;
+    border-top: 1px solid $color-blue-500;
+    text-decoration: none;
+    z-index: 900;
+  }
+  
+  &__title {
+    display: inline-block;
+    line-height: 1.2;
+    width: 70%;
+  }
+  
+  &__urgent-indicator {
+    display: inline-block;
+    margin-left: -30px;
+    text-align: center;
+    line-height: 1.2;
+  }
+  
+  &__urgent-indicator span {
+    background-color: red;
+    border-radius: 80px;
+    color: white;
+    display: inline-block;
+    font-size: 14px;
+    padding: 4px 9px 4px;
+  }
+  
+  &__total {
+    float: right;
+    line-height: 1.4;
+  }
+  
+  &__total,
+  &__total--unread {
+    display: inline-block;
+    text-align: right;
+  }
+  
+  &__total--unread {
+    font-weight: 700;
+  }
+  
+  &--subtray {
+    background-color: white;
+    border-bottom: 1px solid $color-gray-200;
+    border-top: 1px solid $color-gray-200;
+    color: $color-gray-600;
+    display: block;
+    margin-bottom: -1px;
+    padding: 16px 10px;
+    position: relative;
+    text-decoration: none;
+    transition: background-color .125s ease, border-color .125s ease;
+    width: 100%;
+    z-index: 100;
+  
+    &:hover,
+    &:active {
+      background-color: $color-blue-100;
+      border-bottom: 1px solid $color-blue-500;
+      border-top: 1px solid $color-blue-500;
+      text-decoration: none;
+      z-index: 900;
+    }
+    
+    .tray__title {
+      padding-left: 28px;
+    }  
+  }
+  
+  &__current {
+    background: $color-blue-100;
+    border-bottom: 1px solid $color-blue-500;
+    border-top: 1px solid $color-blue-500;
+    color: $color-blue-600;
+    z-index: 900;
+  }
+}

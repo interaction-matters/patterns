@@ -26,6 +26,7 @@ import DossierList from 'components/composites/DossierList/DossierList';
 
 import MenuSearchBar from 'components/modules/menuSearchBar/menuSearchBar';
 import GlobalMenu from 'components/modules/GlobalMenu/GlobalMenu';
+import Tray from 'components/modules/Tray/Tray';
 
 export default class UiBasics extends Component {
 
@@ -75,7 +76,7 @@ export default class UiBasics extends Component {
         <br />  
         <Panel panelName='button-full-container'>
             <h4>This button will fill its container</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            <p>Lorem ipsum dolor sit amet, derus adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
             in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
             sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

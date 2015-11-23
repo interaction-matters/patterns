@@ -4,23 +4,23 @@ UI Basics Label
 
 // Dependencies:
 
-// 1. Base > variables > colours
+// Colours
 @import '~shared/styles/base/variables/colours';
+// Scaffolding
+@import '~shared/styles/base/variables/scaffolding';
 
 // Styles
 
 .app-row {
 	display:table;
-  background: $color-gray-200;
   color: inherit;
-  padding:1em;
+  padding:calc( #{$default-padding} / 2 ) $default-padding;
   width:100%;
-  margin-bottom: 1px;
   transition: background 0.4s ease;
   &:active, &:focus, &:hover {
     text-decoration: inherit;
     color: $color-gray-900;
-    background: darken($color-gray-200, 5%);
+    background: darken($color-gray-100, 5%);
   }
 
   &__link {

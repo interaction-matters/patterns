@@ -1,0 +1,13 @@
+@import "susy/sass/susy";
+
+.management {
+	/* Allow space for menu */
+	transform: translate(calc(100vw / 20), 0);
+	&__main-panel {
+  	@include span (6 of 12);
+	}
+
+	&__secondary-panel {
+	  @include span (6 of 12 last);
+	}
+}

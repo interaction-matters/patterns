@@ -20,6 +20,7 @@ export default class DossierList extends Component {
 
       let dossierRowProps = {
         title: dossier.title,
+        colour: dossier.colour,
         applicant: dossier.applicant,
         number: dossier.number,
         specialist: dossier.specialist,

@@ -21,7 +21,8 @@ Icon Toolbar
 			padding:1em 0;
 		}
 		&:hover, &:active, &:focus {
-		  background:$color-gray-100;
+			transition: 0.2s ease background;
+		  background:darken($color-gray-100, 5%);
 		  color: inherit;
 		}
 	}

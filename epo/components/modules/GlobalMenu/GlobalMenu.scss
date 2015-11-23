@@ -10,8 +10,7 @@
 @import '~shared/styles/base/mixins/box-shadow';
 
 .global-menu {	
-	background:$color-white;
-	padding:$default-padding;
+	background: darken($color-gray-100, 1%);
 	position:absolute;
 	z-index:3;
 	top:5px;
@@ -34,11 +33,27 @@
 		background: transparent;
 	}
 	&__arrow-list {
+		margin:0;
 		padding:0;
+	}
+	&__search-field, &__settings {
+		padding:$default-padding;
+	}
+	&__search-field {
+		border-bottom: 1px solid darken($color-gray-200, 5%);
+	}
+	&__settings {
+		h5 {
+			margin:0;
+		}
+		a, a:hover {
+			color:inherit;
+			text-decoration: inherit;
+		}
 	}
 	&__secondary {
 		background:$color-white;
-		padding:$default-padding;
+		padding:$inner-padding;
 		width:$secondlevelnavwidth;
 		@include box-shadow (0px, 2px, 8px, rgba(0, 0, 0, 0.4));
 		@include border-radius (3px, 3px, 3px, 3px);
@@ -47,8 +62,9 @@
 		position:absolute;
 		//left:calc( #{$globalnavwidth} + 5px + #{$globalmenuwidth} + 5px);
 		left:calc(100% + 5px);
-		//bottom:0;
-		max-height:calc(100vh - 10px);
+		transform: translate(0, calc(-100vh / 5));
+    max-height: 500px;
+		max-height:calc( 100vh * 100 / 60 ); /* 60% */
 		overflow: auto;
 		&::-webkit-scrollbar {
 			display: none;

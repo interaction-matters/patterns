@@ -11,8 +11,11 @@
 	height: 110px;
 	font-size: 1.2em;
 	padding: $inner-padding;
-	margin:5px 0;
-	background: darken($color-gray-100, 2%);
+	transition: 0.3s ease background;
+	margin-bottom: $inner-padding;
+	&:hover {
+		background: darken($color-gray-100, 2%);
+	}
 	&:first-child {
 		margin-top:0;
 	}
@@ -20,13 +23,43 @@
 		margin-bottom:0;
 	}
 	&__colour-block{
-		display: block;
-    width: 15px;
-    min-height: 20px;
-    height: 100%;
-    float: left;
-    margin-right: $inner-padding;
-    background: $cerulean;
+
+		@mixin colour-block {
+			display: block;
+	    width: 15px;
+	    min-height: 20px;
+	    height: 100%;
+	    float: left;
+	    margin-right: $inner-padding;
+	    background: $color-gray-300;
+		}
+
+		@include colour-block;
+
+		&--red {
+    	@include colour-block;
+    	background:lighten($red, 30%);
+    }
+    &--blue {
+    	@include colour-block;
+    	background:lighten($cerulean, 30%);
+    }
+		&--green {
+			@include colour-block;
+			background:lighten($green, 30%);
+		}
+		&--yellow {
+			@include colour-block;
+			background:lighten($yellow, 30%);
+		}
+		&--orange {
+			@include colour-block;
+			background:lighten($orange, 30%);
+		}
+		&--purple {
+			@include colour-block;
+			background:lighten($violet, 30%);
+		}
 	}		
 	&__application, &__meta {
 		display: table-cell;
@@ -44,7 +77,11 @@
 	&__number {
 		text-transform: uppercase;
 		position: absolute;
+		margin: 0;
 		bottom: $inner-padding;
+	}
+	&__lim-date {
+		margin: 0;
 	}
 	&__meta {
 		text-align: right;

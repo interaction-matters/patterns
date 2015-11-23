@@ -1,0 +1,47 @@
+// Colours
+@import '~shared/styles/base/variables/colours';
+
+/* Tray Tabs */
+.tray-tabs {
+  margin: 0 0 -2px 0;
+  padding: 0;
+  position: relative;
+  z-index: 500;
+  
+  &__tab {
+    border-bottom: 1px solid $color-gray-400;
+    border-top: 1px solid $color-gray-400;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 -3px 0 0;
+    padding: 0;
+    text-align: center;
+    width: 50%;
+    
+    a {
+      background-color: $color-gray-300;
+      color: $color-black;
+      display: block;
+      margin: 0;
+      padding: 10px 0;
+      text-decoration: none;
+      width: 100%;
+      
+      &:hover,
+      &:active {
+        background-color: $color-gray-400;
+        text-decoration: inherit;
+        color: $color-black;
+      }
+    }
+    
+    &.is-active {
+      border-bottom: none;
+      
+      a {
+        background-color: $color-white;
+      }
+    }
+  }
+}

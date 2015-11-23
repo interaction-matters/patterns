@@ -48,7 +48,7 @@ export default class Navigation extends Component {
           </Link>
         </div>
 
-        <IconToolbar resetClick={resetClick} toolbarItems={toolbarItems} />
+        <IconToolbar resetClick={resetClick} type="main" toolbarItems={toolbarItems} />
 
         <IconToolbar resetClick={resetClick} type="helpers" toolbarItems={helperItems}>
         {/* Print/font-size etc */}

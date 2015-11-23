@@ -1,8 +1,8 @@
 [
-  {"selected": false, "shortName": "H",   "name": "Home Dashboard", "colour": "blue"},
-  {"selected": false, "shortName": "WM",  "name": "Workmanager", "number": 5,  "activeNumber": 8,  "totalNumber": 67, "colour": "green"},
-  {"selected": false, "shortName": "S",   "name": "Stockmanager",  "number": 22, "activeNumber": 23, "totalNumber": 340, "colour": "yellow"},
-  {"selected": false, "shortName": "D",   "name": "Director Module", "number": 0, "activeNumber": 10, "totalNumber": 86, "colour": "orange"},
-  {"selected": false, "shortName": "C",   "name": "Classification", "number": 5,  "activeNumber": 23, "totalNumber": 31, "colour": "purple"},
-  {"selected": false, "shortName": "eSt", "name": "eStore", "colour": "red"}
+  {"selected": false, "shortName": "H",   "name": "Home Dashboard", "colour": "blue", "route": "/workspace"},
+  {"selected": false, "shortName": "WM",  "name": "Workmanager", "number": 5,  "activeNumber": 8,  "totalNumber": 67, "colour": "green", "route": "/management/work-manager"},
+  {"selected": false, "shortName": "S",   "name": "Stockmanager",  "number": 22, "activeNumber": 23, "totalNumber": 340, "colour": "yellow", "route": "/management/work-manager"},
+  {"selected": false, "shortName": "D",   "name": "Director Module", "number": 0, "activeNumber": 10, "totalNumber": 86, "colour": "orange", "route": "/management/work-manager"},
+  {"selected": false, "shortName": "C",   "name": "Classification", "number": 5,  "activeNumber": 23, "totalNumber": 31, "colour": "purple", "route": "/management/work-manager"},
+  {"selected": false, "shortName": "eSt", "name": "eStore", "colour": "red", "route": "/management/work-manager"}
 ]
