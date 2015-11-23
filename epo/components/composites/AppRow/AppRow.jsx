@@ -22,7 +22,7 @@ export default class AppRow extends Component {
     let totalNumber = this.props.totalNumber;
 
     return (
-    	<a href={route} className={className}>
+    	<a href={'/#' + route} className={className}>
     		<Badge {...this.props}>{shortName}</Badge>
     		<span className='app-row__link'>{name}</span>
     		<span className='app-row__numeric'>

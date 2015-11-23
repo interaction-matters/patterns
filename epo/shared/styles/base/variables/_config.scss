@@ -1,0 +1,15 @@
+/*********************************
+Config
+----------------------------------
+Handles default sizing properties
+for top-level components, in order
+that they can be cross-referenced,
+and stored in a single config file
+**********************************/
+
+// Navigation defaults
+$globalnavwidth: 70px;
+
+// Global menu defaults
+$globalmenuwidth: 400px;
+$secondlevelnavwidth: 550px;

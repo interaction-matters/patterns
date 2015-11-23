@@ -20,6 +20,7 @@ import Analysis from 'pages/analysis/analysis';
 import Search from 'pages/search/search';
 import Viewer from 'pages/viewer/viewer';
 import OfficeActions from 'pages/office_actions/office_actions';
+import Management from 'pages/Management/Management';
 
 export default (
 <Route path="/" component={App}>
@@ -38,12 +39,12 @@ export default (
 
   {/* Management Module routes */}
   <Route path="management" component={ManagementModule}>
-    <Route path="work-manager" component={OfficeActions} />
-    <IndexRoute to="work-manager" component={OfficeActions} />
+    <Route path="work-manager" component={Management} />
+    <IndexRoute to="work-manager" component={Management} />
   </Route>
 
   {/* Default route for root '/' path */}
-  <IndexRoute to="workspace/office-actions" component={ManagementModule} />
+  <IndexRoute to="workspace/office-actions" component={Workspace} />
 
 </Route>
 );

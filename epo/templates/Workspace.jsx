@@ -2,21 +2,20 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-// Redux Actions
+// Redux actions
 import * as toggleActions from 'actions/actions';
+
+// Global menu functions
+import * as gmFuncs from 'shared/functions/globalmenu.js';
  
 // Sass dependencies
 import styles from 'shared/styles/layout/_frames.scss';
 
 // React dependencies
+import RouteHandler from 'components/elements/RouteHandler';
 import Navigation from 'components/modules/navigation/navigation';
 import Helpers from 'components/modules/helpers/helpers';
-import RouteHandler from 'components/elements/RouteHandler';
-
 import GlobalMenu from 'components/modules/GlobalMenu/GlobalMenu';
-
-// Import our initial state as a JSON object
-const apps = require("config/applications.json");
 
 {/* This is the layout for Workspace pages. */}
 export default class Workspace extends Component {
@@ -34,49 +33,26 @@ export default class Workspace extends Component {
       menuItems: this.props.menuItems
     }
 
-    // Toggle global menu with menu button
-    function changeMenuStatusHandler() {
-      let changeMenuStatus;
-      this.props.globalMenuStatus !== 'active' 
-      ? changeMenuStatus = 'active'
-      : changeMenuStatus = 'disabled'
-      this.props.toggleActions.toggleGlobalMenu(changeMenuStatus);
-      console.log('changeMenuStatus: ' + changeMenuStatus)
-    }
-    // Reset global menu (turn off)
-    function resetMenuStatusHandler () {
-      this.props.globalMenuStatus == 'active'
-      ? this.props.toggleActions.toggleGlobalMenu('disabled')
-      : '';
-    }
-    // Reset global menu when clicking outside of it
-    document.body.onclick = function (event) {
-      var target = event.target;  
-      if ((target.className != 'menu-button__icon icon-global-nav') && (target.className == 'global-menu__overlay') && (this.props.globalMenuStatus == 'active')) {
-        this.props.toggleActions.toggleGlobalMenu('disabled');
-      }
-    }.bind(this);
-    // Reset global menu when clicking ESC key
-    window.onkeydown = function (event) {
-      if ((event.keyCode === 27) && (this.props.globalMenuStatus == 'active')) {
-        this.props.toggleActions.toggleGlobalMenu('disabled');
-      }
-    }.bind(this);
-
 		return (
 			<div className="view">
 				{/* Main navigation */}
 				<Navigation 
-          resetClick={resetMenuStatusHandler.bind(this)} 
-          onAddClick={changeMenuStatusHandler.bind(this)} 
+          resetClick={gmFuncs.resetMenuStatusHandler.bind(this)} 
+          onAddClick={gmFuncs.changeMenuStatusHandler.bind(this)} 
           toolbarItems={this.props.toolbarItems} 
-          helperItems={this.props.utilItems} 
+          helperItems={this.props.utilItems}
         />
-
+        {/* Conditional loading of global menu */}
         {(this.props.globalMenuStatus == 'active' ?
           <div>
-            <GlobalMenu status={this.props.globalMenuStatus} apps={apps} />
-            <div className="global-menu__overlay"></div>
+            <GlobalMenu
+              toggleActions = {this.props.toggleActions}
+              status={this.props.globalMenuStatus}
+              apps={this.props.apps}
+              dossiers={this.props.dossiers}
+              currentDossierStatus={this.props.currentDossierStatus}
+              dossierClick={gmFuncs.dossierClickHandler.bind(this)}
+            />  
           </div>
         : '' )}
 				{/* Routes */}
@@ -98,7 +74,10 @@ function mapStateToProps(state) {
     utilItems: state.utils,
     menuItems: state.menu,
     secondaryContent: state.secondary.secondaryContent,
-    globalMenuStatus: state.globalMenu.globalMenuStatus
+    globalMenuStatus: state.globalMenu.globalMenuStatus,
+    apps: state.globalNavApps,
+    dossiers: state.dossiers,
+    currentDossierStatus: state.currentDossiers.currentDossierList
   };
 }
 

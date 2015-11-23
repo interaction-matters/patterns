@@ -1,3 +1,7 @@
+
+// Scaffolding
+@import '~shared/styles/base/variables/scaffolding';
+
 .app-list {
-	margin-bottom:0.625em;
+	padding:calc( #{$default-padding} / 2 ) 0;
 }

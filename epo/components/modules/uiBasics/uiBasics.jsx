@@ -16,13 +16,17 @@ import Label from 'components/elements/label/label';
 import TextLink from 'components/elements/link/link';
 import Button from 'components/elements/button/button';
 import Indicator from 'components/elements/Indicator/Indicator';
+import CloseButton from 'components/elements/CloseButton/CloseButton';
 
 import ButtonToolBar from 'components/composites/buttonToolBar/buttonToolBar';
 import MenuList from 'components/composites/menuList/menuList';
 import SearchForm from 'components/composites/searchForm/searchForm';
+import DossierRow from 'components/composites/DossierRow/DossierRow';
+import DossierList from 'components/composites/DossierList/DossierList';
 
 import MenuSearchBar from 'components/modules/menuSearchBar/menuSearchBar';
 import GlobalMenu from 'components/modules/GlobalMenu/GlobalMenu';
+import Tray from 'components/modules/Tray/Tray';
 
 export default class UiBasics extends Component {
 
@@ -36,6 +40,7 @@ export default class UiBasics extends Component {
     		<p>This is a paragraph with <TextLink linkTarget='#'>a regular link</TextLink> inside it. We have a simple plain&nbsp;
            <Label>label</Label>, a <Label type='warning'>warning label</Label>, 
            and here is a <Label type='status-granted'>TA</Label> badge. Can be used as an indicator, like so: You have <Indicator type="warning">1</Indicator> new message.
+           <CloseButton type='icon-only' />
            Below are some buttons:
         </p>
         <hr />
@@ -71,7 +76,7 @@ export default class UiBasics extends Component {
         <br />  
         <Panel panelName='button-full-container'>
             <h4>This button will fill its container</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            <p>Lorem ipsum dolor sit amet, derus adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
             in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
             sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -92,7 +97,11 @@ export default class UiBasics extends Component {
         <div>
           <h4>A menu plus search</h4>
           <MenuSearchBar menuItems={this.props.menuItems} />
-        </div> 
+        </div>
+        <hr />
+        <Panel>
+          <DossierList dossiers={this.props.dossiers}/>
+        </Panel>
       </div>
     );
   }

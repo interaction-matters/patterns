@@ -6,7 +6,7 @@ import React, { Component, PropTypes } from 'react';
 
 import styles from './ArrowListItem.scss';
 
-import { Link } from 'react-router';
+import DossierList from 'components/composites/DossierList/DossierList';
  
 export default class ArrowListItem extends Component {
 
@@ -15,12 +15,18 @@ export default class ArrowListItem extends Component {
 		let className = 'arrow-list-item';
 
 			return (
-				<div className={className  + ' ' + className + '--' + this.props.className}>
-					<Link className={className + "__link"} to={this.props.route}>
+				<li className={className  + ' ' + className + '--' + this.props.className}>
+					{(this.props.dossierStatus == "active" ?
+            <ul className="global-menu__secondary">
+              <DossierList dossiers={this.props.dossiers} />
+            </ul>
+          : ''
+          )}
+					<a className={className + "__link"} onClick={this.props.onAddClick}>
 						{this.props.children}
 						<i className='icon icon-play_arrow'></i>
-					</Link>				
-				</div>
+					</a>				
+				</li>
 			);
 	}
 
