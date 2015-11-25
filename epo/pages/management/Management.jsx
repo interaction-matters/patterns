@@ -6,8 +6,7 @@ import styles from './Management.scss';
 
 // React dependencies
 import Panel from 'components/elements/panel/panel';
-import Alert from 'components/elements/alert/alert';
-import Button from 'components/elements/button/button'
+import DossierPanel from 'components/modules/DossierPanel/DossierPanel';
 
 export default class Management extends Component {
 
@@ -16,18 +15,11 @@ export default class Management extends Component {
     return (
       <div className="management">
         <Panel panelName='management__main-panel'>
-    			<Alert type='primary'>
-    				<strong>Congratulations!</strong> You have successfully loaded the <strong>default Management</strong> page.
-    			</Alert>
-          <hr />
-          <Button type="danger">Off</Button>
-          <hr />
+
     		</Panel>
 
         <Panel panelName='management__secondary-panel'>
-    			<Alert type='success'>
-    				<strong>Secondary Content</strong>
-    			</Alert>
+    			<DossierPanel />
         </Panel>
       </div>
     );
