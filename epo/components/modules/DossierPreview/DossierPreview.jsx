@@ -14,6 +14,7 @@ export default class DossierPreview extends Component {
 
     return (
     	<div classNameName={className}>
+
 			  <div className="tabs-container">
 				  <ul className="ui-list tabs-container__list">
 				    <li><button className="button tabs-container__tab is-active">Dossier Info</button></li>

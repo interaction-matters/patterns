@@ -13,10 +13,46 @@ export default class AllocationModule extends Component {
 
   render() {
 
-  	let classNameName = 'allocation-module';
+  	let className = 'allocation-module';
 
     return (
-    	<div classNameName={classNameName}>
+    	<div className={className}>
+    		<div className="dossier-metadata">
+				  <div className="dossier-metadata__header">
+				    <a href="#" className="dossier-badge application-number type-ep phase-search">
+				      <b className="phase" title="Search">S</b>
+				      <span className="number">EP 1234 567 89</span>
+				      <i className="language">EN</i>
+				    </a>
+				    <h2 className="dossier-title"><a href="#" className="button button--link">Titanium Alloy Composite for Reinforced Strategy</a></h2>
+				    <div className="top-right-buttons">
+				      <Button size="small" icon="icon-view">
+				        <span className="button__label">Mark Unread</span>
+				      </Button>
+				      &nbsp;
+				      <Button size="small" icon="icon-mail">
+				        <span className="button__label">Share</span>
+				      </Button>
+				      &nbsp;
+				      <div className="dropdown legacy-tool">
+				        <Button size="small">
+				          <i className="icon button__icon button__icon--right icon-down"></i>
+				          <span className="button__label">Open In…</span>
+				        </Button>
+				        <ul className="ui-list dropdown__options">
+				          <li><a href="#" className="option">TRIMARAN</a></li>
+				          <li><a href="#" className="option">Ansera</a></li>
+				          <li><a href="#" className="option">JViewer</a></li>
+				        </ul>
+				      </div>
+				    </div>
+				  </div>
+
+				  <a href="#" className="doccode">CLAR</a> &nbsp;
+				  <span className="dossier-metadata__urgency">Urgency: <b>Normal</b></span> &nbsp;
+				  <span className="task">Task: <b>Clarification request</b></span>
+				</div>
+
     		<section className="manager-module">
 				  <ul className="tab-list">
 				    <li className="tab-list__tab is-active" data-w-tab="Tab 1"><a href="#" className="label">Allocation</a></li>
@@ -120,7 +156,7 @@ export default class AllocationModule extends Component {
 				          </select>
 				        </div>
 				        <div className="footer-buttons">
-				          <Submit value="Allocate" colour="primary" /> <Button type="link">Advanced allocation</Button>
+				          <Button role="submit" type="primary">Allocate</Button> <Button type="link" size="small">Advanced allocation</Button>
 				        </div>
 				      </form>
 				    </div>

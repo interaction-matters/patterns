@@ -561,3 +561,325 @@ tr:nth-of-type(odd) {
     width: 5em;
   }
 }
+
+/* 
+** Dossier Metadata
+*/
+
+.dossier-metadata {
+  padding: 0;
+  position: relative;
+  border-bottom: 1px solid $color-gray-200;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  
+  &__header {
+
+    margin-bottom:15px;
+    
+    .dossier-badge,
+    .dossier-title,
+    .button--send-to {
+    display: inline-block;
+    }
+    
+    .dossier-title {
+      margin: 0;
+      font-size:16px;
+    }
+    
+    .top-right-buttons {
+      float: right;
+      margin-top: 15px;
+    }
+  }
+  
+  .legacy-tool {
+    margin-right: 6px;
+  }
+} 
+
+/* 
+** Badges
+** This is hefty
+*/
+
+// Colors of dossiers (EP, PCT, nationals etc.)
+
+$epo-color-dossier-ep:      #a1d5f7; // EP Direct
+$epo-color-dossier-europct: #e3dfcf; // Euro PCT
+$epo-color-dossier-pct:     #f1b80c; // PCT
+$epo-color-dossier-bo:      #0076d1; // Belgium (WAS: #1244A5)
+$epo-color-dossier-co:      #ddd;    // Cypress
+$epo-color-dossier-fa:      #96d2fc; // France
+$epo-color-dossier-go:      #f5e63d; // Greece
+$epo-color-dossier-io:      #b49f87; // Italy
+$epo-color-dossier-lo:      #57d4c4; // Luxembourg
+$epo-color-dossier-no:      #f06c1a; // Netherlands
+$epo-color-dossier-mo:      #6e5231; // Malta (WAS: #745734)
+$epo-color-dossier-sn:      #0db20d; // SN
+
+
+// Special cases
+
+$epo-color-dossier-fs:    #d44022; // France (red stripe)
+$epo-color-dossier-to:    #df0808; // Turkey (red border only)
+$epo-color-dossier-lt:    #006a44; // Lithuania (green border only)
+
+
+
+// Phases
+
+$epo-color-phase-search:      $epo-color-dossier-bo; // WAS: #BADDE8;
+$epo-color-phase-examination: $epo-color-dossier-bo; // WAS: #BADDE8;
+$epo-color-phase-opposition:  $epo-color-dossier-sn; // WAS: #9FCC6F;
+$epo-color-phase-appeal:      $epo-color-dossier-to; // WAS: #BA000D;
+$epo-color-phase-limitation:  $epo-color-dossier-mo; // WAS: #B47038;
+
+
+// Doccodes (indicators)
+$epo-color-indicator-null:      #4877b7;
+$epo-color-indicator-abex:      #8239ce;
+$epo-color-indicator-seca:      #d62f00;
+$epo-color-indicator-doublure:  #a56a00;
+$epo-color-indicator-clms:      #4877b7;
+
+
+// file: epo/_classes.scss
+
+// EPO-specific classes
+
+// Application identifier
+//
+// - Has attached label for the App. Phase
+// - Shows the App. number
+// - Shows the primary language of the application
+
+$epo-phase-width: 23px;
+
+.application-number {
+  background: rgba($epo-color-dossier-ep, .2);
+  border: 1px solid $epo-color-dossier-ep;
+  border-radius: .125rem;
+  display: inline-block;
+  font-size: 14px;
+  height: 21px;
+  line-height: 18px;
+  margin: 0 .5em 0 0;
+  /* min-width: 150px; */
+  overflow: visible;
+  position: relative;
+  text-decoration: none;
+  white-space: nowrap;
+  
+  &[class^="phase-"],
+  &[class*=" phase-"], {
+    min-width: 150px;
+  }
+
+  .phase {
+    border-radius: .125rem 0 0 .125rem;
+    display: inline-block;
+    height: 21px;
+    left: -1 * $epo-phase-width;
+    line-height: 21px;
+    position: absolute;
+    text-align: center;
+    top: -1px;
+    width: 20px;
+  }
+
+  .number {
+    background: rgba($color-white, .4);
+    color: $color-black;
+    display: inline-block;
+    font-weight: normal;
+    height: 100%;
+    padding: 0 .75em 0 .5em;
+    width: calc(100% - 2.1em);
+  }
+
+  .language {
+    // @include borders-end-cap;
+    color: $color-black;
+    float: right;
+    font-style: normal;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    width: 2em;
+  }
+
+  // With phase included: adjust border radius
+  &.phase-search,
+  &.phase-examination,
+  &.phase-opposition,
+  &.phase-appeal,
+  &.phase-limitation {
+    border-radius: 0 .125rem .125rem 0;
+    margin-left: $epo-phase-width;
+  }
+
+
+// Application type/national variations:
+// INFO: Types for applications are correlated to their dossier codes (incl. nationals)
+
+  &.type-ep {
+    background-color: rgba($epo-color-dossier-ep, 1);
+    border-color: $epo-color-dossier-ep;
+  }
+
+  &.type-europct {
+    background-color: rgba($epo-color-dossier-europct, 1);
+    border-color: $epo-color-dossier-europct;
+  }
+
+  &.type-pct {
+    background-color: rgba($epo-color-dossier-pct, 1);
+    border-color: $epo-color-dossier-pct;
+  }
+
+  &.type-bo {
+    background-color: rgba($epo-color-dossier-bo, 1);
+    border-color: $epo-color-dossier-bo;
+
+    .number {
+      background: rgba($color-white, .7);
+    }
+
+    .language {
+      color: $color-white;
+    }
+  }
+
+  &.type-co {
+    background-color: rgba($epo-color-dossier-co, 1);
+    border-color: $epo-color-dossier-co;
+  }
+
+  &.type-fa {
+    background-color: rgba($epo-color-dossier-fa, 1);
+    border-color: $epo-color-dossier-fa;
+  }
+
+  &.type-go {
+    background-color: rgba($epo-color-dossier-go, 1);
+    border-color: $epo-color-dossier-go;
+  }
+
+  &.type-io {
+    background-color: rgba($epo-color-dossier-io, 1);
+    border-color: $epo-color-dossier-io;
+  }
+
+  &.type-lo {
+    background-color: rgba($epo-color-dossier-lo, 1);
+    border-color: $epo-color-dossier-lo;
+  }
+
+  &.type-no {
+    background-color: rgba($epo-color-dossier-no, 1);
+    border-color: $epo-color-dossier-no;
+  }
+
+  &.type-mo {
+    background-color: rgba($epo-color-dossier-mo, 1);
+    border-color: $epo-color-dossier-mo;
+
+    .number {
+      background: rgba($color-white, .6);
+    }
+
+    .language {
+      color: $color-white;
+    }
+  }
+
+  &.type-sn {
+    background-color: rgba($epo-color-dossier-sn, 1);
+    border-color: $epo-color-dossier-sn;
+
+    .language {
+      color: $color-white;
+    }
+  }
+
+  &.type-fs {
+    background-color: rgba($epo-color-dossier-fa, 1);
+    border-color: $epo-color-dossier-fa;
+
+    .language {
+
+      &:after {
+        background: $epo-color-dossier-fs;
+        bottom: -1px;
+        content: ' ';
+        position: absolute;
+        right: 2em;
+        top: -1px;
+        width: 4px;
+      }
+    }
+  }
+
+  &.type-to {
+    background: $color-white;
+    border-color: $epo-color-dossier-to;
+
+    .language {
+      background: $epo-color-dossier-to;
+      color: $color-white;
+    }
+  }
+
+  &.type-lt {
+    background: $color-white;
+    border-color: $epo-color-dossier-lt;
+
+    .language {
+      background: $epo-color-dossier-lt;
+      color: $color-white;
+    }
+  }
+}
+// This is only for <a> versions:
+a.application-number {
+
+  &:focus,
+  &:hover {
+    outline: none;
+
+    .number,
+    .language {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+// Phases
+// INFO: Phases come in the following five options
+.phase {
+  color: $color-white;
+
+  .phase-search & {
+    background: $epo-color-phase-search;
+  }
+
+  .phase-examination & {
+    background: $epo-color-phase-examination;
+  }
+
+  .phase-opposition & {
+    background: $epo-color-phase-opposition;
+  }
+
+  .phase-appeal & {
+    background: $epo-color-phase-appeal;
+  }
+
+  .phase-limitation & {
+    background: $epo-color-phase-limitation;
+  }
+}
+
