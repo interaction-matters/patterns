@@ -45,9 +45,9 @@ export default class Content extends Component {
                     <hr />
 
                     <div className="header">
-                        <p className="column1"><Button />First column</p>
+                        <p className="column1"><Button /> First column</p>
                         <p className="column2"><Button /> A basic middle tier</p>
-                        <p className="column3">Some additional actions<Button /></p>
+                        <p className="column3">Some additional actions <Button /></p>
                     </div>
 
 
