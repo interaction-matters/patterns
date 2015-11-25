@@ -39,20 +39,20 @@ export default class Content extends Component {
 					</Alert>
           <hr />
           <h4>Secondary Content</h4>
-          {/* 
-          ** assign dispatch to 'toggleActions' props and 
-          ** call the function 'toggleSecondaryContent', 
+          {/*
+          ** assign dispatch to 'toggleActions' props and
+          ** call the function 'toggleSecondaryContent',
           ** passing it the value of the 'secondaryState' var
           ** (see actions.js)
           */}
           <Button onAddClick={ alertOnClick.bind(this) } type={color}>Turn {currentSecState}</Button>&nbsp;
           <hr />
-         
-  			  <div>  		
+
+  			  <div>
 					  {/* Demo of all components */}
 				    <UiBasics {...this.props}  />
 				  	{/* **** */}
-					</div>     
+					</div>
         </Panel>
 
         {/* conditionally load secondary content */}
@@ -60,16 +60,16 @@ export default class Content extends Component {
           <Panel panelName='office-actions__secondary-panel'>
             <p>This is a secondary content <Label type='ts-badge'>panel</Label></p>
             <hr />
-            
+
               Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
-              <hr />         
+              <hr />
               Here is a component (UI Basics) inside the panel:<br /><br />
               <Button>A button</Button>
               <hr />
               <p>Here is an out-of-context ui basics <Label type='ts-badge'>label</Label></p><hr />
-              <p>You can see here that we are mixing an extra small <b>UI basics</b> <Button size='small' type='primary'>Button</Button> with a label for <Label type='status-refused'>Refused</Label>, and <Label type='status-pending'>Pending</Label> from UI basics (Team Edyt)</p>    
+              <p>You can see here that we are mixing an extra small <b>UI basics</b> <Button size='small' type='primary'>Button</Button> with a label for <Label type='status-refused'>Refused</Label>, and <Label type='status-pending'>Pending</Label> from UI basics (Team Edyt)</p>
            </Panel>  : '' )}
-      
+
       </div>
     );
   }
