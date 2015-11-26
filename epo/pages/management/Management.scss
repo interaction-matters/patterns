@@ -1,4 +1,7 @@
 @import "susy/sass/susy";
+// Colours
+@import '~shared/styles/base/variables/colours';
+
 
 .management {
 	/* Allow space for menu */
@@ -11,3 +14,886 @@
 	  @include span (6 of 12 last);
 	}
 }
+
+/* 
+** UI Select
+*/
+
+.ui-select {
+  background: $color-white;
+  border: 1px solid $color-gray-300;
+  border-radius: 4px;
+  color: $color-gray-600;
+  font-size: 14px;
+  height: 27px;
+  line-height: 1.4;
+  margin: -1px 4px 0 0;
+  padding: 4px 8px;
+  vertical-align: middle;
+  transition: border-color .1s ease, box-shadow .1s ease;
+  
+  &:focus {
+    border-color: $color-blue-500;
+    box-shadow: 0 0 4px $color-blue-500;
+    outline: none;
+  }
+  &:hover {
+    border-color: $color-blue-600;
+    cursor: pointer;
+  }
+}
+
+/* 
+** Inputs
+*/
+
+textarea,
+input[type=text] {
+  /* -webkit-appearance: none; */
+  border: 1px solid $color-gray-300;
+  border-radius: 3px;
+  box-shadow: inset 0 2px 2px $color-gray-200;
+  height: 2em;
+  line-height: 1.4;
+  font-size: 14px;
+  padding: 4px;
+  width: 20em;
+  
+  &:hover {
+    border-color: rgba($color-blue-500, .7);
+  }
+  &:focus {
+    border-color: $color-blue-500;
+    box-shadow: 0 0 4px rgba($color-blue-500, .5), inset 0 2px 2px $color-blue-400;
+    outline: none;
+  }
+}
+textarea {
+  height: 4em;
+  min-width: 8em;
+  max-width: 100%;
+  resize: none;
+}
+.textarea--horizontal {
+  resize: horizontal;
+}
+
+.textarea--vertical {
+  resize: vertical;
+}
+
+// Combo box
+.combobox {
+  border: 1px solid $color-gray-300;
+  border-radius: 3px;
+  font-size: 14px;
+  position: relative;
+  width: 300px;
+  
+  &__button.button {
+    border-radius: 0 3px 3px 0;
+    border-width: 0 0 0 1px;
+    box-shadow: none;
+    height: 2em;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    padding: 0;
+    width: 2em;
+  }
+  &__label {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  &__input[type=text] {
+    border-radius: 3px 0 0 3px;
+    border: 0;
+    font-size: 14px;
+    width: calc(100% - 2em);
+    
+    &:focus,
+    &:hover {
+      border: 0;
+    }
+  }
+}
+
+/* 
+** UI Tabs
+*/
+
+.tab-list {
+  padding: 0;
+  margin: 0;
+  
+  &__tab {
+    display: inline-block;
+    margin-right: 6px;
+    padding: 6px 12px;
+    border-radius: 3px 3px 0 0;
+    border: 1px solid $color-gray-300;
+    border-bottom: 0;
+    margin-bottom: -1px;
+    background-color: $color-gray-200;
+    
+    &:hover {
+      background-color: $color-gray-100;
+    }
+    
+    &.is-active {
+      position: relative;
+      z-index: 300;
+      background-color: $color-white;
+      
+      &:hover {
+        background-color: $color-white;
+      }
+      
+      .label {
+        color: $color-gray-800;
+      }
+    }
+    
+    .label {
+      text-decoration: none;
+      color: $color-gray-600;
+    }
+  }
+}
+
+.tab-container {
+  border: 1px solid $color-gray-300;
+  background-color: $color-white;
+  padding: 0;
+  box-shadow: 0 1px 2px 0 $color-gray-200;
+  border-radius:0 3px 3px 3px;
+  z-index: 200;
+  position: relative;
+}
+
+.tab-container__content {
+  padding: 5px 15px 15px 15px;
+  
+  p {
+    margin: 6px 0;
+  }
+}
+
+form {
+  padding: 0;
+}
+
+.allocation__col {
+  display: inline-block;
+  width: 30%;
+  margin-right: 1%;
+  
+  &:nth-of-type(3) {
+    margin-right: 0;
+  }
+  
+  
+  select {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  .button--primary {
+    margin: 10px 10px 0 0;
+  }
+}
+
+.accept-or-redistribute {
+  textarea {
+    width: 93%;
+  }
+}
+
+.find-sm {
+  margin: 6px 0;
+
+  .button--link {
+    padding: 0;
+  }
+}
+
+.footer-buttons {
+  clear: both;
+  margin: 6px 0 0;
+}
+
+.tabs-container {
+  display: block;
+  height: auto;
+  margin: 0 0 -1px 0;
+  position: relative;
+  box-shadow: 0 1px 2px 0 #e9ebed;
+  webkit-box-shadow: 0 1px 2px 0 #e9ebed;
+  
+  &__list {
+    border-bottom: 1px solid $color-gray-300;
+    display: block;
+    font-size: 18px;
+    height: 34px;
+    overflow: inherit;
+    
+    li {
+      /* display: inline-block; */
+      height: 34px;
+      float: left;
+      padding: 0;
+    }
+  }
+  
+  &__tab {
+    border: 1px solid $color-gray-300;
+    border-radius: 3px 3px 0 0;
+    box-shadow: none;
+    margin: 0 4px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    height: 34px;
+    padding: 8px;
+    font-size: 14px;
+    background: $color-gray-200;
+    line-height: 1.4;
+  }
+  
+  &__tab.is-active {
+    background-color: $color-white;
+    border-bottom-color: $color-white;
+  }
+  &__tab[disabled] {
+    border-bottom: 1px solid $color-gray-300;
+  }
+  &__tab:focus {
+    border-bottom: 0;
+    box-shadow: none;
+  }
+  
+  &__contents {
+    background-color: $color-white;
+    border: 1px solid $color-gray-300;
+    border-width: 0 1px 1px;
+    border-radius: 0 3px 3px 3px;
+    box-shadow: 0 1px 2px 0 $color-gray-200;
+    display: block;
+    min-height: 100px;
+    margin: 0;
+    float:left;
+  }
+  
+  // entire Tabs container disabled:
+  &--disabled {
+    opacity: .5;
+  }
+}
+
+.tabs-toolbar {
+  position: absolute;
+  right: 0;
+  top: 3px;
+  
+  & > li {
+    display: inline-block;
+  }
+}
+
+/* 
+** Stickers
+*/
+
+.sticker,
+.doccode {
+  display: inline-block;
+  border: 1px dashed $color-gray-500;
+  background-color: $color-gray-100;
+  color: $color-gray-800;
+  padding: 0 6px;
+  line-height: inherit;
+  border-radius: 3px;
+  margin-left: 6px;
+  text-decoration: none;
+  
+  // default :f and :h
+  &:focus,
+  &:hover {
+    border-color: $color-gray-900;
+    background-color: $color-gray-200;
+    text-decoration: none;
+  }
+
+  &.abex {
+    background-color: $color-orange-100;
+    border-color: $color-orange-500;
+    color: $color-orange-800;
+    
+    &:focus,
+    &:hover {
+      background-color: lighten($color-orange-500, 45%);
+      border-color: $color-orange-900;
+      color: $color-orange-900;      
+    }
+  }
+  &.divisional {
+    background-color: $color-blue-100; 
+    border-color: $color-blue-500;
+    color: $color-blue-800;
+    
+    &:focus,
+    &:hover {
+      background-color: lighten($color-blue-500, 45%);
+      border-color: $color-blue-900;
+      color: $color-blue-900;      
+    }
+  }
+  &.seca {
+    background-color: $color-green-100;
+    border-color: $color-green-500;
+    color: $color-green-800;
+    
+    &:focus,
+    &:hover {
+      background-color: lighten($color-green-500, 45%);
+      border-color: $color-green-900;
+      color: $color-green-900;      
+    }
+  }
+  &.seql {
+    background-color: $color-cyan-100;
+    border: 1px dotted $color-cyan-500;
+    color: $color-cyan-800;
+    
+    &:focus,
+    &:hover {
+      background-color: lighten($color-cyan-500, 45%);
+      border-color: $color-cyan-900;
+      color: $color-cyan-900;      
+    }
+  }
+}
+
+a.sticker,
+a.doccode {
+}
+
+.sticker:first-of-type,
+.doccode:first-of-type {
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+.list-stickers {
+  li {
+    display: inline;
+    margin-right: 6px;
+  }
+}
+
+/* 
+** Dropdown filters
+*/
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  
+  &__button {
+    background: $color-gray-100;
+    border: 1px solid $color-gray-300;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0;
+    min-width: 100px;
+    position: relative;
+     z-index: 500;
+  }
+  
+  &__options {
+    background: $color-gray-100;
+    border: 1px solid $color-gray-300;
+    border-radius: 4px 0 4px 4px;
+    box-shadow: 0 4px 8px rgba($color-gray-600, .6);
+    display: none;
+    margin-top: -1px;
+    min-width: 120px;
+    padding: 8px 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index:800;
+  }
+  
+  &--pull-left &__options {
+    border-radius: 0 0 4px 4px;
+    left: 0;    
+    right: auto;
+  }
+  
+  &--match-width &__options {
+    width: 100%;
+  }
+  
+  &--expanded &__button {
+    background: $color-gray-100;
+    /* border-bottom-color: $color-gray-100; */
+    border-radius: 3px 3px 0 3px;
+    box-shadow: none;
+    /* box-shadow: 0 0 1px rgba($color-gray-600, .5); */
+    /* box-shadow: 1px 0 2px rgba($color-gray-600, .6); */
+  }
+  
+  &--expanded &__options {
+    display: inline-block;
+  }
+  
+  .toggles {
+    font-size: 14px;
+    padding: 0 8px 2px;
+  }
+  
+  li,
+  .option {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .option {
+    color: $color-black;
+    cursor: pointer;
+    padding: 1px 8px;
+    text-decoration: none;
+    
+    &:focus,
+    &:hover {
+      background: $color-blue-500;
+      color: $color-white;
+      outline: none;
+    }
+  }
+  
+}
+
+/* 
+** Tables
+*/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th { 
+  padding: 6px;
+  border: 1px solid $color-gray-200; 
+  text-align: left; 
+}
+th { 
+  background: $color-gray-500;
+  border-color: $color-gray-400;
+  border-top: none;
+  border-bottom: none;
+  color: white; 
+  font-weight: bold; 
+}
+
+/* Zebra striping */
+tr {
+  background-color: $color-gray-200;
+}
+tr:nth-of-type(odd) { 
+  background-color: $color-white !important; 
+}
+
+/*
+** Dossier preview
+*/
+
+.dossier-preview {
+  max-width: 760px;
+}
+
+.dossier-info {
+  background-color: $color-white;
+  border-radius: 0 0 3px 3px;
+  line-height: 1.5;
+  padding: 6px 12px;
+  
+  &__row {
+    float:left;
+    width:100%;
+    padding: 16px 0;
+  }
+  
+  &__row.no-margin {
+    margin: 0;
+    padding: 16px 0 0 0;
+  }
+  
+  &__row.with-border {
+    border-bottom: 1px solid $color-gray-300;
+  }
+  
+  &__section {
+    width:25%;
+    float:left;
+    font-size: .9em;
+    padding: 0 12px;
+    
+    h3 {
+      font-size:1.2rem;
+      margin: 0 0 6px 0;
+    }
+    
+    p {
+      margin: 0;
+    }
+  }
+  &__section.stickers {
+    padding: 50px 12px 0;
+  }
+
+  .ui-list li {
+  }
+  
+}
+
+.list-family {
+  a {
+    display: inline-block;
+    width: 6em;
+  }
+  time {
+    display: inline-block;
+    width: 5em;
+  }
+}
+
+/* 
+** Dossier Metadata
+*/
+
+.dossier-metadata {
+  padding: 0;
+  position: relative;
+  border-bottom: 1px solid $color-gray-200;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  
+  &__header {
+
+    margin-bottom:15px;
+    
+    .dossier-badge,
+    .dossier-title,
+    .button--send-to {
+    display: inline-block;
+    }
+    
+    .dossier-title {
+      margin: 0;
+      font-size:16px;
+    }
+    
+    .top-right-buttons {
+      float: right;
+      margin-top: 15px;
+    }
+  }
+  
+  .legacy-tool {
+    margin-right: 6px;
+  }
+} 
+
+/* 
+** Badges
+** This is hefty
+*/
+
+// Colors of dossiers (EP, PCT, nationals etc.)
+
+$epo-color-dossier-ep:      #a1d5f7; // EP Direct
+$epo-color-dossier-europct: #e3dfcf; // Euro PCT
+$epo-color-dossier-pct:     #f1b80c; // PCT
+$epo-color-dossier-bo:      #0076d1; // Belgium (WAS: #1244A5)
+$epo-color-dossier-co:      #ddd;    // Cypress
+$epo-color-dossier-fa:      #96d2fc; // France
+$epo-color-dossier-go:      #f5e63d; // Greece
+$epo-color-dossier-io:      #b49f87; // Italy
+$epo-color-dossier-lo:      #57d4c4; // Luxembourg
+$epo-color-dossier-no:      #f06c1a; // Netherlands
+$epo-color-dossier-mo:      #6e5231; // Malta (WAS: #745734)
+$epo-color-dossier-sn:      #0db20d; // SN
+
+
+// Special cases
+
+$epo-color-dossier-fs:    #d44022; // France (red stripe)
+$epo-color-dossier-to:    #df0808; // Turkey (red border only)
+$epo-color-dossier-lt:    #006a44; // Lithuania (green border only)
+
+
+
+// Phases
+
+$epo-color-phase-search:      $epo-color-dossier-bo; // WAS: #BADDE8;
+$epo-color-phase-examination: $epo-color-dossier-bo; // WAS: #BADDE8;
+$epo-color-phase-opposition:  $epo-color-dossier-sn; // WAS: #9FCC6F;
+$epo-color-phase-appeal:      $epo-color-dossier-to; // WAS: #BA000D;
+$epo-color-phase-limitation:  $epo-color-dossier-mo; // WAS: #B47038;
+
+
+// Doccodes (indicators)
+$epo-color-indicator-null:      #4877b7;
+$epo-color-indicator-abex:      #8239ce;
+$epo-color-indicator-seca:      #d62f00;
+$epo-color-indicator-doublure:  #a56a00;
+$epo-color-indicator-clms:      #4877b7;
+
+
+// file: epo/_classes.scss
+
+// EPO-specific classes
+
+// Application identifier
+//
+// - Has attached label for the App. Phase
+// - Shows the App. number
+// - Shows the primary language of the application
+
+$epo-phase-width: 23px;
+
+.application-number {
+  background: rgba($epo-color-dossier-ep, .2);
+  border: 1px solid $epo-color-dossier-ep;
+  border-radius: .125rem;
+  display: inline-block;
+  font-size: 14px;
+  height: 21px;
+  line-height: 18px;
+  margin: 0 .5em 0 0;
+  /* min-width: 150px; */
+  overflow: visible;
+  position: relative;
+  text-decoration: none;
+  white-space: nowrap;
+  
+  &[class^="phase-"],
+  &[class*=" phase-"], {
+    min-width: 150px;
+  }
+
+  .phase {
+    border-radius: .125rem 0 0 .125rem;
+    display: inline-block;
+    height: 21px;
+    left: -1 * $epo-phase-width;
+    line-height: 21px;
+    position: absolute;
+    text-align: center;
+    top: -1px;
+    width: 20px;
+  }
+
+  .number {
+    background: rgba($color-white, .4);
+    color: $color-black;
+    display: inline-block;
+    font-weight: normal;
+    height: 100%;
+    padding: 0 .75em 0 .5em;
+    width: calc(100% - 2.1em);
+  }
+
+  .language {
+    // @include borders-end-cap;
+    color: $color-black;
+    float: right;
+    font-style: normal;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    width: 2em;
+  }
+
+  // With phase included: adjust border radius
+  &.phase-search,
+  &.phase-examination,
+  &.phase-opposition,
+  &.phase-appeal,
+  &.phase-limitation {
+    border-radius: 0 .125rem .125rem 0;
+    margin-left: $epo-phase-width;
+  }
+
+
+// Application type/national variations:
+// INFO: Types for applications are correlated to their dossier codes (incl. nationals)
+
+  &.type-ep {
+    background-color: rgba($epo-color-dossier-ep, 1);
+    border-color: $epo-color-dossier-ep;
+  }
+
+  &.type-europct {
+    background-color: rgba($epo-color-dossier-europct, 1);
+    border-color: $epo-color-dossier-europct;
+  }
+
+  &.type-pct {
+    background-color: rgba($epo-color-dossier-pct, 1);
+    border-color: $epo-color-dossier-pct;
+  }
+
+  &.type-bo {
+    background-color: rgba($epo-color-dossier-bo, 1);
+    border-color: $epo-color-dossier-bo;
+
+    .number {
+      background: rgba($color-white, .7);
+    }
+
+    .language {
+      color: $color-white;
+    }
+  }
+
+  &.type-co {
+    background-color: rgba($epo-color-dossier-co, 1);
+    border-color: $epo-color-dossier-co;
+  }
+
+  &.type-fa {
+    background-color: rgba($epo-color-dossier-fa, 1);
+    border-color: $epo-color-dossier-fa;
+  }
+
+  &.type-go {
+    background-color: rgba($epo-color-dossier-go, 1);
+    border-color: $epo-color-dossier-go;
+  }
+
+  &.type-io {
+    background-color: rgba($epo-color-dossier-io, 1);
+    border-color: $epo-color-dossier-io;
+  }
+
+  &.type-lo {
+    background-color: rgba($epo-color-dossier-lo, 1);
+    border-color: $epo-color-dossier-lo;
+  }
+
+  &.type-no {
+    background-color: rgba($epo-color-dossier-no, 1);
+    border-color: $epo-color-dossier-no;
+  }
+
+  &.type-mo {
+    background-color: rgba($epo-color-dossier-mo, 1);
+    border-color: $epo-color-dossier-mo;
+
+    .number {
+      background: rgba($color-white, .6);
+    }
+
+    .language {
+      color: $color-white;
+    }
+  }
+
+  &.type-sn {
+    background-color: rgba($epo-color-dossier-sn, 1);
+    border-color: $epo-color-dossier-sn;
+
+    .language {
+      color: $color-white;
+    }
+  }
+
+  &.type-fs {
+    background-color: rgba($epo-color-dossier-fa, 1);
+    border-color: $epo-color-dossier-fa;
+
+    .language {
+
+      &:after {
+        background: $epo-color-dossier-fs;
+        bottom: -1px;
+        content: ' ';
+        position: absolute;
+        right: 2em;
+        top: -1px;
+        width: 4px;
+      }
+    }
+  }
+
+  &.type-to {
+    background: $color-white;
+    border-color: $epo-color-dossier-to;
+
+    .language {
+      background: $epo-color-dossier-to;
+      color: $color-white;
+    }
+  }
+
+  &.type-lt {
+    background: $color-white;
+    border-color: $epo-color-dossier-lt;
+
+    .language {
+      background: $epo-color-dossier-lt;
+      color: $color-white;
+    }
+  }
+}
+// This is only for <a> versions:
+a.application-number {
+
+  &:focus,
+  &:hover {
+    outline: none;
+
+    .number,
+    .language {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+// Phases
+// INFO: Phases come in the following five options
+.phase {
+  color: $color-white;
+
+  .phase-search & {
+    background: $epo-color-phase-search;
+  }
+
+  .phase-examination & {
+    background: $epo-color-phase-examination;
+  }
+
+  .phase-opposition & {
+    background: $epo-color-phase-opposition;
+  }
+
+  .phase-appeal & {
+    background: $epo-color-phase-appeal;
+  }
+
+  .phase-limitation & {
+    background: $epo-color-phase-limitation;
+  }
+}
+
