@@ -26,7 +26,7 @@ import DossierList from 'components/composites/DossierList/DossierList';
 
 import MenuSearchBar from 'components/modules/menuSearchBar/menuSearchBar';
 import GlobalMenu from 'components/modules/GlobalMenu/GlobalMenu';
-import Tray from 'components/modules/Tray/Tray';
+import AllocationModule from 'components/modules/AllocationModule/AllocationModule';
 
 export default class UiBasics extends Component {
 
@@ -102,6 +102,8 @@ export default class UiBasics extends Component {
         <Panel>
           <DossierList dossiers={this.props.dossiers}/>
         </Panel>
+        <hr />
+        
       </div>
     );
   }

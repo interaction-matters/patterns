@@ -1,7 +1,53 @@
 [
-  {"title": "Sunscreen composition comprising color pigments", "applicant": "BASF SE",         "number": "EP 13 198 908.9 (EN)", "specialist": "1st Examiner", "date": "23.04.2015", "colour": "blue"},
-  {"title": "Oral Care Toothbrush",                            "applicant": "Sony Inc.",       "number": "EP 13 198 908.9 (EN)", "specialist": "1st Examiner", "date": "24.04.2015", "colour": "orange"},
-  {"title": "Interactivity and Dynamic UIs",                   "applicant": "BASF SE",         "number": "Euro PCTbis",          "specialist": "2st Examiner", "date": "21.04.2015", "colour": "green"},
-  {"title": "Event Handling and Synthetic Events",             "applicant": "BASF SE",         "number": "EP 13 198 908.9 (EN)", "specialist": "2st Examiner", "date": "17.04.2015", "colour": "blue"},
-  {"title": "Two-Way Binding Helpers",                         "applicant": "Faberge Company", "number": "EP 13 198 908.9 (EN)", "specialist": "Chairman",     "date": "19.03.2015", "colour": "orange"}
+  {	
+  	"title": "Sunscreen composition comprising color pigments", 
+  	"applicant": "BASF SE",         
+  	"number": "EP 13 198 908.9 (EN)", 
+  	"specialist": "1st Examiner", 
+  	"date": "23.04.2015", 
+  	"colour": "blue",
+  	"status": "Allocation of search division",
+  	"received": "",
+  	"category": "1.6.51 – Medical and Consumer Technology",
+  	"1st Examiner": "Peter Jansen",
+  	"2nd Examiner": "Ann Collins",
+  	"Chairman": "",
+  	"Director": "Sue Storm",
+  	"SIS Unit": "SES123",
+  	"Internal time limit": "",
+  	"Committed time limit": "",
+  	"Legal limit": "",
+  	"Technical Acceptance limit": "",
+  	"Allocation limit": "Allocation limit",
+  	"Date of Receipt": "",
+  	"Date of Filing": ""
+  }, {	
+  	"title": "Oral Care Toothbrush",                            
+  	"applicant": "Sony Inc.",       
+  	"number": "EP 13 198 908.9 (EN)", 
+  	"specialist": "1st Examiner", 
+  	"date": "24.04.2015", 
+  	"colour": "orange"
+  }, {	
+  	"title": "Interactivity and Dynamic UIs",                   
+  	"applicant": "BASF SE",         
+  	"number": "Euro PCTbis",          
+  	"specialist": "2st Examiner", 
+  	"date": "21.04.2015", 
+  	"colour": "green"
+  }, {	
+  	"title": "Event Handling and Synthetic Events",             
+  	"applicant": "BASF SE",         
+  	"number": "EP 13 198 908.9 (EN)", 
+  	"specialist": "2st Examiner", 
+  	"date": "17.04.2015", 
+  	"colour": "blue"
+  }, {	
+  	"title": "Two-Way Binding Helpers",                         
+  	"applicant": "Faberge Company", 
+  	"number": "EP 13 198 908.9 (EN)", 
+  	"specialist": "Chairman",     
+  	"date": "19.03.2015", 
+  	"colour": "orange"
+  }
 ]

@@ -1,0 +1,117 @@
+// Colours
+@import '~shared/styles/base/variables/colours';
+// Config
+@import '~shared/styles/base/variables/config';
+// Scaffolding
+@import '~shared/styles/base/variables/scaffolding';
+// Border radius
+@import '~shared/styles/base/mixins/border-radius';
+// Box shadow
+@import '~shared/styles/base/mixins/box-shadow';
+
+.dossier-snippet {
+	width:100%;
+	display:table;
+	padding: calc(#{$default-padding}/2);
+	@include border-radius(3px, 3px, 3px, 3px);
+	@include box-shadow(0px, 1px, 2px, rgba(0, 0, 0, 0.1));
+	border: 1px solid $color-gray-300;
+	margin-bottom: calc(#{$default-padding}/2);
+	min-height:120px;
+
+	&--selected {
+		background: $color-blue-100;
+		border-color: $color-blue-500;
+	}
+
+	&__tags,
+	&__numbers,
+	&__info,
+	&__dates {
+		display:table-cell;
+		padding: 0 calc(#{$default-padding}/2);
+		position: relative;
+	}
+
+	&__tags {
+		width:5%;
+		border-right: 1px solid $color-gray-200;
+		font-size:0.9em;
+	}
+
+	&__info {
+		width:60%;
+		border-right: 1px solid $color-gray-200;
+	}
+
+	&__numbers {
+		width:20%;
+		border-right: 1px solid $color-gray-200;
+		font-size:0.9em;
+
+		.list-stickers {
+			position:absolute;
+			bottom:0;
+			.sticker {
+				margin-bottom:5px;
+			}
+		}
+	}
+
+	&__number {
+		background:$color-gray-100;
+    border:1px solid $color-gray-300;
+    border-radius: .125rem;
+    display: inline-block;
+    font-size: 14px;
+    height: 21px;
+    line-height: 18px;
+    margin: 0 .5em 0 0;
+    overflow: visible;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+    padding:0 0.2em;
+
+    &--ep {
+    	color:darken($color-blue-500, 10%);
+    	background: rgba(161, 213, 247, 0.2);
+    	border-color: #a1d5f7;
+    }
+
+    &--pct {
+    	color:darken($color-yellow-500, 10%);
+    	background: lighten($color-yellow-400, 10%);
+    	border-color: lighten($color-yellow-500, 10%);
+    }
+
+	}
+
+	&__dates {
+		width:15%;
+		font-size:0.9em;
+
+	}
+
+	&__sub-number {
+		margin-bottom: calc(#{$default-padding}/2);
+	}
+
+	&__ta-stamp {
+		display:block;
+		font-size: 10px;
+		line-height: 20px;
+		text-align: center;
+		height: 20px;
+		width:20px;
+		background:$success;
+		color:$color-white;
+		border-radius:50%;
+	}
+
+	&__status {
+		position:absolute;
+		bottom:0;
+	}
+
+}

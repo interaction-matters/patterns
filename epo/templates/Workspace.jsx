@@ -18,7 +18,7 @@ import Helpers from 'components/modules/helpers/helpers';
 import GlobalMenu from 'components/modules/GlobalMenu/GlobalMenu';
 
 {/* This is the layout for Workspace pages. */}
-export default class Workspace extends Component {
+export class Workspace extends Component {
 	render() {
 
 		// Props array to pass down to UI Basics

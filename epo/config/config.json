@@ -19,8 +19,5 @@
 			{"target":"/workspace/viewer", "icon": "icon-format_size"}, 
 			{"target":"/workspace/office-actions", "icon": "icon-local_print_shop"}
 		],
-	"officeActions": 
-		[
-			{"secondaryContent": "disabled"}
-		]
+		"secondaryContent": "active"
 }

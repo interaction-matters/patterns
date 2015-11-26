@@ -32,7 +32,7 @@ function globalNavDossiersReducer(state=dossiers, action) {
   return state;
 }
 // For toggling the secondary content panel
-function secondaryContentReducer (state={}, action) {
+function secondaryContentReducer (state={secondaryContent: initialState.secondaryContent}, action) {
   switch (action.type) {
   	case 'TOGGLE_SECONDARY_CONTENT':
       return {...state, secondaryContent: action.status}

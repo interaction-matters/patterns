@@ -13,7 +13,7 @@ import styles from 'shared/styles/layout/_frames.scss';
 
 // React dependencies
 import Helpers from 'components/modules/helpers/helpers';
-import Tray from 'components/modules/Tray/Tray';
+import TraysModule from 'components/modules/TraysModule/TraysModule';
 import RouteHandler from 'components/elements/RouteHandler';
 
 {/* This is the layout for Management Module pages. */}
@@ -21,7 +21,15 @@ export default class ManagementModule extends Component {
 	render() {
 		return (
 			<div className="view">
-				<Tray />
+				{
+					/* 
+					** Eventually, this will read the url (hash)
+					** to determine which tray module is shown, but 
+					** for now we will add it manually. Could also
+					** read the route from state with redux-router
+					*/
+				}
+				<TraysModule module="work-manager" title="Work Manager" />
 				{/* Trays will go here */}
 				<RouteHandler className="wrapper">
 					{/* This will be replaced with whichever routes we pass in */}

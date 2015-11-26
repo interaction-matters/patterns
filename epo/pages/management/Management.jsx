@@ -6,8 +6,8 @@ import styles from './Management.scss';
 
 // React dependencies
 import Panel from 'components/elements/panel/panel';
-import Alert from 'components/elements/alert/alert';
-import Button from 'components/elements/button/button'
+import DossierSnippet from 'components/modules/DossierSnippet/DossierSnippet';
+import DossierPanel from 'components/modules/DossierPanel/DossierPanel';
 
 export default class Management extends Component {
 
@@ -16,18 +16,21 @@ export default class Management extends Component {
     return (
       <div className="management">
         <Panel panelName='management__main-panel'>
-    			<Alert type='primary'>
-    				<strong>Congratulations!</strong> You have successfully loaded the <strong>default Management</strong> page.
-    			</Alert>
-          <hr />
-          <Button type="danger">Off</Button>
-          <hr />
+          {/* Absolute 'vanilla' implementation */}
+          <DossierSnippet />
+          {/* Selected state set to true, TA stamp visible, title present */}
+          <DossierSnippet selected={true} taStamp={true} title="Titanium Alloy Composite for Reinforced Strategy"/>
+          {/* With some stickers */}
+          <DossierSnippet stickers={ [ {name:'ABEX'}, {name:'Divisional'}, {name:'SeCa'} ] } />
+          {/* With number type, language set to German */}
+          <DossierSnippet numberType="EP" language="DE"/>
+          {/* With number type set to PCT  */}
+          <DossierSnippet numberType="PCT" number="PCT 1234 5678A"/>
+          {/* Finally, with some dates included  */}
+          <DossierSnippet internalLimit='14.12.2015' committedLimit='10.03.2016' legalLimit='10.03.2018'/>
     		</Panel>
-
         <Panel panelName='management__secondary-panel'>
-    			<Alert type='success'>
-    				<strong>Secondary Content</strong>
-    			</Alert>
+    			<DossierPanel />
         </Panel>
       </div>
     );
