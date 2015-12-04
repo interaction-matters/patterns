@@ -28,7 +28,6 @@ export default (
   {/* Workspace routes */}
   <Route path="workspace" component={Workspace}> {/* set to route '/' to make default */}
     <Route path="home" component={Home} />
-    <Route path="dashboard" component={Dashboard} />
     <Route path="content" component={Content} />
     <Route path="analysis" component={Analysis} />
     <Route path="search" component={Search} />
@@ -44,7 +43,7 @@ export default (
   </Route>
 
   {/* Default route for root '/' path */}
-  <IndexRoute to="workspace/office-actions" component={Workspace} />
+  <IndexRoute to="dashboard" component={Dashboard} />
 
 </Route>
 );

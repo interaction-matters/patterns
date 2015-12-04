@@ -29,7 +29,8 @@ export default class AppList extends Component {
         // Other
         activeNumber: app.activeNumber,
         totalNumber: app.totalNumber,
-        route: app.route
+        route: app.route,
+        info: this.props.info
       }
 
       return <AppRow key={index} {...appRowProps} />

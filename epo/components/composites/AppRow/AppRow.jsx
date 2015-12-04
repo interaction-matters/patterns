@@ -1,4 +1,4 @@
-/***************
+  /***************
 A basic label
 ****************/
 
@@ -13,19 +13,24 @@ export default class AppRow extends Component {
 
   render() {
 
-  	let className = 'app-row';
-    let shortName = this.props.shortName;
-    let route = this.props.route;
-    let name = this.props.name;
-    let number = this.props.number;
-    let activeNumber = this.props.activeNumber;
-    let totalNumber = this.props.totalNumber;
+    const {
+      shortName,
+      route,
+      name,
+      number,
+      activeNumber,
+      totalNumber,
+      info
+    } = this.props
+
+    let hidden;
+    this.props.info == false ? hidden = '--hidden' : hidden = ''
 
     return (
-    	<a href={'/#' + route} className={className}>
+    	<a href={'/#' + route} className='app-row'>
     		<Badge {...this.props}>{shortName}</Badge>
     		<span className='app-row__link'>{name}</span>
-    		<span className='app-row__numeric'>
+    		<span className={'app-row__numeric' + hidden.trim()}>
 
           { ( this.props.number ? <Indicator {...this.props}>{number}</Indicator> : <span className='app-row__spacer'></span> ) }
 	      	
@@ -46,7 +51,8 @@ AppRow.propTypes = {
   name: React.PropTypes.string.isRequired,
   number: React.PropTypes.number,
   activeNumber: React.PropTypes.number,
-  totalNumber: React.PropTypes.number
+  totalNumber: React.PropTypes.number,
+  info: React.PropTypes.bool
 }
 
 AppRow.defaultProps = {}

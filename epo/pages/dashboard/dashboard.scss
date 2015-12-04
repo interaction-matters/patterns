@@ -1,11 +1,21 @@
 @import "susy/sass/susy";
 
 .dashboard {
+	
 	&__main-panel {
-	  @include container (100%);
+		margin-top:10em;
+	  @include container (40%);
+	  height:550px;
 	}
 
-	&__secondary-panel {
-	  @include span (2 of 12 last);
+	h2 {
+		margin-bottom:0.2em;
+		padding:0.2em 0 0.5em;
+		border-bottom:1px solid #eee;
+	}
+	.main-menu {
+		padding:1em;
+		font-size:16px;
+		background:#eee;
 	}
 }

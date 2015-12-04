@@ -24,8 +24,6 @@ export default class Navigation extends Component {
     */}   
     let currentWorkspace = 'workspace';
 
-    const { toolbarItems, helperItems, onAddClick, resetClick } = this.props
- 
     return (
     	<nav className={'nav nav--vertical nav--' + currentWorkspace}>
 
@@ -48,9 +46,9 @@ export default class Navigation extends Component {
           </Link>
         </div>
 
-        <IconToolbar resetClick={resetClick} type="main" toolbarItems={toolbarItems} />
+        <IconToolbar resetClick={this.props.resetClick} type="main" toolbarItems={this.props.toolbarItems} />
 
-        <IconToolbar resetClick={resetClick} type="helpers" toolbarItems={helperItems}>
+        <IconToolbar resetClick={this.props.resetClick} type="helpers" toolbarItems={this.props.helperItems}>
         {/* Print/font-size etc */}
         </IconToolbar>
 

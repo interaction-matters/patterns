@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 import * as toggleActions from 'actions/actions';
 
 // Global menu functions
-import * as gmFuncs from 'shared/functions/globalmenu.js';
+import * as globalMenuFuncs from 'shared/functions/globalmenu.js';
  
 // Sass dependencies
 import styles from 'shared/styles/layout/_frames.scss';
@@ -18,7 +18,7 @@ import Helpers from 'components/modules/helpers/helpers';
 import GlobalMenu from 'components/modules/GlobalMenu/GlobalMenu';
 
 {/* This is the layout for Workspace pages. */}
-export class Workspace extends Component {
+class Workspace extends Component {
 	render() {
 
 		// Props array to pass down to UI Basics
@@ -37,8 +37,8 @@ export class Workspace extends Component {
 			<div className="view">
 				{/* Main navigation */}
 				<Navigation 
-          resetClick={gmFuncs.resetMenuStatusHandler.bind(this)} 
-          onAddClick={gmFuncs.changeMenuStatusHandler.bind(this)} 
+          resetClick={globalMenuFuncs.resetMenuStatusHandler.bind(this)} 
+          onAddClick={globalMenuFuncs.changeMenuStatusHandler.bind(this)} 
           toolbarItems={this.props.toolbarItems} 
           helperItems={this.props.utilItems}
         />
@@ -46,12 +46,12 @@ export class Workspace extends Component {
         {(this.props.globalMenuStatus == 'active' ?
           <div>
             <GlobalMenu
-              toggleActions = {this.props.toggleActions}
+              toggleActions={this.props.toggleActions}
               status={this.props.globalMenuStatus}
               apps={this.props.apps}
               dossiers={this.props.dossiers}
               currentDossierStatus={this.props.currentDossierStatus}
-              dossierClick={gmFuncs.dossierClickHandler.bind(this)}
+              dossierClick={globalMenuFuncs.dossierClickHandler.bind(this)}
             />  
           </div>
         : '' )}
@@ -69,22 +69,27 @@ export class Workspace extends Component {
 }
 
 function mapStateToProps(state) {
-  return { 
-    toolbarItems: state.nav,
-    utilItems: state.utils,
-    menuItems: state.menu,
-    secondaryContent: state.secondary.secondaryContent,
-    globalMenuStatus: state.globalMenu.globalMenuStatus,
-    apps: state.globalNavApps,
-    dossiers: state.dossiers,
-    currentDossierStatus: state.currentDossiers.currentDossierList
-  };
+  return {
+    /* 
+    ** This takes our store state from the 
+    ** reducers, and 'maps' them to props
+    ** which we can pass in to components
+    */
+    toolbarItems: state.navReducer,
+    utilItems: state.utilsReducer,
+    menuItems: state.menuReducer,
+    secondaryContent: state.secondaryContentReducer.secondaryContent,
+    globalMenuStatus: state.globalMenuReducer.globalMenuStatus,
+    apps: state.globalNavAppsReducer,
+    dossiers: state.globalNavDossiersReducer,
+    currentDossierStatus: state.dossierListReducer.currentDossierList
+  }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     /* 
-    ** bind our imported actions to store.dispatch()
+    ** Bind our imported actions to store.dispatch()
     ** and give them a key of the same name 
     */
     toggleActions: bindActionCreators(toggleActions, dispatch)
