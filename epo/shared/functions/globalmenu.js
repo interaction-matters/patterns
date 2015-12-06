@@ -13,7 +13,7 @@ export function changeMenuStatusHandler() {
 // Reset global menu (turn off)
 export function resetMenuStatusHandler() {
   this.props.globalMenuStatus == 'active'
-  ? this.props.toggleActions.toggleGlobalMenu('disabled')  
+  ? this.props.toggleActions.toggleGlobalMenu('disabled')
   : '';
   this.props.toggleActions.toggleDossierMenu('disabled')
 }
