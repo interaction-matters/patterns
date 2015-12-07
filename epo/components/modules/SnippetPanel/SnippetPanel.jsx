@@ -1,34 +1,37 @@
 /***********************
  Snippet Panel
  ------------------------
- A panel filled wwith snippets,
- allowing to select the respective document
+ A panel containing all elements and modules
+ to show and select snippets
  ************************/
 
 import React, { Component, PropTypes } from 'react';
 
-import styles from './DossierPanel.scss';
+import styles from './SnippetPanel.scss';
 
-import AllocationModule from 'components/modules/AllocationModule/AllocationModule';
-import DossierPreview from 'components/modules/DossierPreview/DossierPreview';
+import SnippetFilter from 'components/modules/SnippetFilter/SnippetFilter';
+import SnippetList from 'components/modules/SnippetList/SnippetList';
 
-export default class DossierPanel extends Component {
+export default class SnippetPanel extends Component {
 
     render() {
 
-        let className = 'dossier-panel';
+
 
         return (
-            <div className={className}>
-                <AllocationModule />
-                <hr />
-                <DossierPreview />
+            <div>
+                <SnippetFilter />
+
+                <SnippetList />
+
+
+
             </div>
         );
     }
 
 };
 
-DossierPanel.propTypes = {};
+SnippetPanel.propTypes = {};
 
-DossierPanel.defaultProps = {};
+SnippetPanel.defaultProps = {};
