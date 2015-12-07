@@ -68,25 +68,18 @@ export class Workspace extends Component {
 	}
 }
 
-
-
 function mapStateToProps(state) {
   return { 
     toolbarItems: state.nav,
     utilItems: state.utils,
     menuItems: state.menu,
+    secondaryContent: state.secondary.secondaryContent,
     globalMenuStatus: state.globalMenu.globalMenuStatus,
-    secondaryAnalysis: state.secondaryContent.analysis,
     apps: state.globalNavApps,
     dossiers: state.dossiers,
     currentDossierStatus: state.currentDossiers.currentDossierList
   };
 }
-
-
-
-
-
 
 function mapDispatchToProps(dispatch) {
   return {
