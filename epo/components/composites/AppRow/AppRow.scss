@@ -36,6 +36,9 @@ UI Basics Label
   &__numeric {
   	display:table-cell;
   	vertical-align: middle;
+    &--hidden {
+      visibility:hidden;
+    }
   }
 
   &__treatment {
@@ -45,4 +48,5 @@ UI Basics Label
   &__spacer {
     margin-right:20px;
   }
+
 }

@@ -19,9 +19,17 @@ UI Basics Label
   padding: 1px 4px;
 
 	&--warning {
-  	background: $color-orange-500;
+  	background: $warning;
 	}
-	  
+	&--primary {
+  	background: $primary;
+	}
+	&--success {
+  	background: $success;
+	}
+	&--danger {
+  	background: $danger;
+	}
 	// Miscellaneous global classes
 	&--ta-badge {
 	  background-color: $color-green-500;

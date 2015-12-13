@@ -1,12 +1,13 @@
 {
 	"toolbarItems":
 		[	
-			{"target":"/workspace/analysis", "icon": "icon-analyze"}, 
-			{"target":"/workspace/search", "icon": "icon-search2"}, 
-			{"target":"/workspace/viewer", "icon": "icon-file-stack"}, 
-			{"target":"/workspace/office-actions", "icon": "icon-mail2"}
+			{"target":"/workspace/analysis", "icon": "icon-analyze", "secondaryContent": "active"}, 
+			{"target":"/workspace/search", "icon": "icon-search2", "secondaryContent": "disabled"}, 
+			{"target":"/workspace/viewer", "icon": "icon-file-stack", "secondaryContent": "active"}, 
+			{"target":"/workspace/office-actions", "icon": "icon-mail2", "secondaryContent": "active"}
 		],
-	"itemsInMenu": [
+	"itemsInMenu": 
+		[
       {"text":"Viewer", "target": "/workspace/viewer"}, 
       {"text":"Office Actions", "target": "/workspace/office-actions"}, 
       {"text":"Dashboard", "target": "/workspace/dashboard"}, 
@@ -19,5 +20,5 @@
 			{"target":"/workspace/viewer", "icon": "icon-format_size"}, 
 			{"target":"/workspace/office-actions", "icon": "icon-local_print_shop"}
 		],
-		"secondaryContent": "active"
+	"secondaryContent": "active"
 }

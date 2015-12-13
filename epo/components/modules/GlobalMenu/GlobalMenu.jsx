@@ -18,10 +18,6 @@ import ArrowListItem from 'components/composites/ArrowListItem/ArrowListItem';
 
 export default class GlobalMenu extends Component {
 
-  componentWillMount() {
-    
-  }
-
   componentDidMount() {
     // Reset global menu on click outside
     document.body.onclick = function (event) {

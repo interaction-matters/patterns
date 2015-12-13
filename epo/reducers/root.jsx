@@ -20,7 +20,7 @@ function menuReducer(state=initialState.itemsInMenu, action) {
   return state;
 }
 // Sets the 'utility' icons in main nav
-function utilityReducer(state=initialState.footerToolbarItems, action) {
+function utilsReducer(state=initialState.footerToolbarItems, action) {
   return state;
 }
 // Apps in global navigation
@@ -60,14 +60,14 @@ function dossierListReducer(state={ currentDossierList: 'disabled' }, action) {
 }
 
 const rootReducer = combineReducers({
-	nav: navReducer,
- 	menu: menuReducer,
- 	utils: utilityReducer,
-  secondary: secondaryContentReducer,
-  globalMenu: globalMenuReducer,
-  globalNavApps: globalNavAppsReducer,
-  dossiers: globalNavDossiersReducer,
-  currentDossiers: dossierListReducer
+	navReducer,
+ 	menuReducer,
+ 	utilsReducer,
+  secondaryContentReducer,
+  globalMenuReducer,
+  globalNavAppsReducer,
+  globalNavDossiersReducer,
+  dossierListReducer
 })
 
 export default rootReducer

@@ -7,9 +7,10 @@
 .office-actions {
   &__main-panel {
 	@include span (11 of 12);
-	.office-actions--sc-active & {
-	  @include span (6 of 12);
-	}
+  
+  	.office-actions--sc-active & {
+  	  @include span (6 of 12);
+  	}
   }
 
   &__secondary-panel {

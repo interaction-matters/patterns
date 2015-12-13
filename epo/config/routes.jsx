@@ -7,10 +7,11 @@ Defines the routes for our app
 import React from 'react';
 import { Router, Route, IndexRoute, Redirect } from 'react-router';
 
-// Import 'scaffold' options from components » containers 
-import App from 'templates/App';
+// Import 'scaffold' options from templates
+import Root from 'templates/Root';
 import ManagementModule from 'templates/ManagementModule';
 import Workspace from 'templates/Workspace';
+import Library from 'uxlibrary/components/Library';
 
 // Import pages
 import Home from 'pages/home/home';
@@ -23,12 +24,11 @@ import OfficeActions from 'pages/office_actions/office_actions';
 import Management from 'pages/Management/Management';
 
 export default (
-<Route path="/" component={App}>
+<Route path="/" component={Root}>
   
   {/* Workspace routes */}
   <Route path="workspace" component={Workspace}> {/* set to route '/' to make default */}
     <Route path="home" component={Home} />
-    <Route path="dashboard" component={Dashboard} />
     <Route path="content" component={Content} />
     <Route path="analysis" component={Analysis} />
     <Route path="search" component={Search} />
@@ -44,7 +44,11 @@ export default (
   </Route>
 
   {/* Default route for root '/' path */}
-  <IndexRoute to="workspace/office-actions" component={Workspace} />
+  <IndexRoute to="dashboard" component={Dashboard} />
+
+  <Route path="library" component={Library}>
+    {/* <Route path="buttons" component={Buttons} /> */}
+  </Route>
 
 </Route>
 );

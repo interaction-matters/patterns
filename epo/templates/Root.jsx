@@ -1,5 +1,5 @@
 /*******************************
-App Container
+Root Container
 --------------------------------
 Defines scaffolding for our app
 ********************************/
@@ -14,7 +14,7 @@ import styles from 'shared/styles/layout/_frames.scss';
 import RouteHandler from 'components/elements/RouteHandler'
 
 {/* This is the root-level '/' route. */}
-export default class App extends Component {
+export default class Root extends Component {
 	render() {
 		return (
 			<RouteHandler className="App">
