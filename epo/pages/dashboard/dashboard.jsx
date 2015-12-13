@@ -9,6 +9,7 @@ import styles from './dashboard.scss';
 import Panel from 'components/elements/panel/panel';
 import AppList from 'components/composites/AppList/AppList';
 import MenuList from 'components/composites/menuList/menuList';
+import AppRow from 'components/composites/AppRow/AppRow'
 
 export default class Dashboard extends Component {
 
@@ -22,7 +23,15 @@ export default class Dashboard extends Component {
           {/*<div className="main-menu">
           	<MenuList menuItems={this.props.menuItems} />
           </div>*/}
+          
           <AppList {...this.props} info={false} />
+          <hr />
+          <AppRow
+          	shortName="Lib"
+          	route="/library"
+          	name="View UI Library"
+          	info={false}
+          />
         </Panel>
       </div>
     );

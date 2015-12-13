@@ -30,7 +30,7 @@ export default class ManagementModule extends Component {
 					*/
 				}
 				<TraysModule module="work-manager" title="Work Manager" />
-				{/* Trays will go here */}
+
 				<RouteHandler className="wrapper">
 					{/* This will be replaced with whichever routes we pass in */}
 					{this.props.children}

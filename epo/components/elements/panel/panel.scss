@@ -8,16 +8,25 @@ UI Basics Panel
 @import '~shared/styles/base/mixins/border-radius';
 // Box-shadow
 @import '~shared/styles/base/mixins/box-shadow';
+// Colours
+@import '~shared/styles/base/variables/colours';
 // Padding & margin
 @import '~shared/styles/base/variables/scaffolding';
 
 // Styles
 .ui-panel {
-  border: none;
-  @include border-radius(2px, 2px, 2px, 2px);
-  @include box-shadow(0px, 1px, 4px, rgba(0, 0, 0, 0.3));
   margin-bottom: 1.2em;
   background-color: #fff;
+  &--default {
+    border: 1px solid darken($color-gray-200, 5%);
+    @include border-radius(3px, 3px, 3px, 3px);
+    @include box-shadow(0px, 0px, 2px, rgba(0, 0, 0, 0.1));
+  }
+  &--material {
+    border: none;
+    @include border-radius(2px, 2px, 2px, 2px);
+    @include box-shadow(0px, 1px, 4px, rgba(0, 0, 0, 0.3));
+  }
   &__panel-inner {
     padding:$default-padding;
     & > * {

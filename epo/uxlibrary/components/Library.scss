@@ -1,0 +1,41 @@
+@import "susy/sass/susy";
+// Colours
+@import '~shared/styles/base/variables/colours';
+@import '~shared/styles/base/variables/scaffolding';
+// Highlighting
+@import url(//cdn.jsdelivr.net/highlight.js/9.0.0/styles/github.min.css);
+
+$susy: (
+	gutters: 1/8
+);
+
+.library {
+	@include container(100%);
+	&__nav {
+	  @include span (2 of 12);
+	  height:100vh;
+	  position:fixed;
+	}
+	h2 {
+		margin-top:0;
+	}
+	code.inline {
+		padding: 2px 4px;
+    color: darken($primary, 10%);
+    background-color: lighten($primary, 40%);
+    border-radius: 2px;
+	}
+
+	&__main-content {
+	  @include span (10 of 12 last);
+	  padding:1.2em 1.2em 1.2em 0;
+	  height:calc(100vh - (1.2em * 2));
+	  
+	}
+
+	&__main-view {
+		@include container(100%);
+	}
+
+}
+	
