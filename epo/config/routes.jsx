@@ -11,7 +11,11 @@ import { Router, Route, IndexRoute, Redirect } from 'react-router';
 import Root from 'templates/Root';
 import ManagementModule from 'templates/ManagementModule';
 import Workspace from 'templates/Workspace';
+
+// Library pages
 import Library from 'uxlibrary/components/Library';
+import ButtonsPage from 'uxlibrary/pages/buttons/ButtonsPage';
+import IntroductionPage from 'uxlibrary/pages/introduction/IntroductionPage';
 
 // Import pages
 import Home from 'pages/home/home';
@@ -47,7 +51,9 @@ export default (
   <IndexRoute to="dashboard" component={Dashboard} />
 
   <Route path="library" component={Library}>
-    {/* <Route path="buttons" component={Buttons} /> */}
+    <Route path="introduction" component={IntroductionPage} />
+    <Route path="buttons" component={ButtonsPage} />
+    <IndexRoute to="introduction" component={IntroductionPage} />
   </Route>
 
 </Route>
