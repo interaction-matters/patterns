@@ -6,6 +6,8 @@ import React, { Component, PropTypes } from 'react';
 
 import styles from './AppRow.scss';
 
+import { Link } from 'react-router';
+ 
 import Badge from 'components/elements/Badge/Badge';
 import Indicator from 'components/elements/Indicator/Indicator';
 
@@ -27,7 +29,7 @@ export default class AppRow extends Component {
     this.props.info == false ? hidden = '--hidden' : hidden = ''
 
     return (
-    	<a href={'/#' + route} className='app-row'>
+    	<Link to={route} className='app-row'>
     		<Badge {...this.props}>{shortName}</Badge>
     		<span className='app-row__link'>{name}</span>
     		<span className={'app-row__numeric' + hidden.trim()}>
@@ -39,7 +41,7 @@ export default class AppRow extends Component {
             { ( this.props.totalNumber ? <span>{totalNumber}</span> : '' ) }
 	      	</span>
 	     	</span>
-    	</a>
+    	</Link>
     );
   }
 

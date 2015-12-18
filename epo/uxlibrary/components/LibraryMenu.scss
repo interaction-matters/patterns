@@ -4,6 +4,7 @@
 .library__nav {
 	background:lighten($color-gray-200, 2%);
   border-right: 1px solid darken($color-gray-200, 5%);
+  position:fixed;
 }
 
 .library__item {
@@ -12,25 +13,34 @@
 		font-size:16px;
 		color: $color-gray-900;
 	}
+	& > ul {
+		padding-left:0;
+	}
 	ul {
 		margin-top:0.5em;
-		padding-left:0;
 		list-style: none;
 		li {			
 			a {
-				color:$color-red-700;
+				color:$color-gray-600;
 				display:block;
 				padding-left:1em;
 				transition: 0.4s ease all;
 				border-left: 2px solid $color-gray-300;	
-				&:hover, &:active, &:focus {
+				&:hover {
 					text-decoration: none;
 					background: $color-gray-200;
-					border-color: $color-gray-500;
+					border-color: $color-gray-400;
+					color:$color-gray-600;
 				}
-				&.is-active {
+				&.is-active, &:active, &:focus {
+					text-decoration: none;
 					font-weight:bold;
 					border-color: $color-red-600;
+					color: $color-red-600;
+				}
+				&.disabled {
+					color:$color-gray-400;
+					cursor:not-allowed;
 				}
 			}
 		}
@@ -42,9 +52,10 @@
 	color: $color-white;
 	padding:0.625em;
 	font-size:16px;
+	height:50px;
+	width:calc(100% + 1px);
 	border-bottom:1px solid darken($color-red-600, 5%);
-	border-right:1px solid $color-red-600;
-	// To align with nav border
+
 	i {
 		font-size:20px;
 	}
@@ -53,6 +64,7 @@
 .library__menu {
 	list-style: none;
 	padding-left:1em;
-	margin-top:0.625em;
 	color: inherit;
+	height:calc(100vh - 50px; /* 100% minus menu height + padding amount x2 */
+  overflow-y:auto;
 }

@@ -18,6 +18,13 @@ UI Basics Label
   line-height: 1.4;
   padding: 1px 4px;
 
+  a {
+  	color: $color-white;
+  	&:hover {
+  		color:inherit;
+  	}
+  }
+
 	&--warning {
   	background: $warning;
 	}

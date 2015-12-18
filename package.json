@@ -4,7 +4,7 @@
   "description": "basic envrionment to mount react components easily and consistently within an application environment",
   "main": "''",
   "scripts": {
-    "build": "webpack --progress --profile --colors",
+    "build": "NODE_ENV=production webpack -p --config webpack.prod.config.js --progress --profile --colors",
     "dev": "webpack-dev-server --progress --profile --colors --hot"
   },
   "repository": {
