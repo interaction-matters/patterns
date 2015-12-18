@@ -21,12 +21,12 @@ UI Basics Button
 
 .ui-button {
   @include button-static; /* from button mixin */
-	@include border-radius(0.265em, 0.265em, 0.265em, 0.265em); /* from border-radius mixin */
-	@include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
-	padding: .625em;
+  @include border-radius(0.265em, 0.265em, 0.265em, 0.265em); /* from border-radius mixin */
+  @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
+  padding: .625em;
   line-height:1; /* resets line-height */
   border:1px solid transparent;
-
+  transition: 0.3s background ease;
   & > span {
     display:table;
     & > span {
@@ -53,16 +53,16 @@ UI Basics Button
     color:white;
   }
   &--danger {
-  	@include button($danger);
-  	color:white;
+    @include button($danger);
+    color:white;
   }
   &--warning {
     @include button($warning);
     color:white;
   }
   &--success {
-  	@include button($success);
-  	color:white;
+    @include button($success);
+    color:white;
   }
   &--info {
     @include button($info);
