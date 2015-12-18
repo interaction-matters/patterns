@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "highlight.js": "^8.9.1",
-    "history": "^1.12.6",
+    "history": "^1.16.0",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-highlight": "^0.6.1",
