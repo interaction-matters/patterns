@@ -94,7 +94,7 @@ export default class LibraryMenu extends Component {
               <li><Link to="/library/introduction" className="disabled">Metadata display</Link></li>
               <li><Link to="/library/introduction" className="disabled">Video player</Link></li>
               <li><Link to="/library/introduction" className="disabled">Visualisation elements</Link></li>
-              <li><Link to="/library/introduction" className="disabled">Labels & badges</Link></li>
+              <li><Link to="/library/labels">Labels & badges</Link></li>
               <li><Link to="/library/introduction" className="disabled">Tags</Link></li>
               <li><Link to="/library/introduction" className="disabled">Lists</Link></li>
               <li><Link to="/library/introduction" className="disabled">Filters</Link></li>
@@ -153,11 +153,12 @@ export default class LibraryMenu extends Component {
             </ul>
           </li>
           <li className="library__item">
-            <span>Other</span>
+            <span>Other (internal)</span>
             <ul>
               <li><Link to="/library/introduction" className="disabled">Switch</Link></li>
               <li><Link to="/library/introduction" className="disabled">Numeric stepper</Link></li>
               <li><Link to="/library/introduction" className="disabled">Link bar</Link></li>
+              <li><Link to="/library/introduction" className="disabled">Panel headers</Link></li>
             </ul>
           </li>
         </ul>

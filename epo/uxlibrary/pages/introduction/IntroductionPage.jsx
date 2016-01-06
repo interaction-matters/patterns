@@ -16,7 +16,9 @@ export default class IntroductionPage extends Component {
 
       <div className='library__main-content'>
         <h2>Introduction</h2>
-        <Label type="primary">Library&nbsp;<b>v.0.1</b></Label>
+        <Label type="primary"><i className="icon-star" /> <b>v.0.0.2</b></Label>
+        &nbsp;
+        <Label type="success"><i className="icon-schedule" /> <b>18.12.15</b></Label>
         &nbsp;
         <Label type="default">Proposal</Label>
         <hr />

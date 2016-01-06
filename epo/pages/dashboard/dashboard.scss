@@ -5,11 +5,16 @@
 	&__main-panel {
 		margin-top:5em;
 	  @include container (40%);
-	  height:700px;
+	  height:720px;
+	}
+
+	&__info {
+		position:absolute;
+		top:30px;
 	}
 
 	h2 {
-		margin-bottom:0.2em;
+		margin:0.2em 0;
 		padding:0.2em 0 0.5em;
 		border-bottom:1px solid #eee;
 	}
