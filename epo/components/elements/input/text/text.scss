@@ -15,10 +15,38 @@ Input Type Text
 input[type=text] {
 	&.ui-input-text {
 		-webkit-appearance: none;
-	  @include border-radius(4px, 4px, 4px, 4px);
-		@include box-shadow(1px, 1px, 4px, rgba(0, 0, 0, 0.4));
+	  @include border-radius(2px, 2px, 2px, 2px);
+		@include box-shadow(0, 0, 2px, rgba(0, 0, 0, 0.1));
 		font-size:inherit;
 		padding: .625em;
-		border:0;
+		width: 20em;
+		border:1px solid $color-gray-300;
+		background: $color-gray-100;
+		transition: all 0.3s ease;
+		&:hover {
+	    border-color: rgba($primary, .7);
+	  }
+	  &:focus, &.is-active {
+	    border-color: $primary;
+	    box-shadow: 0 0 4px rgba($primary, .25), inset 0 2px 2px rgba($primary, .1);
+	    outline: none;
+	  }
+	  &.is-error{
+	  	border-color: $danger;
+	  	background: rgba($danger, 0.05);
+	    box-shadow: 0 0 4px rgba($danger, .25), inset 0 2px 2px rgba($danger, .1);
+	  }
+	  &.is-success{
+	  	border-color: $success;
+	  	background: rgba($success, 0.05);
+	    box-shadow: 0 0 4px rgba($success, .25), inset 0 2px 2px rgba($success, .1);
+	  }
+	  &.is-disabled{
+	  	background:$color-gray-200;
+	  	cursor:not-allowed;
+	  	&:hover {
+	  		border-color:$color-gray-300;
+	  	}
+	  }
 	}
 }

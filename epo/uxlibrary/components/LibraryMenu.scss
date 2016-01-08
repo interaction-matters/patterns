@@ -21,7 +21,7 @@
 		list-style: none;
 		li {			
 			a {
-				color:$color-gray-600;
+				color:$color-gray-500;
 				display:block;
 				padding-left:1em;
 				transition: 0.4s ease all;
@@ -39,7 +39,8 @@
 					color: $color-red-600;
 				}
 				&.disabled {
-					color:$color-gray-400;
+					color:$color-gray-300;
+					text-decoration: line-through;
 					cursor:not-allowed;
 				}
 			}
@@ -52,7 +53,6 @@
 	color: $color-white;
 	padding:0.625em;
 	font-size:16px;
-	height:50px;
 	width:calc(100% + 1px);
 	border-bottom:1px solid darken($color-red-600, 5%);
 

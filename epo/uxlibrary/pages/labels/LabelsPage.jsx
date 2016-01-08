@@ -31,8 +31,9 @@ export default class LabelsPage extends Component {
           <p>The <code className="inline">Label</code> component is used to draw attention to new, important content on a page that might otherwise be missed. Labels are not interactive.</p>          
         </Panel>
         <Panel panelName="panel">
-          <h4>Label Types</h4>
-                     
+            <h4>Label Types</h4>
+            <p>There are two main label <i>types</i>:</p>
+            <hr />         
             <h6>Basic labels</h6>
             <div>
               <Label>Default</Label>&nbsp;
@@ -41,7 +42,7 @@ export default class LabelsPage extends Component {
               <Label type="warning">Warning</Label>&nbsp;
               <Label type="danger">Danger</Label>
             </div>
-            
+            <br />
             <h6>Subtle labels</h6>
             <div>
               <Label style="subtle">Default</Label>&nbsp;
@@ -53,22 +54,28 @@ export default class LabelsPage extends Component {
           <hr />
           <div>
             <strong>React/Jsx</strong>
+            <h6>Basic</h6>
             <Highlight className='html'>
-              {"<ButtonToolBar>"}<br />
-                 &nbsp;&nbsp;{"<Button type='primary'>Primary</Button>"}<br />
-                 &nbsp;&nbsp;{"<Button type='warning'>Warning</Button>"}<br />
-                 &nbsp;&nbsp;{"<Button type='success'>Success</Button>"}<br />
-                 &nbsp;&nbsp;{"<Button type='danger'>Danger</Button>"}<br />
-                 &nbsp;&nbsp;{"<Button type='info'>Info</Button>"}<br />
-                 &nbsp;&nbsp;{"<Button>Default</Button>"}<br />
-                 &nbsp;&nbsp;{"<Button type='link'>Link</Button>"}<br />
-              {"</ButtonToolBar>"}
+              {"<Label>Default</Label>"}<br />
+              {"<Label type='primary'>Primary</Label>"}<br />
+              {"<Label type='success'>Success</Label>"}<br />
+              {"<Label type='warning'>Warning</Label>"}<br />
+              {"<Label type='danger'>Danger</Label>"}
+            </Highlight>
+            <h6>Subtle</h6>
+            <Highlight className='html'>
+              {"<Label style='subtle'>Default</Label>"}<br />
+              {"<Label type='primary' style='subtle'>Primary</Label>"}<br />
+              {"<Label type='success' style='subtle'>Success</Label>"}<br />
+              {"<Label type='warning' style='subtle'>Warning</Label>"}<br />
+              {"<Label type='danger' style='subtle'>Danger</Label>"}
             </Highlight>
           </div>
         </Panel>
         <Panel panelName="panel">
           <h4>Label Sizes</h4>
           <p>There are 2 label sizes</p>
+          <hr />
           <div>   
             <Label>Normal</Label>&nbsp;
             <Label size="large">Large</Label>
@@ -77,38 +84,59 @@ export default class LabelsPage extends Component {
           <div>
             <strong>React/Jsx</strong>
             <Highlight className='html'>
-              {"<ButtonToolBar>"}<br />
-                 &nbsp;&nbsp;{"<Button type='primary' icon='icon-file-stack'>Icon left</Button>"}<br />
-                 &nbsp;&nbsp;{"<Button type='warning' icon='icon-dossier-files' position='right'>Icon right</Button>"}<br />
-                 &nbsp;&nbsp;{"<Button type='success' icon='icon-search2' iconOnly ='true'></Button>"}<br />
-                 &nbsp;&nbsp;{"<Button type='link' icon='icon-trash'>Delete this</Button>"}<br />
-              {"</ButtonToolBar>"}
+              {"<Label>Normal</Label>"}<br />
+              {"<Label size='large'>Large</Label>"}
             </Highlight>
           </div>
         </Panel>
         <Panel panelName="panel">
           <h4>Badges</h4>
-          <p>Label type of badge.</p>
-          <div>   
+          <p>Badges are used to display numbers as numeric indicators. For example, to display the number of new notifications to a user. </p>
+          <hr />
+          <div>
+            <h6>Basic</h6>  
             <Label role="badge">1</Label>&nbsp;
             <Label type="primary" role="badge">2</Label>&nbsp;
             <Label type="success" role="badge">3</Label>&nbsp;
             <Label type="warning" role="badge">4</Label>&nbsp;        
             <Label type="danger" role="badge">5</Label>&nbsp;   
-            <Label type="danger" role="badge">12</Label>&nbsp;
-            <Label type="danger" role="badge">123</Label>
+            <Label role="badge">12</Label>&nbsp;
+            <Label type="danger" role="badge">1,234</Label>
+          </div>
+          <br />
+          <div>
+            <h6>Subtle</h6>
+            <Label role="badge" style="subtle">1</Label>&nbsp;
+            <Label type="primary" role="badge" style="subtle">2</Label>&nbsp;
+            <Label type="success" role="badge" style="subtle">3</Label>&nbsp;
+            <Label type="warning" role="badge" style="subtle">4</Label>&nbsp;        
+            <Label type="danger" role="badge" style="subtle">5</Label>&nbsp;   
+            <Label role="badge" style="subtle">12</Label>&nbsp;
+            <Label type="danger" role="badge" style="subtle">1,234</Label>
           </div>
           <hr />
           <div>
             <strong>React/Jsx</strong>
-            <Highlight className='html'>
-              {"<ButtonToolBar>"}<br />
-                 &nbsp;&nbsp;{"<Button type='primary' icon='icon-file-stack'>Icon left</Button>"}<br />
-                 &nbsp;&nbsp;{"<Button type='warning' icon='icon-dossier-files' position='right'>Icon right</Button>"}<br />
-                 &nbsp;&nbsp;{"<Button type='success' icon='icon-search2' iconOnly ='true'></Button>"}<br />
-                 &nbsp;&nbsp;{"<Button type='link' icon='icon-trash'>Delete this</Button>"}<br />
-              {"</ButtonToolBar>"}
+            <h6>Basic</h6>  
+            <Highlight className='html'>      
+              {"<Label role='badge'>1</Label>"}
+              {"<Label type='primary' role='badge'>2</Label>"}<br />
+              {"<Label type='success' role='badge'>3</Label>"}<br />
+              {"<Label type='warning' role='badge'>4</Label>"}<br />       
+              {"<Label type='danger' role='badge'>5</Label>"}<br /> 
+              {"<Label role='badge'>12</Label>"}<br />
+              {"<Label type='danger' role='badge'>1,234</Label>"}
             </Highlight>
+            <h6>Subtle</h6>
+            <Highlight className='html'>              
+              {"<Label role='badge' style='subtle'>1</Label>"}<br />
+              {"<Label type='primary' role='badge' style='subtle'>2</Label>"}<br />
+              {"<Label type='success' role='badge' style='subtle'>3</Label>"}<br />
+              {"<Label type='warning' role='badge' style='subtle'>4</Label>"}<br />     
+              {"<Label type='danger' role='badge' style='subtle'>5</Label>"}<br />   
+              {"<Label role='badge' style='subtle'>12</Label>"}<br />
+              {"<Label type='danger' role='badge' style='subtle'>1,234</Label>"}
+            </Highlight>     
           </div>
         </Panel>
         <div id="accessibility">
