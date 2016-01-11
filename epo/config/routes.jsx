@@ -15,7 +15,9 @@ import Workspace from 'templates/Workspace';
 // Library pages
 import Library from 'uxlibrary/components/Library';
 import ButtonsPage from 'uxlibrary/pages/buttons/ButtonsPage';
+import LabelsPage from 'uxlibrary/pages/labels/LabelsPage';
 import IntroductionPage from 'uxlibrary/pages/introduction/IntroductionPage';
+import InputsPage from 'uxlibrary/pages/inputs/InputsPage';
 
 // Import pages
 import Home from 'pages/home/home';
@@ -53,6 +55,8 @@ export default (
   <Route path="library" component={Library}>
     <Route path="introduction" component={IntroductionPage} />
     <Route path="buttons" component={ButtonsPage} />
+    <Route path="labels" component={LabelsPage} />
+    <Route path="text-input" component={InputsPage} />
     <IndexRoute to="introduction" component={IntroductionPage} />
   </Route>
 

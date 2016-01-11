@@ -20,7 +20,7 @@ export default class LibraryMenu extends Component {
           <span>
             <i className="icon-epo-logo" />
             &nbsp;
-            UX Component Library&nbsp; <Label type="danger">Beta</Label>
+            UX Library&nbsp; <Label type="danger">Beta</Label>
           </span>
         </div>
         <ul className="library__menu">
@@ -29,6 +29,7 @@ export default class LibraryMenu extends Component {
             <ul>
               <li><Link to="/library/introduction">Introduction</Link></li>
               <li><Link to="/library/introduction" className="disabled">Tech stack overview</Link></li>
+              <li><Link to="/library/introduction" className="disabled">Using the code</Link></li>
               <li><Link to="/library/introduction" className="disabled">References</Link></li>
             </ul>
           </li>
@@ -94,7 +95,7 @@ export default class LibraryMenu extends Component {
               <li><Link to="/library/introduction" className="disabled">Metadata display</Link></li>
               <li><Link to="/library/introduction" className="disabled">Video player</Link></li>
               <li><Link to="/library/introduction" className="disabled">Visualisation elements</Link></li>
-              <li><Link to="/library/introduction" className="disabled">Labels & badges</Link></li>
+              <li><Link to="/library/labels">Labels & badges</Link></li>
               <li><Link to="/library/introduction" className="disabled">Tags</Link></li>
               <li><Link to="/library/introduction" className="disabled">Lists</Link></li>
               <li><Link to="/library/introduction" className="disabled">Filters</Link></li>
@@ -107,7 +108,7 @@ export default class LibraryMenu extends Component {
            <li className="library__item">
             <span>Form Controls</span>
             <ul>
-              <li><Link to="/library/introduction" className="disabled">Text input</Link></li>
+              <li><Link to="/library/text-input">Text input</Link></li>
               <li><Link to="/library/introduction" className="disabled">Input field label</Link></li>
               <li><Link to="/library/introduction" className="disabled">Text editor</Link></li>
               <li><Link to="/library/introduction" className="disabled">Dropdown</Link></li>
@@ -153,11 +154,12 @@ export default class LibraryMenu extends Component {
             </ul>
           </li>
           <li className="library__item">
-            <span>Other</span>
+            <span>Other (internal)</span>
             <ul>
               <li><Link to="/library/introduction" className="disabled">Switch</Link></li>
               <li><Link to="/library/introduction" className="disabled">Numeric stepper</Link></li>
               <li><Link to="/library/introduction" className="disabled">Link bar</Link></li>
+              <li><Link to="/library/introduction" className="disabled">Panel headers</Link></li>
             </ul>
           </li>
         </ul>

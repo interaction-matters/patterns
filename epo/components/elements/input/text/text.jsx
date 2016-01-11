@@ -35,8 +35,11 @@ export default class Text extends Component {
     var textValue = this.props.InputValue;
     var textPlaceholder = this.props.textPlaceholder;
 
+    let status;
+    this.props.status ? status = 'is-' + this.props.status : status = ''
+
     return (
-      <input type="text" className={'ui-input-text' + ' ' + 'ui-input-text--' + className} name={textName} maxLength={textMaxLength} value={textValue} placeholder={textPlaceholder} />
+      <input type="text" className={'ui-input-text' + ' ' + 'ui-input-text--' + className + ' ' + status} name={textName} maxLength={textMaxLength} value={textValue} placeholder={textPlaceholder} />
     );
   }
 
@@ -48,7 +51,8 @@ Text.propTypes = {
   textName: React.PropTypes.string,
   textMaxLength: React.PropTypes.number,
   textValue: React.PropTypes.string,
-  textPlaceholder: React.PropTypes.string
+  textPlaceholder: React.PropTypes.string,
+  status: React.PropTypes.string
 };
 
 // Default props

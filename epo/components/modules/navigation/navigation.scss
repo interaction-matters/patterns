@@ -10,7 +10,8 @@ Main Navigation
 @import '~shared/styles/base/variables/config';
 
 .nav {
-	@include box-shadow(1px, 1px, 4px, rgba(0, 0, 0, 0.2));
+	@include box-shadow(0px, 1px, 1px, rgba(0, 0, 0, 0.1));
+	border-right: 1px solid darken($color-gray-200, 5%);
 	background:$color-white;
 	position:fixed;
 	left:0;
