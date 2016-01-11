@@ -24,7 +24,7 @@ input[type=text] {
 		background: $color-gray-100;
 		transition: all 0.3s ease;
 		&:hover {
-	    border-color: rgba($primary, .7);
+	    border-color: $color-gray-400;
 	  }
 	  &:focus, &.is-active {
 	    border-color: $primary;

@@ -35,7 +35,7 @@ export default class Content extends Component {
       <div className={frameName}>
         <Panel panelName='office-actions__main-panel'>
         	<Alert type='success'>
-  			    <strong>Congratulations!</strong> You have successfully loaded the <strong>default OFFICE ACTIONS</strong> page.
+  			    <strong>Congratulations!</strong> You have successfully loaded the <strong>OFFICE ACTIONS</strong> page.
 					</Alert>
           <hr />
           <h4>Secondary Content</h4>
@@ -47,28 +47,17 @@ export default class Content extends Component {
           */}
           <Button onAddClick={ alertOnClick.bind(this) } type={color}>Turn {currentSecState}</Button>&nbsp;
           <hr />
-
   			  <div>
-					  {/* Demo of all components */}
-				    <UiBasics {...this.props}  />
-				  	{/* **** */}
+					  {/* Put some content here */}
 					</div>
         </Panel>
 
         {/* conditionally load secondary content */}
         {(this.props.secondaryContent == 'active' ?
           <Panel panelName='office-actions__secondary-panel'>
-            <p>This is a secondary content <Label type='ts-badge'>panel</Label></p>
-            <hr />
-
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
-              <hr />
-              Here is a component (UI Basics) inside the panel:<br /><br />
-              <Button>A button</Button>
-              <hr />
-              <p>Here is an out-of-context ui basics <Label type='ts-badge'>label</Label></p><hr />
-              <p>You can see here that we are mixing an extra small <b>UI basics</b> <Button size='small' type='primary'>Button</Button> with a label for <Label type='status-refused'>Refused</Label>, and <Label type='status-pending'>Pending</Label> from UI basics (Team Edyt)</p>
-           </Panel>  : '' )}
+            {/* Secondary content here */}  
+          </Panel>  
+        : '' )}
 
       </div>
     );

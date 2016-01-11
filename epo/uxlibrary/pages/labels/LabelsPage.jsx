@@ -142,22 +142,24 @@ export default class LabelsPage extends Component {
         <div id="accessibility">
           <Panel>
               <h4>Accessibility</h4>
-              <p>Users frequently confuse labels as buttons. Always conduct usability testing to make sure your particular implementation is not causing frustration.
-              If your labels are not interactive, be sure to disable hover, focus, and active styles.</p>
-              <p>When labels are used to call out new content that is dynamically loaded onto a page, be sure to use ARIA live regions to alert screen readers of the change.</p>   
+              <p>Users frequently confuse <code className="inline">labels</code> as <code className="inline">buttons</code>. Always conduct usability testing to make sure your particular implementation is not causing frustration.
+              If your labels are not interactive, be sure to disable <code className="inline">hover</code>, <code className="inline">focus</code>, and <code className="inline">active</code> styles.</p>
+              <p>When labels are used to call out new content that is dynamically loaded onto a page, be sure to use <code className="inline">ARIA live regions</code> to alert screen readers of the change.</p>   
           </Panel>
         </div>
         <Panel>
-          <h4>React Properties</h4>
+          <h4>Developer Notes</h4>
+          <p>Resources for developers using this component</p>
+          <hr />
+          <h5>React Proptypes</h5>
           <p>The following <i>React prop types</i> are available to this component:</p>
           <p>
             <code className="inline">type</code>,&nbsp;
             <code className="inline">role</code>,&nbsp;
             <code className="inline">size</code>&nbsp;
           </p>
-        </Panel>
-        <Panel>
-          <h4>Browser Support</h4>
+          <hr />
+          <h5>Browser Support</h5>
           <p>[Table denoting browser support]</p>
         </Panel>
       </div>
