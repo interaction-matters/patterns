@@ -15,7 +15,7 @@ export default class Content extends Component {
       <div className="search">
         <Panel panelName='search__main-panel'>
     			<Alert>
-    				<strong>Congratulations!</strong> You have successfully loaded the <strong>default SEARCH</strong> page.
+    				<strong>Congratulations!</strong> You have successfully loaded the <strong>SEARCH</strong> page.
     			</Alert>
     		</Panel>
 

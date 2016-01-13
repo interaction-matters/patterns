@@ -13,8 +13,8 @@ import styles from 'shared/styles/layout/_frames.scss';
 
 // React dependencies
 import RouteHandler from 'components/elements/RouteHandler';
-import Navigation from 'components/modules/navigation/navigation';
-import Helpers from 'components/modules/helpers/helpers';
+import GlobalNavigation from 'components/modules/GlobalNavigation/GlobalNavigation';
+import Helpers from 'components/modules/Helpers/Helpers';
 import GlobalMenu from 'components/modules/GlobalMenu/GlobalMenu';
 
 {/* This is the layout for Workspace pages. */}
@@ -36,7 +36,7 @@ class Workspace extends Component {
 		return (
 			<div className="view">
 				{/* Main navigation */}
-				<Navigation 
+				<GlobalNavigation 
           resetClick={globalMenuFuncs.resetMenuStatusHandler.bind(this)} 
           onAddClick={globalMenuFuncs.changeMenuStatusHandler.bind(this)} 
           toolbarItems={this.props.toolbarItems} 
