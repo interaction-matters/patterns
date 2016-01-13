@@ -1,5 +1,5 @@
 /********************************
-Main Navigation
+Global Navigation
 ---------------------------------
 A vertical navigation module, for
 the global menu/navigation
@@ -8,7 +8,7 @@ the global menu/navigation
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import styles from './navigation.scss';
+import styles from './GlobalNavigation.scss';
 
 import { Link } from 'react-router';
 

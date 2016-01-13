@@ -12,7 +12,7 @@ import { connect } from 'react-redux';
 import styles from 'shared/styles/layout/_frames.scss';
 
 // React dependencies
-import Helpers from 'components/modules/helpers/helpers';
+import Helpers from 'components/modules/Helpers/Helpers';
 import TraysModule from 'components/modules/TraysModule/TraysModule';
 import RouteHandler from 'components/elements/RouteHandler';
 

@@ -151,6 +151,7 @@ export default class LibraryMenu extends Component {
             <ul>
               <li><Link to="/management/work-manager">Snippet list</Link></li>
               <li><Link to="/management/work-manager">Work Manager</Link></li>
+              <li><Link to="/library/introduction" className="disabled">Global Menu</Link></li>
             </ul>
           </li>
           <li className="library__item">

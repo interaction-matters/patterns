@@ -7,7 +7,7 @@ a menu and search bar
 
 import React, { Component } from 'react';
 
-import styles from './menuSearchBar.scss';
+import styles from './MenuSearchBar.scss';
 
 import MenuList from 'components/composites/menuList/menuList';
 import SearchForm from 'components/composites/searchForm/searchForm';

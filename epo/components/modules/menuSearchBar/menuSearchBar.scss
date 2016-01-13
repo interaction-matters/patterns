@@ -18,11 +18,11 @@ Menu Search Bar
 	}
 
 	input[type="text"], input[type="textarea"] {
-		-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-		transition: all 1s ease;
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		-ms-transition: all 0.3s ease;
+		transition: all 0.3s ease;
 		&:focus {
 			width:375px;
 			outline:0;

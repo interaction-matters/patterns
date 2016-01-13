@@ -1,5 +1,5 @@
-  /***************
-A basic label
+/***************
+App Row
 ****************/
 
 import React, { Component, PropTypes } from 'react';

@@ -19,9 +19,6 @@ export default class Viewer extends Component {
     			<Alert type='primary'>
     				<strong>Congratulations!</strong> You have successfully loaded the <strong>default VIEWER</strong> page.
     			</Alert>
-          <hr />
-          <Button type="danger">Off</Button>
-          <hr />
     		</Panel>
 
         <Panel panelName='viewer__secondary-panel'>
