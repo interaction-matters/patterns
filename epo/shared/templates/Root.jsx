@@ -11,7 +11,7 @@ import { connect } from 'react-redux';
 import styles from 'shared/styles/layout/_frames.scss';
 
 // React dependencies
-import RouteHandler from 'components/elements/RouteHandler'
+import RouteHandler from 'components/utils/RouteHandler'
 
 {/* This is the root-level '/' route. */}
 export default class Root extends Component {

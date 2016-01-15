@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 var Highlight = require('react-highlight');
 
 // React dependencies
-import Panel from 'components/elements/panel/panel';
-import Alert from 'components/elements/alert/alert';
-import Label from 'components/elements/label/label';
+import Panel from 'components/layout/Panel/Panel';
+import Label from 'components/informational/Label/Label';
+import Alert from 'components/elements/Alert/Alert';
 
 export default class LabelsPage extends Component {
 

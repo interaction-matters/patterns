@@ -2,11 +2,9 @@ import React, {Component} from 'react';
 var Highlight = require('react-highlight');
 
 // React dependencies
-import Panel from 'components/elements/panel/panel';
-import Alert from 'components/elements/alert/alert';
-import Label from 'components/elements/label/label';
-import Button from 'components/elements/button/button';
-import ButtonToolBar from 'components/composites/buttonToolBar/buttonToolBar';
+import Panel from 'components/layout/Panel/Panel';
+import Label from 'components/informational/Label/Label';
+import Alert from 'components/elements/Alert/Alert';
 
 export default class IntroductionPage extends Component {
 
@@ -24,7 +22,7 @@ export default class IntroductionPage extends Component {
         <hr />
         <Panel panelName="panel">
           <h4>Overview</h4>
-          <p>Aliquam euismod venenatis tortor, at mattis urna rutrum sit amet. Ut varius vitae mauris sit amet ornare. Morbi non tortor gravida, ultrices lectus consectetur, luctus velit. Ut malesuada tincidunt est, sed consequat risus suscipit non. Integer commodo at metus vitae rhoncus.</p>          
+          <p>This is an ongoing documentation effort.</p>          
         </Panel>
         <Panel>
             <h4>Purpose of this Library</h4>

@@ -5,8 +5,8 @@ var Highlight = require('react-highlight');
 import styles from './Library.scss';
 
 // React dependencies
-import Panel from 'components/elements/panel/panel';
-import RouteHandler from 'components/elements/RouteHandler';
+import Panel from 'components/layout/Panel/Panel';
+import RouteHandler from 'components/utils/RouteHandler';
 // Library components
 import LibraryMenu from 'uxlibrary/components/LibraryMenu';
 

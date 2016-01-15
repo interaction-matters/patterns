@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 var Highlight = require('react-highlight');
 
 // React dependencies
-import Panel from 'components/elements/panel/panel';
-import Alert from 'components/elements/alert/alert';
-import Label from 'components/elements/label/label';
-import Text from 'components/elements/input/text/text';
+import Panel from 'components/layout/Panel/Panel';
+import Label from 'components/informational/Label/Label';
+import Alert from 'components/feedback/Alert/Alert';
+import TextInput from 'components/formcontrols/TextInput/TextInput';
 
 export default class InputPage extends Component {
 
@@ -28,39 +28,40 @@ export default class InputPage extends Component {
           <p>The <code className="inline">text input</code> component allows the user to input a simple text value. It is a simple html <code className="inline">input</code> element of the type <code className="inline">text</code>. A text box only allows for a single line of input.</p>          
         </Panel>
         <Panel panelName="panel">
-            <h4>Input Types</h4>
-            <p>There are five main input <i>types</i>:</p>
+            <h4>Input States</h4>
+            <p>There are five main input <i>states</i>:</p>
             <hr />         
             <h6>Basic Input</h6>
             <div>
-              <Text />
+              <TextInput textPlaceholder="Start writing..." />
             </div>
             <h6>Focus</h6>
             <div>
-              <Text status="active" />
-            </div>    
-            <h6>Success</h6>
-            <div>
-              <Text status="success" />
-            </div>
-            <h6>Error</h6>
-            <div>
-              <Text status="error" />
+              <TextInput status="active"/>
             </div>
             <h6>Disabled</h6>
             <div>
-              <Text status="disabled" />
+              <TextInput status="disabled" />
+            </div>   
+            <h6>Success</h6>
+            <div>
+              <TextInput status="success" />
             </div>
+            <h6>Error</h6>
+            <div>
+              <TextInput status="error" message="Here is an error message" />
+            </div>
+            
           <hr />
           <div>
             <strong>React/Jsx</strong>
             
             <Highlight className='html'>
-              {"<Text />"}<br />
-              {"<Text status='active' />"}<br />
-              {"<Text status='success' />"}<br />
-              {"<Text status='error' />"}<br />
-              {"<Text status='disabled' />"}
+              {"<TextInput />"}<br />
+              {"<TextInput status='active' />"}<br />
+              {"<TextInput status='disabled' />"}<br />
+              {"<TextInput status='success' />"}<br />
+              {"<TextInput status='error' message='Here is an error message' />"}      
             </Highlight>
             
           </div>

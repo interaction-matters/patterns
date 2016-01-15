@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 var Highlight = require('react-highlight');
 
 // React dependencies
-import Panel from 'components/elements/panel/panel';
-import Alert from 'components/elements/alert/alert';
-import Label from 'components/elements/label/label';
-import Button from 'components/elements/button/button';
-import ButtonToolBar from 'components/composites/buttonToolBar/buttonToolBar';
+import Panel from 'components/layout/Panel/Panel';
+import Label from 'components/informational/Label/Label';
+import Alert from 'components/feedback/Alert/Alert';
+import Button from 'components/actions/Button/Button';
+import ButtonToolBar from 'components/utils/ButtonToolBar/ButtonToolBar';
 
 export default class ButtonsPage extends Component {
 
@@ -18,7 +18,7 @@ export default class ButtonsPage extends Component {
         <h2>Buttons</h2>
         <Label type="primary">
           <i className="icon-cloud_download" />
-          <a href="https://github.com/interaction-matters/patterns/tree/master/epo/components/elements/button">&nbsp;v.0.1</a>
+          v.0.1
         </Label>
         &nbsp;
         <Label type="default">Proposal</Label>

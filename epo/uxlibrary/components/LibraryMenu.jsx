@@ -8,7 +8,7 @@ import styles from './LibraryMenu.scss';
 
 import { Link } from 'react-router';
 
-import Label from 'components/elements/label/label';
+import Label from 'components/informational/Label/Label';
 
 export default class LibraryMenu extends Component {
 
