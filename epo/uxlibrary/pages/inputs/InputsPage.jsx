@@ -63,6 +63,8 @@ export default class InputPage extends Component {
               {"<TextInput status='success' />"}<br />
               {"<TextInput status='error' message='Here is an error message' />"}      
             </Highlight>
+
+            <div><script src="https://gist.github.com/mattdoble/00665b7b8bc1ae6c0364.js"></script></div>
             
           </div>
         </Panel>

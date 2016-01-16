@@ -30,10 +30,10 @@ $susy: (
 		}
 	}
 	code {
-		padding: 2px 4px;
     color: darken($color-gray-500, 5%);
     border-radius: 2px;
     &.inline {
+    	padding: 2px 4px;
     	color: darken($primary, 10%);
     	background-color: lighten($primary, 40%);
     }

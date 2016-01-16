@@ -1,6 +1,33 @@
 @import "susy/sass/susy";
+@import '~shared/styles/base/variables/colours';
+@import '~shared/styles/base/mixins/box-shadow';
 
 .dashboard {
+
+	&__header {
+		width:100%;
+		height:40vh;
+		min-height: 300px;
+		background:$color-red-600;
+		h1 {
+			color:$color-white;
+			text-transform: uppercase;
+			text-align: center;
+			margin:0;
+			padding-top: 2.5em;
+			text-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);
+		}
+		h6 {
+			color:$color-red-100;
+			text-transform: uppercase;
+			text-align: center;
+			margin:0;
+			padding-top:1em;
+		}
+		.light-red {
+			color:lighten($color-red-600, 40%);
+		}
+	}
 	
 	&__main-panel {
 		margin-top:5em;
@@ -9,8 +36,7 @@
 	}
 
 	&__info {
-		position:absolute;
-		top:30px;
+		
 	}
 
 	h2 {

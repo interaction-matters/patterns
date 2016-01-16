@@ -16,19 +16,19 @@ export default class Dashboard extends Component {
     return (
       <div className="dashboard">
 
-        <Panel panelName='dashboard__main-panel'>
-
-          <div className="dashboard__info">
-            <Label type="primary"><i className="icon-star" /> <b>v.0.0.2</b></Label>
-            &nbsp;
-            <Label type="success"><i className="icon-schedule" /> <b>18.12.15</b></Label>
-            &nbsp;
-            <Label type="default">Proposal</Label>
-          </div>
-
-          <h2>Welcome to the Dashboard</h2>
-          <Link to="/library">View library</Link>
-        </Panel>
+        <header className="dashboard__header">
+          
+          <h1><i className="icon-epo-logo" />&nbsp;<span className="light-red">EPO</span> UX Library</h1>
+          <h6>A library of <b>React</b> components, and a visual style guide.</h6>
+        </header>
+        <div className="dashboard__info">
+          <Label type="primary"><i className="icon-star" /> <b>v.0.0.2</b></Label>
+          &nbsp;
+          <Label type="success"><i className="icon-schedule" /> <b>18.12.15</b></Label>
+          &nbsp;
+          <Label type="default">Proposal</Label>
+        </div>
+        <Link to="/library">View library</Link>
       </div>
     );
   }
