@@ -1,16 +1,10 @@
-# UI Library
-UI Library project.
+# Buttons
+Buttons are clickable elements.
 
-### To run
+### Usage
 
-Run webpack build using this command: 
+Basic button types: 
 
-```
-> $ npm run build
-```
-
-Run with webpack-dev-server: 
-
-```
-> $ npm run dev
+```html
+<Button type="primary">Primary</Button>
 ```
