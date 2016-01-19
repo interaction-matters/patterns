@@ -6,15 +6,16 @@
 
 	&__header {
 		width:100%;
-		height:40vh;
-		min-height: 300px;
 		background:$color-red-600;
+		/*background: -webkit-linear-gradient($color-red-600, darken($color-red-600, 5%)); /* For Safari 5.1 to 6.0 */
+    /*background: -o-linear-gradient($color-red-600, darken($color-red-600, 5%)); /* For Opera 11.1 to 12.0 */
+    /*background: -moz-linear-gradient($color-red-600, darken($color-red-600, 5%)); /* For Firefox 3.6 to 15 */
+    /*background: linear-gradient($color-red-600, darken($color-red-600, 5%)); /* Standard syntax */
 		h1 {
 			color:$color-white;
 			text-transform: uppercase;
 			text-align: center;
 			margin:0;
-			padding-top: 2.5em;
 			text-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);
 		}
 		h6 {
@@ -22,17 +23,76 @@
 			text-transform: uppercase;
 			text-align: center;
 			margin:0;
-			padding-top:1em;
+			padding-top:1.5em;
 		}
 		.light-red {
 			color:lighten($color-red-600, 40%);
 		}
 	}
+
+	&__inner {
+		width:40vw;
+		max-width: 800px;
+		margin:0 auto;
+		padding:8em 0;
+	}
+
+	&__stats {
+		i {
+			vertical-align: middle;
+		}
+		color:darken($color-red-400, 10%);
+		font-size: 12px;
+		text-align: center;
+		margin:0;
+	}
+
+	&__buttons {
+		width:400px;
+		margin:0 auto;
+		padding:2.5em 0 1em 0;
+		button {
+			border:0;
+			background:$color-white;
+			color:$color-red-600;
+			font-size: 18px;
+			font-weight:700;
+			border-radius:3px;
+			-webkit-border-radius:3px;
+			-moz-border-radius:3px;
+			padding:0.5em 0;
+			width:195px;
+			box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);
+			transition:0.3s ease all;
+			border: 2px solid transparent;
+			&:hover {
+				background:transparent;
+				color:$color-white;
+				border: 2px solid $color-white;
+			}
+		}
+	}
 	
-	&__main-panel {
-		margin-top:5em;
+	&__main-content {
+		margin-top:2.5em;
 	  @include container (60%);
-	  height:720px;
+	}
+
+	&__menu {
+		list-style:none;
+		padding:0 1em;
+		margin:0;
+		h4 {
+			//color:$color-red-600;
+			margin-bottom: 0;
+		}
+	}
+
+	&__menu-panel {
+		@include span (6 of 12);
+		&:nth-child(2n) {
+			@include span (6 of 12 last);
+		}
 	}
 
 	&__info {

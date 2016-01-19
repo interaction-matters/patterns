@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 var Highlight = require('react-highlight');
+var Markdown = require('react-remarkable');
 
 // React dependencies
 import Panel from 'components/layout/Panel/Panel';
@@ -64,7 +65,8 @@ export default class InputPage extends Component {
               {"<TextInput status='error' message='Here is an error message' />"}      
             </Highlight>
 
-            <div><script src="https://gist.github.com/mattdoble/00665b7b8bc1ae6c0364.js"></script></div>
+            <Markdown source="```<p>Some code</p>```">
+            </Markdown>
             
           </div>
         </Panel>
