@@ -20,7 +20,7 @@ export default class LibraryMenu extends Component {
           <span>
             <i className="icon-epo-logo" />
             &nbsp;
-            UX Library&nbsp; <Label type="danger">Beta</Label>
+            UX Library&nbsp; <span className="title__beta-label">Beta</span>
           </span>
         </div>
         <ul className="library__menu">

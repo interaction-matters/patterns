@@ -17,19 +17,17 @@ UI Basics Panel
 .ui-panel {
   margin-bottom: 1.2em;
   background-color: #fff;
+  @include border-radius(3px, 3px, 3px, 3px);
   // Panel types
   &--default {
     border: 1px solid darken($color-gray-200, 5%);
-    @include border-radius(3px, 3px, 3px, 3px);
+  }
+  &--raised {
+    border: 1px solid darken($color-gray-200, 10%);
     @include box-shadow(0px, 0px, 2px, rgba(0, 0, 0, 0.1));
   }
-  &--heavy {
-    border: none;
-    @include border-radius(2px, 2px, 2px, 2px);
-    @include box-shadow(0px, 1px, 4px, rgba(0, 0, 0, 0.3));
-  }
   &--subtle {
-    border: 1px solid darken($color-gray-200, 5%);
+    border: 1px solid darken($color-gray-100, 5%);
   }
   &__panel-inner {
     padding:$default-padding;

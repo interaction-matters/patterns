@@ -28,7 +28,7 @@ export default class Dashboard extends Component {
           </div>
         </header>
         <div className="dashboard__main-content">
-          <Panel panelName="dashboard__menu-panel">   
+          <Panel panelType="raised" panelName="dashboard__menu-panel">   
             <ul className="dashboard__menu">
               <h4>Getting Started</h4>
               <li className="library__item">  

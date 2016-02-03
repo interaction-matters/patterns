@@ -26,7 +26,7 @@ function createDOMHistory(options) {
   }));
 
   function listen(listener) {
-    _invariant2['default'](_ExecutionEnvironment.canUseDOM, 'DOM history needs a DOM');
+    !_ExecutionEnvironment.canUseDOM ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, 'DOM history needs a DOM') : _invariant2['default'](false) : undefined;
 
     return history.listen(listener);
   }

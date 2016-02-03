@@ -7,6 +7,7 @@
 @import '~shared/styles/base/mixins/border-radius';
 // Highlighting
 //@import url(//cdn.jsdelivr.net/highlight.js/9.0.0/styles/github.min.css);
+@import '~shared/styles/vendor/highlight';
 
 $susy: (
 	gutters: 1/8
@@ -22,12 +23,10 @@ $susy: (
 	}
 	pre {
 		padding:0.625em;
+		margin:1em 0 0 0;
 		@include border-radius(3px, 3px, 3px, 3px);
 		background-color: $color-gray-100;
 		border: 1px solid darken($color-gray-100, 5%);
-		.hljs-title {
-			font-weight:bold;
-		}
 	}
 	code {
     color: darken($color-gray-500, 5%);
@@ -51,4 +50,3 @@ $susy: (
 	}
 
 }
-	

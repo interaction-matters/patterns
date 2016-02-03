@@ -55,10 +55,22 @@
 	font-size:16px;
 	width:calc(100% + 1px);
 	border-bottom:1px solid darken($color-red-600, 5%);
-
 	i {
 		font-size:20px;
 	}
+}
+
+.title__beta-label {
+	font-size:8px;
+	font-weight:bold;
+	text-transform:uppercase;
+	line-height:16px;
+	background:white;
+	padding:2px;
+	color:$color-red-600;
+	border-radius:3px;
+	margin-top:5px;
+	vertical-align:top;
 }
 
 .library__menu {

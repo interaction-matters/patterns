@@ -31,8 +31,6 @@
 	}
 
 	&__inner {
-		width:40vw;
-		max-width: 800px;
 		margin:0 auto;
 		padding:8em 0;
 	}
@@ -104,9 +102,11 @@
 		padding:0.2em 0 0.5em;
 		border-bottom:1px solid #eee;
 	}
-	.main-menu {
-		padding:1em;
-		font-size:16px;
-		background:#eee;
-	}
+
+}
+
+@media screen and (max-width: 1800px) {
+    .dashboard__main-content {
+        @include container (80%)
+    }
 }

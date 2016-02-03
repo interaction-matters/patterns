@@ -4,7 +4,7 @@ var Highlight = require('react-highlight');
 // React dependencies
 import Panel from 'components/layout/Panel/Panel';
 import Label from 'components/informational/Label/Label';
-import Alert from 'components/elements/Alert/Alert';
+import Alert from 'components/feedback/Alert/Alert';
 
 export default class IntroductionPage extends Component {
 

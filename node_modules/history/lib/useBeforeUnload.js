@@ -62,7 +62,7 @@ function useBeforeUnload(createHistory) {
         if (_ExecutionEnvironment.canUseDOM) {
           stopBeforeUnloadListener = startBeforeUnloadListener(getBeforeUnloadPromptMessage);
         } else {
-          _warning2['default'](false, 'listenBeforeUnload only works in DOM environments');
+          process.env.NODE_ENV !== 'production' ? _warning2['default'](false, 'listenBeforeUnload only works in DOM environments') : undefined;
         }
       }
 

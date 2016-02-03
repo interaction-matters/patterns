@@ -1,15 +1,9 @@
 /***************************
-Utilities
+Utils
 ----------------------------
-Global utility classes
+Re-usable utility classes
 ****************************/
 
-// Use as a test for global styling
-.global-style {
-	border:1px solid red;
-}
-
-// Hiding
 .visibly-hidden {
   height: 1px;
   left: -10px;
@@ -24,22 +18,30 @@ Global utility classes
 .appearance-none {
 	-webkit-appearance: none;
 }
+  
+/* Scroll bars */
 
-// Scrollbars
+::-webkit-scrollbar {
+    width: 6px;
+}
 
 ::-webkit-scrollbar-track {
-      background-color: transparent;
-} /* the new scrollbar will have a flat appearance with the set background color */
- 
-::-webkit-scrollbar-thumb {
-      background-color: transparent; 
-} /* this will style the thumb, ignoring the track */
- 
-::-webkit-scrollbar-button {
-      background-color: #7c2929;
-} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
- 
-::-webkit-scrollbar-corner {
-      background-color: transparent;
-} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+    background:darken(#eee, 2%);
+}
 
+::-webkit-scrollbar-thumb {
+    background:darken(#ddd, 2%);
+    opacity:0.2;
+    transition:ease 0.3s background;
+    &:hover {
+      background:#b01a0d;
+    }
+}
+
+/* Overrides and hacks */
+.ReactTabs__TabList {
+  border-bottom-color: #ddd !important; 
+}
+.ReactTabs__Tab--selected {
+  border-color: #ddd !important;
+}
