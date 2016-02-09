@@ -49,4 +49,22 @@ $susy: (
 		@include container(100%);
 	}
 
+	.slide-panel__trigger {
+  	color: $color-gray-500;
+  	text-transform: uppercase;
+  	font-size: 12px;
+  	background: darken($color-gray-100, 2%);
+  	padding: 4px;
+  	transition: all ease 0.2s;
+  	@include border-radius(3px, 3px, 3px, 3px);
+  	&:hover {
+  		text-decoration:none;
+  		color: $color-gray-700;
+  		background: $color-gray-200;
+  	}
+  	&:before {
+  		content: "</>";
+  	}
+  }
+
 }

@@ -1,0 +1,14 @@
+.slide-panel {
+  transition: all ease 0.4s;
+  max-height:0;
+  opacity:0;
+  overflow:hidden;
+  &.is-open {
+  	opacity:1;
+  	margin-top:1em;
+  	overflow:auto;
+  }
+  &__trigger {
+  	cursor: pointer;
+  }
+}

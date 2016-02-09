@@ -6,11 +6,15 @@ global app dependencies
 ***********************/
 
 /************
-1. Global 
+1. Vendor 
 *************/
 
 //Normalize
 @import "shared/styles/vendor/normalize";
+
+/************
+2. Global 
+*************/
 
 //Font icons
 @import 'shared/styles/base/global/icons';
@@ -20,3 +24,10 @@ global app dependencies
 
 //Typography
 @import 'shared/styles/base/global/typography';
+
+/************
+3. Theme 
+*************/
+
+//Theme
+@import 'shared/styles/theme/theme';

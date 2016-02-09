@@ -10,6 +10,7 @@ var TabPanel = ReactTabs.TabPanel;
 import Panel from 'components/layout/Panel/Panel';
 import Label from 'components/informational/Label/Label';
 import Alert from 'components/feedback/Alert/Alert';
+import SlidePanel from 'components/utils/SlidePanel/SlidePanel';
 
 export default class LabelsPage extends Component {
 
@@ -57,58 +58,60 @@ export default class LabelsPage extends Component {
               <Label type="danger" style="subtle">Danger</Label>
             </div>
           <hr />
-          <Tabs>
-            <TabList>
-              <Tab>React/Jsx</Tab>
-              <Tab>HTML</Tab>
-              <Tab>Scss</Tab>
-            </TabList>     
-            <TabPanel>
-              
-              <Highlight className='html'>
-                {"/* Basic */"}<br />
-                {"<Label>Default</Label>"}<br />
-                {"<Label type='primary'>Primary</Label>"}<br />
-                {"<Label type='success'>Success</Label>"}<br />
-                {"<Label type='warning'>Warning</Label>"}<br />
-                {"<Label type='danger'>Danger</Label>"}
-                <br /><br />
-                {"/* Subtle */"}<br />
-                {"<Label style='subtle'>Default</Label>"}<br />
-                {"<Label type='primary' style='subtle'>Primary</Label>"}<br />
-                {"<Label type='success' style='subtle'>Success</Label>"}<br />
-                {"<Label type='warning' style='subtle'>Warning</Label>"}<br />
-                {"<Label type='danger' style='subtle'>Danger</Label>"}
-              </Highlight>
-            </TabPanel>
-            <TabPanel>
-              <Highlight className='html'>
-                {"/* Basic */"}<br />
-                {"<span class='ui-label'>Default</span>"}<br />
-                {"<span class='ui-label ui-label--primary'>Primary</span>"}<br />
-                {"<span class='ui-label ui-label--success'>Success</span>"}<br />
-                {"<span class='ui-label ui-label--warning'>Warning</span>"}<br />
-                {"<span class='ui-label ui-label--danger'>Danger</span>"}
-                <br /><br />
-                {"/* Subtle */"}<br />
-                {"<span class='ui-label ui-label--subtle'>Default</span>"}<br />
-                {"<span class='ui-label ui-label--primary ui-label--subtle'>Primary</span>"}<br />
-                {"<span class='ui-label ui-label--success ui-label--subtle'>Success</span>"}<br />
-                {"<span class='ui-label ui-label--warning ui-label--subtle'>Warning</span>"}<br />
-                {"<span class='ui-label ui-label--danger ui-label--subtle'>Danger</span>"}
-              </Highlight>
-            </TabPanel>
-            <TabPanel>
-              <pre>
-                <code>
-                  /* Stylesheet info */
-                  @import 'colors';
-                </code>
-              </pre>
-              
-            </TabPanel>
-          </Tabs>
-         
+          <SlidePanel message="code">
+            <Tabs>
+              <TabList>
+                <Tab>React/Jsx</Tab>
+                <Tab>HTML</Tab>
+                <Tab>Scss</Tab>
+              </TabList>     
+              <TabPanel>
+                
+                <Highlight className='html'>
+                  {"/* Basic */"}<br />
+                  {"<Label>Default</Label>"}<br />
+                  {"<Label type='primary'>Primary</Label>"}<br />
+                  {"<Label type='success'>Success</Label>"}<br />
+                  {"<Label type='warning'>Warning</Label>"}<br />
+                  {"<Label type='danger'>Danger</Label>"}
+                  <br /><br />
+                  {"/* Subtle */"}<br />
+                  {"<Label style='subtle'>Default</Label>"}<br />
+                  {"<Label type='primary' style='subtle'>Primary</Label>"}<br />
+                  {"<Label type='success' style='subtle'>Success</Label>"}<br />
+                  {"<Label type='warning' style='subtle'>Warning</Label>"}<br />
+                  {"<Label type='danger' style='subtle'>Danger</Label>"}
+                </Highlight>
+              </TabPanel>
+              <TabPanel>
+                <Highlight className='html'>
+                  {"/* Basic */"}<br />
+                  {"<span class='ui-label'>Default</span>"}<br />
+                  {"<span class='ui-label ui-label--primary'>Primary</span>"}<br />
+                  {"<span class='ui-label ui-label--success'>Success</span>"}<br />
+                  {"<span class='ui-label ui-label--warning'>Warning</span>"}<br />
+                  {"<span class='ui-label ui-label--danger'>Danger</span>"}
+                  <br /><br />
+                  {"/* Subtle */"}<br />
+                  {"<span class='ui-label ui-label--subtle'>Default</span>"}<br />
+                  {"<span class='ui-label ui-label--primary ui-label--subtle'>Primary</span>"}<br />
+                  {"<span class='ui-label ui-label--success ui-label--subtle'>Success</span>"}<br />
+                  {"<span class='ui-label ui-label--warning ui-label--subtle'>Warning</span>"}<br />
+                  {"<span class='ui-label ui-label--danger ui-label--subtle'>Danger</span>"}
+                </Highlight>
+              </TabPanel>
+              <TabPanel>
+                <pre>
+                  <code>
+                    /* Stylesheet info */
+                    @import 'colors';
+                  </code>
+                  
+                </pre>
+                
+              </TabPanel>
+            </Tabs>
+          </SlidePanel>
         </Panel>
         <Panel panelName="panel">
           <h4>Label Sizes</h4>
@@ -120,11 +123,13 @@ export default class LabelsPage extends Component {
           </div>
           <hr />
           <div>
+          <SlidePanel message="code">
             <strong>React/Jsx</strong>
             <Highlight className='html'>
               {"<Label>Normal</Label>"}<br />
               {"<Label size='large'>Large</Label>"}
             </Highlight>
+          </SlidePanel>
           </div>
         </Panel>
         <Panel panelName="panel">
@@ -153,37 +158,33 @@ export default class LabelsPage extends Component {
             <Label type="danger" role="badge" style="subtle">1,234</Label>
           </div>
           <hr />
-          <div>
-            <strong>React/Jsx</strong>
-            
-            <Highlight className='html'>
-              {"/* Basic */"}<br />      
-              {"<Label role='badge'>1</Label>"}
-              {"<Label type='primary' role='badge'>2</Label>"}<br />
-              {"<Label type='success' role='badge'>3</Label>"}<br />
-              {"<Label type='warning' role='badge'>4</Label>"}<br />       
-              {"<Label type='danger' role='badge'>5</Label>"}<br /> 
-              {"<Label role='badge'>12</Label>"}<br />
-              {"<Label type='danger' role='badge'>1,234</Label>"}
-            </Highlight>
-            
-            <Highlight className='html'>
-              {"/* Subtle */"}<br />              
-              {"<Label role='badge' style='subtle'>1</Label>"}<br />
-              {"<Label type='primary' role='badge' style='subtle'>2</Label>"}<br />
-              {"<Label type='success' role='badge' style='subtle'>3</Label>"}<br />
-              {"<Label type='warning' role='badge' style='subtle'>4</Label>"}<br />     
-              {"<Label type='danger' role='badge' style='subtle'>5</Label>"}<br />   
-              {"<Label role='badge' style='subtle'>12</Label>"}<br />
-              {"<Label type='danger' role='badge' style='subtle'>1,234</Label>"}
-            </Highlight>
-            <Highlight className='css'>
-              {"/* Subtle */"}<br />              
-              {".someClass {"}<br />
-              &nbsp;&nbsp;{"text-align:center;"}<br />
-              {"}"}
-            </Highlight>   
-          </div>
+          <SlidePanel message="code">
+            <div>
+              <strong>React/Jsx</strong>
+              
+              <Highlight className='html'>
+                {"/* Basic */"}<br />      
+                {"<Label role='badge'>1</Label>"}
+                {"<Label type='primary' role='badge'>2</Label>"}<br />
+                {"<Label type='success' role='badge'>3</Label>"}<br />
+                {"<Label type='warning' role='badge'>4</Label>"}<br />       
+                {"<Label type='danger' role='badge'>5</Label>"}<br /> 
+                {"<Label role='badge'>12</Label>"}<br />
+                {"<Label type='danger' role='badge'>1,234</Label>"}
+              </Highlight>
+              
+              <Highlight className='html'>
+                {"/* Subtle */"}<br />              
+                {"<Label role='badge' style='subtle'>1</Label>"}<br />
+                {"<Label type='primary' role='badge' style='subtle'>2</Label>"}<br />
+                {"<Label type='success' role='badge' style='subtle'>3</Label>"}<br />
+                {"<Label type='warning' role='badge' style='subtle'>4</Label>"}<br />     
+                {"<Label type='danger' role='badge' style='subtle'>5</Label>"}<br />   
+                {"<Label role='badge' style='subtle'>12</Label>"}<br />
+                {"<Label type='danger' role='badge' style='subtle'>1,234</Label>"}
+              </Highlight>
+            </div>
+          </SlidePanel>
         </Panel>
         <div id="accessibility">
           <Panel>
