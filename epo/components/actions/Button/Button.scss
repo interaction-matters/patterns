@@ -22,20 +22,17 @@ UI Basics Button
   @include border-radius(0.265em, 0.265em, 0.265em, 0.265em); /* from border-radius mixin */
   @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
   padding: .625em;
-  line-height:1; /* resets line-height */
+  line-height:initial; /* resets line-height */
   border:1px solid transparent;
-  transition: 0.3s background ease;
-  & > span {
-    display:table;
-    & > span {
-      vertical-align: middle;
-    }
-  }
+  transition: 0.2s all ease;
 
   &--default {
-    @include button($color-gray-200);
+    background: $color-gray-100;
     border:1px solid $color-gray-300;
     @include box-shadow(0,1px,2px,rgba(0,0,0,0.1))
+    &:hover, &.has-focus {
+      border-color:darken($color-gray-400, 5%);
+    }
   }
 
   &--link {
@@ -114,6 +111,9 @@ UI Basics Button
     padding: 0 .325em 0 0;
     vertical-align: middle;
     text-decoration: none;
+    &:last-child {
+      padding: 0;
+    }
     &--left {
       float: left;
     }
@@ -126,5 +126,39 @@ UI Basics Button
       padding: 0;
     }
   }
-  
+
+  &__caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align:middle;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+   
+}
+
+.split-button {
+  display: inline-block;
+  position:relative;
+  //@include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
+  & > .ui-button {
+    @include box-shadow(0, 0, 0, 0);
+    &:first-of-type {
+      @include border-radius(0.265em, 0, 0, 0.265em);
+      border-right:0;
+    }
+    &:last-of-type {
+      @include border-radius(0, 0.265em, 0.265em, 0);
+    }
+  }
+}
+
+.dropdown-button {
+  display: inline-block;
+  position:relative;
+  .ui-button__caret {
+    margin-left:6px;
+  }
 }

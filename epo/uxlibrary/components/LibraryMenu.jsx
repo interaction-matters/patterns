@@ -4,11 +4,13 @@ UX Library Menu
 
 import React, { Component, PropTypes } from 'react';
 
+/* Styles */
 import styles from './LibraryMenu.scss';
-
+/* Components */
 import { Link } from 'react-router';
-
 import Label from 'components/informational/Label/Label';
+/* Utils */
+import { toggleClass } from 'shared/functions/toggleClass.js';
 
 export default class LibraryMenu extends Component {
 
@@ -46,10 +48,12 @@ export default class LibraryMenu extends Component {
             <span>Layout</span>
             <ul>
               <li><Link to="/library/introduction" className="disabled">Panel</Link></li>
+              <li><Link to="/library/introduction" className="disabled">Disclosure</Link></li>
               <li><Link to="/library/introduction" className="disabled">Dialog</Link></li>
               <li><Link to="/library/introduction" className="disabled">Overlay</Link></li>
               <li><Link to="/library/introduction" className="disabled">Modal</Link></li>
               <li><Link to="/library/introduction" className="disabled">Popover</Link></li>
+              <li><Link to="/library/introduction" className="disabled">Accordian</Link></li>
             </ul>
           </li>
           <li className="library__item">
@@ -152,6 +156,8 @@ export default class LibraryMenu extends Component {
               <li><Link to="/management/work-manager">Snippet list</Link></li>
               <li><Link to="/management/work-manager">Work Manager</Link></li>
               <li><Link to="/library/introduction" className="disabled">Global Menu</Link></li>
+              <li><Link to="/library/introduction" className="disabled">Allocation Module</Link></li>
+              <li><Link to="/library/introduction" className="disabled">Search/Query</Link></li>
             </ul>
           </li>
           <li className="library__item">

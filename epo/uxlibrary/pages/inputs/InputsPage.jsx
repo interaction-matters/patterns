@@ -1,12 +1,18 @@
 import React, {Component} from 'react';
 var Highlight = require('react-highlight');
 var Markdown = require('react-remarkable');
+var ReactTabs = require('react-tabs');
+var Tab = ReactTabs.Tab;
+var Tabs = ReactTabs.Tabs;
+var TabList = ReactTabs.TabList;
+var TabPanel = ReactTabs.TabPanel;
 
 // React dependencies
 import Panel from 'components/layout/Panel/Panel';
 import Label from 'components/informational/Label/Label';
 import Alert from 'components/feedback/Alert/Alert';
 import TextInput from 'components/formcontrols/TextInput/TextInput';
+import SlidePanel from 'components/utils/SlidePanel/SlidePanel';
 
 export default class InputPage extends Component {
 
@@ -54,21 +60,36 @@ export default class InputPage extends Component {
             </div>
             
           <hr />
-          <div>
-            <strong>React/Jsx</strong>
-            
-            <Highlight className='html'>
-              {"<TextInput />"}<br />
-              {"<TextInput status='active' />"}<br />
-              {"<TextInput status='disabled' />"}<br />
-              {"<TextInput status='success' />"}<br />
-              {"<TextInput status='error' message='Here is an error message' />"}      
-            </Highlight>
-
-            <Markdown source="```<p>Some code</p>```">
-            </Markdown>
-            
-          </div>
+          <SlidePanel message="code">
+            <Tabs>
+              <TabList>
+                <Tab>React/Jsx</Tab>
+                <Tab>HTML</Tab>
+              </TabList>     
+              <TabPanel>  
+                <Highlight className='html'>
+                  {"<TextInput />"}<br />
+                  {"<TextInput status='active' />"}<br />
+                  {"<TextInput status='disabled' />"}<br />
+                  {"<TextInput status='success' />"}<br />
+                  {"<TextInput status='error' message='Here is an error message' />"}      
+                </Highlight>        
+              </TabPanel>
+              <TabPanel>  
+                <Highlight className='html'>
+                  {"<input type='text' class='ui-input-text' name='default' maxlength='500' placeholder='Start writing...' />"}<br />
+                  {"<input type='text' class='ui-input-text is-active' name='default' maxlength='500' />"}<br />
+                  {"<input type='text' class='ui-input-text is-disabled' name='default' maxlength='500' />"}<br />
+                  {"<input type='text' class='ui-input-text is-success' name='default' maxlength='500' />"}<br />
+                  {"<span class='text-input__msg'>"}<br />
+                  &nbsp;&nbsp;{"<i class='icon-warning'></i>"}<br />
+                  &nbsp;&nbsp;{"Here is an error message"}<br />
+                  {"</span>"}<br />
+                  {"<input type='text' class='ui-input-text is-error' name='default' maxlength='500' />"}
+                </Highlight>        
+              </TabPanel>
+            </Tabs>
+          </SlidePanel>
         </Panel>
         <div id="accessibility">
           <Panel>

@@ -45,14 +45,17 @@ export default class Button extends Component {
     let iconTag, icon;
     icon = this.props.icon;
     if (Boolean(this.props.icon)) {iconTag = <i className={'ui-button__icon' + ' ' + icon + ' ' + position + ' ' + iconOnly}></i>}
+    // Focus
+    let focus;
+    if(this.props.focus) {focus = this.props.focus} else {focus=''}
 
     // Remove whitespace from class definition
-    var trimClass = 'ui-button' + ' ' + type + ' ' + size + ' ' + width;
+    var trimClass = 'ui-button' + ' ' + type + ' ' + size + ' ' + width + focus;
     
     return (
 
-      this.props.disabled? <button type={role} onClick={this.props.onAddClick} className={trimClass.trim()} disabled><span>{iconTag}{this.props.children}</span></button> : 
-                           <button type={role} onClick={this.props.onAddClick} className={trimClass.trim()}><span>{iconTag}{this.props.children}</span></button>
+      this.props.disabled == true ? <button type={role} onClick={this.props.onAddClick} className={trimClass.trim()} disabled><span className="ui-button__inner">{iconTag}{this.props.children}</span></button> : 
+                           <button type={role} onClick={this.props.onAddClick} className={trimClass.trim()}><span className="ui-button__inner">{iconTag}{this.props.children}</span></button>
     );
 
   }

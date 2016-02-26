@@ -1,0 +1,14 @@
+/**************
+UI Button Group
+***************/
+
+.ui-button-group {
+	& > button, 
+	.split-button, 
+	.dropdown-button {
+		margin-right:5px;
+		&:last-child {
+			margin:0;
+		}
+	}
+}

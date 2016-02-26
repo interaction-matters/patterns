@@ -15,6 +15,12 @@ export default class Panel extends Component {
 
     return (
 			<div className={'ui-panel' + ' ' + panelType + ' ' + this.props.panelName}>
+				{(this.props.header
+					? <div className="ui-panel__header">
+							{this.props.header}
+						</div>
+					: null
+				)}
 				<div className='ui-panel__panel-inner'>{this.props.children}</div>
 			</div>	
     );

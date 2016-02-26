@@ -12,30 +12,59 @@ UI Basics Panel
 @import '~shared/styles/base/variables/colours';
 // Padding & margin
 @import '~shared/styles/base/variables/scaffolding';
+// Clearfix
+@import '~shared/styles/base/mixins/clearfix';
+
+@mixin header-variant($colour) {
+  background: lighten($colour, 40%);
+  color: darken($colour, 10%);
+  border: 1px solid lighten($colour, 30%);
+}
 
 // Styles
 .ui-panel {
   margin-bottom: 1.2em;
   background-color: #fff;
-  @include border-radius(3px, 3px, 3px, 3px);
-  // Panel types
-  &--default {
-    border: 1px solid darken($color-gray-200, 5%);
-  }
-  &--raised {
-    border: 1px solid darken($color-gray-200, 10%);
-    @include box-shadow(0px, 0px, 2px, rgba(0, 0, 0, 0.1));
-  }
-  &--subtle {
-    border: 1px solid darken($color-gray-100, 5%);
+  // Panel header
+  &__header {
+    font-size:18px;
+    padding:6px 20px;
+    @include border-radius(3px, 3px, 0, 0);
+    //Colours 
+    .ui-panel--default & {
+      @include header-variant(lighten($color-gray-500, 2.5%));
+    }
+    .ui-panel--primary & {
+      @include header-variant($primary);
+    }
+    .ui-panel--danger & {
+      @include header-variant($danger);
+    }
+    .ui-panel--info & {
+      @include header-variant($info);
+    }
+    .ui-panel--success & {
+      @include header-variant($success);
+    }
   }
   &__panel-inner {
     padding:$default-padding;
+    border: 1px solid darken($color-gray-200, 5%);
+    @include border-radius(3px, 3px, 3px, 3px);
+    @include clearfix;
+    .ui-panel__header + & {
+      border-top:0;
+      @include border-radius(0, 0, 3px, 3px);
+    }
     & > * {
 	  	&:first-child {
 		  	//padding-top:0;
 		  	margin-top:0;
 	  	}
+      &:last-child {
+        //padding-top:0;
+        margin-bottom:0;
+      }
 	  }
   }
 }

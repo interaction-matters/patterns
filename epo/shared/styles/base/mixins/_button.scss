@@ -6,7 +6,7 @@ Default button mixin
 	background-color: $color;
 	border-color: mix(black, $color, 10%);
   
-	&:hover {
+	&:hover, &.has-focus {
 		background-color: mix(black, $color, 15%);
 		border-color: mix(black, $color, 20%);
 	}
@@ -24,5 +24,8 @@ Default button mixin
 	
 	&:hover {
 		cursor: pointer;
+	}
+	&:focus {
+		outline: 0;
 	}
 }

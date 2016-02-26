@@ -1,0 +1,26 @@
+// Colours
+@import '~shared/styles/base/variables/colours';
+
+.ui-select {
+  background: $color-white;
+  border: 1px solid $color-gray-300;
+  border-radius: 4px;
+  color: $color-gray-600;
+  font-size: 14px;
+  height: 27px;
+  line-height: 1.4;
+  margin: -1px 4px 0 0;
+  padding: 4px 8px;
+  vertical-align: middle;
+  transition: border-color .3s ease;
+  -moz-appearance: none;
+  &:focus {
+    border-color: $primary;
+    //box-shadow: 0 0 4px $color-blue-500;
+    outline: none;
+  }
+  &:hover {
+    border-color: darken($primary, 5%);
+    cursor: pointer;
+  }
+}
