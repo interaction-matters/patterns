@@ -1,4 +1,8 @@
+// Clearfix
+@import '~shared/styles/base/mixins/clearfix';
+
 .ui-block {
+	@include clearfix;
 	&--left {
 		float:left;
 		margin-right:10px;

@@ -23,6 +23,10 @@ export default class DropdownButton extends Component {
 			: this.setState({toggle: 'off'})
 		}
 
+    function togglOff() {
+      this.setState({toggle: 'off'})
+    }
+
 		const toggleState = {
 			toggle: this.state.toggle
 		}
@@ -34,9 +38,10 @@ export default class DropdownButton extends Component {
     
     return (
     	<div className="dropdown-button">
-    		<Button {...this.props} focus={focus} onAddClick={toggl.bind(this)}>
+    		<Button {...this.props} focus={focus} onAddClick={toggl.bind(this)} onAddBlur={togglOff.bind(this)}>
     			{this.props.title}
           <span className="ui-button__caret"></span>
+         
     		</Button>
         {/* Pass down toggle state as props */}
         { React.cloneElement(this.props.children, {...toggleState}) }

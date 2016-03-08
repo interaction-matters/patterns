@@ -5,10 +5,13 @@ Default button mixin
 @mixin button($color) {
 	background-color: $color;
 	border-color: mix(black, $color, 10%);
-  
-	&:hover, &.has-focus {
+	&:hover {
 		background-color: mix(black, $color, 15%);
 		border-color: mix(black, $color, 20%);
+	}
+	&.has-focus {
+		background-color: mix(black, $color, 25%);
+		border-color: mix(black, $color, 30%);
 	}
 }
 
@@ -21,7 +24,6 @@ Default button mixin
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
-	
 	&:hover {
 		cursor: pointer;
 	}

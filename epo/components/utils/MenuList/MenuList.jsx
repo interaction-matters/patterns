@@ -20,7 +20,7 @@ export default class MenuList extends Component {
   	var menuPlacement = this.props.menuPlacement;
   	// Get menu items in menu
   	var menuItems = this.props.menuItems.map((menuItem, index) => {
-      return <li key={index}>
+      return <li key={index} className="ui-menu__item">
       					<Link to={menuItem.target}>
                   {(menuItem.icon ? 
                     <i className={menuItem.icon} />

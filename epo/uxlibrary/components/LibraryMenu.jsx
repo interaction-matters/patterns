@@ -117,7 +117,7 @@ export default class LibraryMenu extends Component {
               <li><Link to="/library/introduction" className="disabled">Text editor</Link></li>
               <li><Link to="/library/introduction" className="disabled">Dropdown</Link></li>
               <li><Link to="/library/introduction" className="disabled">Headings</Link></li>
-              <li><Link to="/library/introduction" className="disabled">Combo box</Link></li>
+              <li><Link to="/library/combo-box">Combo box</Link></li>
               <li><Link to="/library/introduction" className="disabled">Calendar picker</Link></li>
               <li><Link to="/library/introduction" className="disabled">Colour picker</Link></li>
               <li><Link to="/library/introduction" className="disabled">In place editing</Link></li>

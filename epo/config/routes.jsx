@@ -17,6 +17,7 @@ import ButtonsPage from 'uxlibrary/pages/buttons/ButtonsPage';
 import LabelsPage from 'uxlibrary/pages/labels/LabelsPage';
 import IntroductionPage from 'uxlibrary/pages/introduction/IntroductionPage';
 import InputsPage from 'uxlibrary/pages/inputs/InputsPage';
+import ComboBoxPage from 'uxlibrary/pages/combobox/ComboBoxPage';
 
 export default (
 <Route path="/" component={Root}>
@@ -30,6 +31,7 @@ export default (
     <Route path="buttons" component={ButtonsPage} />
     <Route path="labels" component={LabelsPage} />
     <Route path="text-input" component={InputsPage} />
+    <Route path="combo-box" component={ComboBoxPage} />
     <IndexRoute to="introduction" component={IntroductionPage} />
   </Route>
 

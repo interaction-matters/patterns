@@ -31,7 +31,7 @@ export default class ButtonsPage extends Component {
       {text:"Dashboard", target: "/workspace/dashboard", icon: "icon-local_library"}, 
       {text:"Analysis", target: "/workspace/analysis", icon: "icon-dossier-files"}
     ]
-
+    
     return (
 
       <div className='library__main-content'>
@@ -43,14 +43,17 @@ export default class ButtonsPage extends Component {
         &nbsp;
         <Label style="subtle">Draft</Label>
         <hr />
-        <Alert>
-          <i className="icon-local_library" />&nbsp;
-          <strong>Tip:</strong> Read the accessibility guidelines for buttons <a href="#accessibility">at the bottom of this page</a>
-        </Alert>
-        <br />
         <Panel panelName="panel">
           <h4>Usage</h4>
           <p>The <code className="inline">Button</code> component defines a clickable button. Inside a <code className="inline">Button</code> element you can put content, like text or images. This is the difference between this element and buttons created with the <code className="inline">input</code> element.</p>          
+          <Alert dismissible={true}>
+            <i className="icon-local_library" />&nbsp;
+            <strong>Tip:</strong> Read the accessibility guidelines for buttons <a href="#accessibility">at the bottom of this page</a>
+          </Alert>
+
+          {/*<MenuList menuItems={menuItems}  />*/}
+        
+
         </Panel>
         <Panel panelName="panel">
           <h4>Button Types</h4>
@@ -253,27 +256,58 @@ export default class ButtonsPage extends Component {
           </ButtonGroup>
           <hr />
           <h6>Button Toolbar</h6>
-          <Block placement="left">
-            <ButtonToolBar size="small">
-              <Button>Button</Button>
-              <Button icon='icon-file-stack'>Button</Button>
-              <Button icon='icon-settings'></Button>
-              <DropDownButton title="dropdown" type="primary">
-                <DropDownPanel >
-                  <MenuList menuItems={menuItems} />
-                </DropDownPanel>
-              </DropDownButton>
-              <Button>Button</Button>
-            </ButtonToolBar>
-          </Block>&nbsp;&nbsp;
-          <Block placement="left">
-            <ButtonToolBar size="small">
-              <Button icon='icon-file-stack' iconOnly={true}></Button>
-              <Button icon='icon-dossier-files' iconOnly={true}></Button>
-              <Button icon='icon-search2' iconOnly={true}></Button>
-              <Button icon='icon-trash' iconOnly={true}></Button>
-            </ButtonToolBar>
-          </Block>
+          <Block>
+            <Block placement="left">
+              <ButtonToolBar size="small">
+                <Button>Button</Button>
+                <Button icon='icon-file-stack'>Button</Button>
+                <Button icon='icon-settings'></Button>
+                <DropDownButton title="dropdown" type="primary">
+                  <DropDownPanel >
+                    <MenuList menuItems={menuItems} />
+                  </DropDownPanel>
+                </DropDownButton>
+                <Button>Button</Button>
+              </ButtonToolBar>
+            </Block>&nbsp;&nbsp;
+            <Block placement="left">
+              <ButtonToolBar size="small">
+                <Button icon='icon-file-stack' iconOnly={true}></Button>
+                <Button icon='icon-dossier-files' iconOnly={true}></Button>
+                <Button icon='icon-search2' iconOnly={true}></Button>
+                <Button icon='icon-trash' iconOnly={true}></Button>
+              </ButtonToolBar>
+            </Block>
+          </Block>  
+          <hr />
+          <SlidePanel message="code">
+            <Tabs>
+              <TabList>
+                <Tab>React/Jsx</Tab>
+                <Tab>HTML</Tab>
+              </TabList>
+              <TabPanel>
+                <Highlight className='html'>
+                  {"<ButtonToolBar>"}<br />
+                     &nbsp;&nbsp;{"<Button type='primary' icon='icon-file-stack'>Icon left</Button>"}<br />
+                     &nbsp;&nbsp;{"<Button type='warning' icon='icon-dossier-files' position='right'>Icon right</Button>"}<br />
+                     &nbsp;&nbsp;{"<Button type='success' icon='icon-search2' iconOnly ='true'></Button>"}<br />
+                     &nbsp;&nbsp;{"<Button type='link' icon='icon-trash'>Delete this</Button>"}<br />
+                  {"</ButtonToolBar>"}
+                </Highlight>
+              </TabPanel>
+              <TabPanel>
+                <Highlight className='html'>
+                  {"<div class='ui-button-toolbar'>"}<br />
+                     &nbsp;&nbsp;{"<button type='button' class='ui-button ui-button--primary'><i class='ui-button__icon icon-file-stack ui-button__icon--left'></i>Icon left</button>"}<br />
+                     &nbsp;&nbsp;{"<button type='button' class='ui-button ui-button--warning'><i class='ui-button__icon icon-dossier-files ui-button__icon--right'></i>Icon right</button>"}<br />
+                     &nbsp;&nbsp;{"<button type='button' class='ui-button ui-button--success'><i class='ui-button__icon icon-search2  ui-button__icon--icon-only'></i></button>"}<br />
+                     &nbsp;&nbsp;{"<button type='button' class='ui-button ui-button--link'><i class='ui-button__icon icon-trash'></i>Delete this</button>"}<br />
+                  {"</div>"}
+                </Highlight>
+              </TabPanel>
+            </Tabs>
+          </SlidePanel>
         </Panel>
         <div id="accessibility">
           <Panel>

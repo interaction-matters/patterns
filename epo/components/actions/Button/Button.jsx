@@ -19,7 +19,8 @@ Params:
 
 import React, { Component } from 'react';
 
-import styles from './Button.scss';
+import base from './base.scss';
+import theme from './theme.scss';
 
 export default class Button extends Component {
 
@@ -55,7 +56,7 @@ export default class Button extends Component {
     return (
 
       this.props.disabled == true ? <button type={role} onClick={this.props.onAddClick} className={trimClass.trim()} disabled><span className="ui-button__inner">{iconTag}{this.props.children}</span></button> : 
-                           <button type={role} onClick={this.props.onAddClick} className={trimClass.trim()}><span className="ui-button__inner">{iconTag}{this.props.children}</span></button>
+                           <button type={role} onFocus={this.props.onAddFocus} onBlur={this.props.onAddBlur} onClick={this.props.onAddClick} className={trimClass.trim()}><span className="ui-button__inner">{iconTag}{this.props.children}</span></button>
     );
 
   }

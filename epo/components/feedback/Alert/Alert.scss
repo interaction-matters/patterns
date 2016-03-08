@@ -34,4 +34,9 @@ Alerts
     border-color: mix(white, $success, 60%);
     color: mix(black, $success, 25%);
   }
+  &__close-btn {
+    float:right;
+    padding:0 0.5em;
+    cursor:pointer;
+  }
 }

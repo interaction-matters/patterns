@@ -6,27 +6,21 @@ Menu
 	display:block;
 	padding:0;
 	margin:0;
-	i {
-		display: inline-block;
-		margin-right:5px;
+	&__item {
+		list-style:none;
+		i[class*="icon"] {
+			display: inline-block;
+			margin-right:5px;
+		}
 	}
-
 	&--horizontal {
 		vertical-align:middle;
-		& > li {
-			display:inline-block;
-			margin-right:0.5em;
-			&:after {
-				content:" • ";
-				color: #666;
-			}
+		.ui-menu__item {
+			display:inline;
+			margin-right:1em;
 			&:last-child {
 				margin-right: 0;
-				&:after {
-					content:""
-				}
 			}
 		}
 	}
-	
 }
